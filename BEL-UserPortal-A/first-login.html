@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEL Portal - First Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="bel-header">
+        <i class="bel-hamburger-menu fas fa-bars" id="bel-hamburger-btn"></i>
+        <div class="bel-header-content">
+            <div class="bel-sidebar-logo">
+                <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="logo">
+                <span>BEL Portal</span>
+            </div>
+            <div class="bel-header-right">
+                <div class="bel-notification-bell" id="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <div class="dot"></div>
+                </div>
+                <div class="bel-notification-panel" id="notification-panel">
+                    <div class="bel-notification-header">Announcements</div>
+                    <ul class="bel-notification-list">
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag" style="background-color: var(--ds-color-success-light); color: var(--ds-color-success);">Welcome</span>Welcome to BEL Partner Program!</div>
+                            <div class="bel-notification-date">2025-09-18</div>
+                        </li>
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag new-product">New Campaign</span>ADAM Remote I/O Series are now available for promotion</div>
+                            <div class="bel-notification-date">2025-08-25</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-language-selector" id="language-selector">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="bel-language-panel" id="language-panel">
+                    <ul class="bel-language-list">
+                        <li class="bel-language-item" data-lang="en">
+                            <div class="bel-language-name">English</div>
+                        </li>
+                        <li class="bel-language-item" data-lang="zh">
+                            <div class="bel-language-name">繁體中文</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-user-profile">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="User Avatar">
+                </div>
+                <div class="user-profile-panel" id="user-profile-panel">
+                    <div class="panel-content">
+                        <div class="user-info">
+                            <span class="user-name">New User</span>
+                            <span class="user-email">newuser@example.com</span>
+                        </div>
+                        <div class="user-level">
+                            <span class="bel-badge builder"><i class="fas fa-seedling"></i> Builder</span>
+                        </div>
+                        <hr class="divider">
+                        <a href="first-login-account.html" class="panel-link">My Account</a>
+                        <a href="#" class="panel-link">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bel-container">
+        <!-- Sidebar Component -->
+        <aside class="bel-sidebar" id="bel-sidebar">
+            <div class="bel-sidebar-menu-title">MAIN MENU</div>
+            <nav class="bel-sidebar-nav">
+                <a href="first-login.html" class="bel-sidebar-nav-link active"><i class="fas fa-tachometer-alt fa-fw"></i><span>Sales Engagement</span></a>
+                <a href="first-login-earnings.html" class="bel-sidebar-nav-link"><i class="fas fa-wallet fa-fw"></i><span>Earnings & Orders</span></a>
+                <a href="first-login-account.html" class="bel-sidebar-nav-link"><i class="fas fa-user-circle fa-fw"></i><span>My Account</span></a>
+            </nav>
+            <div class="bel-sidebar-menu-title">HELP & SUPPORT</div>
+            <nav class="bel-sidebar-nav">
+                <a href="first-login-support-faq.html" class="bel-sidebar-nav-link"><i class="fas fa-question-circle fa-fw"></i><span>Talk to Admin</span></a>
+                <a href="first-login-resource-center.html" class="bel-sidebar-nav-link"><i class="fas fa-folder fa-fw"></i><span>Get Resource</span></a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="bel-main-content" id="bel-main-content">
+            <!-- Welcome Banner for First-time Users -->
+            <div class="welcome-banner" style="background: linear-gradient(135deg, #006EEF, #013160);  color: var(--ds-color-gray-90); padding: 24px; border-radius: 4px; margin-bottom: 24px; text-align: center;">
+                <h1 style="margin: 0 0 12px 0; font-size: var(--fs-xl); font-weight: var(--fw-semibold); color: var(--ds-color-white);"><i class="fas fa-rocket" style="margin-right: 12px; color: var(--ds-color-white);"></i>Welcome to BEL Partner Program!</h1>
+                <p style="margin: 0; font-size: var(--fs-base); color: var(--ds-color-white);">Start your promotional journey and earn generous commission rewards</p>
+            </div>
+            
+            <h1 class="bel-h1">Welcome, Maxwell Walker 👋</h1>
+            
+            <div class="bel-grid-container grid-cols-2">
+                <div class="bel-panel level-panel" style="margin-bottom: 0px;">
+                    <h3>Start your promotional journey!</h3>
+                    <div style="display: flex; align-items: center; justify-content: flex-start; gap: 12px; margin-bottom: 4px;">
+                        <span class="bel-badge builder bel-badge-fitted" style="margin: 0px;"><i class="fas fa-seedling"></i> Builder</span>
+                        <p id="level-progress-text" style="margin: 0; font-size: 14px;line-height: 36px; display: flex; align-items: center;">Reach $50K in sales to advance to 'Enabler' level!</p>
+                    </div>
+                    <div class="level-milestone-container">
+                        <div class="milestone-track">
+                           <div class="milestone-progress" style="width: 5%;"></div>
+                           <div class="milestone-nodes">
+                               <div class="milestone-node active"></div>
+                               <div class="milestone-node"></div>
+                               <div class="milestone-node"></div>
+                               <div class="milestone-node"></div>
+                           </div>
+                       </div>
+                       <div class="milestone-labels">
+                           <div class="milestone-label active">Builder</div>
+                           <div class="milestone-label">Enabler</div>
+                           <div class="milestone-label">Explorer</div>
+                           <div class="milestone-label">Leader</div>
+                       </div>
+                   </div>
+                </div>
+                <div class="bel-panel referral-panel" style="margin-bottom: 0px;">
+                    <div class="qr-code">
+                        <img
+                        src="https://irp.cdn-website.com/56869327/dms3rep/multi/IoTMart-qr-code-3+1.png"
+                        alt="Referral QR Code"
+                        />
+                    </div>
+                    <div class="links">
+                        <div class="referral-input-group">
+                        <label for="ref-link-db" class="bel-label-spacing">Your Referral Link</label>
+                        <div class="referral-inline">
+                            <input id="ref-link-db" type="text" value="https://www.iotmart.com/en-en/?ref=KDEDIGICA" readonly />
+                            <select id="region-selector" class="region-selector">
+                                <option value="global" data-url="https://www.iotmart.com/en-en/?ref=">Global</option>
+                                <option value="eu" data-url="https://www.iotmart.com/en-eu/?ref=">EU</option>
+                                <option value="kr" data-url="https://www.iotmart.com/kr/?ref=">KR</option>
+                            </select>
+                            <button class="copy-button" data-copy-target="ref-link-db"><i class="far fa-copy"></i> </button>
+                        </div>
+                        </div>
+
+                        <div class="referral-input-group">
+                        <label for="ref-id-db" class="bel-label-spacing">Your Referral ID</label>
+                        <div class="referral-inline">
+                            <input id="ref-id-db" type="text" value="KDEDIGICA" readonly />
+                            <button class="copy-button" data-copy-target="ref-id-db"><i class="far fa-copy"></i></button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Getting Started Guide -->
+            <div class="section-title" style="margin-top: 32px;">
+                <h3><i class="fas fa-compass" style="margin-right: 8px; color: var(--ds-color-brand);"></i>Getting Started Guide</h3>
+            </div>
+            <div class="bel-panel">
+                <div class="getting-started-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <div class="getting-started-card" style="padding: 20px; background: var(--ds-color-gray-30); border: 1px solid var(--ds-color-gray-40); border-radius: 4px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <div style="width: 40px; height: 40px; background: var(--ds-color-brand); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-share" style="color: var(--ds-color-white);"></i>
+                            </div>
+                            <h4 style="margin: 0; color: var(--ds-color-gray-90); font-size: var(--fs-base); font-weight: var(--fw-semibold);">Step 1: Share Your Referral Link</h4>
+                        </div>
+                        <p style="color: var(--ds-color-gray-80); margin: 0; font-size: var(--fs-sm);">Use your unique referral link and ID to share with potential customers and start earning commissions.</p>
+                    </div>
+                    <div class="getting-started-card" style="padding: 20px; background: var(--ds-color-gray-30); border: 1px solid var(--ds-color-gray-40); border-radius: 4px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <div style="width: 40px; height: 40px; background: var(--ds-color-success); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-chart-line" style="color: var(--ds-color-white);"></i>
+                            </div>
+                            <h4 style="margin: 0; color: var(--ds-color-gray-90); font-size: var(--fs-base); font-weight: var(--fw-semibold);">Step 2: Track Performance</h4>
+                        </div>
+                        <p style="color: var(--ds-color-gray-80); margin: 0; font-size: var(--fs-sm);">Monitor your referral traffic, conversion rates, and order data to optimize your promotional strategy.</p>
+                    </div>
+                    <div class="getting-started-card" style="padding: 20px; background: var(--ds-color-gray-30); border: 1px solid var(--ds-color-gray-40); border-radius: 4px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                            <div style="width: 40px; height: 40px; background: var(--ds-color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-dollar-sign" style="color: var(--ds-color-white);"></i>
+                            </div>
+                            <h4 style="margin: 0; color: var(--ds-color-gray-90); font-size: var(--fs-base); font-weight: var(--fw-semibold);">Step 3: Earn Rewards</h4>
+                        </div>
+                        <p style="color: var(--ds-color-gray-80); margin: 0; font-size: var(--fs-sm);">Earn commissions on every successful order, plus upgrade bonuses as you level up!</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bel-stats-cards">
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                    <div>
+                    <div class="bel-card-title">Referral Link Traffic</div>
+                    <div class="bel-card-value">0</div>
+                    </div>
+                    <div class="bel-card-icon"><i class="fas fa-mouse-pointer"></i></div>
+                    </div>
+                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); background: var(--ds-color-gray-30);"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">Start promoting</span></div>
+                </div>
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                    <div>
+                    <div class="bel-card-title">Referral ID Usage</div>
+                    <div class="bel-card-value">0</div>
+                    </div>
+                    <div class="bel-card-icon"><i class="fas fa-tags"></i></div>
+                    </div>
+                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); background: var(--ds-color-gray-30);"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">Awaiting usage</span></div>
+                </div>
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                    <div>
+                    <div class="bel-card-title">Total Orders Count</div>
+                    <div class="bel-card-value">0</div>
+                    </div>
+                    <div class="bel-card-icon"><i class="fas fa-shopping-cart"></i></div>
+                    </div>
+                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); background: var(--ds-color-gray-30);"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No orders yet</span></div>
+                </div>
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                    <div>
+                    <div class="bel-card-title">Rebate Earnings</div>
+                    <div class="bel-card-value">$0</div>
+                    </div>
+                    <div class="bel-card-icon"><i class="fas fa-dollar-sign"></i></div>
+                    </div>
+                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); background: var(--ds-color-gray-30);"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">Start earning</span></div>
+                </div>
+            </div>
+
+            <!-- Empty State Charts -->
+            <div class="section-title">
+                <h3>Annual Performance Overview</h3>
+                <select name="year" id="year-select">
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                </select>
+            </div>
+            <div class="bel-panel">
+                <div class="empty-state" style="text-align: center; padding: 60px 20px; color: var(--ds-color-gray-60);">
+                    <i class="fas fa-chart-line" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5; color: var(--ds-color-gray-50);"></i>
+                    <h3 style="color: var(--ds-color-gray-70); margin-bottom: 8px; font-size: var(--fs-lg); font-weight: var(--fw-medium);">No Data Available</h3>
+                    <p style="margin: 0; font-size: var(--fs-sm);">Your performance data will appear here once you start promoting</p>
+                </div>
+            </div>
+            
+            <div class="section-title">
+                <h3>Categories & Products Sales Effectiveness</h3>
+            </div>
+            <div class="bel-panel">
+                <div class="product-sales-grid">
+                     <div>
+                        <h4 style="font-size: 1rem; margin-bottom: 10px;">Top 5 Product Category Analysis</h4>
+                        <div class="empty-state" style="text-align: center; padding: 40px 20px; color: var(--ds-color-gray-60);">
+                            <i class="fas fa-chart-bar" style="font-size: 2rem; margin-bottom: 12px; opacity: 0.5; color: var(--ds-color-gray-50);"></i>
+                            <p style="margin: 0; color: var(--ds-color-gray-70); font-size: var(--fs-sm);">Category analysis will show after first sales</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1rem; margin-bottom: 10px;">Top 20 Products</h4>
+                        <div class="scrollable-table-container" style="max-height: 350px;">
+                            <div class="empty-state" style="text-align: center; padding: 40px 20px; color: var(--ds-color-gray-60);">
+                                <i class="fas fa-box" style="font-size: 2rem; margin-bottom: 12px; opacity: 0.5; color: var(--ds-color-gray-50);"></i>
+                                <p style="margin: 0; color: var(--ds-color-gray-70); font-size: var(--fs-sm);">No product sales records yet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h3>Market Analysis</h3>
+            </div>
+            <div class="bel-panel">
+                <h4 class="bel-section-heading-large">Top 5 Market Regions</h4>
+                <div class="empty-state" style="text-align: center; padding: 40px 20px; color: var(--ds-color-gray-60);">
+                    <i class="fas fa-globe" style="font-size: 2rem; margin-bottom: 12px; opacity: 0.5; color: var(--ds-color-gray-50);"></i>
+                    <p style="margin: 0; color: var(--ds-color-gray-70); font-size: var(--fs-sm);">Market data will appear once you start promoting</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Fixed Task Modal in Bottom Right -->
+    <div id="setup-task-modal" class="setup-task-modal">
+        <div class="setup-task-content">
+            <div class="setup-task-header">
+                <div class="task-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="task-text">
+                    <div class="task-title">Complete Setup</div>
+                    <div class="task-subtitle">1 task remaining</div>
+                </div>
+                <button class="task-close" id="task-close-btn" title="Minimize (task will remain active)">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            <div class="setup-task-body" id="setup-task-body">
+                <div class="task-item incomplete" data-task="banking">
+                    <div class="task-item-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="task-item-content">
+                        <div class="task-item-title">Banking Information</div>
+                        <div class="task-item-desc">Set up your payout details, required to receive commission payments and earnings</div>
+                    </div>
+                    <button class="task-item-action" onclick="goToBankingSetup()">
+                        Complete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data-loader.js"></script>
+    <script src="js/common.js"></script>
+    
+    <script>
+        // Setup task modal management
+        function checkBankingStatus() {
+            const bankingCompleted = localStorage.getItem('bel_banking_completed');
+            const taskModal = document.getElementById('setup-task-modal');
+            const bankingTask = document.querySelector('[data-task="banking"]');
+            const taskSubtitle = document.querySelector('.task-subtitle');
+            
+            if (bankingCompleted === 'true') {
+                // Hide the entire modal if banking is completed
+                taskModal.style.display = 'none';
+            } else {
+                // Show modal if banking not completed
+                taskModal.style.display = 'block';
+            }
+        }
+        
+        function goToBankingSetup() {
+            window.location.href = 'first-login-account.html';
+        }
+        
+        // Task modal minimize/restore functionality
+        const taskModal = document.getElementById('setup-task-modal');
+        const taskCloseBtn = document.getElementById('task-close-btn');
+        const taskBody = document.getElementById('setup-task-body');
+        let isMinimized = false;
+        
+        taskCloseBtn.addEventListener('click', function() {
+            if (isMinimized) {
+                // Restore
+                taskBody.style.display = 'block';
+                taskModal.classList.remove('minimized');
+                taskCloseBtn.innerHTML = '<i class="fas fa-minus"></i>';
+                taskCloseBtn.title = 'Minimize (task will remain active)';
+                isMinimized = false;
+            } else {
+                // Minimize
+                taskBody.style.display = 'none';
+                taskModal.classList.add('minimized');
+                taskCloseBtn.innerHTML = '<i class="fas fa-plus"></i>';
+                taskCloseBtn.title = 'Restore task panel';
+                isMinimized = true;
+            }
+        });
+        
+        // Check banking status on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            checkBankingStatus();
+        });
+    </script>
+
+    <style>
+        /* Fixed Task Modal Styles */
+        .setup-task-modal {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e8ecef;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: none; /* Hidden by default, shown via JavaScript */
+        }
+        
+        .setup-task-modal.minimized {
+            width: 200px;
+        }
+        
+        .setup-task-content {
+            padding: 0;
+        }
+        
+        .setup-task-header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: #fef7e6;
+            border-radius: 12px 12px 0 0;
+            border-bottom: 1px solid #f0d7a7;
+        }
+        
+        .task-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--ds-color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .task-text {
+            flex: 1;
+        }
+        
+        .task-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 2px;
+        }
+        
+        .task-subtitle {
+            font-size: 12px;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .task-close {
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: transparent;
+            color: var(--ds-color-gray-60);
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .task-close:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--ds-color-gray-80);
+        }
+        
+        .setup-task-body {
+            padding: 16px;
+        }
+        
+        .task-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 4px;
+            background: #f8f9fa;
+            border: 1px solid #e8ecef;
+        }
+        
+        .task-item.incomplete {
+            background: #fff3cd;
+            border-color: #ffeaa7;
+        }
+        
+        .task-item.complete {
+            background: #d4edda;
+            border-color: #c3e6cb;
+        }
+        
+        .task-item-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: var(--ds-color-primary);
+            font-size: 12px;
+        }
+        
+        .task-item.complete .task-item-icon {
+            color: #28a745;
+        }
+        
+        .task-item-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .task-item-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 2px;
+        }
+        
+        .task-item-desc {
+            font-size: 11px;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .task-item-action {
+            background: var(--ds-color-primary);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .task-item-action:hover {
+            background: #e57b03;
+        }
+        
+        .task-item.complete .task-item-action {
+            background: #28a745;
+            cursor: default;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .setup-task-modal {
+                width: 280px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .setup-task-modal.minimized {
+                width: 160px;
+            }
+        }
+    </style>
+    <script src="js/charts.js"></script>
+    
+    <script>
+        // Override for first login experience
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show welcome message
+            const welcomeMsg = document.createElement('div');
+            welcomeMsg.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: var(--ds-color-success); 
+                color: var(--ds-color-white); 
+                padding: 16px 24px; 
+                border-radius: 4px; 
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+                z-index: 1000;
+                animation: slideIn 0.5s ease-out;
+                font-size: var(--fs-sm);
+                font-weight: var(--fw-medium);
+            `;
+            welcomeMsg.innerHTML = '<i class="fas fa-check-circle" style="margin-right: 8px;"></i>Welcome to BEL Partner Program!';
+            document.body.appendChild(welcomeMsg);
+            
+            // Add CSS animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                .trend-indicator.neutral {
+                    color: var(--ds-color-gray-70);
+                    background: var(--ds-color-gray-30);
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Auto hide welcome message after 5 seconds
+            setTimeout(() => {
+                welcomeMsg.style.animation = 'slideIn 0.5s ease-out reverse';
+                setTimeout(() => welcomeMsg.remove(), 500);
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

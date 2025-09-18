@@ -610,6 +610,22 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
     });
+
+    // --- Region Selector Logic ---
+    const regionSelector = document.getElementById('region-selector');
+    const referralLinkInput = document.getElementById('ref-link-db');
+    const referralIdInput = document.getElementById('ref-id-db');
+
+    if (regionSelector && referralLinkInput) {
+        regionSelector.addEventListener('change', (e) => {
+            const selectedOption = e.target.selectedOptions[0];
+            const baseUrl = selectedOption.getAttribute('data-url');
+            const referralId = referralIdInput ? referralIdInput.value : 'ATWADVANT';
+            
+            // Update the referral link input with the new URL
+            referralLinkInput.value = baseUrl + referralId;
+        });
+    }
         
     // --- Resource Filter Logic ---
     const filterContainer = document.getElementById('resource-filter');
@@ -970,8 +986,20 @@ async function loadUserProfileHeader() {
                     </div>
                     <hr class="divider">
                     <a href="my-account.html" class="panel-link">My Account</a>
-                    <a href="#" class="panel-link">Log Out</a>
+                    <a href="../login.html" id="logout-link" class="panel-link">Log Out</a>
                 `;
+
+                // Add logout functionality
+                const logoutLink = panelContent.querySelector('#logout-link');
+                if (logoutLink) {
+                    logoutLink.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        // Clear session storage
+                        sessionStorage.removeItem('bel_user_session');
+                        // Redirect to login page
+                        window.location.href = '../login.html';
+                    });
+                }
             }
         }
     } catch (error) {
@@ -1007,7 +1035,7 @@ async function loadDashboardData() {
             if (levelPanel && nextLevel) {
                 const levelBadge = levelPanel.querySelector('.bel-badge');
                 const milestoneContainer = levelPanel.querySelector('.level-milestone-container');
-                const levelText = levelPanel.querySelector('p');
+                const levelText = document.getElementById('level-progress-text');
                 
                 if (levelBadge) {
                     levelBadge.innerHTML = `<i class="${userProfile.level.icon}"></i> ${userProfile.level.name}`;
@@ -1040,14 +1068,29 @@ async function loadDashboardData() {
                                 if (index <= currentLevelIndex) {
                                     labelClass += ' active';
                                 }
-                                return `<div class="${labelClass}">${level}</div>`;
+                                // Find the corresponding level data from config
+                                const levelData = config.partnerLevels.find(l => l.name === level);
+                                const percentage = levelData ? levelData.percentage : '';
+                                const target = levelData ? levelData.target : '';
+                                
+                                return `
+                                    <div class="${labelClass}">
+                                        <div class="milestone-level-name">${level}</div>
+                                        <div class="milestone-percentage" style="color: #888; font-size: 10px; margin-top: 2px;">${percentage} | ${target}</div>
+                                    </div>
+                                `;
                             }).join('')}
                         </div>
                     `;
                 }
                 
-                if (levelText) {
-                    levelText.textContent = `Complete ${userProfile.level.progress.remaining} more referral orders to be promoted to the '${nextLevel.name}' level.`;
+                if (levelText && nextLevel) {
+                    const currentLevelData = config.partnerLevels.find(l => l.name === userProfile.level.name);
+                    const nextLevelData = config.partnerLevels.find(l => l.name === nextLevel.name);
+                    const currentLevelTarget = currentLevelData ? currentLevelData.target : '';
+                    const nextLevelPercentage = nextLevelData ? nextLevelData.percentage : '';
+                    
+                    levelText.innerHTML = `<span style="color: #E57B03; font-weight: 600;">Hit $${currentLevelTarget} in sales to advance to the '${nextLevel.name}' level and enjoy a ${nextLevelPercentage} rebates!</span>`;
                 }
             }
             
@@ -1067,6 +1110,11 @@ async function loadDashboardData() {
                             <label for="ref-link-db" style="margin-bottom: 2px;">Your Referral Link</label>
                             <div class="referral-inline">
                                 <input id="ref-link-db" type="text" value="${userProfile.referralInfo.link}" readonly />
+                                <select id="region-selector" class="region-selector">
+                                    <option value="global" data-url="https://www.iotmart.com/en-en/?ref=">Global</option>
+                                    <option value="eu" data-url="https://www.iotmart.com/en-eu/?ref=">EU</option>
+                                    <option value="kr" data-url="https://www.iotmart.com/kr/?ref=">KR</option>
+                                </select>
                                 <button class="copy-button" data-copy-target="ref-link-db"><i class="far fa-copy"></i> </button>
                             </div>
                         </div>
@@ -1078,6 +1126,24 @@ async function loadDashboardData() {
                             </div>
                         </div>
                     `;
+                    
+                    // Re-initialize region selector functionality after DOM update
+                    setTimeout(() => {
+                        const regionSelector = document.getElementById('region-selector');
+                        const referralLinkInput = document.getElementById('ref-link-db');
+                        const referralIdInput = document.getElementById('ref-id-db');
+
+                        if (regionSelector && referralLinkInput) {
+                            regionSelector.addEventListener('change', (e) => {
+                                const selectedOption = e.target.selectedOptions[0];
+                                const baseUrl = selectedOption.getAttribute('data-url');
+                                const referralId = referralIdInput ? referralIdInput.value : 'ATWADVANT';
+                                
+                                // Update the referral link input with the new URL
+                                referralLinkInput.value = baseUrl + referralId;
+                            });
+                        }
+                    }, 100);
                 }
             }
         }

@@ -209,8 +209,8 @@ BELPlatform/
         }
       },
       "referralInfo": {
-        "link": "https://www.iotmart.com/en-en/?ref=A8C1E3F",
-        "id": "A8C1E3F",
+        "link": "https://www.iotmart.com/en-en/?ref=ATWADVANT",
+        "id": "ATWADVANT",
         "qrCode": "https://irp.cdn-website.com/56869327/dms3rep/multi/IoTMart-qr-code-3+1.png"
       },
       "bankInfo": {

@@ -1112,6 +1112,21 @@ transition: background-color 0.2s;
 background-color: #004a99;
 }
 
+.region-selector {
+width: 60px;
+height: 38px;
+border: 1px solid var(--ot-color-gray-45);
+border-radius: 4px;
+background-color: var(--ds-color-white);
+font-size: 0.75rem;
+font-weight: 600;
+color: var(--ds-color-gray-80);
+cursor: pointer;
+outline: none;
+text-align: center;
+text-align-last: center;
+}
+
 .scrollable-table-container { 
     max-height: 350px; 
     overflow-y: auto; 
@@ -1137,7 +1152,7 @@ background-color: #004a99;
 .milestone-node.completed { border-color: var(--ds-color-primary); }
 .milestone-node.active { border-color: var(--ds-color-primary); background-color: var(--ds-color-primary); }
 .milestone-labels { display: flex; justify-content: space-between; padding: 0 10px; margin-top: 8px; }
-.milestone-label { width: 60px; text-align: center; font-size: 0.75rem; font-weight: 600; color: var(--ot-color-gray-65); }
+.milestone-label { width: 80px; text-align: center; font-size: 0.75rem; font-weight: 600; color: var(--ot-color-gray-65); }
 .milestone-label.active { color: var(--ds-color-primary); }
 
 .resource-filter-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
@@ -1786,7 +1801,7 @@ background-color: #004a99;
 
 .terms-section {
     background: var(--ds-color-white);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 2rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     border: 1px solid var(--ot-color-gray-45);
@@ -1849,7 +1864,7 @@ background-color: #004a99;
     color: var(--ds-color-error);
     background-color: var(--ds-color-error-light);
     border: 1px solid var(--ds-color-error-light);
-    border-radius: 8px;
+    border-radius: 4px;
     margin: 1rem 0;
 }
 
@@ -2246,7 +2261,7 @@ background-color: #004a99;
     position: relative;
     width: 80px;
     height: 80px;
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
     border: 2px solid var(--ot-color-gray-45);
     cursor: pointer;

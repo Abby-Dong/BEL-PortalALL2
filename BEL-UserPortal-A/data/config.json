@@ -12,28 +12,32 @@
     {
       "name": "Builder",
       "icon": "fas fa-hammer",
-      "percentage": "2.5%",
+      "percentage": "2%",
+      "target": "20K",
       "requirement": 0,
       "color": "#006EFF"
     },
     {
       "name": "Enabler",
       "icon": "fas fa-cog",
-      "percentage": "3.5%",
+      "percentage": "2%",
+      "target": "100K",
       "requirement": 20,
       "color": "#00893A"
     },
     {
       "name": "Explorer",
       "icon": "fas fa-rocket",
-      "percentage": "4.5%",
+      "percentage": "3%",
+      "target": "200K",
       "requirement": 35,
       "color": "#F39800"
     },
     {
       "name": "Leader",
       "icon": "fas fa-crown",
-      "percentage": "5.5%",
+      "percentage": "4%",
+      "target": "Advanced",
       "requirement": 50,
       "color": "#DB3A3A"
     }

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk to Admin - BEL Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="bel-header">
+        <i class="bel-hamburger-menu fas fa-bars" id="bel-hamburger-btn"></i>
+        <div class="bel-header-content">
+            <div class="bel-sidebar-logo">
+                <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="logo">
+                <span>BEL Portal</span>
+            </div>
+            <div class="bel-header-right">
+                <div class="bel-notification-bell" id="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <div class="dot"></div>
+                </div>
+                <div class="bel-notification-panel" id="notification-panel">
+                    <div class="bel-notification-header">Announcements</div>
+                    <ul class="bel-notification-list">
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag" style="background-color: var(--ds-color-success-light); color: var(--ds-color-success);">Welcome</span>Welcome to BEL Partner Program!</div>
+                            <div class="bel-notification-date">2025-09-18</div>
+                        </li>
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag new-product">New Campaign</span>ADAM Remote I/O Series are now available for promotion</div>
+                            <div class="bel-notification-date">2025-08-25</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-language-selector" id="language-selector">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="bel-language-panel" id="language-panel">
+                    <ul class="bel-language-list">
+                        <li class="bel-language-item" data-lang="en">
+                            <div class="bel-language-name">English</div>
+                        </li>
+                        <li class="bel-language-item" data-lang="zh">
+                            <div class="bel-language-name">繁體中文</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-user-profile">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="User Avatar">
+                </div>
+                <div class="user-profile-panel" id="user-profile-panel">
+                    <div class="panel-content">
+                        <div class="user-info">
+                            <span class="user-name">New User</span>
+                            <span class="user-email">newuser@example.com</span>
+                        </div>
+                        <div class="user-level">
+                            <span class="bel-badge builder"><i class="fas fa-seedling"></i> Builder</span>
+                        </div>
+                        <hr class="divider">
+                        <a href="first-login-account.html" class="panel-link">My Account</a>
+                        <a href="#" class="panel-link">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bel-container">
+        <!-- Sidebar Component -->
+        <aside class="bel-sidebar" id="bel-sidebar">
+            <div class="bel-sidebar-menu-title">MAIN MENU</div>
+            <nav class="bel-sidebar-nav">
+                <a href="first-login.html" class="bel-sidebar-nav-link"><i class="fas fa-tachometer-alt fa-fw"></i><span>Sales Engagement</span></a>
+                <a href="first-login-earnings.html" class="bel-sidebar-nav-link"><i class="fas fa-wallet fa-fw"></i><span>Earnings & Orders</span></a>
+                <a href="first-login-account.html" class="bel-sidebar-nav-link"><i class="fas fa-user-circle fa-fw"></i><span>My Account</span></a>
+            </nav>
+            <div class="bel-sidebar-menu-title">HELP & SUPPORT</div>
+            <nav class="bel-sidebar-nav">
+                <a href="first-login-support-faq.html" class="bel-sidebar-nav-link active"><i class="fas fa-question-circle fa-fw"></i><span>Talk to Admin</span></a>
+                <a href="first-login-resource-center.html" class="bel-sidebar-nav-link"><i class="fas fa-folder fa-fw"></i><span>Get Resource</span></a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="bel-main-content" id="bel-main-content">
+            <h1 class="bel-h1">Talk to Admin</h1>
+
+            <!-- New User Welcome Notice -->
+            <div style="background: #fef7e6; border: 1px solid #f0d7a7; border-radius: 4px; padding: 20px; margin-bottom: 24px;">
+                <div style="display: flex; align-items: center;">
+                    <i class="fas fa-info-circle" style="color: var(--ds-color-primary); margin-right: 12px; font-size: 1.2rem;"></i>
+                    <div>
+                        <h3 style="margin: 0 0 6px 0; color: var(--ds-color-gray-90); font-size: 1.1rem; font-weight: 600;">Welcome to BEL Partner Support</h3>
+                        <p style="margin: 0; color: var(--ds-color-gray-70); font-size: 0.9rem;">
+                            As a new partner, you have full access to our support system. Submit tickets for any questions or issues, and browse our FAQ for quick answers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header-with-action">
+                <h3 class="bel-h3">Contact Support</h3>
+                <button class="bel-btn primary" id="contact-support-btn">
+                    <i class="fas fa-headset"></i> Submit Support Ticket
+                </button>
+            </div>
+            
+            <div class="bel-panel">
+                <!-- Empty State for New User -->
+                <div style="text-align: center; padding: 40px 20px; color: var(--ds-color-gray-60);">
+                    <i class="fas fa-ticket-alt" style="font-size: 3rem; margin-bottom: 16px; color: var(--ds-color-gray-40);"></i>
+                    <h3 style="margin: 0 0 8px 0; color: var(--ds-color-gray-70); font-size: 1.1rem;">No Support Tickets Yet</h3>
+                    <p style="margin: 0; font-size: 0.9rem; line-height: 1.5;">
+                        You haven't submitted any support tickets yet.<br>
+                        Click "Submit Support Ticket" above to get help with any questions or issues.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="bel-h3">Frequently Asked Questions (FAQ)</h3>
+            <div class="bel-panel bel-panel-pt-0" id="faq-content">
+                <!-- Common FAQ for New Users -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I start earning commissions as a new partner?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To start earning commissions:</p>
+                        <ol>
+                            <li><strong>Complete your banking information</strong> in My Account to enable payouts</li>
+                            <li><strong>Get your referral links</strong> from the Sales Engagement dashboard</li>
+                            <li><strong>Share your links</strong> with potential customers</li>
+                            <li><strong>Track your performance</strong> in Earnings & Orders</li>
+                        </ol>
+                        <p>Commissions are calculated based on successful orders and paid monthly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>When will I receive my first commission payout?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Commission payouts are processed on the 5th of each month for the previous month's earnings. Requirements:</p>
+                        <ul>
+                            <li>Minimum payout threshold: $100 USD</li>
+                            <li>Banking information must be complete</li>
+                            <li>Account must be in good standing</li>
+                        </ul>
+                        <p>If your balance is under $100, it will roll over to the next month.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I advance to higher partner levels?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Partner levels are based on performance metrics:</p>
+                        <ul>
+                            <li><strong>Builder</strong> (Current): Starting level for new partners</li>
+                            <li><strong>Explorer</strong>: 10+ successful referrals or $1,000+ in sales</li>
+                            <li><strong>Leader</strong>: 25+ successful referrals or $5,000+ in sales</li>
+                            <li><strong>Champion</strong>: 50+ successful referrals or $15,000+ in sales</li>
+                        </ul>
+                        <p>Higher levels unlock better commission rates and exclusive resources.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What resources are available to help me succeed?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We provide comprehensive resources in the Get Resource section:</p>
+                        <ul>
+                            <li><strong>Product catalogs</strong> with detailed specifications</li>
+                            <li><strong>Marketing materials</strong> including brochures and presentations</li>
+                            <li><strong>Training videos</strong> on product features and benefits</li>
+                            <li><strong>Sales tools</strong> and customer case studies</li>
+                        </ul>
+                        <p>All materials are updated regularly and available for download.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How can I track my referrals and earnings?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The Earnings & Orders section provides comprehensive tracking:</p>
+                        <ul>
+                            <li><strong>Real-time earnings</strong> summary and pending payouts</li>
+                            <li><strong>Order tracking</strong> with status updates</li>
+                            <li><strong>Performance charts</strong> showing your progress</li>
+                            <li><strong>Payout history</strong> with detailed breakdowns</li>
+                        </ul>
+                        <p>Data is updated daily to keep you informed of your performance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What should I do if I encounter technical issues?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For technical support:</p>
+                        <ol>
+                            <li><strong>Check this FAQ</strong> for common solutions</li>
+                            <li><strong>Submit a support ticket</strong> using the button above</li>
+                            <li><strong>Include details</strong> about your issue (browser, error messages, etc.)</li>
+                            <li><strong>Expect a response</strong> within 24 hours during business days</li>
+                        </ol>
+                        <p>For urgent matters, contact us directly at <a href="mailto:Service.iotmart@advantech.com" style="color: var(--ds-color-link);">Service.iotmart@advantech.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contact Support Modal -->
+    <div class="modal-overlay" id="contact-support-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Submit Support Ticket</h3>
+                <button class="close-button" id="close-contact-modal">&times;</button>
+            </div>
+            <form id="contact-support-form">
+                <div class="bel-form-group">
+                    <label for="support-subject">Subject *</label>
+                    <input type="text" id="support-subject" placeholder="Enter your subject" required style="color: var(--ds-color-gray-80);">
+                </div>
+                <div class="bel-form-group">
+                    <label for="support-message">Message *</label>
+                    <textarea id="support-message" rows="5" placeholder="Describe your issue or question in detail" required class="bel-textarea-form" style="color: var(--ds-color-gray-80);"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="bel-btn secondary" id="cancel-support-btn">Cancel</button>
+                    <button type="submit" class="bel-btn primary" id="submit-support-btn">Submit Ticket</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content bel-max-w-400">
+            <div class="bel-modal-center">
+                <div class="bel-mb-20">
+                    <i class="fas fa-check-circle bel-success-icon"></i>
+                </div>
+                <h3 class="bel-modal-title">Ticket Submitted Successfully</h3>
+                <p class="bel-modal-text">
+                    Your support ticket has been submitted. You will receive a confirmation email shortly.
+                </p>
+                <button class="bel-btn primary success-modal-close">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data-loader.js"></script>
+    <div class="modal-overlay" id="view-detail-modal">
+        <div class="modal-content bel-modal-content-p24">
+            <div class="modal-header">
+                <div id="view-detail-modal-header" class="bel-modal-header-flex"></div>
+                <button class="close-button" id="close-view-detail-modal">&times;</button>
+            </div>
+            <div id="view-detail-body">
+                <!-- Details will be injected by JS -->
+            </div>
+        </div>
+    </div>
+    <script src="js/common.js"></script>
+
+    <style>
+        /* Placeholder styling */
+        input::placeholder,
+        textarea::placeholder {
+            color: var(--ds-color-gray-50) !important;
+            opacity: 1;
+        }
+        
+        input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder {
+            color: var(--ds-color-gray-50) !important;
+        }
+        
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            color: var(--ds-color-gray-50) !important;
+            opacity: 1;
+        }
+        
+        input:-ms-input-placeholder,
+        textarea:-ms-input-placeholder {
+            color: var(--ds-color-gray-50) !important;
+        }
+        
+        /* Fixed Task Modal Styles */
+        .setup-task-modal {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e8ecef;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: none;
+        }
+        
+        .setup-task-modal.minimized {
+            width: 200px;
+        }
+        
+        .setup-task-content {
+            padding: 0;
+        }
+        
+        .setup-task-header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: #fef7e6;
+            border-radius: 12px 12px 0 0;
+            border-bottom: 1px solid #f0d7a7;
+        }
+        
+        .task-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--ds-color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .task-text {
+            flex: 1;
+        }
+        
+        .task-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 2px;
+        }
+        
+        .task-subtitle {
+            font-size: 12px;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .task-close {
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: transparent;
+            color: var(--ds-color-gray-60);
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .task-close:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--ds-color-gray-80);
+        }
+        
+        .setup-task-body {
+            padding: 16px;
+        }
+        
+        .task-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 4px;
+            background: #f8f9fa;
+            border: 1px solid #e8ecef;
+        }
+        
+        .task-item.incomplete {
+            background: #fff3cd;
+            border-color: #ffeaa7;
+        }
+        
+        .task-item.complete {
+            background: #d4edda;
+            border-color: #c3e6cb;
+        }
+        
+        .task-item-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: var(--ds-color-primary);
+            font-size: 12px;
+        }
+        
+        .task-item.complete .task-item-icon {
+            color: #28a745;
+        }
+        
+        .task-item-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .task-item-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 2px;
+        }
+        
+        .task-item-desc {
+            font-size: 11px;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .task-item-action {
+            background: var(--ds-color-primary);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .task-item-action:hover {
+            background: #e57b03;
+        }
+        
+        .task-item.complete .task-item-action {
+            background: #28a745;
+            cursor: default;
+        }
+        
+        @media (max-width: 768px) {
+            .setup-task-modal {
+                width: 280px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .setup-task-modal.minimized {
+                width: 160px;
+            }
+        }
+    </style>
+    
+    <!-- Fixed Task Modal in Bottom Right -->
+    <div id="setup-task-modal" class="setup-task-modal">
+        <div class="setup-task-content">
+            <div class="setup-task-header">
+                <div class="task-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="task-text">
+                    <div class="task-title">Complete Setup</div>
+                    <div class="task-subtitle">1 task remaining</div>
+                </div>
+                <button class="task-close" id="task-close-btn" title="Minimize (task will remain active)">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            <div class="setup-task-body" id="setup-task-body">
+                <div class="task-item incomplete" data-task="banking">
+                    <div class="task-item-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="task-item-content">
+                        <div class="task-item-title">Banking Information</div>
+                        <div class="task-item-desc">Set up your payout details, required to receive commission payments and earnings</div>
+                    </div>
+                    <button class="task-item-action" onclick="goToBankingSetup()">
+                        Complete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Setup task modal management
+        function checkBankingStatus() {
+            const bankingCompleted = localStorage.getItem('bel_banking_completed');
+            const taskModal = document.getElementById('setup-task-modal');
+            
+            if (bankingCompleted === 'true') {
+                taskModal.style.display = 'none';
+            } else {
+                taskModal.style.display = 'block';
+            }
+        }
+        
+        function goToBankingSetup() {
+            window.location.href = 'first-login-account.html';
+        }
+        
+        // Task modal minimize/restore functionality
+        const taskModal = document.getElementById('setup-task-modal');
+        const taskCloseBtn = document.getElementById('task-close-btn');
+        const taskBody = document.getElementById('setup-task-body');
+        let isMinimized = false;
+        
+        taskCloseBtn.addEventListener('click', function() {
+            if (isMinimized) {
+                taskBody.style.display = 'block';
+                taskModal.classList.remove('minimized');
+                taskCloseBtn.innerHTML = '<i class="fas fa-minus"></i>';
+                taskCloseBtn.title = 'Minimize (task will remain active)';
+                isMinimized = false;
+            } else {
+                taskBody.style.display = 'none';
+                taskModal.classList.add('minimized');
+                taskCloseBtn.innerHTML = '<i class="fas fa-plus"></i>';
+                taskCloseBtn.title = 'Restore task panel';
+                isMinimized = true;
+            }
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            checkBankingStatus();
+        });
+    </script>
+</body>
+</html>

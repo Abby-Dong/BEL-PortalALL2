@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Resource - BEL Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="bel-header">
+        <i class="bel-hamburger-menu fas fa-bars" id="bel-hamburger-btn"></i>
+        <div class="bel-header-content">
+            <div class="bel-sidebar-logo">
+                <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="logo">
+                <span>BEL Portal</span>
+            </div>
+            <div class="bel-header-right">
+                <div class="bel-notification-bell" id="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <div class="dot"></div>
+                </div>
+                <div class="bel-notification-panel" id="notification-panel">
+                    <div class="bel-notification-header">Announcements</div>
+                    <ul class="bel-notification-list">
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag" style="background-color: var(--ds-color-success-light); color: var(--ds-color-success);">Welcome</span>Welcome to BEL Partner Program!</div>
+                            <div class="bel-notification-date">2025-09-18</div>
+                        </li>
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag new-product">New Campaign</span>ADAM Remote I/O Series are now available for promotion</div>
+                            <div class="bel-notification-date">2025-08-25</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-language-selector" id="language-selector">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="bel-language-panel" id="language-panel">
+                    <ul class="bel-language-list">
+                        <li class="bel-language-item" data-lang="en">
+                            <div class="bel-language-name">English</div>
+                        </li>
+                        <li class="bel-language-item" data-lang="zh">
+                            <div class="bel-language-name">繁體中文</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-user-profile">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="User Avatar">
+                </div>
+                <div class="user-profile-panel" id="user-profile-panel">
+                    <div class="panel-content">
+                        <div class="user-info">
+                            <span class="user-name">New User</span>
+                            <span class="user-email">newuser@example.com</span>
+                        </div>
+                        <div class="user-level">
+                            <span class="bel-badge builder"><i class="fas fa-seedling"></i> Builder</span>
+                        </div>
+                        <hr class="divider">
+                        <a href="first-login-account.html" class="panel-link">My Account</a>
+                        <a href="#" class="panel-link">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bel-container">
+        <!-- Sidebar Component -->
+        <aside class="bel-sidebar" id="bel-sidebar">
+            <div class="bel-sidebar-menu-title">MAIN MENU</div>
+            <nav class="bel-sidebar-nav">
+                <a href="first-login.html" class="bel-sidebar-nav-link"><i class="fas fa-tachometer-alt fa-fw"></i><span>Sales Engagement</span></a>
+                <a href="first-login-earnings.html" class="bel-sidebar-nav-link"><i class="fas fa-wallet fa-fw"></i><span>Earnings & Orders</span></a>
+                <a href="first-login-account.html" class="bel-sidebar-nav-link"><i class="fas fa-user-circle fa-fw"></i><span>My Account</span></a>
+            </nav>
+            <div class="bel-sidebar-menu-title">HELP & SUPPORT</div>
+            <nav class="bel-sidebar-nav">
+                <a href="first-login-support-faq.html" class="bel-sidebar-nav-link"><i class="fas fa-question-circle fa-fw"></i><span>Talk to Admin</span></a>
+                <a href="first-login-resource-center.html" class="bel-sidebar-nav-link active"><i class="fas fa-folder fa-fw"></i><span>Get Resource</span></a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="bel-main-content" id="bel-main-content">
+            <h1 class="bel-h1">Get Resource</h1>
+            
+            <!-- New User Welcome Notice -->
+            <div style="background: #fef7e6; border: 1px solid #f0d7a7; border-radius: 4px; padding: 20px; margin-bottom: 24px;">
+                <div style="display: flex; align-items: center;">
+                    <i class="fas fa-folder-open" style="color: var(--ds-color-primary); margin-right: 12px; font-size: 1.2rem;"></i>
+                    <div>
+                        <h3 style="margin: 0 0 6px 0; color: var(--ds-color-gray-90); font-size: 1.1rem; font-weight: 600;">Access Marketing Resources</h3>
+                        <p style="margin: 0; color: var(--ds-color-gray-70); font-size: 0.9rem;">
+                            Browse and download product catalogs, marketing materials, and technical resources to support your sales efforts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="resource-filter-bar" id="resource-filter">
+                <button class="filter-btn active" data-filter="deals">Deals & Offers</button>
+                <button class="filter-btn" data-filter="products">Advantech</button>
+            </div>
+            
+            <div class="resource-grid">
+                <div class="resource-card" data-category="deals">
+                    <div class="thumbnail">
+                        <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/BEL-PCs.png" alt="Industrial Touch Panel PCs" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNmMGYwZjAiLz48dGV4dCB4PSIxMDAiIHk9Ijc1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTk5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+SW5kdXN0cmlhbCBQQ3M8L3RleHQ+PC9zdmc+';">
+                    </div>
+                    <div class="resource-card-copy">
+                        <p>Industrial Touch Panel PCs</p>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="deals">
+                    <div class="thumbnail">
+                        <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/BEL-PoE.png" alt="PoE Industrial switches" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNmMGYwZjAiLz48dGV4dCB4PSIxMDAiIHk9Ijc1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTk5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+UG9FIFN3aXRjaGVzPC90ZXh0Pjwvc3ZnPg==';">
+                    </div>
+                    <div class="resource-card-copy">
+                        <p>PoE Industrial Switches</p>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="deals">
+                    <div class="thumbnail">
+                        <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/BEL-ADAM.png" alt="ADAM Remote I/O Series" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNmMGYwZjAiLz48dGV4dCB4PSIxMDAiIHk9Ijc1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTk5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+QURBTSBTZXJpZXM8L3RleHQ+PC9zdmc+';">
+                    </div>
+                    <div class="resource-card-copy">
+                        <p>ADAM Remote I/O Series</p>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-category="products">
+                    <div class="thumbnail">
+                        <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/BEL-WISE.png" alt="WISE IoT Sensor Node" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNmMGYwZjAiLz48dGV4dCB4PSIxMDAiIHk9Ijc1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTk5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+V0lTRSBJb1QgU2Vuc29yPC90ZXh0Pjwvc3ZnPg==';">
+                    </div>
+                    <div class="resource-card-copy">
+                        <p>WISE IoT Sensor Node Series</p>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="products">
+                    <div class="thumbnail">
+                        <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/BEL-ARK.png" alt="ARK Embedded Systems" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNmMGYwZjAiLz48dGV4dCB4PSIxMDAiIHk9Ijc1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTk5OTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+QVJLIEVtYmVkZGVkPC90ZXh0Pjwvc3ZnPg==';">
+                    </div>
+                    <div class="resource-card-copy">
+                        <p>ARK Embedded Computer Systems</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Fixed Task Modal in Bottom Right -->
+    <div id="setup-task-modal" class="setup-task-modal">
+        <div class="setup-task-content">
+            <div class="setup-task-header">
+                <div class="task-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="task-text">
+                    <div class="task-title">Complete Setup</div>
+                    <div class="task-subtitle">1 task remaining</div>
+                </div>
+                <button class="task-close" id="task-close-btn" title="Minimize (task will remain active)">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            <div class="setup-task-body" id="setup-task-body">
+                <div class="task-item incomplete" data-task="banking">
+                    <div class="task-item-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="task-item-content">
+                        <div class="task-item-title">Banking Information</div>
+                        <div class="task-item-desc">Set up your payout details, required to receive commission payments and earnings</div>
+                    </div>
+                    <button class="task-item-action" onclick="goToBankingSetup()">
+                        Complete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data-loader.js"></script>
+    <script src="js/common.js"></script>
+    
+    <script>
+        // Setup task modal management
+        function checkBankingStatus() {
+            const bankingCompleted = localStorage.getItem('bel_banking_completed');
+            const taskModal = document.getElementById('setup-task-modal');
+            
+            if (bankingCompleted === 'true') {
+                taskModal.style.display = 'none';
+            } else {
+                taskModal.style.display = 'block';
+            }
+        }
+        
+        function goToBankingSetup() {
+            window.location.href = 'first-login-account.html';
+        }
+        
+        // Task modal minimize/restore functionality
+        const taskModal = document.getElementById('setup-task-modal');
+        const taskCloseBtn = document.getElementById('task-close-btn');
+        const taskBody = document.getElementById('setup-task-body');
+        let isMinimized = false;
+        
+        taskCloseBtn.addEventListener('click', function() {
+            if (isMinimized) {
+                taskBody.style.display = 'block';
+                taskModal.classList.remove('minimized');
+                taskCloseBtn.innerHTML = '<i class="fas fa-minus"></i>';
+                taskCloseBtn.title = 'Minimize (task will remain active)';
+                isMinimized = false;
+            } else {
+                taskBody.style.display = 'none';
+                taskModal.classList.add('minimized');
+                taskCloseBtn.innerHTML = '<i class="fas fa-plus"></i>';
+                taskCloseBtn.title = 'Restore task panel';
+                isMinimized = true;
+            }
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            checkBankingStatus();
+        });
+    </script>
+
+    <style>
+        /* Fixed Task Modal Styles */
+        .setup-task-modal {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e8ecef;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: none;
+        }
+        
+        .setup-task-modal.minimized {
+            width: 200px;
+        }
+        
+        .setup-task-content {
+            padding: 0;
+        }
+        
+        .setup-task-header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: #fef7e6;
+            border-radius: 12px 12px 0 0;
+            border-bottom: 1px solid #f0d7a7;
+        }
+        
+        .task-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--ds-color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .task-text {
+            flex: 1;
+        }
+        
+        .task-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 2px;
+        }
+        
+        .task-subtitle {
+            font-size: 12px;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .task-close {
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: transparent;
+            color: var(--ds-color-gray-60);
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .task-close:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--ds-color-gray-80);
+        }
+        
+        .setup-task-body {
+            padding: 16px;
+        }
+        
+        .task-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 4px;
+            background: #f8f9fa;
+            border: 1px solid #e8ecef;
+        }
+        
+        .task-item.incomplete {
+            background: #fff3cd;
+            border-color: #ffeaa7;
+        }
+        
+        .task-item.complete {
+            background: #d4edda;
+            border-color: #c3e6cb;
+        }
+        
+        .task-item-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: var(--ds-color-primary);
+            font-size: 12px;
+        }
+        
+        .task-item.complete .task-item-icon {
+            color: #28a745;
+        }
+        
+        .task-item-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .task-item-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 2px;
+        }
+        
+        .task-item-desc {
+            font-size: 11px;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .task-item-action {
+            background: var(--ds-color-primary);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .task-item-action:hover {
+            background: #e57b03;
+        }
+        
+        .task-item.complete .task-item-action {
+            background: #28a745;
+            cursor: default;
+        }
+        
+        @media (max-width: 768px) {
+            .setup-task-modal {
+                width: 280px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .setup-task-modal.minimized {
+                width: 160px;
+            }
+        }
+    </style>
+</body>
+</html>

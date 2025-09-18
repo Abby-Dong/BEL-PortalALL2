@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - BEL Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="bel-header">
+        <i class="bel-hamburger-menu fas fa-bars" id="bel-hamburger-btn"></i>
+        <div class="bel-header-content">
+            <div class="bel-sidebar-logo">
+                <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="logo">
+                <span>BEL Portal</span>
+            </div>
+            <div class="bel-header-right">
+                <div class="bel-notification-bell" id="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <div class="dot"></div>
+                </div>
+                <div class="bel-notification-panel" id="notification-panel">
+                    <div class="bel-notification-header">Announcements</div>
+                    <ul class="bel-notification-list">
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag" style="background-color: var(--ds-color-success-light); color: var(--ds-color-success);">Welcome</span>Welcome to BEL Partner Program!</div>
+                            <div class="bel-notification-date">2025-09-18</div>
+                        </li>
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag new-product">New Campaign</span>ADAM Remote I/O Series are now available for promotion</div>
+                            <div class="bel-notification-date">2025-08-25</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-language-selector" id="language-selector">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="bel-language-panel" id="language-panel">
+                    <ul class="bel-language-list">
+                        <li class="bel-language-item" data-lang="en">
+                            <div class="bel-language-name">English</div>
+                        </li>
+                        <li class="bel-language-item" data-lang="zh">
+                            <div class="bel-language-name">繁體中文</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-user-profile">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="User Avatar">
+                </div>
+                <div class="user-profile-panel" id="user-profile-panel">
+                    <div class="panel-content">
+                        <div class="user-info">
+                            <span class="user-name">New User</span>
+                            <span class="user-email">newuser@example.com</span>
+                        </div>
+                        <div class="user-level">
+                            <span class="bel-badge builder"><i class="fas fa-seedling"></i> Builder</span>
+                        </div>
+                        <hr class="divider">
+                        <a href="first-login-account.html" class="panel-link">My Account</a>
+                        <a href="#" class="panel-link">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bel-container">
+        <!-- Sidebar Component -->
+        <aside class="bel-sidebar" id="bel-sidebar">
+            <div class="bel-sidebar-menu-title">MAIN MENU</div>
+            <nav class="bel-sidebar-nav">
+                <a href="first-login.html" class="bel-sidebar-nav-link"><i class="fas fa-tachometer-alt fa-fw"></i><span>Sales Engagement</span></a>
+                <a href="first-login-earnings.html" class="bel-sidebar-nav-link"><i class="fas fa-wallet fa-fw"></i><span>Earnings & Orders</span></a>
+                <a href="first-login-account.html" class="bel-sidebar-nav-link active"><i class="fas fa-user-circle fa-fw"></i><span>My Account</span></a>
+            </nav>
+            <div class="bel-sidebar-menu-title">HELP & SUPPORT</div>
+            <nav class="bel-sidebar-nav">
+                <a href="first-login-support-faq.html" class="bel-sidebar-nav-link"><i class="fas fa-question-circle fa-fw"></i><span>Talk to Admin</span></a>
+                <a href="first-login-resource-center.html" class="bel-sidebar-nav-link"><i class="fas fa-folder fa-fw"></i><span>Get Resource</span></a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="bel-main-content" id="bel-main-content">
+            <h1 class="bel-h1">My Account</h1>
+            
+            <!-- Priority Task Banner -->
+            <div class="priority-banner" style="background: #fef7e6; border: 1px solid #f0d7a7; color: var(--ds-color-gray-90); padding: 20px; border-radius: 4px; margin-bottom: 24px; border-left: 4px solid var(--ds-color-primary);">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center;">
+                        <i class="fas fa-exclamation-circle" style="font-size: 1.5rem; margin-right: 16px; color: var(--ds-color-primary);"></i>
+                        <div>
+                            <h3 style="margin: 0 0 4px 0; font-size: 1.2rem; font-weight: 600; color: var(--ds-color-gray-90);">Complete Your Banking Information</h3>
+                            <p style="margin: 0; color: var(--ds-color-gray-60); font-size: 0.9rem;">Set up your banking details to start receiving commission payouts</p>
+                        </div>
+                    </div>
+                    <button onclick="scrollToBanking()" style="background: var(--ds-color-primary); color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 500; transition: background-color 0.2s; font-size: 0.9rem;">
+                        Complete Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="bel-panel editable-panel" id="account-profile-panel">
+                <div class="panel-header">
+                    <h3>Account Profile</h3>
+                    <div>
+                        <button class="bel-btn secondary edit-button">Edit</button>
+                        <div class="save-cancel-buttons">
+                            <button class="bel-btn secondary cancel-button">Cancel</button>
+                            <button class="bel-btn secondary save-button" disabled>Save</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Avatar Section -->
+                <div class="profile-avatar-section">
+                    <div class="avatar-container">
+                        <div class="avatar-preview">
+                            <img id="profile-avatar-img" src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="Profile Avatar">
+                            <div class="avatar-overlay" id="avatar-overlay">
+                                <i class="fas fa-camera"></i>
+                                <span>Change Photo</span>
+                            </div>
+                        </div>
+                        <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+                        <div class="avatar-info">
+                            <h4>Profile Picture</h4>
+                            <p>Upload a photo to personalize your profile. JPG, PNG files up to 5MB.</p>
+                            <button class="bel-btn secondary avatar-upload-btn" id="avatar-upload-btn">
+                                <i class="fas fa-upload"></i>
+                                Upload Photo
+                            </button>
+                            <button class="bel-btn secondary avatar-remove-btn" id="avatar-remove-btn">
+                                <i class="fas fa-trash"></i>
+                                Remove Photo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bel-grid-container grid-cols-3">
+                    <div class="bel-form-group">
+                        <label for="acc-name">Name</label>
+                        <input type="text" id="acc-name" value="New User" readonly>
+                    </div>
+                    <div class="bel-form-group">
+                        <label for="acc-email">Contact Email</label>
+                        <input type="email" id="acc-email" value="newuser@example.com" readonly>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bel-panel editable-panel bel-mt-24" id="payout-info-panel">
+                <div class="panel-header">
+                    <h3>Payout Information</h3>
+                    <div>
+                        <span class="priority-indicator" style="background: var(--ds-color-warning-light); color: var(--ds-color-warning-dark); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; margin-right: 8px;">
+                            <i class="fas fa-exclamation-triangle" style="margin-right: 4px;"></i>Incomplete
+                        </span>
+                        <a href="#" id="payout-info-help" class="bel-help-link">
+                            <i class="fas fa-question-circle bel-mr-4" style="margin-right: 4px;"></i>How to Modify?
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Banking Information Notice -->
+                <div class="banking-notice" style="background: #fef7e6; border: 1px solid #f0d7a7; border-radius: 4px; padding: 16px; margin-bottom: 20px;">
+                    <div style="display: flex; align-items: center;">
+                        <i class="fas fa-info-circle" style="color: var(--ds-color-primary); margin-right: 12px; font-size: 1.1rem;"></i>
+                        <p style="margin: 0; color: var(--ds-color-gray-70); font-size: 0.9rem;">
+                            <strong>Required for payouts:</strong> Complete your banking information to receive commission payments. This information is required for first-time setup and can be modified later through support.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Banking Form -->
+                <form class="banking-form" id="banking-form">
+                    <!-- First row: Account Holder Name | Phone Number (50% each) -->
+                    <div class="bel-grid-container grid-cols-2 bel-mb-16">
+                        <div class="bel-form-group">
+                            <label for="account-holder-name">Account Holder Name *</label>
+                            <input type="text" id="account-holder-name" placeholder="Full name as on bank account" required style="color: var(--ds-color-gray-80);">
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="phone-number">Phone Number *</label>
+                            <input type="tel" id="phone-number" placeholder="Enter phone number" required style="color: var(--ds-color-gray-80);">
+                        </div>
+                    </div>
+                    <!-- Second row: Bank Name | SWIFT Code | Account Number (33% each) -->
+                    <div class="bel-grid-container grid-cols-3 bel-mb-16">
+                        <div class="bel-form-group">
+                            <label for="bank-name">Bank Name *</label>
+                            <input type="text" id="bank-name" placeholder="Your bank name" required style="color: var(--ds-color-gray-80);">
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="swift-code">SWIFT Code *</label>
+                            <input type="text" id="swift-code" placeholder="Bank SWIFT code" required style="color: var(--ds-color-gray-80);">
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="account-number">Account Number *</label>
+                            <input type="text" id="account-number" placeholder="Your bank account number" required style="color: var(--ds-color-gray-80);">
+                        </div>
+                    </div>
+                    <!-- Third row: Address (full width) -->
+                    <div class="bel-grid-container bel-mb-16">
+                        <div class="bel-form-group">
+                            <label for="address">Address *</label>
+                            <textarea id="address" rows="3" placeholder="Complete address for bank account verification" required style="resize: vertical; min-height: 80px; width: 100%; color: var(--ds-color-gray-80);"></textarea>
+                        </div>
+                    </div>
+                    <!-- Form Actions -->
+                    <div class="form-actions" style="margin-top: 24px; text-align: right;">
+                        <button type="reset" class="bel-btn secondary" style="margin-right: 12px;">
+                            <i class="fas fa-undo" style="margin-right: 6px;"></i>
+                            Reset Form
+                        </button>
+                        <button type="submit" class="bel-btn primary">
+                            <i class="fas fa-save" style="margin-right: 6px;"></i>
+                            Save Banking Information
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <h3 class="bel-h3">Account Settings</h3>
+            <div class="bel-panel">
+                <div class="settings-row" id="language-setting-row">
+                    <div class="icon"><i class="fas fa-globe"></i></div>
+                    <div class="text-content">
+                        <h4>Language</h4>
+                        <p>General preferences for web</p>
+                    </div>
+                    <div class="current-value" id="language-current-value">English</div>
+                    <div id="language-select-group">
+                        <select id="language-select" class="bel-language-select">
+                            <option value="English">English</option>
+                            <option value="Traditional Chinese">繁體中文</option>
+                            <option value="Korean">한국어</option>
+                        </select>
+                        <button class="bel-btn bel-save-btn" id="save-language-btn">Save</button>
+                    </div>
+                    <div class="arrow" id="language-arrow"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content bel-max-w-400">
+            <div class="bel-modal-center">
+                <div class="bel-mb-20">
+                    <i class="fas fa-check-circle bel-success-icon"></i>
+                </div>
+                <h3 class="bel-modal-title">Banking Information Saved!</h3>
+                <p class="bel-modal-text">
+                    Your banking information has been saved successfully. Your account is now ready to receive commission payouts.
+                </p>
+                <button class="bel-btn primary success-modal-close">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payout Information Help Modal -->
+    <div class="modal-overlay" id="payout-info-modal">
+        <div class="modal-content bel-max-w-500">
+            <div class="modal-header">
+                <h3>Payout Information Policy</h3>
+            </div>
+            <div>
+                <div class="bel-security-notice-container">
+                    <i class="fas fa-exclamation-triangle bel-warning-icon"></i>
+                    <span class="bel-security-title">First-Time Setup</span>
+                </div>
+                <p class="bel-modal-text-no-margin">
+                    This is your first-time login. Please complete your banking information to enable commission payouts.
+                </p>
+                <p class="bel-modal-text-mb20">
+                    After setup, changes to banking information require identity verification through our <a href="support-faq.html" class="bel-color-link">support team</a> for security reasons.
+                </p>
+                <div class="bel-text-center">
+                    <button class="bel-btn primary modal-close-button">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data-loader.js"></script>
+    <script src="js/common.js"></script>
+    
+    <script>
+        // Banking form functionality
+        document.getElementById('banking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success modal
+            document.getElementById('success-modal').classList.add('show');
+            
+            // Mark banking task as completed in localStorage
+            localStorage.setItem('bel_banking_completed', 'true');
+            
+            // Update priority indicator
+            const priorityIndicator = document.querySelector('.priority-indicator');
+            if (priorityIndicator) {
+                priorityIndicator.style.background = '#d4edda';
+                priorityIndicator.style.color = '#155724';
+                priorityIndicator.innerHTML = '<i class="fas fa-check-circle" style="margin-right: 4px;"></i>Complete';
+            }
+            
+            // Update banking notice
+            const bankingNotice = document.querySelector('.banking-notice');
+            if (bankingNotice) {
+                bankingNotice.style.background = '#d4edda';
+                bankingNotice.style.borderColor = '#c3e6cb';
+                bankingNotice.innerHTML = `
+                    <div style="display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="color: #28a745; margin-right: 12px; font-size: 1.1rem;"></i>
+                        <p style="margin: 0; color: var(--ds-color-gray-70); font-size: 0.9rem;">
+                            <strong>Banking information saved successfully!</strong> Your account is now ready to receive payouts.
+                        </p>
+                    </div>
+                `;
+            }
+            
+            // Update priority banner
+            const priorityBanner = document.querySelector('.priority-banner');
+            if (priorityBanner) {
+                priorityBanner.style.background = '#d4edda';
+                priorityBanner.style.borderColor = '#c3e6cb';
+                priorityBanner.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-check-circle" style="font-size: 1.5rem; margin-right: 16px; color: #28a745;"></i>
+                        <div>
+                            <h3 style="margin: 0 0 4px 0; font-size: 1.2rem; font-weight: 600; color: var(--ds-color-gray-90);">Banking Information Complete!</h3>
+                            <p style="margin: 0; color: var(--ds-color-gray-60); font-size: 0.9rem;">Your account is now ready to receive commission payouts</p>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Hide setup task modal if it exists
+            const taskModal = document.getElementById('setup-task-modal');
+            if (taskModal) {
+                taskModal.style.display = 'none';
+            }
+            
+            // Disable form inputs
+            const formInputs = document.querySelectorAll('#banking-form input, #banking-form textarea, #banking-form select');
+            formInputs.forEach(input => {
+                input.disabled = true;
+                input.style.backgroundColor = '#f8f9fa';
+            });
+        });
+        
+        // Scroll to banking section
+        function scrollToBanking() {
+            document.getElementById('payout-info-panel').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <style>
+        /* Placeholder styling */
+        input::placeholder,
+        textarea::placeholder {
+            color: var(--ds-color-gray-50) !important;
+            opacity: 1;
+        }
+        
+        input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder {
+            color: var(--ds-color-gray-50) !important;
+        }
+        
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            color: var(--ds-color-gray-50) !important;
+            opacity: 1;
+        }
+        
+        input:-ms-input-placeholder,
+        textarea:-ms-input-placeholder {
+            color: var(--ds-color-gray-50) !important;
+        }
+        
+        /* Fix textarea styling */
+        #address {
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 1rem;
+            line-height: 1.5;
+            padding: 12px;
+            border: 1px solid var(--ds-color-gray-30);
+            border-radius: 6px;
+        }
+        
+        #address:focus {
+            outline: none;
+            border-color: var(--ds-color-primary);
+            box-shadow: 0 0 0 2px rgba(243, 152, 0, 0.2);
+        }
+        
+        /* Ensure form consistency */
+        .banking-form input,
+        .banking-form textarea {
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        /* Priority indicator styling */
+        .priority-indicator {
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 6px 10px;
+            border-radius: 4px;
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        
+        /* Fixed Task Modal Styles */
+        .setup-task-modal {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e8ecef;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: none;
+        }
+        
+        .setup-task-modal.minimized {
+            width: 200px;
+        }
+        
+        .setup-task-content {
+            padding: 0;
+        }
+        
+        .setup-task-header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: #fef7e6;
+            border-radius: 12px 12px 0 0;
+            border-bottom: 1px solid #f0d7a7;
+        }
+        
+        .task-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--ds-color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .task-text {
+            flex: 1;
+        }
+        
+        .task-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 2px;
+        }
+        
+        .task-subtitle {
+            font-size: 12px;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .task-close {
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: transparent;
+            color: var(--ds-color-gray-60);
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .task-close:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--ds-color-gray-80);
+        }
+        
+        .setup-task-body {
+            padding: 16px;
+        }
+        
+        .task-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 4px;
+            background: #f8f9fa;
+            border: 1px solid #e8ecef;
+        }
+        
+        .task-item.incomplete {
+            background: #fff3cd;
+            border-color: #ffeaa7;
+        }
+        
+        .task-item.complete {
+            background: #d4edda;
+            border-color: #c3e6cb;
+        }
+        
+        .task-item-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: var(--ds-color-primary);
+            font-size: 12px;
+        }
+        
+        .task-item.complete .task-item-icon {
+            color: #28a745;
+        }
+        
+        .task-item-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .task-item-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 2px;
+        }
+        
+        .task-item-desc {
+            font-size: 11px;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .task-item-action {
+            background: var(--ds-color-primary);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .task-item-action:hover {
+            background: #e57b03;
+        }
+        
+        .task-item.complete .task-item-action {
+            background: #28a745;
+            cursor: default;
+        }
+        
+        @media (max-width: 768px) {
+            .setup-task-modal {
+                width: 280px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .setup-task-modal.minimized {
+                width: 160px;
+            }
+        }
+    </style>
+    
+    <!-- Fixed Task Modal in Bottom Right -->
+    <div id="setup-task-modal" class="setup-task-modal">
+        <div class="setup-task-content">
+            <div class="setup-task-header">
+                <div class="task-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="task-text">
+                    <div class="task-title">Complete Setup</div>
+                    <div class="task-subtitle">1 task remaining</div>
+                </div>
+                <button class="task-close" id="task-close-btn" title="Minimize (task will remain active)">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            <div class="setup-task-body" id="setup-task-body">
+                <div class="task-item incomplete" data-task="banking">
+                    <div class="task-item-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="task-item-content">
+                        <div class="task-item-title">Banking Information</div>
+                        <div class="task-item-desc">Set up your payout details, required to receive commission payments and earnings</div>
+                    </div>
+                    <button class="task-item-action" onclick="scrollToBankingSection()">
+                        Complete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Setup task modal management
+        function checkBankingStatus() {
+            const bankingCompleted = localStorage.getItem('bel_banking_completed');
+            const taskModal = document.getElementById('setup-task-modal');
+            
+            if (bankingCompleted === 'true') {
+                taskModal.style.display = 'none';
+            } else {
+                taskModal.style.display = 'block';
+            }
+        }
+        
+        function scrollToBankingSection() {
+            const bankingSection = document.getElementById('banking-setup');
+            if (bankingSection) {
+                bankingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        
+        // Task modal minimize/restore functionality
+        const taskModal = document.getElementById('setup-task-modal');
+        const taskCloseBtn = document.getElementById('task-close-btn');
+        const taskBody = document.getElementById('setup-task-body');
+        let isMinimized = false;
+        
+        taskCloseBtn.addEventListener('click', function() {
+            if (isMinimized) {
+                taskBody.style.display = 'block';
+                taskModal.classList.remove('minimized');
+                taskCloseBtn.innerHTML = '<i class="fas fa-minus"></i>';
+                taskCloseBtn.title = 'Minimize (task will remain active)';
+                isMinimized = false;
+            } else {
+                taskBody.style.display = 'none';
+                taskModal.classList.add('minimized');
+                taskCloseBtn.innerHTML = '<i class="fas fa-plus"></i>';
+                taskCloseBtn.title = 'Restore task panel';
+                isMinimized = true;
+            }
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            checkBankingStatus();
+        });
+    </script>
+</body>
+</html>
