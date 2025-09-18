@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "uploadDate": "2025-08-15",
+      "title": "ADAM-6017 Product Guide",
+      "subtitle": "Complete setup and configuration guide for ADAM-6017 series industrial modules",
+      "category": "IoTMart Campaign",
+      "pageLink": "https://example.com/products/adam-6017"
+    },
+    {
+      "uploadDate": "2025-08-10",
+      "title": "IoT Solutions Catalog",
+      "subtitle": "2025 Product Catalog with comprehensive IoT solutions and pricing",
+      "category": "Advantech Resource Website",
+      "pageLink": "https://example.com/catalog/2025"
+    }
+  ],
+  "description": "內容管理系統資料，包含行銷素材、產品文件、圖片與連結管理"
+}

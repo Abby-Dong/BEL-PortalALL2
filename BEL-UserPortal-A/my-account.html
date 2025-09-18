@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - BEL Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="bel-header">
+        <i class="bel-hamburger-menu fas fa-bars" id="bel-hamburger-btn"></i>
+        <div class="bel-header-content">
+            <div class="bel-sidebar-logo">
+                <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="logo">
+                <span>BEL Portal</span>
+            </div>
+            <div class="bel-header-right">
+                <div class="bel-notification-bell" id="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <div class="dot"></div>
+                </div>
+                <div class="bel-notification-panel" id="notification-panel">
+                    <div class="bel-notification-header">Announcements</div>
+                    <ul class="bel-notification-list">
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag important">Important</span>September Earnings Payout Postponed</div>
+                            <div class="bel-notification-date">2025-08-26</div>
+                        </li>
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag new-product">New Campaign</span>ADAM Remote I/O Series are now available for promotion</div>
+                            <div class="bel-notification-date">2025-08-25</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-language-selector" id="language-selector">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="bel-language-panel" id="language-panel">
+                    <ul class="bel-language-list">
+                        <li class="bel-language-item" data-lang="en">
+                            <div class="bel-language-name">English</div>
+                        </li>
+                        <li class="bel-language-item" data-lang="zh">
+                            <div class="bel-language-name">繁體中文</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-user-profile">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="User Avatar">
+                </div>
+                <div class="user-profile-panel" id="user-profile-panel">
+                    <div class="panel-content">
+                        <div class="user-info">
+                            <span class="user-name">Maxwell</span>
+                            <span class="user-email">Maxwell.Walker@example.com</span>
+                        </div>
+                        <div class="user-level">
+                            <span class="bel-badge explorer"><i class="fas fa-rocket"></i> Explorer</span>
+                        </div>
+                        <hr class="divider">
+                        <a href="my-account.html" class="panel-link">My Account</a>
+                        <a href="#" class="panel-link">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bel-container">
+        <!-- Sidebar Component -->
+        <aside class="bel-sidebar" id="bel-sidebar">
+            <div class="bel-sidebar-menu-title">MAIN MENU</div>
+            <nav class="bel-sidebar-nav">
+                <a href="index.html" class="bel-sidebar-nav-link"><i class="fas fa-tachometer-alt fa-fw"></i><span>Sales Engagement</span></a>
+                <a href="earnings-orders.html" class="bel-sidebar-nav-link"><i class="fas fa-wallet fa-fw"></i><span>Earnings & Orders</span></a>
+                <a href="my-account.html" class="bel-sidebar-nav-link active"><i class="fas fa-user-circle fa-fw"></i><span>My Account</span></a>
+            </nav>
+            <div class="bel-sidebar-menu-title">HELP & SUPPORT</div>
+            <nav class="bel-sidebar-nav">
+                <a href="support-faq.html" class="bel-sidebar-nav-link"><i class="fas fa-question-circle fa-fw"></i><span>Talk to Admin</span></a>
+                <a href="resource-center.html" class="bel-sidebar-nav-link"><i class="fas fa-folder fa-fw"></i><span>Get Resource</span></a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="bel-main-content" id="bel-main-content">
+            <h1 class="bel-h1">My Account</h1>
+
+            <div class="bel-panel editable-panel" id="account-profile-panel">
+                <div class="panel-header">
+                    <h3>Account Profile</h3>
+                    <div>
+                        <button class="bel-btn secondary edit-button">Edit</button>
+                        <div class="save-cancel-buttons">
+                            <button class="bel-btn secondary cancel-button">Cancel</button>
+                            <button class="bel-btn secondary save-button" disabled>Save</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Avatar Section -->
+                <div class="profile-avatar-section">
+                    <div class="avatar-container">
+                        <div class="avatar-preview">
+                            <img id="profile-avatar-img" src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="Profile Avatar">
+                            <div class="avatar-overlay" id="avatar-overlay">
+                                <i class="fas fa-camera"></i>
+                                <span>Change Photo</span>
+                            </div>
+                        </div>
+                        <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+                        <div class="avatar-info">
+                            <h4>Profile Picture</h4>
+                            <p>Upload a photo to personalize your profile. JPG, PNG files up to 5MB.</p>
+                            <button class="bel-btn secondary avatar-upload-btn" id="avatar-upload-btn">
+                                <i class="fas fa-upload"></i>
+                                Upload Photo
+                            </button>
+                            <button class="bel-btn secondary avatar-remove-btn" id="avatar-remove-btn">
+                                <i class="fas fa-trash"></i>
+                                Remove Photo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bel-grid-container grid-cols-3">
+                    <div class="bel-form-group">
+                        <label for="acc-name">Name</label>
+                        <input type="text" id="acc-name" value="Maxwell Walker" readonly>
+                    </div>
+                    <div class="bel-form-group">
+                        <label for="acc-email">Contact Email</label>
+                        <input type="email" id="acc-email" value="Maxwell.Walker@example.com" readonly>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bel-panel editable-panel bel-mt-24" id="payout-info-panel">
+                <div class="panel-header">
+                    <h3>Payout Information</h3>
+                    <div>
+                        <a href="#" id="payout-info-help" class="bel-help-link">
+                            <i class="fas fa-question-circle bel-mr-4" style="margin-right: 4px;"></i>How to Modify?
+                        </a>
+                    </div>
+                </div>
+                <!-- First row: Account Holder Name | Phone Number (50% each) -->
+                <div class="bel-grid-container grid-cols-2 bel-mb-16">
+                    <div class="bel-form-group">
+                        <label for="account-holder-name">Account Holder Name</label>
+                        <div class="bel-text-display" id="account-holder-name">Maxwell Walker</div>
+                    </div>
+                    <div class="bel-form-group">
+                        <label for="phone-number">Phone Number</label>
+                        <div class="bel-text-display" id="phone-number">+1 (555) 123-4567</div>
+                    </div>
+                </div>
+                <!-- Second row: Bank Name | SWIFT Code | Account Number (33% each) -->
+                <div class="bel-grid-container grid-cols-3 bel-mb-16">
+                    <div class="bel-form-group">
+                        <label for="bank-name">Bank Name</label>
+                        <div class="bel-text-display" id="bank-name">Bank of America</div>
+                    </div>
+                    <div class="bel-form-group">
+                        <label for="swift-code">SWIFT Code</label>
+                        <div class="bel-text-display" id="swift-code">BOFAUS3N</div>
+                    </div>
+                    <div class="bel-form-group">
+                        <label for="account-number">Account Number</label>
+                        <div class="bel-text-display" id="account-number">**** **** **** 1234</div>
+                    </div>
+                </div>
+                <!--Third  row: Address (full width) -->
+                <div class="bel-grid-container" >
+                    <div class="bel-form-group">
+                        <label for="address">Address</label>
+                        <div class="bel-text-display" id="address">1234 Technology Innovation Boulevard, Suite 567, Silicon Valley Business District, San Francisco, California 94102, United States of America</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="bel-h3">Account Settings</h3>
+            <div class="bel-panel">
+                <div class="settings-row" id="language-setting-row">
+                    <div class="icon"><i class="fas fa-globe"></i></div>
+                    <div class="text-content">
+                        <h4>Language</h4>
+                        <p>General preferences for web</p>
+                    </div>
+                    <div class="current-value" id="language-current-value">English</div>
+                    <div id="language-select-group">
+                        <select id="language-select" class="bel-language-select">
+                            <option value="English">English</option>
+                            <option value="Traditional Chinese">繁體中文</option>
+                            <option value="Korean">한국어</option>
+                        </select>
+                        <button class="bel-btn bel-save-btn" id="save-language-btn">Save</button>
+                    </div>
+                    <div class="arrow" id="language-arrow"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content bel-max-w-400">
+            <div class="bel-modal-center">
+                <div class="bel-mb-20">
+                    <i class="fas fa-check-circle bel-success-icon"></i>
+                </div>
+                <h3 class="bel-modal-title">Changes Saved Successfully</h3>
+                <p class="bel-modal-text">
+                    Your account information has been updated successfully.
+                </p>
+                <button class="bel-btn primary success-modal-close">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payout Information Help Modal -->
+    <div class="modal-overlay" id="payout-info-modal">
+        <div class="modal-content bel-max-w-500">
+            <div class="modal-header">
+                <h3>Payout Information Policy</h3>
+            </div>
+            <div>
+                <div class="bel-security-notice-container">
+                    <i class="fas fa-exclamation-triangle bel-warning-icon"></i>
+                    <span class="bel-security-title">Security Notice</span>
+                </div>
+                <p class="bel-modal-text-no-margin">
+                    For security and payment processing reasons, payout information can only be set during first login and cannot be modified afterwards.
+                </p>
+                <p class="bel-modal-text-mb20">
+                    If you need to update your information, please contact our <a href="support-faq.html" class="bel-color-link">support team</a> with identity verification.
+                </p>
+                <div class="bel-text-center">
+                    <button class="bel-btn primary modal-close-button">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data-loader.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

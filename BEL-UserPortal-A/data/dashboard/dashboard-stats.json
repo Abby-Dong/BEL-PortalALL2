@@ -1,0 +1,49 @@
+{
+  "userStats": [
+    {
+      "userId": "USER_001",
+      "stats": [
+        {
+          "title": "Referral Link Traffic",
+          "value": "1,280",
+          "icon": "fas fa-mouse-pointer",
+          "trend": {
+            "direction": "positive",
+            "percentage": "+6.5%",
+            "text": "Since Last Month (MoM)"
+          }
+        },
+        {
+          "title": "Referral ID Usage", 
+          "value": "142",
+          "icon": "fas fa-tags",
+          "trend": {
+            "direction": "negative",
+            "percentage": "-0.10%",
+            "text": "Since Last Month (MoM)"
+          }
+        },
+        {
+          "title": "Total Orders Count",
+          "value": "35", 
+          "icon": "fas fa-shopping-cart",
+          "trend": {
+            "direction": "negative",
+            "percentage": "-0.2%",
+            "text": "Since Last Month (MoM)"
+          }
+        },
+        {
+          "title": "Rebate Earnings",
+          "value": "$8,500",
+          "icon": "fas fa-dollar-sign", 
+          "trend": {
+            "direction": "positive",
+            "percentage": "+11.8%",
+            "text": "Since Last Month (MoM)"
+          }
+        }
+      ]
+    }
+  ]
+}

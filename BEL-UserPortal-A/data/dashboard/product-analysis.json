@@ -1,0 +1,196 @@
+{
+  "topCategories": [
+    {
+      "category": "IoT Gateway & Edge Intelligence",
+      "sales": 3500,
+      "percentage": 31.2,
+      "color": "#007bff"
+    },
+    {
+      "category": "Remote I/O Modules",
+      "sales": 2800,
+      "percentage": 25.0,
+      "color": "#28a745"
+    },
+    {
+      "category": "Embedded Computers",
+      "sales": 2200,
+      "percentage": 19.6,
+      "color": "#ffc107"
+    },
+    {
+      "category": "Wireless Sensing & Solutions",
+      "sales": 1500,
+      "percentage": 13.4,
+      "color": "#17a2b8"
+    },
+    {
+      "category": "Edge AI Solutions",
+      "sales": 1200,
+      "percentage": 10.7,
+      "color": "#6c757d"
+    }
+  ],
+  "topProducts": [
+    {
+      "rank": 1,
+      "name": "ADAM-6017",
+      "category": "Remote I/O Modules",
+      "price": "$150",
+      "units": 20,
+      "total": "$3,000"
+    },
+    {
+      "rank": 2,
+      "name": "AIM-68G0",
+      "category": "Embedded Computers",
+      "price": "$280",
+      "units": 8,
+      "total": "$2,240"
+    },
+    {
+      "rank": 3,
+      "name": "ARK-1220",
+      "category": "Embedded Computers",
+      "price": "$410",
+      "units": 6,
+      "total": "$2,460"
+    },
+    {
+      "rank": 4,
+      "name": "WISE-6610",
+      "category": "IoT Gateway & Edge Intelligence",
+      "price": "$520",
+      "units": 5,
+      "total": "$2,600"
+    },
+    {
+      "rank": 5,
+      "name": "UNO-2271G",
+      "category": "Embedded Computers",
+      "price": "$350",
+      "units": 4,
+      "total": "$1,400"
+    },
+    {
+      "rank": 6,
+      "name": "WISE-5000",
+      "category": "IoT Gateway & Edge Intelligence",
+      "price": "$90",
+      "units": 15,
+      "total": "$1,350"
+    },
+    {
+      "rank": 7,
+      "name": "WISE-4012E",
+      "category": "Wireless Sensing & Solutions",
+      "price": "$120",
+      "units": 11,
+      "total": "$1,320"
+    },
+    {
+      "rank": 8,
+      "name": "MIC-AI770",
+      "category": "Edge AI Solutions",
+      "price": "$800",
+      "units": 3,
+      "total": "$2,400"
+    },
+    {
+      "rank": 9,
+      "name": "MIC-770",
+      "category": "Embedded Computers",
+      "price": "$1,200",
+      "units": 2,
+      "total": "$2,400"
+    },
+    {
+      "rank": 10,
+      "name": "ADAM-6250",
+      "category": "Remote I/O Modules",
+      "price": "$210",
+      "units": 7,
+      "total": "$1,470"
+    },
+    {
+      "rank": 11,
+      "name": "WISE-2410",
+      "category": "Wireless Sensing & Solutions",
+      "price": "$160",
+      "units": 8,
+      "total": "$1,280"
+    },
+    {
+      "rank": 12,
+      "name": "WISE-2200-M",
+      "category": "Wireless Sensing & Solutions",
+      "price": "$240",
+      "units": 5,
+      "total": "$1,200"
+    },
+    {
+      "rank": 13,
+      "name": "ADAM-6052",
+      "category": "Remote I/O Modules",
+      "price": "$95",
+      "units": 12,
+      "total": "$1,140"
+    },
+    {
+      "rank": 14,
+      "name": "VEGA-3000",
+      "category": "Edge AI Solutions",
+      "price": "$560",
+      "units": 2,
+      "total": "$1,120"
+    },
+    {
+      "rank": 15,
+      "name": "UNO-1372G",
+      "category": "Embedded Computers",
+      "price": "$270",
+      "units": 4,
+      "total": "$1,080"
+    },
+    {
+      "rank": 16,
+      "name": "WISE-4220",
+      "category": "Wireless Sensing & Solutions",
+      "price": "$180",
+      "units": 6,
+      "total": "$1,080"
+    },
+    {
+      "rank": 17,
+      "name": "AIR-101",
+      "category": "Embedded Computers",
+      "price": "$520",
+      "units": 2,
+      "total": "$1,040"
+    },
+    {
+      "rank": 18,
+      "name": "WISE-6610G",
+      "category": "IoT Gateway & Edge Intelligence",
+      "price": "$190",
+      "units": 5,
+      "total": "$950"
+    },
+    {
+      "rank": 19,
+      "name": "VEGA-AI730",
+      "category": "Edge AI Solutions",
+      "price": "$890",
+      "units": 1,
+      "total": "$890"
+    },
+    {
+      "rank": 20,
+      "name": "ADAM-6066",
+      "category": "Remote I/O Modules",
+      "price": "$85",
+      "units": 10,
+      "total": "$850"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "deals": [
+    {
+      "id": 1,
+      "title": "Touch Panel PCs Solutions",
+      "description": "Discover our comprehensive range of industrial touch panel computers designed for harsh environments.",
+      "image": "https://irp.cdn-website.com/56869327/dms3rep/multi/BEL-PCs.png",
+      "link": "https://campaign.iotmart.com/Industrial-Touch-Panel-PCs",
+      "category": "deals",
+      "featured": true,
+      "validUntil": "2025-12-31",
+      "discount": "15% OFF"
+    },
+    {
+      "id": 2,
+      "title": "PoE Industrial Switches", 
+      "description": "High-performance Power over Ethernet switches for industrial networking applications.",
+      "image": "https://irp.cdn-website.com/56869327/dms3rep/multi/BEL-PoE.png",
+      "link": "https://campaign.iotmart.com/poe-industrial-switch-injector-splitter",
+      "category": "deals",
+      "featured": true,
+      "validUntil": "2025-11-30",
+      "discount": "10% OFF"
+    },
+    {
+      "id": 3,
+      "title": "ADAM Remote I/O Modules",
+      "description": "Versatile remote I/O modules for distributed data acquisition and control systems.",
+      "image": "https://irp.cdn-website.com/56869327/dms3rep/multi/BEL-ADAM.png",
+      "link": "https://campaign.iotmart.com/ADAM-remote-io",
+      "category": "deals",
+      "featured": false,
+      "validUntil": "2025-10-31",
+      "discount": "12% OFF"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Advantech Official Website",
+      "description": "Explore Advantech’s official website to discover industrial IoT solutions, product innovations, and global services driving digital transformation.",
+      "image": "https://irp.cdn-website.com/56869327/dms3rep/multi/ADVANTECH+WEB.png", 
+      "link": "https://www.advantech.com/en",
+      "category": "products",
+      "specifications": [
+        "Wireless connectivity",
+        "Built-in sensors",
+        "Edge computing",
+        "Battery powered"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Advantech Academy",
+      "description": "Advantech Academy offers online courses and training programs designed to enhance your knowledge of IoT, automation, and industrial technologies.",
+      "image": "https://irp.cdn-website.com/56869327/dms3rep/multi/IoTACADEMY.png",
+      "link": "https://academy.advantech.com/en/courses",
+      "category": "products",
+      "specifications": [
+        "Fanless design",
+        "Wide temperature range",
+        "Multiple I/O interfaces",
+        "Compact form factor"
+      ]
+    }
+  ],
+  "marketing": [
+    {
+      "id": 1,
+      "title": "Product Banners",
+      "description": "Download high-resolution product banners for your marketing campaigns",
+      "category": "marketing",
+      "type": "banners",
+      "files": [
+        {
+          "name": "Touch Panel PCs Banner",
+          "format": "PNG",
+          "size": "1920x1080",
+          "downloadUrl": "/downloads/banners/tpc-banner.png"
+        },
+        {
+          "name": "PoE Switches Banner",
+          "format": "PNG", 
+          "size": "1920x1080",
+          "downloadUrl": "/downloads/banners/poe-banner.png"
+        },
+        {
+          "name": "IoT Solutions Banner",
+          "format": "PNG",
+          "size": "1920x1080", 
+          "downloadUrl": "/downloads/banners/iot-banner.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Product Videos",
+      "description": "Promotional videos showcasing product features and applications",
+      "category": "marketing",
+      "type": "videos",
+      "files": [
+        {
+          "name": "Industrial Automation Overview",
+          "format": "MP4",
+          "duration": "2:30",
+          "downloadUrl": "/downloads/videos/automation-overview.mp4"
+        },
+        {
+          "name": "IoT Solutions Demo",
+          "format": "MP4",
+          "duration": "3:15",
+          "downloadUrl": "/downloads/videos/iot-demo.mp4"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Technical Brochures",
+      "description": "Detailed technical specifications and application guides",
+      "category": "marketing",
+      "type": "brochures",
+      "files": [
+        {
+          "name": "Touch Panel PCs Catalog",
+          "format": "PDF",
+          "pages": 24,
+          "downloadUrl": "/downloads/brochures/tpc-catalog.pdf"
+        },
+        {
+          "name": "Industrial Networking Guide",
+          "format": "PDF",
+          "pages": 16,
+          "downloadUrl": "/downloads/brochures/networking-guide.pdf"
+        },
+        {
+          "name": "IoT Solutions Overview",
+          "format": "PDF",
+          "pages": 12,
+          "downloadUrl": "/downloads/brochures/iot-overview.pdf"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Social Media Assets",
+      "description": "Ready-to-use social media posts and graphics",
+      "category": "marketing",
+      "type": "social",
+      "files": [
+        {
+          "name": "LinkedIn Post Templates",
+          "format": "PNG",
+          "count": 5,
+          "downloadUrl": "/downloads/social/linkedin-templates.zip"
+        },
+        {
+          "name": "Twitter Graphics",
+          "format": "PNG",
+          "count": 8,
+          "downloadUrl": "/downloads/social/twitter-graphics.zip"
+        }
+      ]
+    }
+  ]
+}

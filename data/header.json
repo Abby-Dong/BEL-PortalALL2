@@ -1,0 +1,28 @@
+{
+  "portalTitle": "BEL Portal",
+  "logo": "https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg",
+  "notifications": [
+    {
+      "type": "admin-alert",
+      "tagText": "Alert", 
+      "title": "Multiple Login Attempts Detected",
+      "date": "2025-08-30",
+      "details": "Unusual login activity detected from IP: 192.168.1.100"
+    },
+    {
+      "type": "admin-system",
+      "tagText": "System",
+      "title": "Database Backup Completed",
+      "date": "2025-08-30",
+      "details": "Daily backup completed successfully at 02:00 AM"
+    },
+    {
+      "type": "admin-user",
+      "tagText": "New",
+      "title": "5 New BEL Registrations Pending",
+      "date": "2025-08-29",
+      "details": "Review required for new user applications"
+    }
+  ],
+  "description": "頁首配置與系統通知資料，包含品牌標誌、標題與即時通知列表"
+}

@@ -1,0 +1,36 @@
+{
+  "tickets": [
+    {
+      "ticketId": "TICK-2025-001",
+      "subject": "Payment Processing Issue",
+      "status": "Open",
+      "response": "Pending Review",
+      "createdDate": "2025-08-28",
+      "lastUpdated": "2025-08-29"
+    },
+    {
+      "ticketId": "TICK-2025-002",
+      "subject": "Referral Link Not Working",
+      "status": "Open",
+      "response": "Under Investigation",
+      "createdDate": "2025-08-25",
+      "lastUpdated": "2025-08-30"
+    },
+    {
+      "ticketId": "TICK-2025-003",
+      "subject": "Commission Calculation Query",
+      "status": "Closed",
+      "response": "Calculation method explained via email",
+      "createdDate": "2025-08-20",
+      "lastUpdated": "2025-08-22"
+    },
+    {
+      "ticketId": "TICK-2025-004",
+      "subject": "Account Level Promotion Request",
+      "status": "Closed",
+      "response": "Requirements clarified, promotion approved",
+      "createdDate": "2025-08-15",
+      "lastUpdated": "2025-08-18"
+    }
+  ]
+}

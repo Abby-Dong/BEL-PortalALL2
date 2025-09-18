@@ -1,0 +1,346 @@
+{
+  "tickets": [
+    {
+      "ticketNumber": "T-2025-001",
+      "belName": "Maxwell Walker",
+      "referralId": "ATWADVANT",
+      "subject": "Payment inquiry for August",
+      "status": "Open",
+      "questionTime": "2025-08-28 09:15",
+      "message": "I have questions about my August payout calculation. The amount seems lower than expected based on my orders. Could you please review my account?",
+      "replies": [
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-002",
+      "belName": "Olivia Chen",
+      "referralId": "KUSOLVACE",
+      "subject": "Technical support for ADAM-6017",
+      "status": "Closed",
+      "questionTime": "2025-08-24 16:45",
+      "message": "I'm having trouble setting up the ADAM-6017 device. The configuration seems to reset after each reboot. Could you provide updated firmware or configuration guide?",
+      "replies": [
+        {
+          "time": "2025-08-25 09:15",
+          "text": "Please try updating to firmware version 2.1.3 available on our support portal. This should resolve the configuration reset issue."
+        }
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-003",
+      "belName": "Liam Müller",
+      "referralId": "KDEIMULER",
+      "subject": "Unable to access dashboard",
+      "status": "Open",
+      "questionTime": "2025-08-27 08:45",
+      "message": "I cannot log into my BEL dashboard. Getting 'Invalid credentials' error even though I'm using the correct password. Tried password reset but haven't received the email.",
+      "replies": [
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-004",
+      "belName": "Noah Kim",
+      "referralId": "KKRNOAHIM",
+      "subject": "Order status not updating",
+      "status": "Closed",
+      "questionTime": "2025-08-23 14:20",
+      "message": "My recent order (IMKR240815) shows as 'Processing' for over a week. Customer is asking for updates. Can you check the status?",
+      "replies": [
+        {
+          "time": "2025-08-24 13:40",
+          "text": "We checked your order IMKR240815. There was a delay in our warehouse due to inventory restocking. The order has now been shipped and tracking info has been updated."
+        },
+        {
+          "time": "2025-08-24 15:20",
+          "text": "Perfect, thank you! Customer received the tracking info and is satisfied."
+        }
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-005",
+      "belName": "Sophia Dubois",
+      "referralId": "KFRDUBOIS",
+      "subject": "Commission calculation error",
+      "status": "Closed",
+      "questionTime": "2025-08-20 16:45",
+      "message": "There seems to be an error in my July commission calculation. The amount is significantly lower than expected.",
+      "replies": [
+        {
+          "time": "2025-08-22 10:30",
+          "text": "We've reviewed your July activity and found a calculation error. The correct commission has been added to your next payout."
+        }
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-006",
+      "belName": "Kenji Tanaka",
+      "referralId": "KJPTANAKA",
+      "subject": "Product catalog access issue",
+      "status": "Closed",
+      "questionTime": "2025-08-19 13:20",
+      "message": "I cannot access the new product catalog section. Getting a 404 error when clicking the link.",
+      "replies": [
+        {
+          "time": "2025-08-20 14:15",
+          "text": "The catalog link has been updated. Please clear your browser cache and try the new link we've sent via email."
+        }
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-007",
+      "belName": "Isabella Rossi",
+      "referralId": "KITROSSIT",
+      "subject": "Banking information update request",
+      "status": "Closed",
+      "questionTime": "2025-08-17 09:15",
+      "message": "I need to update my banking information for future payouts. What documents are required?",
+      "replies": [
+        {
+          "time": "2025-08-18 11:45",
+          "text": "Please provide a bank statement and voided check. You can upload these in your profile settings under Banking Information."
+        }
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-008",
+      "belName": "Ava Schmidt",
+      "referralId": "KDESCHMIT",
+      "subject": "Referral link not working",
+      "status": "Closed",
+      "questionTime": "2025-08-15 14:30",
+      "message": "My referral link seems to be broken. Customers are getting an error when they try to use it.",
+      "replies": [
+        {
+          "time": "2025-08-17 16:20",
+          "text": "The issue has been fixed. Your referral link is now working properly. We've also credited you for any lost referrals during the downtime."
+        }
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-009",
+      "belName": "Lucas Garcia",
+      "referralId": "KMXGARCIA",
+      "subject": "Training material request",
+      "status": "Closed",
+      "questionTime": "2025-08-14 10:15",
+      "message": "Could you provide updated training materials for the new IoT product line?",
+      "replies": [
+        {
+          "time": "2025-08-15 13:30",
+          "text": "Training materials have been uploaded to your resource center. Check the 'Training' section in your dashboard."
+        }
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-010",
+      "belName": "Mia Wang",
+      "referralId": "KCNMIAWAN",
+      "subject": "Performance report discrepancy",
+      "status": "Closed",
+      "questionTime": "2025-08-13 15:20",
+      "message": "The performance report shows different numbers than what I'm seeing in my dashboard analytics.",
+      "replies": [
+        {
+          "time": "2025-08-14 09:45",
+          "text": "There was a sync issue between the dashboard and reporting systems. This has been Closed and your reports are now accurate."
+        }
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-011",
+      "belName": "Emma Johnson",
+      "referralId": "KAUJOISON",
+      "subject": "Email notification settings",
+      "status": "Closed",
+      "questionTime": "2025-08-12 11:30",
+      "message": "I'm not receiving email notifications for new orders. How can I enable them?",
+      "replies": [
+        {
+          "time": "2025-08-12 15:20",
+          "text": "Email notifications have been enabled for your account. Please check your notification preferences in settings to customize them."
+        }
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-013",
+      "belName": "Isabella López",
+      "referralId": "KMXLOPEZZ",
+      "subject": "Level upgrade criteria",
+      "status": "Closed",
+      "questionTime": "2025-08-11 16:15",
+      "message": "What are the specific criteria to upgrade from Builder to Enabler level?",
+      "replies": [
+        {
+          "time": "2025-08-10 14:00",
+          "text": "To upgrade to Enabler level, you need 50+ orders and $15,000+ in total revenue. You're currently at 42 orders and $12,800 revenue. Keep up the great work!"
+        }
+      ]
+    },
+    {
+      "ticketNumber": "T-2025-014",
+      "belName": "Sarah Wilson",
+      "referralId": "KPLKAROLN",
+      "subject": "Customer contact information update",
+      "status": "Closed",
+      "message": "Need to update customer contact information for order IMPL240810.",
+      "replies": [
+        {
+          "time": "2025-08-09 16:40",
+          "text": "Customer information has been updated. The order has been processed with the new contact details."
+        }
+      ],
+      "questionTime": "2025-08-10 09:45"
+    },
+    {
+      "ticketNumber": "T-2025-015",
+      "belName": "Carlos Silva",
+      "referralId": "KBRSILVAN",
+      "subject": "Pricing update request",
+      "status": "Closed",
+      "message": "The pricing sheet for Brazilian market seems outdated. Could you provide the latest pricing?",
+      "replies": [
+        {
+          "time": "2025-08-08 11:15",
+          "text": "The updated pricing sheet for Brazil has been uploaded to your resource center under 'Regional Pricing'."
+        }
+      ],
+      "questionTime": "2025-08-09 14:20"
+    },
+    {
+      "ticketNumber": "T-2025-016",
+      "belName": "Rajesh Patel",
+      "referralId": "KINRAJESH",
+      "subject": "Marketing material request",
+      "status": "Closed",
+      "message": "I need brochures and presentation materials for an upcoming trade show in Mumbai.",
+      "replies": [
+        {
+          "time": "2025-08-07 13:15",
+          "text": "Marketing materials have been prepared and shipped to your address. Tracking number: TN12345678."
+        }
+      ],
+      "questionTime": "2025-08-08 10:15"
+    },
+    {
+      "ticketNumber": "T-2025-017",
+      "belName": "Michael Johnson",
+      "referralId": "KSGJOHNSO",
+      "subject": "Account verification issue",
+      "status": "Closed",
+      "message": "My account verification is pending for over two weeks. What additional documents are needed?",
+      "replies": [
+        {
+          "time": "2025-08-06 10:30",
+          "text": "Your account has been successfully verified. You now have access to all BEL features and benefits."
+        }
+      ],
+      "questionTime": "2025-08-07 13:45"
+    },
+    {
+      "ticketNumber": "T-2025-018",
+      "belName": "David Wong",
+      "referralId": "KTHWONGCH",
+      "subject": "Technical documentation request",
+      "status": "Closed",
+      "message": "Could you provide technical specifications for the new EKI series switches?",
+      "replies": [
+        {
+          "time": "2025-08-05 15:45",
+          "text": "Technical documentation has been added to your resource library under 'Product Specifications'."
+        }
+      ],
+      "questionTime": "2025-08-06 15:30"
+    },
+    {
+      "ticketNumber": "T-2025-019",
+      "belName": "Ahmad Hassan",
+      "referralId": "KMYAHMEDZ",
+      "subject": "Commission tier advancement",
+      "status": "Closed",
+      "message": "When will I be eligible for the next commission tier? What are the requirements?",
+      "replies": [
+        {
+          "time": "2025-08-04 12:20",
+          "text": "Based on your current performance, you're eligible for tier advancement next month. Congratulations!"
+        }
+      ],
+      "questionTime": "2025-08-05 11:20"
+    },
+    {
+      "ticketNumber": "T-2025-020",
+      "belName": "Pieter van Berg",
+      "referralId": "KNLPIETER",
+      "subject": "Shipping address update",
+      "status": "Closed",
+      "message": "Need to update my shipping address for sample product deliveries.",
+      "replies": [
+        {
+          "time": "2025-08-03 14:10",
+          "text": "Your shipping address has been updated in our system. Future deliveries will be sent to the new address."
+        }
+      ],
+      "questionTime": "2025-08-04 16:45"
+    },
+    {
+      "ticketNumber": "T-2025-021",
+      "belName": "Anders Larsson",
+      "referralId": "KSEANDRES",
+      "subject": "Partnership opportunity inquiry",
+      "status": "Closed",
+      "message": "Interested in exploring strategic partnership opportunities for enterprise clients in Nordic region.",
+      "replies": [
+        {
+          "time": "2025-08-02 11:55",
+          "text": "Thank you for your interest. Our partnership team will contact you within 48 hours to discuss opportunities."
+        }
+      ],
+      "questionTime": "2025-08-03 10:30"
+    },
+    {
+      "ticketNumber": "T-2025-022",
+      "belName": "Erik Andersen",
+      "referralId": "KNOERICSO",
+      "subject": "Event registration assistance",
+      "status": "Closed",
+      "message": "Having trouble registering for the upcoming BEL conference. The registration form keeps timing out.",
+      "replies": [
+        {
+          "time": "2025-08-01 09:30",
+          "text": "We've manually registered you for the conference. You'll receive a confirmation email with all event details."
+        }
+      ],
+      "questionTime": "2025-08-02 14:15"
+    },
+    {
+      "ticketNumber": "T-2025-023",
+      "belName": "Emily Robertson",
+      "referralId": "KCAEMILYR",
+      "subject": "Product sample request",
+      "status": "Closed",
+      "message": "Could I get samples of the latest sensor products for customer demonstrations in Canada?",
+      "replies": [
+        {
+          "time": "2025-07-31 16:25",
+          "text": "Sample kit has been prepared and will be shipped tomorrow. You'll receive tracking information via email."
+        }
+      ],
+      "questionTime": "2025-08-01 13:20"
+    },
+    {
+      "ticketNumber": "T-2025-024",
+      "belName": "Daniel van Wyk",
+      "referralId": "KZAVANWYC",
+      "subject": "Customer support escalation",
+      "status": "Closed",
+      "message": "My customer is experiencing issues with their order and needs immediate assistance.",
+      "replies": [
+        {
+          "time": "2025-07-30 13:40",
+          "text": "We've contacted your customer directly and Closed their issue. A replacement unit has been expedited."
+        }
+      ],
+      "questionTime": "2025-07-31 16:45"
+    }
+  ],
+  "description": "客戶支援票券管理系統"
+}

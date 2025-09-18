@@ -1,0 +1,116 @@
+{
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States"
+    },
+    {
+      "code": "TW",
+      "name": "Taiwan"
+    },
+    {
+      "code": "JP",
+      "name": "Japan"
+    },
+    {
+      "code": "DE",
+      "name": "Germany"
+    },
+    {
+      "code": "UK",
+      "name": "United Kingdom"
+    },
+    {
+      "code": "CA",
+      "name": "Canada"
+    },
+    {
+      "code": "AU",
+      "name": "Australia"
+    },
+    {
+      "code": "SG",
+      "name": "Singapore"
+    },
+    {
+      "code": "KR",
+      "name": "South Korea"
+    },
+    {
+      "code": "CN",
+      "name": "China"
+    }
+  ],
+  "supportCategories": [
+    {
+      "id": "account",
+      "name": "Account Issues"
+    },
+    {
+      "id": "payment",
+      "name": "Payment & Payout"
+    },
+    {
+      "id": "technical",
+      "name": "Technical Support"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing Resources"
+    },
+    {
+      "id": "general",
+      "name": "General Inquiry"
+    }
+  ],
+  "orderStatuses": [
+    {
+      "key": "processing",
+      "label": "Processing",
+      "class": "status-processing",
+      "color": "#ffc107"
+    },
+    {
+      "key": "completed",
+      "label": "Completed",
+      "class": "status-completed",
+      "color": "#28a745"
+    },
+    {
+      "key": "canceled",
+      "label": "Canceled",
+      "class": "status-canceled",
+      "color": "#6c757d"
+    },
+    {
+      "key": "refunded",
+      "label": "Refunded",
+      "class": "status-refunded",
+      "color": "#dc3545"
+    },
+    {
+      "key": "pending",
+      "label": "Pending",
+      "class": "status-pending",
+      "color": "#17a2b8"
+    }
+  ],
+  "priorityLevels": [
+    {
+      "id": "low",
+      "name": "Low"
+    },
+    {
+      "id": "medium",
+      "name": "Medium"
+    },
+    {
+      "id": "high",
+      "name": "High"
+    },
+    {
+      "id": "urgent",
+      "name": "Urgent"
+    }
+  ]
+}

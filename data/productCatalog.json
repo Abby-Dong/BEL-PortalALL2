@@ -1,0 +1,1036 @@
+{
+  "productCatalog": [
+    {
+      "name": "AIR-030-S30A1",
+      "description": "Edge AI NVIDIA AGX Orin 64G inference system",
+      "category": "IoT Gateway & Edge Intelligence",
+      "avgPrice": 4999,
+      "levelFactor": {
+        "Leader": 2.0,
+        "Enabler": 0.5,
+        "Builder": 0.6,
+        "Exploder": 0.8
+      }
+    },
+    {
+      "name": "UNO-2484G-7731BE",
+      "description": "i7-7600U, 8G RAM w/4xLAN,4xCOM,1xMini",
+      "category": "IoT Gateway & Edge Intelligence",
+      "avgPrice": 3299,
+      "levelFactor": {
+        "Leader": 1.8,
+        "Enabler": 0.4,
+        "Builder": 0.7,
+        "Exploder": 1.0
+      }
+    },
+    {
+      "name": "ECU-150-12A",
+      "description": "A53 1.3GHz,2xLAN,2xcom,1x",
+      "category": "IoT Gateway & Edge Intelligence",
+      "avgPrice": 899,
+      "levelFactor": {
+        "Leader": 1.5,
+        "Enabler": 1.0,
+        "Builder": 0.8,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "EKI-1211-A",
+      "description": "1-port modbus gateway",
+      "category": "IoT Gateway & Edge Intelligence",
+      "avgPrice": 299,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 1.4,
+        "Builder": 1.1,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "ECU-1251D-R10AA",
+      "description": "Cloud enabled Intelligent Communication Gateway",
+      "category": "IoT Gateway & Edge Intelligence",
+      "avgPrice": 1599,
+      "levelFactor": {
+        "Leader": 1.6,
+        "Enabler": 0.9,
+        "Builder": 0.7,
+        "Exploder": 1.1
+      }
+    },
+    {
+      "name": "AIR-020X-S9A1",
+      "description": "Edge AI NVIDIA Xavier NX inference system",
+      "category": "IoT Gateway & Edge Intelligence",
+      "avgPrice": 2999,
+      "levelFactor": {
+        "Leader": 1.9,
+        "Enabler": 0.4,
+        "Builder": 0.5,
+        "Exploder": 0.9
+      }
+    },
+    {
+      "name": "UNO-127-E22BA",
+      "description": "ATOM X6413E, 1.5GHZ, 4G DDR4, 2LAN, 2USB",
+      "category": "IoT Gateway & Edge Intelligence",
+      "avgPrice": 799,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 1.2,
+        "Builder": 1.0,
+        "Exploder": 1.4
+      }
+    },
+    {
+      "name": "UNO-2271G-N231AU",
+      "description": "Pocket-Size Edge IoT Gateway with Intel",
+      "category": "IoT Gateway & Edge Intelligence",
+      "avgPrice": 1299,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 1.1,
+        "Builder": 0.9,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "SQR-UD4S4G3K2HN",
+      "description": "UDIMM DDR4 3200 4GB 512x16 (0-85) Hynix",
+      "category": "Peripherals & Modules",
+      "avgPrice": 89,
+      "levelFactor": {
+        "Leader": 1.1,
+        "Enabler": 1.2,
+        "Builder": 1.8,
+        "Exploder": 1.0
+      }
+    },
+    {
+      "name": "SQR-SD4N32G3K2HN",
+      "description": "SODIMM ECC DDR4 3200 32GB 2Gx8 (0-85) Hynix",
+      "category": "Peripherals & Modules",
+      "avgPrice": 599,
+      "levelFactor": {
+        "Leader": 1.5,
+        "Enabler": 0.6,
+        "Builder": 1.4,
+        "Exploder": 0.7
+      }
+    },
+    {
+      "name": "SQR-UD4N8G3K2HE",
+      "description": "UDIMM ECC DDR4 3200 8GB 1Gx8 (0-85) Hynix",
+      "category": "Peripherals & Modules",
+      "avgPrice": 149,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 1.0,
+        "Builder": 1.6,
+        "Exploder": 1.1
+      }
+    },
+    {
+      "name": "SQR-UD4N16G3K2H",
+      "description": "UDIMM ECC DDR4 3200 16GB 1Gx8 (0-85) Hynix",
+      "category": "Peripherals & Modules",
+      "avgPrice": 289,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 0.8,
+        "Builder": 1.5,
+        "Exploder": 0.9
+      }
+    },
+    {
+      "name": "SQR-UD4N32G3K2H",
+      "description": "UDIMM ECC DDR4 3200 32GB 2Gx8 (0-85) Hynix",
+      "category": "Peripherals & Modules",
+      "avgPrice": 589,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 0.5,
+        "Builder": 1.3,
+        "Exploder": 0.6
+      }
+    },
+    {
+      "name": "SQR-SD4S4G3K2HN",
+      "description": "SODIMM DDR4 3200 4GB 512x16 (0-85) Hynix",
+      "category": "Peripherals & Modules",
+      "avgPrice": 79,
+      "levelFactor": {
+        "Leader": 1.0,
+        "Enabler": 1.3,
+        "Builder": 1.9,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "SQR-SD4N8G3K2HE",
+      "description": "SODIMM ECC DDR4 3200 8GB 1Gx8 (0-85) Hynix",
+      "category": "Peripherals & Modules",
+      "avgPrice": 159,
+      "levelFactor": {
+        "Leader": 1.1,
+        "Enabler": 1.1,
+        "Builder": 1.7,
+        "Exploder": 1.0
+      }
+    },
+    {
+      "name": "SQR-SD4N16G3K2H",
+      "description": "SODIMM ECC DDR4 3200 16GB 1Gx8 (0-85) Hynix",
+      "category": "Peripherals & Modules",
+      "avgPrice": 299,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 0.9,
+        "Builder": 1.6,
+        "Exploder": 0.8
+      }
+    },
+    {
+      "name": "UNO-247-N3N1A",
+      "description": "N97, w/4xLAN, 1xVGA, 1xHDMI, 4xCOM",
+      "category": "Embedded Computers",
+      "avgPrice": 1299,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 1.2,
+        "Builder": 0.8,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "UNO-238-C7N1AE",
+      "description": "i7-8665UE 4xUSB 3.2 DP+HDMI,2xCOM,GPIO/C",
+      "category": "Embedded Computers",
+      "avgPrice": 2199,
+      "levelFactor": {
+        "Leader": 1.7,
+        "Enabler": 0.7,
+        "Builder": 0.6,
+        "Exploder": 1.0
+      }
+    },
+    {
+      "name": "UNO-238-C5N1AE",
+      "description": "i5-1245UE 4xUSB 3.2 DP+HDMI,2xCOM,GPIO/C",
+      "category": "Embedded Computers",
+      "avgPrice": 1799,
+      "levelFactor": {
+        "Leader": 1.5,
+        "Enabler": 0.8,
+        "Builder": 0.7,
+        "Exploder": 1.1
+      }
+    },
+    {
+      "name": "UNO-238-C3N1AE",
+      "description": "i3-1215UE 4xUSB 3.2 DP+HDMI,2xCOM,GPIO/C",
+      "category": "Embedded Computers",
+      "avgPrice": 1399,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 1.0,
+        "Builder": 0.9,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "ARK-3534B-00A1",
+      "description": "Intel ADL-S H610E PCIeX4+PCIeX16, 9-36V",
+      "category": "Embedded Computers",
+      "avgPrice": 2499,
+      "levelFactor": {
+        "Leader": 1.8,
+        "Enabler": 0.5,
+        "Builder": 0.6,
+        "Exploder": 0.8
+      }
+    },
+    {
+      "name": "UNO-2271G-N231AE",
+      "description": "N41x5 1.2GHz, 8-RAM, 64G, 2xGbE, 2xUSB",
+      "category": "Embedded Computers",
+      "avgPrice": 999,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 1.3,
+        "Builder": 1.0,
+        "Exploder": 1.4
+      }
+    },
+    {
+      "name": "ARK-2251-S3A1U",
+      "description": "Intel Raptor Lake i3 1335UE 1.3G 15G&E+6",
+      "category": "Embedded Computers",
+      "avgPrice": 1699,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 0.8,
+        "Builder": 0.7,
+        "Exploder": 1.0
+      }
+    },
+    {
+      "name": "ARK-2251-S2A1U",
+      "description": "Intel Raptor Lake i3 1315UE 1.2G 15G&E+6",
+      "category": "Embedded Computers",
+      "avgPrice": 1599,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 0.9,
+        "Builder": 0.8,
+        "Exploder": 1.1
+      }
+    },
+    {
+      "name": "AIM-77S-SW01000",
+      "description": "Wifi 6E, 4GB/64GB, NFC, ADP, Std. OS",
+      "category": "Mobile Tablets & Devices",
+      "avgPrice": 1299,
+      "levelFactor": {
+        "Leader": 1.0,
+        "Enabler": 1.6,
+        "Builder": 0.9,
+        "Exploder": 1.5
+      }
+    },
+    {
+      "name": "AIM-77S-SW11000",
+      "description": "Wifi 6E, 6GB/64GB, ADP, Std. OS",
+      "category": "Mobile Tablets & Devices",
+      "avgPrice": 1499,
+      "levelFactor": {
+        "Leader": 1.1,
+        "Enabler": 1.5,
+        "Builder": 0.8,
+        "Exploder": 1.4
+      }
+    },
+    {
+      "name": "LEO-L50-G0",
+      "description": "LEO-L50 Outdoor Asset Management - Core Unit",
+      "category": "Mobile Tablets & Devices",
+      "avgPrice": 899,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 1.4,
+        "Builder": 1.0,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "AIM-77S-SW00000",
+      "description": "Wifi 6E, 4GB/64GB, NFC, BCR, ADP, Std. OS",
+      "category": "Mobile Tablets & Devices",
+      "avgPrice": 1399,
+      "levelFactor": {
+        "Leader": 0.9,
+        "Enabler": 1.7,
+        "Builder": 0.8,
+        "Exploder": 1.4
+      }
+    },
+    {
+      "name": "AIM-68S-201B10",
+      "description": "10i/N50/8G/128G/Win 11/Wifi 6E/W BCR",
+      "category": "Mobile Tablets & Devices",
+      "avgPrice": 1799,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 1.3,
+        "Builder": 0.7,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "AIM-68S-201B00",
+      "description": "10i/N200/8G/128G/Win 11/Wifi 6E/W BCR",
+      "category": "Mobile Tablets & Devices",
+      "avgPrice": 1699,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 1.4,
+        "Builder": 0.8,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "AIM-68S-201010",
+      "description": "10i/N200/8G/128G/Win 11/Wifi 6E",
+      "category": "Mobile Tablets & Devices",
+      "avgPrice": 1599,
+      "levelFactor": {
+        "Leader": 1.1,
+        "Enabler": 1.5,
+        "Builder": 0.9,
+        "Exploder": 1.4
+      }
+    },
+    {
+      "name": "AIM-68S-201000",
+      "description": "10i/N200/8G/128G/Win 11/Wifi 6E",
+      "category": "Mobile Tablets & Devices",
+      "avgPrice": 1499,
+      "levelFactor": {
+        "Leader": 1.0,
+        "Enabler": 1.6,
+        "Builder": 1.0,
+        "Exploder": 1.5
+      }
+    },
+    {
+      "name": "EPC-R7300U-ALA1NN",
+      "description": "EPC-R7300U-ALA1NN w/ Nano-4GB,Ubuntu 12",
+      "category": "Industrial Computer Boards",
+      "avgPrice": 899,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 0.8,
+        "Builder": 1.8,
+        "Exploder": 0.9
+      }
+    },
+    {
+      "name": "RSB-4411CD-PNA2E",
+      "description": "NXP A2 LMX8 Dual Core/1GB DDR 0~60",
+      "category": "Industrial Computer Boards",
+      "avgPrice": 699,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 0.9,
+        "Builder": 1.9,
+        "Exploder": 0.8
+      }
+    },
+    {
+      "name": "AIMB-788G2-00A1",
+      "description": "LGA1700 ATX Q670E/BMC/DP/HDMI/2",
+      "category": "Industrial Computer Boards",
+      "avgPrice": 1299,
+      "levelFactor": {
+        "Leader": 1.6,
+        "Enabler": 0.6,
+        "Builder": 1.6,
+        "Exploder": 0.7
+      }
+    },
+    {
+      "name": "RSB-3720Q-ACA2E",
+      "description": "A2 2.5 UIO SBC NXP L MX8M Plus Quad, 6G",
+      "category": "Industrial Computer Boards",
+      "avgPrice": 999,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 0.7,
+        "Builder": 1.7,
+        "Exploder": 0.8
+      }
+    },
+    {
+      "name": "SKY-MXM-A500-4SHA",
+      "description": "Quadro A500 MXM 4GB MS Hybrid mode Type",
+      "category": "Industrial Computer Boards",
+      "avgPrice": 1999,
+      "levelFactor": {
+        "Leader": 1.8,
+        "Enabler": 0.4,
+        "Builder": 1.4,
+        "Exploder": 0.5
+      }
+    },
+    {
+      "name": "SKY-MXM-A2000-8SDA",
+      "description": "Quadro A2000 MXM 8GB Discrete mode Type",
+      "category": "Industrial Computer Boards",
+      "avgPrice": 2999,
+      "levelFactor": {
+        "Leader": 2.0,
+        "Enabler": 0.3,
+        "Builder": 1.3,
+        "Exploder": 0.4
+      }
+    },
+    {
+      "name": "AIMB-B2000-15ZE",
+      "description": "AIMB-B2000-Mini-ITX MB chassis w/ 150W P",
+      "category": "Industrial Computer Boards",
+      "avgPrice": 799,
+      "levelFactor": {
+        "Leader": 1.1,
+        "Enabler": 0.8,
+        "Builder": 1.9,
+        "Exploder": 0.9
+      }
+    },
+    {
+      "name": "AIMB-586QG2-00A1E",
+      "description": "LGA1151 mATX 2DP/HDMI/eDP/6SATA/5",
+      "category": "Industrial Computer Boards",
+      "avgPrice": 1199,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 0.6,
+        "Builder": 1.7,
+        "Exploder": 0.7
+      }
+    },
+    {
+      "name": "MIC743AT7A1-ES",
+      "description": "AI Inference System, NVIDIA Jetson Thor",
+      "category": "Edge AI Solutions",
+      "avgPrice": 5999,
+      "levelFactor": {
+        "Leader": 2.2,
+        "Enabler": 0.3,
+        "Builder": 0.4,
+        "Exploder": 0.5
+      }
+    },
+    {
+      "name": "MIC-711D-ON3A2",
+      "description": "NVIDIA Jetson Orin Nano 8G Developer Kit",
+      "category": "Edge AI Solutions",
+      "avgPrice": 1999,
+      "levelFactor": {
+        "Leader": 1.8,
+        "Enabler": 0.6,
+        "Builder": 1.2,
+        "Exploder": 0.9
+      }
+    },
+    {
+      "name": "MIC-711-ON3A1",
+      "description": "NVIDIA Jetson Orin NX 8G Lite AI System",
+      "category": "Edge AI Solutions",
+      "avgPrice": 2499,
+      "levelFactor": {
+        "Leader": 1.9,
+        "Enabler": 0.5,
+        "Builder": 1.0,
+        "Exploder": 0.8
+      }
+    },
+    {
+      "name": "MIC-711D-OX4A1",
+      "description": "NVIDIA Jetson Orin NX 16G Lite AI System",
+      "category": "Edge AI Solutions",
+      "avgPrice": 2999,
+      "levelFactor": {
+        "Leader": 2.0,
+        "Enabler": 0.4,
+        "Builder": 0.9,
+        "Exploder": 0.7
+      }
+    },
+    {
+      "name": "MIC-711-OX4A1",
+      "description": "NVIDIA Jetson Orin NX 16G Lite AI System",
+      "category": "Edge AI Solutions",
+      "avgPrice": 2799,
+      "levelFactor": {
+        "Leader": 1.9,
+        "Enabler": 0.4,
+        "Builder": 1.0,
+        "Exploder": 0.7
+      }
+    },
+    {
+      "name": "MIC-713S-ON3A1",
+      "description": "NVIDIA Jetson Orin Nano 8GB AI Solution Kit",
+      "category": "Edge AI Solutions",
+      "avgPrice": 2199,
+      "levelFactor": {
+        "Leader": 1.7,
+        "Enabler": 0.5,
+        "Builder": 1.1,
+        "Exploder": 0.8
+      }
+    },
+    {
+      "name": "MIC-713S-ON2A1",
+      "description": "NVIDIA Jetson Orin Nano 4GB AI Solution Kit",
+      "category": "Edge AI Solutions",
+      "avgPrice": 1899,
+      "levelFactor": {
+        "Leader": 1.6,
+        "Enabler": 0.6,
+        "Builder": 1.2,
+        "Exploder": 0.9
+      }
+    },
+    {
+      "name": "EKI-7720E-4FI-BE",
+      "description": "16FE+4SFP Port Managed Ethernet Switch Wide Temp",
+      "category": "Network Communications",
+      "avgPrice": 1599,
+      "levelFactor": {
+        "Leader": 1.6,
+        "Enabler": 0.8,
+        "Builder": 0.7,
+        "Exploder": 1.0
+      }
+    },
+    {
+      "name": "SFP-GSM3-40K",
+      "description": "IE-SFP/1250-ED, SM1310/LONG-LC",
+      "category": "Network Communications",
+      "avgPrice": 299,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 1.1,
+        "Builder": 1.0,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "EKI-2711PSI-A",
+      "description": "Industrial 25W PoE splitter",
+      "category": "Network Communications",
+      "avgPrice": 199,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 1.4,
+        "Builder": 1.1,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "EKI-2541S-BE",
+      "description": "Ethernet to Single mode fiber media converter",
+      "category": "Network Communications",
+      "avgPrice": 159,
+      "levelFactor": {
+        "Leader": 1.1,
+        "Enabler": 1.3,
+        "Builder": 1.2,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "EKI-2541M-BE",
+      "description": "Ethernet to Multi mode Fiber Media converter",
+      "category": "Network Communications",
+      "avgPrice": 149,
+      "levelFactor": {
+        "Leader": 1.0,
+        "Enabler": 1.4,
+        "Builder": 1.3,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "SFP-XSS-40KTX-LC",
+      "description": "SFP+-10G, SSLX-SM-LC (1270XMT/1330RCV)",
+      "category": "Network Communications",
+      "avgPrice": 399,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 0.8,
+        "Builder": 0.9,
+        "Exploder": 0.9
+      }
+    },
+    {
+      "name": "SFP-XSS-40KRX-LC",
+      "description": "SFP+-10G, SSLX-SM-LC (1330XMT/1270RCV)",
+      "category": "Network Communications",
+      "avgPrice": 389,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 0.8,
+        "Builder": 0.9,
+        "Exploder": 0.9
+      }
+    },
+    {
+      "name": "ADAM-6018-D",
+      "description": "8-ch Thermocouple Input Modbus/RTU Module",
+      "category": "Remote I/O Modules",
+      "avgPrice": 599,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 1.2,
+        "Builder": 1.3,
+        "Exploder": 1.1
+      }
+    },
+    {
+      "name": "ADAM-6015-D",
+      "description": "7-ch Isolated RTD Input Modbus/RTU Module",
+      "category": "Remote I/O Modules",
+      "avgPrice": 549,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 1.3,
+        "Builder": 1.4,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "WISE-4012E",
+      "description": "4-ch DI, 2-ch AI, 2-ch DO, Modbus/TCP, WISE-PaaS",
+      "category": "Remote I/O Modules",
+      "avgPrice": 399,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 1.4,
+        "Builder": 1.5,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "WISE-4050E",
+      "description": "4-ch DI, 4-ch DO, Modbus/TCP, WISE-PaaS",
+      "category": "Remote I/O Modules",
+      "avgPrice": 359,
+      "levelFactor": {
+        "Leader": 1.1,
+        "Enabler": 1.5,
+        "Builder": 1.6,
+        "Exploder": 1.4
+      }
+    },
+    {
+      "name": "ADAM-6050-D",
+      "description": "12-ch Isolated Digital I/O Modbus/RTU Module",
+      "category": "Remote I/O Modules",
+      "avgPrice": 459,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 1.3,
+        "Builder": 1.5,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "ADAM-6017-D",
+      "description": "8-ch Analog Input Modbus/RTU Module",
+      "category": "Remote I/O Modules",
+      "avgPrice": 429,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 1.4,
+        "Builder": 1.6,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "ADAM-6052-D",
+      "description": "8-ch Isolated Digital I/O, Modbus/TCP, WISE-PaaS",
+      "category": "Remote I/O Modules",
+      "avgPrice": 489,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 1.3,
+        "Builder": 1.5,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "WISE-4051-A",
+      "description": "4-ch DI, 4-ch DO, Modbus/TCP, WISE-PaaS",
+      "category": "Remote I/O Modules",
+      "avgPrice": 339,
+      "levelFactor": {
+        "Leader": 1.0,
+        "Enabler": 1.6,
+        "Builder": 1.7,
+        "Exploder": 1.4
+      }
+    },
+    {
+      "name": "WISE-4250-S214",
+      "description": "WISE-4250 with 4AI+4DI",
+      "category": "Wireless Sensing & Solutions",
+      "avgPrice": 599,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 1.4,
+        "Builder": 1.5,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "WISE-4250-S252",
+      "description": "WISE-4250 with 12DI+12DO",
+      "category": "Wireless Sensing & Solutions",
+      "avgPrice": 649,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 1.3,
+        "Builder": 1.4,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "WISE-4250-S232",
+      "description": "WISE-4250 with Temperature & Humidity Sensor",
+      "category": "Wireless Sensing & Solutions",
+      "avgPrice": 559,
+      "levelFactor": {
+        "Leader": 1.1,
+        "Enabler": 1.5,
+        "Builder": 1.6,
+        "Exploder": 1.4
+      }
+    },
+    {
+      "name": "OPT1-ANT-5GSSW-30",
+      "description": "5G NR MIMO / 4G / 3G / 2G, WiFi 2.4/5.0/6 GHz",
+      "category": "Wireless Sensing & Solutions",
+      "avgPrice": 899,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 0.9,
+        "Builder": 1.0,
+        "Exploder": 1.0
+      }
+    },
+    {
+      "name": "ICR-2437-DE",
+      "description": "Cellular Router, Cat4, LTE450, 2x ETH",
+      "category": "Wireless Sensing & Solutions",
+      "avgPrice": 799,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 1.0,
+        "Builder": 0.9,
+        "Exploder": 1.1
+      }
+    },
+    {
+      "name": "WISE-4252-A",
+      "description": "WISE-4250 12DI/12DO I/O Module",
+      "category": "Wireless Sensing & Solutions",
+      "avgPrice": 459,
+      "levelFactor": {
+        "Leader": 1.0,
+        "Enabler": 1.4,
+        "Builder": 1.7,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "1751000717-01",
+      "description": "Dipole Ant.WiFi 6E SMA/M-R RG178 BLK L18",
+      "category": "Wireless Sensing & Solutions",
+      "avgPrice": 49,
+      "levelFactor": {
+        "Leader": 0.8,
+        "Enabler": 1.6,
+        "Builder": 2.0,
+        "Exploder": 1.5
+      }
+    },
+    {
+      "name": "AIW-169BN-GX1",
+      "description": "Wi-Fi 6E M.2 solution based on Realtek R",
+      "category": "Wireless Sensing & Solutions",
+      "avgPrice": 159,
+      "levelFactor": {
+        "Leader": 0.9,
+        "Enabler": 1.3,
+        "Builder": 1.8,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "LEO-S592-AQE0",
+      "description": "LEO-S LoRaWAN 7 in 1 AQI sensor 868",
+      "category": "AIoT Software & Solutions",
+      "avgPrice": 399,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 1.3,
+        "Builder": 1.1,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "LEO-S572-TPE0",
+      "description": "LEO-S LoRaWAN Temp Probe sensor 868",
+      "category": "AIoT Software & Solutions",
+      "avgPrice": 299,
+      "levelFactor": {
+        "Leader": 1.2,
+        "Enabler": 1.4,
+        "Builder": 1.2,
+        "Exploder": 1.3
+      }
+    },
+    {
+      "name": "LEO-S592-TPG0",
+      "description": "LEO-S LoRaWAN Insertion Temperature Sensor",
+      "category": "AIoT Software & Solutions",
+      "avgPrice": 329,
+      "levelFactor": {
+        "Leader": 1.3,
+        "Enabler": 1.3,
+        "Builder": 1.1,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "LEO-S573-C2G0",
+      "description": "LEO-S LoRaWAN CO2 sensor 915",
+      "category": "AIoT Software & Solutions",
+      "avgPrice": 449,
+      "levelFactor": {
+        "Leader": 1.4,
+        "Enabler": 1.2,
+        "Builder": 1.0,
+        "Exploder": 1.1
+      }
+    },
+    {
+      "name": "LEO-S550-DAG0",
+      "description": "LEO-S LoRaWAN DAQ Controller 915",
+      "category": "AIoT Software & Solutions",
+      "avgPrice": 599,
+      "levelFactor": {
+        "Leader": 1.5,
+        "Enabler": 1.1,
+        "Builder": 0.9,
+        "Exploder": 1.0
+      }
+    },
+    {
+      "name": "PCIE-1154-BE",
+      "description": "PCI Express x4, 4-Port USB 3.0 Host Adapter",
+      "category": "AIoT Software & Solutions",
+      "avgPrice": 199,
+      "levelFactor": {
+        "Leader": 1.1,
+        "Enabler": 1.3,
+        "Builder": 1.6,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "LEO-S595-MSG0",
+      "description": "LEO-S LoRaWAN Magnetic Switch 915",
+      "category": "AIoT Software & Solutions",
+      "avgPrice": 159,
+      "levelFactor": {
+        "Leader": 1.0,
+        "Enabler": 1.5,
+        "Builder": 1.3,
+        "Exploder": 1.4
+      }
+    },
+    {
+      "name": "PCI-1245L-AE",
+      "description": "Basic 4-Axis SoftMotion Controller",
+      "category": "AIoT Software & Solutions",
+      "avgPrice": 799,
+      "levelFactor": {
+        "Leader": 1.6,
+        "Enabler": 0.9,
+        "Builder": 1.1,
+        "Exploder": 0.8
+      }
+    },
+    {
+      "name": "MIC-7330B-C42N",
+      "description": "Xeon w/ C422 6xUSB 3.1 3xLAN 1xHDMI 2xDP",
+      "category": "Industrial Servers & IPC",
+      "avgPrice": 4999,
+      "levelFactor": {
+        "Leader": 2.1,
+        "Enabler": 0.2,
+        "Builder": 0.3,
+        "Exploder": 0.4
+      }
+    },
+    {
+      "name": "ARK-3510P-U2A1E",
+      "description": "Intel i5-12500TE 65W with",
+      "category": "Industrial Servers & IPC",
+      "avgPrice": 2799,
+      "levelFactor": {
+        "Leader": 1.8,
+        "Enabler": 0.4,
+        "Builder": 0.5,
+        "Exploder": 0.6
+      }
+    },
+    {
+      "name": "MIC-7700-11110AE",
+      "description": "i7-12700E 1.5G 64G DDR5 2xLAN 1xCOM",
+      "category": "Industrial Servers & IPC",
+      "avgPrice": 3599,
+      "levelFactor": {
+        "Leader": 1.9,
+        "Enabler": 0.3,
+        "Builder": 0.4,
+        "Exploder": 0.5
+      }
+    },
+    {
+      "name": "MIC-7700-01100AE",
+      "description": "i5-12500E 1.5G 64G DDR5 2xLAN 1xCOM",
+      "category": "Industrial Servers & IPC",
+      "avgPrice": 2999,
+      "levelFactor": {
+        "Leader": 1.7,
+        "Enabler": 0.4,
+        "Builder": 0.5,
+        "Exploder": 0.6
+      }
+    },
+    {
+      "name": "UNO-137-E42BA",
+      "description": "Core i7-1185G7E 4.8GHz, 16G DDR4",
+      "category": "Industrial IoT Gateways",
+      "avgPrice": 2299,
+      "levelFactor": {
+        "Leader": 1.7,
+        "Enabler": 0.6,
+        "Builder": 0.5,
+        "Exploder": 0.8
+      }
+    },
+    {
+      "name": "ECU-1251D-E10AA",
+      "description": "Cloud enabled Intelligent Communication Gateway",
+      "category": "Industrial IoT Gateways",
+      "avgPrice": 1399,
+      "levelFactor": {
+        "Leader": 1.5,
+        "Enabler": 1.0,
+        "Builder": 0.8,
+        "Exploder": 1.2
+      }
+    },
+    {
+      "name": "ECU-1251D-E10AE",
+      "description": "Cloud enabled Intelligent Communication Gateway",
+      "category": "Industrial IoT Gateways",
+      "avgPrice": 1499,
+      "levelFactor": {
+        "Leader": 1.5,
+        "Enabler": 0.9,
+        "Builder": 0.7,
+        "Exploder": 1.1
+      }
+    },
+    {
+      "name": "UNO-137-E42B",
+      "description": "Core i7-1185G7E 4.8GHz, 16G DDR4",
+      "category": "Industrial IoT Gateways",
+      "avgPrice": 2199,
+      "levelFactor": {
+        "Leader": 1.7,
+        "Enabler": 0.6,
+        "Builder": 0.5,
+        "Exploder": 0.8
+      }
+    }
+  ]
+}

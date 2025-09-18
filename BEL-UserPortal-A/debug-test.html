@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+</head>
+<body>
+    <h1>Debug Test</h1>
+    <div id="debug-output"></div>
+
+    <script src="js/data-loader.js"></script>
+    <script>
+        async function testDataLoading() {
+            const debugOutput = document.getElementById('debug-output');
+            
+            try {
+                const dataLoader = new DataLoader();
+                
+                console.log('Testing payout history loading...');
+                const payoutHistory = await dataLoader.loadPayoutHistory();
+                console.log('Payout history result:', payoutHistory);
+                
+                console.log('Testing order tracking loading...');
+                const orderTracking = await dataLoader.loadOrderTracking();
+                console.log('Order tracking result:', orderTracking);
+                
+                debugOutput.innerHTML = `
+                    <h3>Payout History:</h3>
+                    <pre>${JSON.stringify(payoutHistory, null, 2)}</pre>
+                    <h3>Order Tracking:</h3>
+                    <pre>${JSON.stringify(orderTracking, null, 2)}</pre>
+                `;
+                
+            } catch (error) {
+                console.error('Error in test:', error);
+                debugOutput.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+        
+        // Run test when page loads
+        document.addEventListener('DOMContentLoaded', testDataLoading);
+    </script>
+</body>
+</html>

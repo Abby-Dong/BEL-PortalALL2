@@ -1,0 +1,33 @@
+{
+  "announcements": [
+    {
+      "created": "2025-08-26",
+      "category": "Leader",
+      "title": "Urgent System Alert",
+      "body": "Critical security update required",
+      "link": "https://example.com/security-update"
+    },
+    {
+      "created": "2025-08-25",
+      "category": "Exploder",
+      "title": "Platform Maintenance",
+      "body": "Scheduled maintenance on September 1st",
+      "link": "https://example.com/maintenance"
+    },
+    {
+      "created": "2025-08-20",
+      "category": "Enabler",
+      "title": "New ADAM Series Available",
+      "body": "Latest ADAM series now available for promotion",
+      "link": "https://example.com/adam-series"
+    },
+    {
+      "created": "2025-08-15",
+      "category": "Builder",
+      "title": "Monthly Payout Schedule",
+      "body": "August payout processing completed",
+      "link": "https://example.com/payout-info"
+    }
+  ],
+  "description": "系統公告與通知管理"
+}

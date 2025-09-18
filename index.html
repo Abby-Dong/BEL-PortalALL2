@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEL Management Portal</title>
+    
+    <!-- External Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="bel-header">
+        <button class="bel-hamburger-menu" id="bel-hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        
+        <div class="bel-header-content">
+            <div class="bel-sidebar-logo">
+                <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="IoTMart Logo">
+                <span>BEL Portal</span>
+            </div>
+            
+            <div class="bel-header-right">
+                <!-- Global Filter Controls -->
+                <div class="bel-header-filters" role="toolbar" aria-label="Global filters">
+                    <label for="header-year-filter" class="sr-only">Filter by year</label>
+                    <select id="header-year-filter" class="bel-form-control bel-form-select bel-select--compact" aria-describedby="year-filter-desc">
+                        <option value="all">All Years</option>
+                    </select>
+                    <span id="year-filter-desc" class="sr-only">Filter data by year</span>
+                    
+                    <label for="header-region-filter" class="sr-only">Filter by region</label>
+                    <select id="header-region-filter" class="bel-form-control bel-form-select bel-select--compact" aria-describedby="region-filter-desc">
+                        <option value="all">All Regions</option>
+                    </select>
+                    <span id="region-filter-desc" class="sr-only">Filter data by geographic region</span>
+                </div>
+                
+                <!-- Notification Panel -->
+                <div class="bel-notification-container">
+                    <button class="bel-notification-bell" id="notification-bell" aria-label="Show notifications" aria-expanded="false">
+                        <i class="fas fa-bell" aria-hidden="true"></i>
+                        <span class="notification-dot" aria-hidden="true"></span>
+                    </button>
+                    <div class="bel-notification-panel" id="notification-panel" role="dialog" aria-labelledby="notification-title" aria-hidden="true">
+                        <h3 id="notification-title" class="bel-notification-header">Announcements</h3>
+                        <ul class="bel-notification-list" role="list">
+                            <!-- Notifications populated by JavaScript -->
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- User Profile -->
+                <div class="bel-user-profile-container">
+                    <button class="bel-user-profile" id="user-profile-btn" aria-label="Open user menu" aria-expanded="false">
+                        <img src="" alt="User Avatar" class="user-avatar">
+                    </button>
+                    <div class="user-profile-panel" id="user-profile-panel" role="dialog" aria-labelledby="user-profile-title" aria-hidden="true">
+                        <div class="panel-content">
+                            <div class="user-info">
+                                <h3 id="user-profile-title" class="user-name">Abby Dong</h3>
+                                <p class="user-email">Abby.dong@advantech.com</p>
+                            </div>
+                            <div class="user-level">
+                                <span class="bel-badge admin">Admin</span>
+                            </div>
+                            <hr class="divider" role="separator">
+                            <button class="panel-link" role="menuitem">Log Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Application Container -->
+    <main class="bel-container">
+        <!-- Navigation Sidebar -->
+        <aside class="bel-sidebar" id="bel-sidebar" role="navigation" aria-label="Main navigation">
+            <div class="bel-sidebar-menu-title">MAIN MENU</div>
+            <nav class="bel-sidebar-nav">
+                <a href="#dashboard" class="bel-sidebar-nav-link active" role="menuitem" aria-current="page">
+                    <i class="fas fa-tachometer-alt fa-fw" aria-hidden="true"></i>
+                    <span>Sales Performance</span>
+                </a>
+                <a href="#payouts-order" class="bel-sidebar-nav-link" role="menuitem">
+                    <i class="fas fa-wallet fa-fw" aria-hidden="true"></i>
+                    <span>Payouts & Orders</span>
+                </a>
+                <a href="#Account-Management" class="bel-sidebar-nav-link" role="menuitem">
+                    <i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>
+                    <span>Account Management</span>
+                </a>
+            </nav>
+            <div class="bel-sidebar-menu-title">HELP & SUPPORT</div>
+            <nav class="bel-sidebar-nav">
+                <a href="#contact-support" class="bel-sidebar-nav-link" role="menuitem">
+                    <i class="fas fa-headset fa-fw" aria-hidden="true"></i>
+                    <span>Respond to Leader</span>
+                </a>
+                <a href="#content" class="bel-sidebar-nav-link" role="menuitem">
+                    <i class="fas fa-folder fa-fw" aria-hidden="true"></i>
+                    <span>Publish Resource</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="bel-main-content" id="bel-main-content" role="main">
+            
+            <!-- Sales Performance Dashboard -->
+            <section id="dashboard" class="content-section active">
+                <header class="section-header">
+                    <h1 class="bel-h1">Sales Performance Dashboard</h1>
+                </header>
+                
+                <!-- Key Metrics Overview -->
+                <section aria-labelledby="metrics-heading">
+                    <h2 id="metrics-heading" class="sr-only">Key Performance Metrics</h2>
+                    <div class="bel-stats-cards grid-cols-3" role="region" aria-label="Key performance indicators">
+                        <!-- Cards populated by JavaScript -->
+                    </div>
+                </section>
+                
+                <!-- Performance Analysis -->
+                <section aria-labelledby="performance-heading">
+                    <h2 id="performance-heading" class="bel-h3">Level Distribution & Performance</h2>
+                    <div class="bel-panel">
+                        <div class="performance-grid">
+                            <!-- Level Distribution Chart -->
+                            <div class="chart-section pie-chart-section">
+                                <h3 class="sr-only">Level Distribution Chart</h3>
+                                <div class="chart-container pie-chart-container" style="position: relative; width: 100%;">
+                                    <canvas id="level-pie-chart" aria-label="Distribution of users by level"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Performance Comparison -->
+                            <div class="performance-comparison-section">
+                                <div class="view-switcher" id="payout-view-switcher" role="tablist" aria-label="Performance view options">
+                                   <button class="view-btn active" data-view="chart" role="tab" aria-selected="true" aria-controls="performance-chart-view">
+                                       <i class="fas fa-chart-bar" aria-hidden="true"></i> Chart View
+                                   </button>
+                                   <button class="view-btn" data-view="table" role="tab" aria-selected="false" aria-controls="performance-table-view">
+                                       <i class="fas fa-list" aria-hidden="true"></i> List View
+                                   </button>
+                                </div>
+                                
+                                <div class="scrollable-table-container view-content" id="performance-table-view" role="tabpanel" aria-labelledby="table-view-btn" style="display: none; height:214px; margin-top: 43px; margin-bottom: 43px;">
+                                    <table class="bel-table" role="table" aria-label="Performance data by level">
+                                        <thead>
+                                            <tr role="row">
+                                                <th role="columnheader" data-sortable data-type="string">Level</th>
+                                                <th role="columnheader" data-sortable data-type="number">Total Clicks</th>
+                                                <th role="columnheader" data-sortable data-type="number">Revenue</th>
+                                                <th role="columnheader" data-sortable data-type="number">Orders</th>
+                                                <th role="columnheader" data-sortable data-type="number">C2O CVR (%)</th>
+                                                <th role="columnheader" data-sortable data-type="number">AOV</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Performance data populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="view-content" id="performance-chart-view" role="tabpanel" aria-labelledby="chart-view-btn" style="display: block; width: 100%; height: 300px;">
+                                    <canvas id="performance-percentage-chart" aria-label="Performance comparison chart by level"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Product Analysis -->
+                <section aria-labelledby="products-heading">
+                    <h2 id="products-heading" class="bel-h3">Categories & Products Sales Effectiveness</h2>
+                    <div class="bel-panel">
+                        <div class="product-sales-grid">
+                             <!-- Category Analysis -->
+                             <div class="category-analysis">
+                                <h3 class="chart-title">Top 5 Product Category Analysis</h3>
+                                <div class="chart-container bar-chart-container">
+                                    <canvas id="product-category-chart" aria-label="Top performing product categories"></canvas>
+                                </div>
+                            </div>
+                            
+                            <!-- Top Products -->
+                            <div class="top-products">
+                                <h3 class="chart-title">Top 20 Products</h3>
+                                <div class="scrollable-table-container" style="max-height: 350px;">
+                                    <table class="bel-table" role="table" aria-label="Top performing products">
+                                        <thead>
+                                            <tr role="row">
+                                                <th role="columnheader" data-sortable data-type="number" style="width:24px;">Rank</th>
+                                                <th role="columnheader" data-sortable data-type="string" style="width:160px;">Product</th>
+                                                <th role="columnheader" data-sortable data-type="number">Price</th>
+                                                <th role="columnheader" data-sortable data-type="number">Qty</th>
+                                                <th role="columnheader" data-sortable data-type="number">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Product data populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Leaderboard Section -->
+                <section aria-labelledby="leaderboard-heading">
+                    <h2 id="leaderboard-heading" class="bel-h3">Top 10 Performance Leaderboard</h2>
+                    <div class="bel-panel">
+                        <!-- Search and Filter Controls -->
+                        <div class="filters-section" role="search" aria-labelledby="filters-heading">
+                            <h3 id="filters-heading" class="bel-h3" style="margin-top:0; font-size: 1.25rem;">Filters</h3>
+                            <form id="bel-filters" class="filters-grid">
+                                <div class="bel-form-group">
+                                    <label for="f-referral-id">Referral ID</label>
+                                    <div class="search-input-container">
+                                        <input id="f-referral-id" class="bel-form-control bel-form-input" type="search" 
+                                               placeholder="Search Referral ID" autocomplete="off" 
+                                               aria-describedby="referral-help" />
+                                        <div id="search-suggestions-id" class="search-suggestions" aria-label="Search suggestions"></div>
+                                        <span id="referral-help" class="sr-only">Search by referral ID</span>
+                                    </div>
+                                </div>
+                                <div class="bel-form-group">
+                                    <label for="f-name">Name</label>
+                                    <div class="search-input-container">
+                                        <input id="f-name" class="bel-form-control bel-form-input" type="search" 
+                                               placeholder="Search Name" autocomplete="off" 
+                                               aria-describedby="name-help" />
+                                        <div id="search-suggestions-name" class="search-suggestions" aria-label="Search suggestions"></div>
+                                        <span id="name-help" class="sr-only">Search by name</span>
+                                    </div>
+                                </div>
+                                <!-- Common Filter Component -->
+                                <div class="bel-form-group">
+                                    <label for="f-level">Level</label>
+                                    <select id="f-level" class="bel-form-control bel-form-select">
+                                        <option value="">All Levels</option>
+                                        <!-- Options populated by JavaScript -->
+                                    </select>
+                                </div>
+                                <div class="bel-form-group">
+                                    <label for="f-region">Region</label>
+                                    <select id="f-region" class="bel-form-control bel-form-select">
+                                        <option value="">All Regions</option>
+                                        <!-- Options populated by JavaScript -->
+                                    </select>
+                                </div>
+                                <div class="bel-form-group">
+                                    <label for="f-country">Country</label>
+                                    <select id="f-country" class="bel-form-control bel-form-select">
+                                        <option value="">All Countries</option>
+                                        <!-- Countries populated by JavaScript -->
+                                    </select>
+                                </div>
+                                <div class="bel-form-group">
+                                    <label for="f-activity">Activity</label>
+                                    <select id="f-activity" class="bel-form-control bel-form-select">
+                                        <option value="">Any activity</option>
+                                        <option value="clicks">Has clicks only</option>
+                                        <option value="orders">Has orders</option>
+                                        <option value="none">No activity</option>
+                                    </select>
+                                </div>
+                            </form>
+                            
+                            <!-- Batch Actions -->
+                            <div class="batch-actions" role="toolbar" aria-label="Batch actions">
+                                <div class="left">
+                                    <label>
+                                        <input type="checkbox" id="select-all-page" aria-describedby="select-help"/>
+                                        Select all
+                                    </label>
+                                    <span class="text-muted" id="selected-count" aria-live="polite">0 selected</span>
+                                    <span id="select-help" class="sr-only">Select all items on current page</span>
+                                </div>
+                                <div class="right">
+                                    <button class="bel-btn secondary" id="export-csv" aria-describedby="export-help">
+                                        <i class="fas fa-file-export" aria-hidden="true"></i> Export CSV
+                                    </button>
+                                    <span id="export-help" class="sr-only">Export selected data to CSV file</span>
+                                </div>
+                            </div>
+
+                            <!-- Results Table -->
+                            <div class="table-container">
+                                <div class="scrollable-table-container">
+                                    <table class="bel-table" id="bel-table" role="table" aria-label="BEL performance data">
+                                        <thead>
+                                            <tr role="row">
+                                                <th role="columnheader">
+                                                    <input type="checkbox" id="th-select" aria-label="Select all on this page" />
+                                                </th>
+                                                <th role="columnheader" data-sortable="id">Referral ID</th>
+                                                <th role="columnheader" data-sortable="name">Name</th>
+                                                <th role="columnheader" data-sortable="level">Level</th>
+                                                <th role="columnheader" data-sortable="clicks30" style="text-align: right;">Clicks</th>
+                                                <th role="columnheader" data-sortable="orders30" style="text-align: right;">Orders</th>
+                                                <th role="columnheader" data-sortable="revenue30" style="text-align: right;">Revenue</th>
+                                                <th role="columnheader" style="text-align: right;">C2O CVR (%)</th>
+                                                <th role="columnheader" style="text-align: right;">AOV</th>
+                                                <th role="columnheader" data-sortable="region">Region</th>
+                                                <th role="columnheader" data-sortable="country">Country</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- BEL data populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Pagination Component -->
+                                <nav class="pagination-bar" role="navigation" aria-label="Table pagination">
+                                    <div class="rows-select">
+                                        <label for="rows-per-page">Rows per page</label>
+                                        <select id="rows-per-page" class="bel-form-control bel-form-select" style="width: 70px;">
+                                            <option>10</option>
+                                            <option>20</option>
+                                            <option>50</option>
+                                        </select>
+                                    </div>
+                                    <div class="pagination-controls">
+                                        <span id="range-label" class="text-muted" aria-live="polite">0–0 of 0</span>
+                                        <button class="bel-btn secondary" id="prev-page" aria-label="Previous page">
+                                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="bel-btn secondary" id="next-page" aria-label="Next page">
+                                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Account Management Section -->
+            <section id="Account-Management" class="content-section">
+                <header class="section-header">
+                    <h1 class="bel-h1">Account Management</h1>
+                </header>
+    <!-- Top Performers Section -->
+    <section aria-labelledby="top-performers-heading">
+        <div class="bel-panel">
+            <div class="top-performers-grid">
+                <div class="top-performer-section">
+                    <h3 class="chart-title">Top Revenue Performers</h3>
+                    <div id="top-revenue-performers" class="top-performers-card">
+                        <!-- Top Revenue Performers 會在這裡顯示 -->
+                    </div>
+                </div>
+                <div class="top-performer-section">
+                    <h3 class="chart-title">Top CVR Performers</h3>
+                    <div id="top-cvr-performers" class="top-performers-card">  
+                        <!-- Top CVR Performers 會在這裡顯示 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                
+                
+                <!-- View Controls -->
+                <div class="view-switcher" id="account-view-switcher" role="tablist" aria-label="View options">
+                    <button class="view-btn active" data-view="grid" role="tab" aria-selected="true" aria-controls="account-grid-view">
+                        <i class="fas fa-th" aria-hidden="true"></i> Grid View
+                    </button>
+                    <button class="view-btn" data-view="list" role="tab" aria-selected="false" aria-controls="account-list-view">
+                        <i class="fas fa-list" aria-hidden="true"></i> List View
+                    </button>
+                </div>
+                
+                <!-- Filter Controls -->
+                <div class="bel-panel filter-panel" style="background-color:var(--ds-color-white);border: none;margin-top: 8px;">
+                    <h2 class="bel-h3" style="margin-top:0; font-size: 1.25rem;">Filters</h2>
+                    <form id="account-filters" class="filters-grid" role="search">
+                        <div class="bel-form-group">
+                            <label for="account-f-referral-id">Referral ID</label>
+                            <div class="search-input-container">
+                                <input id="account-f-referral-id" class="bel-form-control bel-form-input" 
+                                       type="search" placeholder="Search Referral ID" autocomplete="off" />
+                                <div id="account-search-suggestions-id" class="search-suggestions" aria-label="Search suggestions"></div>
+                            </div>
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="account-f-name">Name</label>
+                            <div class="search-input-container">
+                                <input id="account-f-name" class="bel-form-control bel-form-input" 
+                                       type="search" placeholder="Search Name" autocomplete="off" />
+                                <div id="account-search-suggestions-name" class="search-suggestions" aria-label="Search suggestions"></div>
+                            </div>
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="account-f-level">Level</label>
+                            <select id="account-f-level" class="bel-form-control bel-form-select">
+                                <option value="">All Levels</option>
+                                <!-- Options populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="account-f-region">Region</label>
+                            <select id="account-f-region" class="bel-form-control bel-form-select">
+                                <option value="">All Regions</option>
+                                <!-- Options populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="account-f-sort">Sort By</label>
+                            <select id="account-f-sort" class="bel-form-control bel-form-select">
+                                <option value="name">By Name</option>
+                                <option value="id">By ID</option>
+                                <option value="level">By Level</option>
+                                <option value="orders">By Orders</option>
+                                <option value="clicks">By Clicks</option>
+                                <option value="revenue">By Revenue</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Grid View -->
+                <div class="view-container active" id="account-grid-view" role="tabpanel" aria-labelledby="grid-view-btn">
+                    <div id="account-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        <!-- Cards populated by JavaScript -->
+                    </div>
+                    <!-- Grid Pagination -->
+                    <nav class="pagination-bar" role="navigation" aria-label="Grid pagination">
+                        <div class="rows-select">
+                            <label for="account-grid-rows-per-page">Cards per page</label>
+                            <select id="account-grid-rows-per-page" class="bel-form-control bel-form-select" style="width: 70px;">
+                                <option>6</option>
+                                <option selected>12</option>
+                                <option>24</option>
+                            </select>
+                        </div>
+                        <div class="pagination-controls">
+                            <span id="account-grid-range-label" class="text-muted" aria-live="polite">0–0 of 0</span>
+                            <button class="bel-btn secondary" id="account-grid-prev-page" aria-label="Previous page">
+                                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="bel-btn secondary" id="account-grid-next-page" aria-label="Next page">
+                                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+                
+                <!-- List View -->
+                <div class="view-container" id="account-list-view" role="tabpanel" aria-labelledby="list-view-btn" style="display: none;">
+                    <div class="bel-panel" style="padding: 0;">
+                        <div class="scrollable-table-container">
+                            <table class="bel-table" id="account-list-table" role="table" aria-label="Account list data">
+                                <thead>
+                                    <tr role="row">
+                                        <th role="columnheader" data-sortable="referralId">Referral ID</th>
+                                        <th role="columnheader" data-sortable="name">Name</th>
+                                        <th role="columnheader" data-sortable="level">Level</th>
+                                        <th role="columnheader" data-sortable="clicks30" style="text-align: right;">Clicks</th>
+                                        <th role="columnheader" data-sortable="orders30" style="text-align: right;">Orders</th>
+                                        <th role="columnheader" data-sortable="revenue30" style="text-align: right;">Revenue</th>
+                                        <th role="columnheader" data-sortable="c20cvr" style="text-align: right;">C2O CVR (%)</th>
+                                        <th role="columnheader" data-sortable="aov" style="text-align: right;">AOV</th>
+                                        <th role="columnheader" data-sortable="region">Region</th>
+                                        <th role="columnheader" data-sortable="country">Country</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- List items populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- List Pagination -->
+                    <nav class="pagination-bar" role="navigation" aria-label="List pagination">
+                        <div class="rows-select">
+                            <label for="account-list-rows-per-page">Rows per page</label>
+                            <select id="account-list-rows-per-page" class="bel-form-control bel-form-select" style="width: 70px;">
+                                <option>5</option>
+                                <option selected>10</option>
+                                <option>20</option>
+                            </select>
+                        </div>
+                        <div class="pagination-controls">
+                            <span id="account-list-range-label" class="text-muted" aria-live="polite">0–0 of 0</span>
+                            <button class="bel-btn secondary" id="account-list-prev-page" aria-label="Previous page">
+                                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="bel-btn secondary" id="account-list-next-page" aria-label="Next page">
+                                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- Dynamic Content Sections -->
+            <section id="payouts-order" class="content-section">
+                <!-- Content dynamically injected by JavaScript -->
+            </section>
+
+            <section id="content" class="content-section">
+                <!-- Content dynamically injected by JavaScript -->
+            </section>
+
+            <section id="contact-support" class="content-section">
+                <!-- Content dynamically injected by JavaScript -->
+            </section>
+        </div>
+    </main>
+    
+    <!-- BEL Details Modal Component -->
+    <div class="modal-overlay" id="bel-details-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content modal-lg">
+            <header class="modal-header">
+                <div class="bel-profile-identifier">
+                    <img src="" alt="" class="modal-avatar-small" style="display: none;">
+                    <div class="bel-profile-info">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <h2 id="modal-title">Maxwell Walker</h2>
+                            <span id="modal-bel-level-badge" class="bel-badge exploder">Exploder</span>
+                        </div>
+                        <p id="modal-bel-info">Referral ID: ATWADVANT | Email: maxwell.walker@advantech.com</p>
+                    </div>
+                </div>
+                <button class="close-button" aria-label="Close modal">&times;</button>
+            </header>
+
+            <div class="modal-body-grid" style="height: 600px;">
+                <!-- Modal Navigation -->
+                <div class="modal-left-pane">
+                    <nav class="tab-navigation" role="tablist" aria-label="Modal sections">
+                        <button class="tab-link active" data-tab="overview" role="tab" aria-selected="true" aria-controls="overview">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i> Performance
+                        </button>
+                        <button class="tab-link" data-tab="payouts" role="tab" aria-selected="false" aria-controls="payouts">
+                            <i class="fas fa-wallet" aria-hidden="true"></i> Finance
+                        </button>
+                        <button class="tab-link" data-tab="payout" role="tab" aria-selected="false" aria-controls="payout">
+                            <i class="fas fa-dollar-sign" aria-hidden="true"></i> Payout
+                        </button>
+                        <button class="tab-link" data-tab="insights" role="tab" aria-selected="false" aria-controls="insights">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i> Customer Insights
+                        </button>
+                    </nav>
+
+                    <!-- Performance Tab -->
+                    <div class="tab-content active" id="overview" role="tabpanel" aria-labelledby="performance-tab">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h3 style="margin: 0;">Annual Performance Metrics</h3>
+                            <label for="year-selector" class="sr-only">Select year</label>
+                            <select id="year-selector" class="bel-form-control bel-form-select bel-select--inline">
+                                <option value="2024">2024</option>
+                                <option value="2025" selected>2025</option>
+                            </select>
+                        </div>
+                        <div class="metric-cards-grid">
+                            <div class="metric-card" role="region" aria-label="Total clicks metric">
+                                <span>Total Clicks</span><strong id="modal-total-clicks">-</strong>
+                            </div>
+                            <div class="metric-card" role="region" aria-label="Total orders metric">
+                                <span>Total Orders</span><strong id="modal-total-orders">-</strong>
+                            </div>
+                            <div class="metric-card" role="region" aria-label="Total revenue metric">
+                                <span>Total Revenue</span><strong id="modal-total-revenue">-</strong>
+                            </div>
+                            <div class="metric-card" role="region" aria-label="Conversion rate metric">
+                                <span>C2O CVR (%)</span><strong id="modal-conv-rate">-</strong>
+                            </div>
+                            <div class="metric-card" role="region" aria-label="Average order value metric">
+                                <span>AOV</span><strong id="modal-aov">-</strong>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin-top: 24px; margin-bottom: 4px;">Performance Trend</h4>
+                        <div class="chart-container" style="height: 280px; margin-bottom: 2rem;">
+                            <canvas id="bel-performance-trend-chart" aria-label="Performance trend chart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Finance Tab -->
+                    <div class="tab-content" id="payouts" role="tabpanel" aria-labelledby="finance-tab">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h3>Banking Information</h3>
+                            <div class="action-buttons">
+                                <button class="bel-btn secondary" id="edit-banking-btn">
+                                    <i class="fas fa-edit" aria-hidden="true"></i> Edit
+                                </button>
+                                <button class="bel-btn secondary" id="banking-history-btn">
+                                    <i class="fas fa-history" aria-hidden="true"></i> History
+                                </button>
+                            </div>
+                        </div>
+                        <div class="banking-info-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 24px;">
+                            <div class="bel-form-group">
+                                <label>Bank Name</label>
+                                <div class="banking-display" id="bank-name-display">-</div>
+                                <input type="text" id="bank-name-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
+                            </div>
+                            <div class="bel-form-group">
+                                <label>SWIFT Code</label>
+                                <div class="banking-display" id="swift-code-display">-</div>
+                                <input type="text" id="swift-code-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
+                            </div>
+                            <div class="bel-form-group">
+                                <label>Account Holder Name (Passport Name)</label>
+                                <div class="banking-display" id="account-holder-display">-</div>
+                                <input type="text" id="account-holder-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
+                            </div>
+                            <div class="bel-form-group">
+                                <label>Phone Number</label>
+                                <div class="banking-display" id="phone-display">-</div>
+                                <input type="tel" id="phone-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
+                            </div>
+                            <div class="bel-form-group" style="grid-column: 1 / -1;">
+                                <label>Address</label>
+                                <div class="banking-display" id="address-display">-</div>
+                                <textarea id="address-edit" class="bel-form-control bel-form-textarea banking-edit" style="display: none; min-height: 80px;"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="banking-edit-actions" style="display: none; margin-bottom: 24px;">
+                            <button class="bel-btn secondary" id="cancel-banking-btn">Cancel</button>
+                            <button class="bel-btn primary" id="save-banking-btn" style="margin-left: 10px;">
+                                <i class="fas fa-save" aria-hidden="true"></i> Save Changes
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Payout Tab -->
+                    <div class="tab-content" id="payout" role="tabpanel" aria-labelledby="payout-tab">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h3 style="margin: 0;">Annual Payouts History</h3>
+                            <label for="payout-year-selector" class="sr-only">Select payout year</label>
+                            <select id="payout-year-selector" class="bel-form-control bel-form-select bel-select--inline">
+                                <!-- Years populated by JavaScript -->
+                            </select>
+                        </div>
+                        
+                         <div class="bel-grid-container grid-cols-3" style="margin-bottom: 12px; gap:12px;">
+                            <div class="bel-card gray-bg">
+                                <div class="bel-card-title">Total Gross Amount</div>
+                                <div class="bel-card-value" style="font-size: 1.5rem;" id="total-gross-amount">$0.00</div>
+                            </div>
+                            <div class="bel-card gray-bg">
+                                <div class="bel-card-title">WHT</div>
+                                <div class="bel-card-value" style=" font-size: 1.5rem;" id="total-wht-amount">$0.00</div>
+                            </div>
+                            <div class="bel-card gray-bg">
+                                <div class="bel-card-title">Total Net Amount</div>
+                                <div class="bel-card-value" style="color:var(--ds-color-success); font-size: 1.5rem;" id="total-net-amount">$0.00</div>
+                            </div>
+                        </div>
+                        <div class="scrollable-table-container" style="margin-bottom:12px ;">
+                             <table class="bel-table" role="table" aria-label="Payout history">
+                                 <thead>
+                                     <tr role="row">
+                                         <th role="columnheader" data-sortable data-type="date">Date</th>
+                                         <th role="columnheader" data-sortable data-type="number">Gross Amount</th>
+                                         <th role="columnheader" data-sortable data-type="number">WHT</th>
+                                         <th role="columnheader" data-sortable data-type="number">Net Amount</th>
+                                         <th role="columnheader" data-sortable data-type="string">Status</th>
+                                     </tr>
+                                 </thead>
+                                 <tbody id="payout-history-tbody">
+                                     <!-- Payout history populated by JavaScript -->
+                                 </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Insights Tab -->
+                    <div class="tab-content" id="insights" role="tabpanel" aria-labelledby="insights-tab">
+                        <h3>Top Purchased Categories & Products</h3>
+                        <div class="tags-container">
+                            <span class="insight-tag">Smart Home</span>
+                            <span class="insight-tag">Sensors</span>
+                            <span class="insight-tag">Industrial PC</span>
+                        </div>
+                        <ol class="product-list">
+                            <li>Smart Lock Pro</li>
+                            <li>Environment Sensor Gen 2</li>
+                            <li>Smart Bulb Kit</li>
+                            <li>ADAM-6017</li>
+                            <li>UNO-2271G</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Modal Management Panel -->
+                <div class="modal-right-pane">
+                    <h3>Management</h3>
+                    <div class="bel-form-group">
+                        <label for="level-adjustment">Adjust Level</label>
+                        <select id="level-adjustment" class="bel-form-control bel-form-select">
+                            <option value="Builder">Builder</option>
+                            <option value="Enabler">Enabler</option>
+                            <option value="Exploder" selected>Exploder</option>
+                            <option value="Leader">Leader</option>
+                        </select>
+                    </div>
+                     <div class="modal-actions">
+                        <button class="bel-btn primary">
+                            <i class="fas fa-save" aria-hidden="true"></i> Save Changes
+                        </button>
+                    </div>
+                    
+                    <hr class="divider" role="separator">
+
+                    <h3>Internal Notes</h3>
+                    <div class="notes-history">
+                        <div class="note-item">
+                            <p>Contacted to confirm partnership interest, samples will be sent.</p>
+                            <span><strong>Admin</strong> - 2025-08-15 10:30</span>
+                        </div>
+                        <div class="note-item">
+                            <p>Observed high community engagement rate, recommend designating as a key partner.</p>
+                            <span><strong>Manager</strong> - 2025-07-20 15:00</span>
+                        </div>
+                    </div>
+                    <div class="add-note-form">
+                        <label for="add-note-textarea" class="sr-only">Add a note</label>
+                        <textarea id="add-note-textarea" class="bel-form-control bel-form-textarea" placeholder="Add a new note..."></textarea>
+                        <button id="add-note-btn" class="bel-btn secondary" style="width: 100%;">Add Note</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+    <!-- Unified Modules -->
+    <script src="src/js/modules/utils.js"></script>
+    <script src="src/js/modules/pagination-manager.js"></script>
+    <script src="src/js/modules/search-manager.js"></script>
+    <script src="src/js/modules/modal-manager.js"></script>
+    
+    <!-- Core Application -->
+    <script src="src/js/data-loader.js"></script>
+    <script src="src/js/app.js"></script>
+    <script>
+        // Enhanced year selector functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSelector = document.getElementById('year-selector');
+            if (yearSelector) {
+                yearSelector.addEventListener('change', function(e) {
+                    const selectedYear = e.target.value;
+                    if (window.updateModalMetrics) {
+                        window.updateModalMetrics(selectedYear);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

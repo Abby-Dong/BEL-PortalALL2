@@ -1,0 +1,85 @@
+{
+  "logo": "https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg",
+  "platformName": "BEL Platform",
+  "supportEmail": "bel-support@iotmart.com",
+  "paymentSchedule": {
+    "paymentDate": 5,
+    "minimumPayout": 100,
+    "processingDays": "5-7"
+  },
+  "cookieDuration": 30,
+  "partnerLevels": [
+    {
+      "name": "Builder",
+      "icon": "fas fa-hammer",
+      "percentage": "2.5%",
+      "requirement": 0,
+      "color": "#006EFF"
+    },
+    {
+      "name": "Enabler",
+      "icon": "fas fa-cog",
+      "percentage": "3.5%",
+      "requirement": 20,
+      "color": "#00893A"
+    },
+    {
+      "name": "Explorer",
+      "icon": "fas fa-rocket",
+      "percentage": "4.5%",
+      "requirement": 35,
+      "color": "#F39800"
+    },
+    {
+      "name": "Leader",
+      "icon": "fas fa-crown",
+      "percentage": "5.5%",
+      "requirement": 50,
+      "color": "#DB3A3A"
+    }
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "zh-TW",
+      "name": "繁體中文"
+    },
+    {
+      "code": "kr",
+      "name": "한국어"
+    }
+  ],
+  "timezones": [
+    {
+      "code": "UTC-8",
+      "name": "Pacific Standard Time (PST)"
+    },
+    {
+      "code": "UTC-7",
+      "name": "Mountain Standard Time (MST)"
+    },
+    {
+      "code": "UTC-6",
+      "name": "Central Standard Time (CST)"
+    },
+    {
+      "code": "UTC-5",
+      "name": "Eastern Standard Time (EST)"
+    },
+    {
+      "code": "UTC+0",
+      "name": "Greenwich Mean Time (GMT)"
+    },
+    {
+      "code": "UTC+8",
+      "name": "China Standard Time (CST)"
+    },
+    {
+      "code": "UTC+9",
+      "name": "Japan Standard Time (JST)"
+    }
+  ]
+}

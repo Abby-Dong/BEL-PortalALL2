@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnings & Orders - BEL Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="bel-header">
+        <i class="bel-hamburger-menu fas fa-bars" id="bel-hamburger-btn"></i>
+        <div class="bel-header-content">
+            <div class="bel-sidebar-logo">
+                <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="logo">
+                <span>BEL Portal</span>
+            </div>
+            <div class="bel-header-right">
+                <div class="bel-notification-bell" id="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <div class="dot"></div>
+                </div>
+                <div class="bel-notification-panel" id="notification-panel">
+                    <div class="bel-notification-header">Announcements</div>
+                    <ul class="bel-notification-list">
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag important">Important</span>September Earnings Payout Postponed</div>
+                            <div class="bel-notification-date">2025-08-26</div>
+                        </li>
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag new-product">New Campaign</span>ADAM Remote I/O Series are now available for promotion</div>
+                            <div class="bel-notification-date">2025-08-25</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-language-selector" id="language-selector">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="bel-language-panel" id="language-panel">
+                    <ul class="bel-language-list">
+                        <li class="bel-language-item" data-lang="en">
+                            <div class="bel-language-name">English</div>
+                        </li>
+                        <li class="bel-language-item" data-lang="zh">
+                            <div class="bel-language-name">繁體中文</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-user-profile">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="User Avatar">
+                </div>
+                <div class="user-profile-panel" id="user-profile-panel">
+                    <div class="panel-content">
+                        <div class="user-info">
+                            <span class="user-name">Maxwell</span>
+                            <span class="user-email">Maxwell.Walker@example.com</span>
+                        </div>
+                        <div class="user-level">
+                            <span class="bel-badge explorer"><i class="fas fa-rocket"></i> Explorer</span>
+                        </div>
+                        <hr class="divider">
+                        <a href="my-account.html" class="panel-link">My Account</a>
+                        <a href="#" class="panel-link">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bel-container">
+        <!-- Sidebar Component -->
+        <aside class="bel-sidebar" id="bel-sidebar">
+            <div class="bel-sidebar-menu-title">MAIN MENU</div>
+            <nav class="bel-sidebar-nav">
+                <a href="index.html" class="bel-sidebar-nav-link"><i class="fas fa-tachometer-alt fa-fw"></i><span>Sales Engagement</span></a>
+                <a href="earnings-orders.html" class="bel-sidebar-nav-link active"><i class="fas fa-wallet fa-fw"></i><span>Earnings & Orders</span></a>
+                <a href="my-account.html" class="bel-sidebar-nav-link"><i class="fas fa-user-circle fa-fw"></i><span>My Account</span></a>
+            </nav>
+            <div class="bel-sidebar-menu-title">HELP & SUPPORT</div>
+            <nav class="bel-sidebar-nav">
+                <a href="support-faq.html" class="bel-sidebar-nav-link"><i class="fas fa-question-circle fa-fw"></i><span>Talk to Admin</span></a>
+                <a href="resource-center.html" class="bel-sidebar-nav-link"><i class="fas fa-folder fa-fw"></i><span>Get Resource</span></a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="bel-main-content" id="bel-main-content">
+            <h1 class="bel-h1">Earnings & Orders</h1>
+            
+            <div class="bel-stats-cards">
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                        <div>
+                            <div class="bel-card-title">Net Payouts</div>
+                            <div class="bel-card-value" id="net-payouts-value">Loading...</div>
+                        </div>
+                        <div class="bel-card-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    </div>
+                    <div class="trend-indicator" id="net-payouts-trend">
+                        <i class="fas fa-caret-up"></i> +0% <span class="trend-indicator-text">MoM</span>
+                    </div>
+                </div>
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                        <div>
+                            <div class="bel-card-title">Order Counts</div>
+                            <div class="bel-card-value" id="order-counts-value">Loading...</div>
+                        </div>
+                        <div class="bel-card-icon"><i class="fas fa-shopping-cart"></i></div>
+                    </div>
+                    <div class="trend-indicator" id="order-counts-trend">
+                        <i class="fas fa-caret-up"></i> +0% <span class="trend-indicator-text">MoM</span>
+                    </div>
+                </div>
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                        <div>
+                            <div class="bel-card-title">Order Amount (Total)</div>
+                            <div class="bel-card-value" id="order-amount-value">Loading...</div>
+                        </div>
+                        <div class="bel-card-icon"><i class="fas fa-chart-line"></i></div>
+                    </div>
+                    <div class="trend-indicator" id="order-amount-trend">
+                        <i class="fas fa-caret-up"></i> +0% <span class="trend-indicator-text">MoM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bel-panel earnings-summary-panel" style="display: none;">
+                <div class="total-title">
+                    Total Rebate Earnings
+                    <span class="tooltip-container">
+                        <i class="fas fa-info-circle tooltip-icon"></i>
+                        <span class="tooltip-text">Payouts over $100 USD are processed on the 5th of each month. Balances under $100 will roll over to the next month.</span>
+                    </span>
+                </div>
+                <div class="total-value">Loading...</div>
+                <div class="sub-earnings">
+                    <div>
+                        <div class="sub-title">To Be Payout</div>
+                        <div class="sub-value">Loading...</div>
+                    </div>
+                    <div>
+                        <div class="sub-title">Already Paid</div>
+                        <div class="sub-value">Loading...</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-header-with-controls">
+               <h3 class="bel-h3 bel-h3-reset">Payout History</h3>
+            </div>
+            <div class="table-controls">
+                <div class="view-switcher" id="payout-view-switcher">
+                    <button class="view-btn active" data-view="list"><i class="fas fa-list"></i> List View</button>
+                    <button class="view-btn" data-view="chart"><i class="fas fa-chart-bar"></i> Chart View</button>
+                </div>
+                <div class="date-filter">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="text" id="payout-date-filter" placeholder="Filter by date range...">
+                </div>
+            </div>
+
+            <div class="view-container active" id="payout-list-view">
+                <div class="bel-panel bel-panel-no-padding">
+                    <div class="bel-table-container">
+                        <table class="bel-table" id="payout-history-table">
+                        <thead>
+                            <tr>
+                                <th data-sortable data-type="string">Payout ID</th>
+                                <th data-sortable data-type="date">Date</th>
+                                <th data-sortable data-type="number">Gross Earnings</th>
+                                <th data-sortable data-type="number">WHT</th>
+                                <th data-sortable data-type="number">Net Payout</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-container bel-view-hidden" id="payout-chart-view">
+                <div class="bel-panel">
+                    <div class="chart-container line-chart-container">
+                        <canvas id="payout-history-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header-with-controls">
+                <h3 class="bel-h3 bel-h3-reset">Order Tracking</h3>
+                <div class="table-controls">
+                    <div class="date-filter">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="text" id="order-date-filter" placeholder="Filter by date range...">
+                    </div>
+                </div>
+            </div>
+            <div class="bel-panel bel-panel-no-padding">
+                <div class="bel-table-container">
+                    <table class="bel-table" id="order-tracking-table">
+                    <thead>
+                        <tr>
+                            <th data-sortable data-type="date">Order Placed</th>
+                            <th data-sortable data-type="string">Order Number</th>
+                            <th data-sortable data-type="string">Currency</th>
+                            <th data-sortable data-type="number">Order Amount</th>
+                            <th data-sortable data-type="number">Product Actual Amount</th>
+                            <th data-sortable data-type="string">Order Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/data-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

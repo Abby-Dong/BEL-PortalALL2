@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEL Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="bel-header">
+        <i class="bel-hamburger-menu fas fa-bars" id="bel-hamburger-btn"></i>
+        <div class="bel-header-content">
+            <div class="bel-sidebar-logo">
+                <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="logo">
+                <span>BEL Portal</span>
+            </div>
+            <div class="bel-header-right">
+                <div class="bel-notification-bell" id="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <div class="dot"></div>
+                </div>
+                <div class="bel-notification-panel" id="notification-panel">
+                    <div class="bel-notification-header">Announcements</div>
+                    <ul class="bel-notification-list">
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag important">Important</span>September Earnings Payout Postponed</div>
+                            <div class="bel-notification-date">2025-08-26</div>
+                        </li>
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag new-product">New Campaign</span>ADAM Remote I/O Series are now available for promotion</div>
+                            <div class="bel-notification-date">2025-08-25</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-language-selector" id="language-selector">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="bel-language-panel" id="language-panel">
+                    <ul class="bel-language-list">
+                        <li class="bel-language-item" data-lang="en">
+                            <div class="bel-language-name">English</div>
+                        </li>
+                        <li class="bel-language-item" data-lang="zh">
+                            <div class="bel-language-name">繁體中文</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-user-profile">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="User Avatar">
+                </div>
+                <div class="user-profile-panel" id="user-profile-panel">
+                    <div class="panel-content">
+                        <div class="user-info">
+                            <span class="user-name">Maxwell</span>
+                            <span class="user-email">Maxwell.Walker@example.com</span>
+                        </div>
+                        <div class="user-level">
+                            <span class="bel-badge explorer"><i class="fas fa-rocket"></i> Explorer</span>
+                        </div>
+                        <hr class="divider">
+                        <a href="my-account.html" class="panel-link">My Account</a>
+                        <a href="#" class="panel-link">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bel-container">
+        <!-- Sidebar Component -->
+        <aside class="bel-sidebar" id="bel-sidebar">
+            <div class="bel-sidebar-menu-title">MAIN MENU</div>
+            <nav class="bel-sidebar-nav">
+                <a href="index.html" class="bel-sidebar-nav-link active"><i class="fas fa-tachometer-alt fa-fw"></i><span>Sales Engagement</span></a>
+                <a href="earnings-orders.html" class="bel-sidebar-nav-link"><i class="fas fa-wallet fa-fw"></i><span>Earnings & Orders</span></a>
+                <a href="my-account.html" class="bel-sidebar-nav-link"><i class="fas fa-user-circle fa-fw"></i><span>My Account</span></a>
+            </nav>
+            <div class="bel-sidebar-menu-title">HELP & SUPPORT</div>
+            <nav class="bel-sidebar-nav">
+                <a href="support-faq.html" class="bel-sidebar-nav-link"><i class="fas fa-question-circle fa-fw"></i><span>Talk to Admin</span></a>
+                <a href="resource-center.html" class="bel-sidebar-nav-link"><i class="fas fa-folder fa-fw"></i><span>Get Resource</span></a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="bel-main-content" id="bel-main-content">
+            <h1 class="bel-h1">Welcome Back, Loading... 👋</h1>
+            
+            <div class="bel-grid-container grid-cols-2">
+                <div class="bel-panel level-panel" style="margin-bottom: 0px;">
+                    <h3>Your performance is excellent!</h3>
+                    <span class="bel-badge explorer bel-badge-fitted"><i class="fas fa-rocket"></i> Explorer</span>
+                    <div class="level-milestone-container">
+                        <div class="milestone-track">
+                           <div class="milestone-progress"></div>
+                           <div class="milestone-nodes">
+                               <div class="milestone-node completed"></div>
+                               <div class="milestone-node completed"></div>
+                               <div class="milestone-node active"></div>
+                               <div class="milestone-node"></div>
+                           </div>
+                       </div>
+                       <div class="milestone-labels">
+                           <div class="milestone-label active">Builder</div>
+                           <div class="milestone-label active">Enabler</div>
+                           <div class="milestone-label active">Explorer</div>
+                           <div class="milestone-label">Leader</div>
+                       </div>
+                   </div>
+                   <p>Hit $200K in sales to advance to the ‘Leader’ level and enjoy a 5% commission reward.</p>
+                </div>
+                <div class="bel-panel referral-panel" style="margin-bottom: 0px;">
+                    <div class="qr-code">
+                        <img
+                        src="https://irp.cdn-website.com/56869327/dms3rep/multi/IoTMart-qr-code-3+1.png"
+                        alt="Referral QR Code"
+                        />
+                    </div>
+                    <div class="links">
+                        <div class="referral-input-group">
+                        <label for="ref-link-db" class="bel-label-spacing">Your Referral Link</label>
+                        <div class="referral-inline">
+                            <input id="ref-link-db" type="text" value="https://www.iotmart.com/en-en/?ref=A8C1E3F" readonly />
+                            <button class="copy-button" data-copy-target="ref-link-db"><i class="far fa-copy"></i> </button>
+                        </div>
+                        </div>
+
+                        <div class="referral-input-group">
+                        <label for="ref-id-db" class="bel-label-spacing">Your Referral ID</label>
+                        <div class="referral-inline">
+                            <input id="ref-id-db" type="text" value="A8C1E3F" readonly />
+                            <button class="copy-button" data-copy-target="ref-id-db"><i class="far fa-copy"></i></button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bel-stats-cards">
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                    <div>
+                    <div class="bel-card-title">Referral Link Traffic</div>
+                    <div class="bel-card-value">1,280</div>
+                    </div>
+                    <div class="bel-card-icon"><i class="fas fa-mouse-pointer"></i></div>
+                    </div>
+                    <div class="trend-indicator positive"><i class="fas fa-caret-up"></i> +6.5% <span class="trend-indicator-text">MoM (MoM)</span></div>
+                </div>
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                    <div>
+                    <div class="bel-card-title">Referral ID Usage</div>
+                    <div class="bel-card-value">142</div>
+                    </div>
+                    <div class="bel-card-icon"><i class="fas fa-tags"></i></div>
+                    </div>
+                    <div class="trend-indicator negative"><i class="fas fa-caret-down"></i> -0.10% <span class="trend-indicator-text">MoM (MoM)</span></div>
+                </div>
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                    <div>
+                    <div class="bel-card-title">Total Orders Count</div>
+                    <div class="bel-card-value">35</div>
+                    </div>
+                    <div class="bel-card-icon"><i class="fas fa-shopping-cart"></i></div>
+                    </div>
+                    <div class="trend-indicator negative"><i class="fas fa-caret-down"></i> -0.2% <span class="trend-indicator-text">MoM (MoM)</span></div>
+                </div>
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                    <div>
+                    <div class="bel-card-title">Rebate Earnings</div>
+                    <div class="bel-card-value">$8,500</div>
+                    </div>
+                    <div class="bel-card-icon"><i class="fas fa-dollar-sign"></i></div>
+                    </div>
+                    <div class="trend-indicator positive"><i class="fas fa-caret-up"></i> +11.8% <span class="trend-indicator-text">MoM (MoM)</span></div>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h3>Annual Performance Overview</h3>
+                <select name="year" id="year-select">
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                </select>
+            </div>
+            <div class="bel-panel">
+                <div class="chart-container" style="height: 280px;">
+                    <canvas id="annual-performance-chart"></canvas>
+                </div>
+            </div>
+            
+            <div class="section-title">
+                <h3>Categories & Products Sales Effectiveness</h3>
+            </div>
+            <div class="bel-panel">
+                <div class="product-sales-grid">
+                     <div>
+                        <h4 style="font-size: 1rem; margin-bottom: 10px;">Top 5 Product Category Analysis</h4>
+                        <div class="chart-container bar-chart-container">
+                            <canvas id="product-category-chart"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1rem; margin-bottom: 10px;">Top 20 Products</h4>
+                        <div class="scrollable-table-container" style="max-height: 350px;">
+                            <table class="bel-table" style="margin-top:0;">
+                                <thead>
+                                    <tr>
+                                        <th data-sortable data-type="number" style="width:24px;">Rank</th>
+                                        <th data-sortable data-type="string" style="width:160px;">Product</th>
+                                        <th data-sortable data-type="number">Price</th>
+                                        <th data-sortable data-type="number">Qty</th>
+                                        <th data-sortable data-type="number">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Product data will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h3>Market Analysis</h3>
+            </div>
+            <div class="bel-panel">
+                <h4 class="bel-section-heading-large">Top 5 Market Regions</h4>
+                <div class="bel-table-container">
+                    <table class="bel-table">
+                    <thead>
+                        <tr>
+                            <th class="bel-th-small">#</th>
+                            <th>Market</th>
+                            <th>Orders</th>
+                            <th>Sales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be loaded by JavaScript -->
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/data-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

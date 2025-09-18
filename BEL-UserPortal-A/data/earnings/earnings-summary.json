@@ -1,0 +1,77 @@
+{
+  "userEarnings": [
+    {
+      "userId": "USER_001",
+      "totalEarnings": "$8,500.00",
+      "pendingPayout": "$1,520.00",
+      "alreadyPaid": "$6,980.00",
+      "tooltipText": "Payouts over $100 USD are processed on the 5th of each month. Balances under $100 will roll over to the next month."
+    }
+  ],
+  "userPerformance": [
+    {
+      "userId": "USER_001",
+      "totalOrders": 19,
+      "performanceScore": 35,
+      "currentLevel": {
+        "name": "Explorer",
+        "effectiveDate": "2025-06-15"
+      },
+      "levelProgress": {
+        "current": 35,
+        "target": 50,
+        "nextLevel": "Leader",
+        "progressPercentage": 70
+      },
+      "monthlyBreakdown": {
+        "august2025": {
+          "orders": 8,
+          "avgOrderValue": "$342.86",
+          "performancePoints": 12
+        },
+        "july2025": {
+          "orders": 6,
+          "avgOrderValue": "$405.56",
+          "performancePoints": 10
+        },
+        "june2025": {
+          "orders": 5,
+          "avgOrderValue": "$424.44",
+          "performancePoints": 8
+        }
+      }
+    },
+    {
+      "userId": "USER_002",
+      "totalOrders": 31,
+      "performanceScore": 65,
+      "currentLevel": {
+        "name": "Leader",
+        "effectiveDate": "2025-08-20"
+      },
+      "levelProgress": {
+        "current": 65,
+        "target": 80,
+        "nextLevel": "Master",
+        "progressPercentage": 81
+      },
+      "monthlyBreakdown": {
+        "august2025": {
+          "orders": 12,
+          "avgOrderValue": "$432.73",
+          "performancePoints": 18
+        },
+        "july2025": {
+          "orders": 10,
+          "avgOrderValue": "$481.82",
+          "performancePoints": 15
+        },
+        "june2025": {
+          "orders": 9,
+          "avgOrderValue": "$484.85",
+          "performancePoints": 14
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3618 @@
+{
+  "summaryStatsConfig": {
+    "belCount": {
+      "title": "BEL Count (#)",
+      "icon": "fas fa-users",
+      "trend": "+5.1%",
+      "trendText": "MoM",
+      "status": "positive"
+    },
+    "totalClicks": {
+      "title": "Total Clicks (#)",
+      "icon": "fas fa-mouse-pointer",
+      "trend": "+12.3%",
+      "trendText": "MoM",
+      "status": "positive"
+    },
+    "totalOrders": {
+      "title": "Total Orders (#)",
+      "icon": "fas fa-shopping-cart",
+      "trend": "+8.2%",
+      "trendText": "MoM",
+      "status": "positive"
+    },
+    "revenue": {
+      "title": "Revenue ($)",
+      "icon": "fas fa-dollar-sign",
+      "trend": "+15.8%",
+      "trendText": "MoM",
+      "status": "positive"
+    },
+    "convRate": {
+      "title": "C2O CVR (%)",
+      "icon": "fas fa-bullseye",
+      "trend": "-0.5%",
+      "trendText": "MoM",
+      "status": "negative"
+    },
+    "aov": {
+      "title": "AOV ($)",
+      "icon": "fas fa-file-invoice-dollar",
+      "trend": "+2.1%",
+      "trendText": "MoM",
+      "status": "positive"
+    }
+  },
+  "productAnalysis": {
+    "categoryDataByYearRegion": {
+      "2024": {
+        "North America": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 6,
+              "price": 3820
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 5,
+              "price": 1030
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 7,
+              "price": 850
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 8,
+              "price": 2320
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 4,
+              "price": 2325
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 5,
+              "price": 1100
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 3,
+              "price": 1055
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 2,
+              "price": 885
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 4,
+              "price": 810
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 3,
+              "price": 1985
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 4,
+              "price": 710
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 3,
+              "price": 240
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 6,
+              "price": 755
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 5,
+              "price": 580
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 4,
+              "price": 180
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 3,
+              "price": 230
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 295
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 4,
+              "price": 425
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 3,
+              "price": 440
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 1335
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 3665
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 3,
+              "price": 1310
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 3500
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 2,
+              "price": 2015
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 3860
+            }
+          ]
+        },
+        "Europe": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 5,
+              "price": 4070
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 4,
+              "price": 1915
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 5,
+              "price": 1660
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 6,
+              "price": 1250
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 3,
+              "price": 3040
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 4,
+              "price": 1805
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 2,
+              "price": 1170
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 3,
+              "price": 615
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 3,
+              "price": 925
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 2,
+              "price": 1465
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 3,
+              "price": 500
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 3,
+              "price": 435
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 5,
+              "price": 310
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 4,
+              "price": 370
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 3,
+              "price": 495
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 2,
+              "price": 305
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 295
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 3,
+              "price": 590
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 2,
+              "price": 300
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 1035
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 2610
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 2,
+              "price": 3670
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 2285
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 1375
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 3080
+            }
+          ]
+        },
+        "Taiwan": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 4,
+              "price": 3395
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 3,
+              "price": 1055
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 4,
+              "price": 1575
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 5,
+              "price": 960
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 2,
+              "price": 3460
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 3,
+              "price": 1200
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 2,
+              "price": 1885
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 2,
+              "price": 1865
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 2,
+              "price": 1340
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 2,
+              "price": 1780
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 2,
+              "price": 345
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 2,
+              "price": 220
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 4,
+              "price": 195
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 3,
+              "price": 385
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 2,
+              "price": 445
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 2,
+              "price": 280
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 1,
+              "price": 1075
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 2,
+              "price": 440
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 2,
+              "price": 1085
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 1,
+              "price": 505
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 1,
+              "price": 2755
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 1,
+              "price": 2340
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 3055
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 3805
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 2695
+            }
+          ]
+        },
+        "China": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 5,
+              "price": 1865
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 4,
+              "price": 1560
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 6,
+              "price": 1525
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 6,
+              "price": 1230
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 3,
+              "price": 3945
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 3,
+              "price": 1145
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 3,
+              "price": 2000
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 3,
+              "price": 1925
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 3,
+              "price": 745
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 2,
+              "price": 1845
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 4,
+              "price": 800
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 3,
+              "price": 325
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 5,
+              "price": 695
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 4,
+              "price": 400
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 3,
+              "price": 315
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 3,
+              "price": 675
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 590
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 3,
+              "price": 475
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 3,
+              "price": 1145
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 1610
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 3480
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 2,
+              "price": 2100
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 2530
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 1430
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 2140
+            }
+          ]
+        },
+        "ASEAN": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 4,
+              "price": 1330
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 3,
+              "price": 2450
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 5,
+              "price": 1445
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 5,
+              "price": 1620
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 3,
+              "price": 2295
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 3,
+              "price": 735
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 2,
+              "price": 1030
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 2,
+              "price": 1760
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 2,
+              "price": 1245
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 2,
+              "price": 1035
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 3,
+              "price": 660
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 2,
+              "price": 555
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 4,
+              "price": 620
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 3,
+              "price": 295
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 3,
+              "price": 420
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 2,
+              "price": 340
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 450
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 2,
+              "price": 960
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 2,
+              "price": 775
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 1405
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 1,
+              "price": 2275
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 2,
+              "price": 3595
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 2955
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 3590
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 2835
+            }
+          ]
+        },
+        "Japan": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 3,
+              "price": 2680
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 2,
+              "price": 1250
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 3,
+              "price": 1085
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 4,
+              "price": 1845
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 2,
+              "price": 3220
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 2,
+              "price": 785
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 2,
+              "price": 695
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 1,
+              "price": 825
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 2,
+              "price": 915
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 1,
+              "price": 1885
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 2,
+              "price": 315
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 2,
+              "price": 580
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 3,
+              "price": 760
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 2,
+              "price": 215
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 2,
+              "price": 545
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 2,
+              "price": 590
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 1,
+              "price": 810
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 2,
+              "price": 680
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 1,
+              "price": 740
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 1,
+              "price": 815
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 1,
+              "price": 3465
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 1,
+              "price": 1245
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 3985
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 1670
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 3990
+            }
+          ]
+        },
+        "Korea": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 3,
+              "price": 3400
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 2,
+              "price": 2335
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 3,
+              "price": 1345
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 3,
+              "price": 2375
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 2,
+              "price": 3825
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 2,
+              "price": 1295
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 1,
+              "price": 830
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 1,
+              "price": 1200
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 2,
+              "price": 1490
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 1,
+              "price": 925
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 2,
+              "price": 615
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 2,
+              "price": 155
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 3,
+              "price": 420
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 2,
+              "price": 660
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 1,
+              "price": 330
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 1,
+              "price": 720
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 1,
+              "price": 1135
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 1,
+              "price": 310
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 1,
+              "price": 1090
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 1,
+              "price": 1580
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 1,
+              "price": 2420
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 1,
+              "price": 3815
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 3280
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 3695
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 2015
+            }
+          ]
+        },
+        "India": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 4,
+              "price": 1825
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 3,
+              "price": 1565
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 4,
+              "price": 2360
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 4,
+              "price": 1130
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 2,
+              "price": 3410
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 2,
+              "price": 1685
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 2,
+              "price": 600
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 2,
+              "price": 1825
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 2,
+              "price": 1265
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 2,
+              "price": 1600
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 3,
+              "price": 170
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 2,
+              "price": 265
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 3,
+              "price": 520
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 2,
+              "price": 465
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 2,
+              "price": 395
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 2,
+              "price": 260
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 1,
+              "price": 445
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 2,
+              "price": 1100
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 2,
+              "price": 780
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 1,
+              "price": 460
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 1,
+              "price": 1550
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 1,
+              "price": 3190
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 1485
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 3380
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 1715
+            }
+          ]
+        },
+        "LATAM": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 3,
+              "price": 1725
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 3,
+              "price": 2150
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 4,
+              "price": 1775
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 3,
+              "price": 1925
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 2,
+              "price": 1875
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 2,
+              "price": 1140
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 2,
+              "price": 1680
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 2,
+              "price": 1840
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 2,
+              "price": 1465
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 1,
+              "price": 1035
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 2,
+              "price": 700
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 2,
+              "price": 355
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 3,
+              "price": 470
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 2,
+              "price": 560
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 2,
+              "price": 530
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 1,
+              "price": 650
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 1,
+              "price": 1120
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 1,
+              "price": 730
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 1,
+              "price": 660
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 1,
+              "price": 545
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 1,
+              "price": 2215
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 1,
+              "price": 2120
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 1460
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 2585
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 1285
+            }
+          ]
+        },
+        "ME&A": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 2,
+              "price": 3610
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 2,
+              "price": 1935
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 3,
+              "price": 1270
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 2,
+              "price": 2005
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 1,
+              "price": 2100
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 2,
+              "price": 615
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 1,
+              "price": 745
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 1,
+              "price": 1890
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 1,
+              "price": 720
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 1,
+              "price": 1070
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 1,
+              "price": 220
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 1,
+              "price": 180
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 2,
+              "price": 490
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 2,
+              "price": 220
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 1,
+              "price": 675
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 1,
+              "price": 445
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 1,
+              "price": 485
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 1,
+              "price": 885
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 1,
+              "price": 695
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 1,
+              "price": 740
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 1,
+              "price": 3410
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 1,
+              "price": 1740
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 3540
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 3560
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 3135
+            }
+          ]
+        },
+        "AAU / NZ": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 2,
+              "price": 2195
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 2,
+              "price": 2405
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 3,
+              "price": 1770
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 2,
+              "price": 2455
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 1,
+              "price": 2865
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 1,
+              "price": 990
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 1,
+              "price": 795
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 1,
+              "price": 800
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 1,
+              "price": 1950
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 1,
+              "price": 1480
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 1,
+              "price": 510
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 1,
+              "price": 585
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 2,
+              "price": 570
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 2,
+              "price": 630
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 1,
+              "price": 205
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 1,
+              "price": 890
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 1,
+              "price": 870
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 1,
+              "price": 860
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 1,
+              "price": 300
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 1,
+              "price": 425
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 1,
+              "price": 2850
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 1,
+              "price": 2590
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 1645
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 2220
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 1985
+            }
+          ]
+        },
+        "Russia & CIS": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 2,
+              "price": 1980
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 2,
+              "price": 1900
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 3,
+              "price": 1720
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 2,
+              "price": 1085
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 1,
+              "price": 2930
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 1,
+              "price": 975
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 1,
+              "price": 1170
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 1,
+              "price": 1545
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 1,
+              "price": 1110
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 1,
+              "price": 755
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 1,
+              "price": 605
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 1,
+              "price": 715
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 2,
+              "price": 250
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 1,
+              "price": 200
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 1,
+              "price": 705
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 1,
+              "price": 1055
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 1,
+              "price": 215
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 1,
+              "price": 1190
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 1,
+              "price": 295
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 1,
+              "price": 1845
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 1,
+              "price": 2170
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 1,
+              "price": 1880
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 2865
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 3190
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 3170
+            }
+          ]
+        },
+        "Others": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 2,
+              "price": 2075
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 2,
+              "price": 1620
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 2,
+              "price": 920
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 2,
+              "price": 1135
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 1,
+              "price": 2750
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 1,
+              "price": 605
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 1,
+              "price": 1400
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 1,
+              "price": 1145
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 1,
+              "price": 1530
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 1,
+              "price": 1185
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 1,
+              "price": 585
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 1,
+              "price": 720
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 1,
+              "price": 650
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 1,
+              "price": 310
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 1,
+              "price": 345
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 1,
+              "price": 505
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 1,
+              "price": 420
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 1,
+              "price": 1190
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 1,
+              "price": 260
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 1,
+              "price": 1485
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 1,
+              "price": 3420
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 1,
+              "price": 1450
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 1,
+              "price": 2485
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 1,
+              "price": 1435
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 1,
+              "price": 1405
+            }
+          ]
+        }
+      },
+      "2025": {
+        "North America": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 9,
+              "price": 3590
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 8,
+              "price": 1775
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 10,
+              "price": 1830
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 11,
+              "price": 1885
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 7,
+              "price": 1845
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 8,
+              "price": 715
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 6,
+              "price": 1640
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 5,
+              "price": 765
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 7,
+              "price": 980
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 6,
+              "price": 740
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 7,
+              "price": 760
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 5,
+              "price": 220
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 11,
+              "price": 390
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 9,
+              "price": 565
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 7,
+              "price": 270
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 6,
+              "price": 1165
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 5,
+              "price": 1110
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 8,
+              "price": 785
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 6,
+              "price": 450
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 5,
+              "price": 1485
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 5,
+              "price": 3635
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 6,
+              "price": 1360
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 4,
+              "price": 3735
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 5,
+              "price": 1535
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 4,
+              "price": 2915
+            }
+          ]
+        },
+        "Europe": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 8,
+              "price": 3890
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 7,
+              "price": 1995
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 9,
+              "price": 1955
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 10,
+              "price": 1870
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 6,
+              "price": 2495
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 7,
+              "price": 1135
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 5,
+              "price": 1020
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 5,
+              "price": 1970
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 6,
+              "price": 1245
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 5,
+              "price": 1090
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 6,
+              "price": 420
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 5,
+              "price": 555
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 9,
+              "price": 285
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 7,
+              "price": 455
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 6,
+              "price": 620
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 5,
+              "price": 525
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 4,
+              "price": 1150
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 6,
+              "price": 970
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 5,
+              "price": 1160
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 4,
+              "price": 450
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 4,
+              "price": 1240
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 4,
+              "price": 3075
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 3,
+              "price": 3745
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 4,
+              "price": 3505
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 3,
+              "price": 1610
+            }
+          ]
+        },
+        "Taiwan": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 7,
+              "price": 1500
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 6,
+              "price": 1900
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 8,
+              "price": 1235
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 9,
+              "price": 1835
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 5,
+              "price": 2285
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 6,
+              "price": 870
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 4,
+              "price": 1315
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 4,
+              "price": 740
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 5,
+              "price": 1100
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 4,
+              "price": 1355
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 5,
+              "price": 440
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 4,
+              "price": 310
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 8,
+              "price": 600
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 6,
+              "price": 705
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 5,
+              "price": 460
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 4,
+              "price": 825
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 3,
+              "price": 1025
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 5,
+              "price": 870
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 4,
+              "price": 740
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 3,
+              "price": 315
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 3,
+              "price": 3935
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 3,
+              "price": 3470
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 2425
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 3,
+              "price": 3915
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 2,
+              "price": 1625
+            }
+          ]
+        },
+        "China": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 8,
+              "price": 1750
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 7,
+              "price": 1340
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 9,
+              "price": 1035
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 9,
+              "price": 1020
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 6,
+              "price": 4240
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 6,
+              "price": 1735
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 6,
+              "price": 920
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 5,
+              "price": 1155
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 6,
+              "price": 1175
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 5,
+              "price": 1840
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 6,
+              "price": 365
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 5,
+              "price": 500
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 8,
+              "price": 360
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 7,
+              "price": 800
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 5,
+              "price": 420
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 4,
+              "price": 715
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 3,
+              "price": 700
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 5,
+              "price": 455
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 4,
+              "price": 1125
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 3,
+              "price": 2160
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 3,
+              "price": 1410
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 3,
+              "price": 1580
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 3800
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 3,
+              "price": 2935
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 2,
+              "price": 2335
+            }
+          ]
+        },
+        "ASEAN": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 7,
+              "price": 1380
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 6,
+              "price": 805
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 8,
+              "price": 1485
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 8,
+              "price": 2380
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 5,
+              "price": 1735
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 5,
+              "price": 1905
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 4,
+              "price": 1135
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 4,
+              "price": 930
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 4,
+              "price": 1505
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 4,
+              "price": 1730
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 5,
+              "price": 585
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 4,
+              "price": 725
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 7,
+              "price": 160
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 6,
+              "price": 265
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 5,
+              "price": 225
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 3,
+              "price": 1165
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 3,
+              "price": 1105
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 4,
+              "price": 905
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 3,
+              "price": 1125
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 3,
+              "price": 605
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 3435
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 3,
+              "price": 1345
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 2710
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 2,
+              "price": 3585
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 2,
+              "price": 3465
+            }
+          ]
+        },
+        "Japan": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 6,
+              "price": 1805
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 5,
+              "price": 1680
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 6,
+              "price": 1060
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 7,
+              "price": 885
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 5,
+              "price": 2460
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 4,
+              "price": 1345
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 4,
+              "price": 680
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 3,
+              "price": 1330
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 4,
+              "price": 1030
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 3,
+              "price": 1995
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 4,
+              "price": 405
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 3,
+              "price": 255
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 5,
+              "price": 510
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 4,
+              "price": 725
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 3,
+              "price": 565
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 3,
+              "price": 1195
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 835
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 3,
+              "price": 965
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 2,
+              "price": 360
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 785
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 1865
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 2,
+              "price": 1925
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 2890
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 2,
+              "price": 1300
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 2,
+              "price": 1935
+            }
+          ]
+        },
+        "Korea": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 5,
+              "price": 4215
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 4,
+              "price": 1480
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 5,
+              "price": 2400
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 6,
+              "price": 1645
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 4,
+              "price": 4485
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 3,
+              "price": 1970
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 3,
+              "price": 1110
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 2,
+              "price": 1145
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 3,
+              "price": 925
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 2,
+              "price": 820
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 3,
+              "price": 540
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 3,
+              "price": 190
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 4,
+              "price": 630
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 3,
+              "price": 375
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 2,
+              "price": 355
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 2,
+              "price": 1035
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 1140
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 2,
+              "price": 670
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 2,
+              "price": 560
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 925
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 2130
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 2,
+              "price": 2115
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 1295
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 2,
+              "price": 3905
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 2,
+              "price": 1990
+            }
+          ]
+        },
+        "India": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 6,
+              "price": 2830
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 5,
+              "price": 1470
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 6,
+              "price": 1370
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 6,
+              "price": 940
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 4,
+              "price": 4365
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 4,
+              "price": 1170
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 4,
+              "price": 1320
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 3,
+              "price": 1915
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 4,
+              "price": 1645
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 3,
+              "price": 1420
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 4,
+              "price": 700
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 3,
+              "price": 490
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 5,
+              "price": 180
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 4,
+              "price": 270
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 3,
+              "price": 415
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 3,
+              "price": 380
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 795
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 3,
+              "price": 1185
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 3,
+              "price": 470
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 380
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 1645
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 2,
+              "price": 3645
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 2980
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 2,
+              "price": 2615
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 2,
+              "price": 2485
+            }
+          ]
+        },
+        "LATAM": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 5,
+              "price": 2985
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 4,
+              "price": 2040
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 5,
+              "price": 1845
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 5,
+              "price": 1035
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 3,
+              "price": 2775
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 3,
+              "price": 1780
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 3,
+              "price": 990
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 2,
+              "price": 1120
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 3,
+              "price": 690
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 2,
+              "price": 1495
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 3,
+              "price": 150
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 2,
+              "price": 680
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 4,
+              "price": 700
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 3,
+              "price": 350
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 2,
+              "price": 520
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 2,
+              "price": 640
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 270
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 2,
+              "price": 1170
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 2,
+              "price": 880
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 975
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 3750
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 2,
+              "price": 2485
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 3915
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 2,
+              "price": 1710
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 2,
+              "price": 2430
+            }
+          ]
+        },
+        "ME&A": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 4,
+              "price": 3275
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 3,
+              "price": 1435
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 4,
+              "price": 2165
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 4,
+              "price": 1635
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 2,
+              "price": 2535
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 3,
+              "price": 1425
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 2,
+              "price": 1205
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 2,
+              "price": 1735
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 2,
+              "price": 860
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 2,
+              "price": 990
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 2,
+              "price": 580
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 2,
+              "price": 540
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 3,
+              "price": 330
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 3,
+              "price": 780
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 2,
+              "price": 730
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 2,
+              "price": 510
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 615
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 2,
+              "price": 760
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 2,
+              "price": 1055
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 300
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 2445
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 2,
+              "price": 2375
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 2060
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 2,
+              "price": 2960
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 2,
+              "price": 3575
+            }
+          ]
+        },
+        "AAU / NZ": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 3,
+              "price": 3685
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 3,
+              "price": 2140
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 4,
+              "price": 1460
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 3,
+              "price": 1750
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 2,
+              "price": 3010
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 2,
+              "price": 1505
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 2,
+              "price": 1985
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 2,
+              "price": 1035
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 2,
+              "price": 1645
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 2,
+              "price": 1570
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 2,
+              "price": 325
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 2,
+              "price": 235
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 3,
+              "price": 440
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 2,
+              "price": 675
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 2,
+              "price": 800
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 2,
+              "price": 835
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 545
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 2,
+              "price": 295
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 2,
+              "price": 1040
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 1840
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 2160
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 2,
+              "price": 3955
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 2470
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 2,
+              "price": 2120
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 2,
+              "price": 2015
+            }
+          ]
+        },
+        "Russia & CIS": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 3,
+              "price": 1805
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 3,
+              "price": 850
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 4,
+              "price": 895
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 3,
+              "price": 1300
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 2,
+              "price": 3145
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 2,
+              "price": 1850
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 2,
+              "price": 750
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 2,
+              "price": 1530
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 2,
+              "price": 1450
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 2,
+              "price": 1890
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 2,
+              "price": 740
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 2,
+              "price": 350
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 3,
+              "price": 545
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 2,
+              "price": 655
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 2,
+              "price": 560
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 2,
+              "price": 450
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 350
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 2,
+              "price": 870
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 2,
+              "price": 905
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 310
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 1635
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 2,
+              "price": 2940
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 2095
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 2,
+              "price": 1920
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 2,
+              "price": 3320
+            }
+          ]
+        },
+        "Others": {
+          "IoT Gateway & Edge Intelligence": [
+            {
+              "product": "AIR-030-S30A1",
+              "units": 3,
+              "price": 3100
+            },
+            {
+              "product": "UNO-2484G-7731BE",
+              "units": 3,
+              "price": 900
+            },
+            {
+              "product": "ECU-150-12A",
+              "units": 3,
+              "price": 1940
+            },
+            {
+              "product": "EKI-1211-A",
+              "units": 3,
+              "price": 1310
+            },
+            {
+              "product": "AIR-020X-S9A1",
+              "units": 2,
+              "price": 1695
+            }
+          ],
+          "Embedded Computers": [
+            {
+              "product": "UNO-247-N3N1A",
+              "units": 2,
+              "price": 1535
+            },
+            {
+              "product": "UNO-238-C7N1AE",
+              "units": 2,
+              "price": 875
+            },
+            {
+              "product": "ARK-3534B-00A1",
+              "units": 2,
+              "price": 1550
+            },
+            {
+              "product": "UNO-2271G-N231AE",
+              "units": 2,
+              "price": 1965
+            },
+            {
+              "product": "ARK-2251-S3A1U",
+              "units": 2,
+              "price": 1685
+            }
+          ],
+          "Remote I/O Modules": [
+            {
+              "product": "ADAM-6018-D",
+              "units": 2,
+              "price": 720
+            },
+            {
+              "product": "ADAM-6015-D",
+              "units": 2,
+              "price": 760
+            },
+            {
+              "product": "WISE-4012E",
+              "units": 2,
+              "price": 475
+            },
+            {
+              "product": "WISE-4050E",
+              "units": 2,
+              "price": 605
+            },
+            {
+              "product": "ADAM-6050-D",
+              "units": 2,
+              "price": 775
+            }
+          ],
+          "Wireless Sensing & Solutions": [
+            {
+              "product": "WISE-4250-S214",
+              "units": 2,
+              "price": 1035
+            },
+            {
+              "product": "WISE-4250-S252",
+              "units": 2,
+              "price": 935
+            },
+            {
+              "product": "OPT1-ANT-5GSSW-30",
+              "units": 2,
+              "price": 1115
+            },
+            {
+              "product": "ICR-2437-DE",
+              "units": 2,
+              "price": 715
+            },
+            {
+              "product": "AIW-169BN-GX1",
+              "units": 2,
+              "price": 1175
+            }
+          ],
+          "Edge AI Solutions": [
+            {
+              "product": "MIC-711D-ON3A2",
+              "units": 2,
+              "price": 3445
+            },
+            {
+              "product": "MIC-711-ON3A1",
+              "units": 2,
+              "price": 3025
+            },
+            {
+              "product": "MIC-711D-OX4A1",
+              "units": 2,
+              "price": 1850
+            },
+            {
+              "product": "MIC-713S-ON3A1",
+              "units": 2,
+              "price": 3145
+            },
+            {
+              "product": "MIC-713S-ON2A1",
+              "units": 2,
+              "price": 3045
+            }
+          ]
+        }
+      }
+    },
+    "topProducts": []
+  },
+  "description": "儀表板核心數據，包含統計卡片、等級分析、排行榜與產品銷售分析"
+}

@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "userId": "USER_001",
+      "name": "Maxwell Walker",
+      "email": "Maxwell.Walker@example.com",
+      "avatar": "https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png",
+      "level": {
+        "name": "Explorer",
+        "icon": "fas fa-rocket",
+        "progress": {
+          "current": 35,
+          "target": 50,
+          "remaining": 15
+        }
+      },
+      "referralInfo": {
+        "link": "https://www.iotmart.com/en-en/?ref=A8C1E3F",
+        "id": "A8C1E3F",
+        "qrCode": "https://irp.cdn-website.com/56869327/dms3rep/multi/IoTMart-qr-code-3+1.png"
+      },
+      "bankInfo": {
+        "bankName": "Bank of America",
+        "swiftCode": "BOFAUS3N",
+        "accountNumber": "123456789012345"
+      },
+      "accountSettings": {
+        "language": "English",
+        "timezone": "UTC-7",
+        "emailNotifications": true,
+        "smsNotifications": false
+      }
+    },
+    {
+      "userId": "USER_002",
+      "name": "Sarah Chen",
+      "email": "sarah.chen@example.com",
+      "avatar": "https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-F.png",
+      "level": {
+        "name": "Leader", 
+        "icon": "fas fa-crown",
+        "progress": {
+          "current": 65,
+          "target": 100,
+          "remaining": 35
+        }
+      },
+      "referralInfo": {
+        "link": "https://www.iotmart.com/en-en/?ref=B9D2F4G",
+        "id": "B9D2F4G",
+        "qrCode": "https://irp.cdn-website.com/56869327/dms3rep/multi/IoTMart-qr-code-2.png"
+      },
+      "bankInfo": {
+        "bankName": "Chase Bank",
+        "swiftCode": "CHASUS33",
+        "accountNumber": "987654321098765"
+      },
+      "accountSettings": {
+        "language": "Traditional Chinese",
+        "timezone": "UTC+8",
+        "emailNotifications": true,
+        "smsNotifications": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "rank": 1,
+    "region": "North America",
+    "orders": 15,
+    "sales": "$12,850"
+  },
+  {
+    "rank": 2,
+    "region": "Europe",
+    "orders": 8,
+    "sales": "$8,420"
+  },
+  {
+    "rank": 3,
+    "region": "Asia Pacific",
+    "orders": 7,
+    "sales": "$6,340"
+  },
+  {
+    "rank": 4,
+    "region": "Latin America",
+    "orders": 3,
+    "sales": "$2,890"
+  },
+  {
+    "rank": 5,
+    "region": "Middle East",
+    "orders": 2,
+    "sales": "$1,500"
+  }
+]

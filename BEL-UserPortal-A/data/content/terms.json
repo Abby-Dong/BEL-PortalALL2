@@ -1,0 +1,93 @@
+{
+  "lastUpdated": "August 29, 2025",
+  "version": "2.1",
+  "sections": [
+    {
+      "id": 1,
+      "title": "Program Overview",
+      "content": "The BEL (Business Exclusive Leader) Platform is an invitation-only partner program operated by IoTMart, designed to reward qualified business partners, system integrators, and industry professionals who promote IoTMart products and services. This program provides exclusive access to promotional tools, marketing resources, and partner benefits to help partners grow their business while expanding IoTMart's market reach."
+    },
+    {
+      "id": 2,
+      "title": "Eligibility and Invitation",
+      "content": "Participation in the BEL Portal is by invitation only. IoTMart reserves the right to invite qualified candidates based on their industry expertise, business credentials, market influence, and alignment with IoTMart's business objectives. Invitations may be extended to system integrators, distributors, consultants, industry influencers, and other business professionals who demonstrate the ability to effectively promote IoTMart products within their professional networks."
+    },
+    {
+      "id": 3,
+      "title": "Partner Levels and Earnings",
+      "content": "Partners are classified into different levels based on their performance, engagement, and business contribution. Each level offers different benefits and privileges. Progression through levels is determined by accumulated performance metrics and business development activities.",
+      "levels": [
+        {
+          "name": "Builder Level",
+          "requirement": "Entry level - No minimum requirements",
+          "benefits": ["Basic marketing materials", "Standard support"]
+        },
+        {
+          "name": "Enabler Level", 
+          "requirement": "Minimum 20 performance points",
+          "benefits": ["Enhanced marketing materials", "Priority support", "Quarterly business reviews"]
+        },
+        {
+          "name": "Explorer Level",
+          "requirement": "Minimum 35 performance points",
+          "benefits": ["Premium marketing materials", "Dedicated account manager", "Early product access"]
+        },
+        {
+          "name": "Leader Level",
+          "requirement": "Minimum 50 performance points",
+          "benefits": ["Custom marketing materials", "Co-marketing opportunities", "Strategic planning sessions"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Payment Terms and Schedule",
+      "content": "Partner benefits and rewards are processed monthly according to the following schedule: Benefit assessments are completed on the 5th of each month based on your performance points and partner level. Rewards and benefits are delivered according to your current level privileges. Benefits include marketing materials, priority support, and account management services as outlined in the partner level requirements above."
+    },
+    {
+      "id": 5,
+      "title": "Referral Tracking and Attribution",
+      "content": "IoTMart uses advanced tracking technology to ensure accurate attribution of referrals. Each partner receives a unique referral link and referral ID. Referral tracking cookies are valid for 30 days from the initial click. Multiple touchpoints from the same customer within the cookie period will be attributed to the original referrer. Partners are responsible for ensuring their referral materials comply with applicable laws and regulations."
+    },
+    {
+      "id": 6,
+      "title": "Marketing Guidelines and Compliance",
+      "content": "Partners must adhere to IoTMart's marketing guidelines when promoting products and services. All marketing materials and communications must be professional, accurate, and compliant with applicable laws and regulations. Partners may not engage in spam, misleading advertising, trademark infringement, or any activities that could harm IoTMart's reputation. Violation of marketing guidelines may result in benefit suspension and program termination."
+    },
+    {
+      "id": 7,
+      "title": "Account Management and Responsibilities",
+      "content": "Partners are responsible for maintaining accurate account information, including contact details and banking information. Partners must report any suspicious activities or potential fraud related to their referrals. IoTMart reserves the right to audit partner activities and request documentation to verify the legitimacy of referrals. Partners agree to cooperate with any investigations or audits conducted by IoTMart."
+    },
+    {
+      "id": 8,
+      "title": "Intellectual Property",
+      "content": "All marketing materials, product information, logos, trademarks, and other intellectual property provided by IoTMart remain the exclusive property of IoTMart. Partners are granted a limited, non-exclusive license to use these materials solely for the purpose of promoting IoTMart products within the BEL Portal program. This license terminates immediately upon program termination or suspension."
+    },
+    {
+      "id": 9,
+      "title": "Confidentiality",
+      "content": "Partners may have access to confidential information including pricing, product roadmaps, business strategies, and customer data. Partners agree to maintain strict confidentiality of all proprietary information and use such information solely for the purpose of participating in the BEL Portal program. Confidentiality obligations survive the termination of this agreement."
+    },
+    {
+      "id": 10,
+      "title": "Program Modifications and Termination",
+      "content": "IoTMart reserves the right to modify program terms, benefit structures, partner levels, and other program elements at any time with 30 days' written notice. IoTMart may suspend or terminate partner accounts for violation of program terms, fraudulent activities, or business reasons. Upon termination, partners forfeit access to the platform and any program benefits."
+    },
+    {
+      "id": 11,
+      "title": "Limitation of Liability",
+      "content": "IoTMart's liability under this program is limited to the provision of agreed partner benefits and services. IoTMart is not liable for indirect, special, incidental, or consequential damages. Partners participate in the program at their own risk and are responsible for their own business decisions and activities. The total liability of IoTMart shall not exceed the value of benefits provided to the partner in the preceding 12 months."
+    },
+    {
+      "id": 12,
+      "title": "Governing Law and Dispute Resolution",
+      "content": "This agreement is governed by the laws of the jurisdiction where IoTMart is incorporated. Any disputes arising from this program shall be resolved through binding arbitration in accordance with the rules of the relevant arbitration association. Partners waive their right to participate in class action lawsuits against IoTMart related to this program."
+    },
+    {
+      "id": 13,
+      "title": "Contact Information",
+      "content": "For questions about these terms and conditions or the BEL Portal program, please contact our support team at bel-support@iotmart.com. Our team is available Monday through Friday, 9:00 AM to 6:00 PM (local time) to assist with program-related inquiries."
+    }
+  ]
+}

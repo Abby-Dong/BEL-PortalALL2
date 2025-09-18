@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Debug</title>
+</head>
+<body>
+    <h1>Data Loading Debug</h1>
+    <div id="debug-output"></div>
+
+    <script src="js/data-loader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const output = document.getElementById('debug-output');
+            
+            try {
+                // Test data loading
+                console.log('Testing data loading...');
+                
+                const earningsData = await window.dataLoader.loadEarningsSummary();
+                console.log('Earnings Summary:', earningsData);
+                
+                const payoutData = await window.dataLoader.loadPayoutHistory();
+                console.log('Payout History:', payoutData);
+                
+                const orderData = await window.dataLoader.loadOrderTracking();
+                console.log('Order Tracking:', orderData);
+                
+                output.innerHTML = `
+                    <h3>Earnings Summary:</h3>
+                    <pre>${JSON.stringify(earningsData, null, 2)}</pre>
+                    
+                    <h3>Payout History:</h3>
+                    <pre>${JSON.stringify(payoutData, null, 2)}</pre>
+                    
+                    <h3>Order Tracking:</h3>
+                    <pre>${JSON.stringify(orderData, null, 2)}</pre>
+                `;
+                
+            } catch (error) {
+                console.error('Error loading data:', error);
+                output.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        });
+    </script>
+</body>
+</html>

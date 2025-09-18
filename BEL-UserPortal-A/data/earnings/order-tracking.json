@@ -1,0 +1,110 @@
+{
+  "userOrders": [
+    {
+      "userId": "USER_001",
+      "orders": [
+        {
+          "orderPlaced": "2025-08-25",
+          "orderNumber": "IMUS00068932", 
+          "orderAmount": "USD 1,200.00",
+          "productActualAmount": "1,150.00",
+          "orderStatus": "Processing",
+          "statusClass": "status-processing"
+        },
+        {
+          "orderPlaced": "2025-08-22",
+          "orderNumber": "IMDE00068901",
+          "orderAmount": "EUR 125.50", 
+          "productActualAmount": "118.75",
+          "orderStatus": "Completed",
+          "statusClass": "status-completed"
+        },
+        {
+          "orderPlaced": "2025-08-18",
+          "orderNumber": "IMJP00068875",
+          "orderAmount": "JPY 350,000", 
+          "productActualAmount": "330,000",
+          "orderStatus": "Canceled",
+          "statusClass": "status-canceled"
+        },
+        {
+          "orderPlaced": "2025-08-15",
+          "orderNumber": "IMUK00068852",
+          "orderAmount": "GBP 680.75", 
+          "productActualAmount": "652.50",
+          "orderStatus": "Completed",
+          "statusClass": "status-completed"
+        },
+        {
+          "orderPlaced": "2025-07-30",
+          "orderNumber": "IMUS00068799",
+          "orderAmount": "USD 1,500.00", 
+          "productActualAmount": "1,425.00",
+          "orderStatus": "Completed",
+          "statusClass": "status-completed"
+        },
+        {
+          "orderPlaced": "2025-07-28",
+          "orderNumber": "IMDE00068782",
+          "orderAmount": "EUR 380.25", 
+          "productActualAmount": "365.00",
+          "orderStatus": "Completed",
+          "statusClass": "status-completed"
+        },
+        {
+          "orderPlaced": "2025-07-25",
+          "orderNumber": "IMTW00068770",
+          "orderAmount": "TWD 22,500", 
+          "productActualAmount": "21,000",
+          "orderStatus": "Completed",
+          "statusClass": "status-completed"
+        }
+      ]
+    },
+    {
+      "userId": "USER_002",
+      "orders": [
+        {
+          "orderPlaced": "2025-08-26",
+          "orderNumber": "IMJP00068945", 
+          "orderAmount": "JPY 420,000",
+          "productActualAmount": "395,000",
+          "orderStatus": "Completed",
+          "statusClass": "status-completed"
+        },
+        {
+          "orderPlaced": "2025-08-24",
+          "orderNumber": "IMDE00068938",
+          "orderAmount": "EUR 720.50", 
+          "productActualAmount": "685.00",
+          "orderStatus": "Processing",
+          "statusClass": "status-processing"
+        },
+        {
+          "orderPlaced": "2025-08-22",
+          "orderNumber": "IMUS00068925",
+          "orderAmount": "USD 1,450.00", 
+          "productActualAmount": "1,380.00",
+          "orderStatus": "Completed",
+          "statusClass": "status-completed"
+        },
+        {
+          "orderPlaced": "2025-08-20",
+          "orderNumber": "IMUK00068912",
+          "orderAmount": "GBP 1,320.75", 
+          "productActualAmount": "1,250.00",
+          "orderStatus": "Completed",
+          "statusClass": "status-completed"
+        },
+        {
+          "orderPlaced": "2025-08-18",
+          "orderNumber": "IMTW00068899",
+          "orderAmount": "TWD 19,500", 
+          "productActualAmount": "18,200",
+          "orderStatus": "Completed",
+          "statusClass": "status-completed"
+        }
+      ]
+    }
+  ]
+}

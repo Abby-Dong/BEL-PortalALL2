@@ -1,0 +1,59 @@
+{
+  "userNotifications": [
+    {
+      "userId": "USER_001",
+      "notifications": [
+        {
+          "id": 1,
+          "title": "September Earnings Payout Postponed",
+          "date": "2025-08-26",
+          "tag": {
+            "text": "Important",
+            "type": "important"
+          }
+        },
+        {
+          "id": 2,
+          "title": "ADAM Remote I/O Series are now available for promotion",
+          "date": "2025-08-25",
+          "tag": {
+            "text": "New Campaign",
+            "type": "new-product"
+          }
+        },
+        {
+          "id": 3,
+          "title": "Your referral link has generated 15 new clicks",
+          "date": "2025-08-23",
+          "tag": {
+            "text": "Traffic",
+            "type": "info"
+          }
+        }
+      ]
+    },
+    {
+      "userId": "USER_002",
+      "notifications": [
+        {
+          "id": 1,
+          "title": "Congratulations! You've reached Leader level",
+          "date": "2025-08-20",
+          "tag": {
+            "text": "Achievement",
+            "type": "achievement"
+          }
+        },
+        {
+          "id": 2,
+          "title": "Monthly payout processed successfully",
+          "date": "2025-08-05",
+          "tag": {
+            "text": "Payment",
+            "type": "payment"
+          }
+        }
+      ]
+    }
+  ]
+}

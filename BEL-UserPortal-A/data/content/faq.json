@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "question": "How are partner benefits determined?",
+    "answer": "Partner benefits are determined based on your current partner level and performance metrics. Each level offers different privileges including marketing materials, support levels, and account management services. The levels are: Builder (entry level), Enabler (20+ performance points), Explorer (35+ performance points), and Leader (50+ performance points). For detailed information, please refer to the Legal Terms page.",
+    "category": "benefits",
+    "tags": ["benefits", "partner levels", "performance"]
+  },
+  {
+    "id": 2,
+    "question": "When are partner benefits delivered?", 
+    "answer": "Partner benefits are assessed and delivered monthly based on your current level and performance metrics. Benefit assessments are completed on the 5th of each month. Benefits include marketing materials, priority support, and account management services according to your partner level. You will receive email notifications when new benefits become available.",
+    "category": "benefits",
+    "tags": ["benefits", "timeline", "delivery"]
+  },
+  {
+    "id": 3,
+    "question": "How do I track my referrals?",
+    "answer": "You can track your referrals through the Dashboard and Earnings & Orders pages. The Dashboard shows real-time statistics including referral link traffic, referral ID usage, and total orders. The Earnings & Orders page provides detailed order tracking with customer information and order status.",
+    "category": "tracking",
+    "tags": ["referrals", "dashboard", "tracking"]
+  },
+  {
+    "id": 4,
+    "question": "What are the different partner levels?",
+    "answer": "The BEL Portal has 4 partner levels: Builder (entry level), Enabler (20+ performance points), Explorer (35+ performance points), and Leader (50+ performance points). Your level is determined by your performance metrics and business contribution. Higher levels unlock enhanced benefits including better marketing materials, priority support, and dedicated account management.",
+    "category": "levels",
+    "tags": ["partner levels", "benefits", "progression"]
+  },
+  {
+    "id": 5,
+    "question": "How do I update my account information?",
+    "answer": "You can update your account information in the 'My Account' section under 'Profile Information'. Click 'Edit Profile' and update your contact details, business information, and preferences. Changes are saved automatically and will apply to all future program communications.",
+    "category": "account",
+    "tags": ["account information", "profile", "account settings"]
+  },
+  {
+    "id": 6,
+    "question": "Can I use multiple referral methods?",
+    "answer": "Yes, you can use both your referral link and referral ID. The referral link can be shared directly or embedded in your marketing materials. The referral ID can be manually entered by customers during checkout. Both methods will be tracked and attributed to your account for performance tracking.",
+    "category": "referrals",
+    "tags": ["referral link", "referral ID", "methods"]
+  },
+  {
+    "id": 7,
+    "question": "What marketing resources are available?",
+    "answer": "The Resource Center provides various marketing materials including product banners, promotional videos, technical brochures, and social media assets. All materials are professionally designed and ready to use in your marketing campaigns. You can download them directly from the Resource Center page.",
+    "category": "marketing",
+    "tags": ["marketing materials", "resource center", "downloads"]
+  },
+  {
+    "id": 8,
+    "question": "How do I submit a support ticket?",
+    "answer": "You can submit a support ticket through the 'Support & FAQ' page by clicking the 'Submit Support Ticket' button. Please select the appropriate category (Account Issues, Payment & Payout, Technical Support, Marketing Resources, or General Inquiry) and provide detailed information about your question or issue. We typically respond within 24 hours during business days.",
+    "category": "support",
+    "tags": ["support ticket", "help", "customer service", "contact support"]
+  },
+  {
+    "id": 9,
+    "question": "Are there any fees associated with the program?",
+    "answer": "The BEL Portal program itself is free to join and participate in. There are no membership fees or charges for accessing the platform, marketing materials, or partner benefits. All program benefits are provided at no cost to qualified partners.",
+    "category": "program",
+    "tags": ["fees", "program costs", "membership"]
+  },
+  {
+    "id": 10,
+    "question": "Can I change my referral ID?",
+    "answer": "Referral IDs are typically assigned automatically and cannot be changed to maintain tracking integrity. However, if you have a specific business need, you can contact our support team to discuss possible options. Any changes to referral IDs may affect historical tracking data.",
+    "category": "referrals",
+    "tags": ["referral ID", "changes", "tracking"]
+  },
+  {
+    "id": 11,
+    "question": "What happens if a customer returns a product?",
+    "answer": "Returns and refunds are handled according to IoTMart's standard return policy. You can track order statuses including refunded orders in the 'Earnings & Orders' section where they will be marked with a 'Refunded' status. This helps maintain accurate performance tracking and metrics.",
+    "category": "orders",
+    "tags": ["returns", "refunds", "order tracking"]
+  },
+  {
+    "id": 12,
+    "question": "How often is the dashboard data updated?",
+    "answer": "Dashboard statistics are updated in real-time for most metrics including referral link traffic and referral ID usage. Order data is typically updated within 1-2 hours of order processing. Monthly performance charts are updated daily to reflect the most current information.",
+    "category": "tracking",
+    "tags": ["dashboard updates", "real-time", "data refresh"]
+  }
+]

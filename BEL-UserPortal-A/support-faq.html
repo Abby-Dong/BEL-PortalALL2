@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk to Admin - BEL Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="bel-header">
+        <i class="bel-hamburger-menu fas fa-bars" id="bel-hamburger-btn"></i>
+        <div class="bel-header-content">
+            <div class="bel-sidebar-logo">
+                <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="logo">
+                <span>BEL Portal</span>
+            </div>
+            <div class="bel-header-right">
+                <div class="bel-notification-bell" id="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <div class="dot"></div>
+                </div>
+                <div class="bel-notification-panel" id="notification-panel">
+                    <div class="bel-notification-header">Announcements</div>
+                    <ul class="bel-notification-list">
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag important">Important</span>September Earnings Payout Postponed</div>
+                            <div class="bel-notification-date">2025-08-26</div>
+                        </li>
+                        <li class="bel-notification-item">
+                            <div class="bel-notification-title"><span class="tag new-product">New Campaign</span>ADAM Remote I/O Series are now available for promotion</div>
+                            <div class="bel-notification-date">2025-08-25</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-language-selector" id="language-selector">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="bel-language-panel" id="language-panel">
+                    <ul class="bel-language-list">
+                        <li class="bel-language-item" data-lang="en">
+                            <div class="bel-language-name">English</div>
+                        </li>
+                        <li class="bel-language-item" data-lang="zh">
+                            <div class="bel-language-name">繁體中文</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bel-user-profile">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="User Avatar">
+                </div>
+                <div class="user-profile-panel" id="user-profile-panel">
+                    <div class="panel-content">
+                        <div class="user-info">
+                            <span class="user-name">Maxwell</span>
+                            <span class="user-email">Maxwell.Walker@example.com</span>
+                        </div>
+                        <div class="user-level">
+                            <span class="bel-badge explorer"><i class="fas fa-rocket"></i> Explorer</span>
+                        </div>
+                        <hr class="divider">
+                        <a href="my-account.html" class="panel-link">My Account</a>
+                        <a href="#" class="panel-link">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bel-container">
+        <!-- Sidebar Component -->
+        <aside class="bel-sidebar" id="bel-sidebar">
+            <div class="bel-sidebar-menu-title">MAIN MENU</div>
+            <nav class="bel-sidebar-nav">
+                <a href="index.html" class="bel-sidebar-nav-link"><i class="fas fa-tachometer-alt fa-fw"></i><span>Sales Engagement</span></a>
+                <a href="earnings-orders.html" class="bel-sidebar-nav-link"><i class="fas fa-wallet fa-fw"></i><span>Earnings & Orders</span></a>
+                <a href="my-account.html" class="bel-sidebar-nav-link"><i class="fas fa-user-circle fa-fw"></i><span>My Account</span></a>
+            </nav>
+            <div class="bel-sidebar-menu-title">HELP & SUPPORT</div>
+            <nav class="bel-sidebar-nav">
+                <a href="support-faq.html" class="bel-sidebar-nav-link active"><i class="fas fa-question-circle fa-fw"></i><span>Talk to Admin</span></a>
+                <a href="resource-center.html" class="bel-sidebar-nav-link"><i class="fas fa-folder fa-fw"></i><span>Get Resource</span></a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="bel-main-content" id="bel-main-content">
+            <h1 class="bel-h1">Talk to Admin</h1>
+
+            <div class="section-header-with-action">
+                <h3 class="bel-h3">Contact Support</h3>
+                <button class="bel-btn primary" id="contact-support-btn">
+                    <i class="fas fa-headset"></i> Submit Support Ticket
+                </button>
+            </div>
+            
+            <div class="bel-panel">
+                <div class="bel-table-container">
+                    <table class="bel-table" id="support-tickets-table">
+                        <thead>
+                            <tr>
+                                <th>Ticket #</th>
+                                <th>Date</th>
+                                <th class="bel-th-subject">Subject</th>
+                                <th>Status</th>
+                                <th>Response</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="6" class="loading-message">Loading support tickets...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h3 class="bel-h3">Frequently Asked Questions (FAQ)</h3>
+            <div class="bel-panel bel-panel-pt-0" id="faq-content">
+                <div class="loading-message">Loading FAQ content...</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contact Support Modal -->
+    <div class="modal-overlay" id="contact-support-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Submit Support Ticket</h3>
+                <button class="close-button" id="close-contact-modal">&times;</button>
+            </div>
+            <form id="contact-support-form">
+                <div class="bel-form-group">
+                    <label for="support-subject">Subject *</label>
+                    <input type="text" id="support-subject" placeholder="Enter your subject" required>
+                </div>
+                <div class="bel-form-group">
+                    <label for="support-message">Message *</label>
+                    <textarea id="support-message" rows="5" placeholder="Describe your issue or question in detail" required class="bel-textarea-form"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="bel-btn secondary" id="cancel-support-btn">Cancel</button>
+                    <button type="submit" class="bel-btn primary" id="submit-support-btn">Submit Ticket</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content bel-max-w-400">
+            <div class="bel-modal-center">
+                <div class="bel-mb-20">
+                    <i class="fas fa-check-circle bel-success-icon"></i>
+                </div>
+                <h3 class="bel-modal-title">Ticket Submitted Successfully</h3>
+                <p class="bel-modal-text">
+                    Your support ticket has been submitted. You will receive a confirmation email shortly.
+                </p>
+                <button class="bel-btn primary success-modal-close">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data-loader.js"></script>
+    <div class="modal-overlay" id="view-detail-modal">
+        <div class="modal-content bel-modal-content-p24">
+            <div class="modal-header">
+                <div id="view-detail-modal-header" class="bel-modal-header-flex"></div>
+                <button class="close-button" id="close-view-detail-modal">&times;</button>
+            </div>
+            <div id="view-detail-body">
+                <!-- Details will be injected by JS -->
+            </div>
+        </div>
+    </div>
+    <script src="js/common.js"></script>
+</body>
+</html>
