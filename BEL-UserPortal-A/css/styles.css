@@ -2450,3 +2450,64 @@ text-align-last: center;
         font-size: 1rem;
     }
 }
+
+/* ===================== 統一的 Notice Banner 樣式 ===================== */
+.notice-banner {
+    background: #fef7e6;
+    border: 1px solid #f0d7a7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.notice-banner-content {
+    display: flex;
+    align-items: center;
+}
+
+.notice-banner-icon {
+    color: var(--ds-color-primary);
+    margin-right: 12px;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.notice-banner-text {
+    flex: 1;
+}
+
+.notice-banner h3,
+.notice-banner h4 {
+    margin: 0 0 6px 0;
+    color: var(--ds-color-gray-90);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.notice-banner p {
+    margin: 0;
+    color: var(--ds-color-gray-70);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.notice-banner a {
+    color: var(--ds-color-primary);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.notice-banner a:hover {
+    text-decoration: underline;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .notice-banner {
+        padding: 16px;
+    }
+    
+    .notice-banner-icon {
+        font-size: 1.1rem;
+    }
+}

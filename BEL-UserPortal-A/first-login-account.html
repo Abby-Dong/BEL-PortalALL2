@@ -89,18 +89,13 @@
             <h1 class="bel-h1">My Account</h1>
             
             <!-- Priority Task Banner -->
-            <div class="priority-banner" style="background: #fef7e6; border: 1px solid #f0d7a7; color: var(--ds-color-gray-90); padding: 20px; border-radius: 4px; margin-bottom: 24px; border-left: 4px solid var(--ds-color-primary);">
-                <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <div style="display: flex; align-items: center;">
-                        <i class="fas fa-exclamation-circle" style="font-size: 1.5rem; margin-right: 16px; color: var(--ds-color-primary);"></i>
-                        <div>
-                            <h3 style="margin: 0 0 4px 0; font-size: 1.2rem; font-weight: 600; color: var(--ds-color-gray-90);">Complete Your Banking Information</h3>
-                            <p style="margin: 0; color: var(--ds-color-gray-60); font-size: 0.9rem;">Set up your banking details to start receiving commission payouts</p>
-                        </div>
+            <div class="notice-banner">
+                <div class="notice-banner-content">
+                    <i class="fas fa-exclamation-circle notice-banner-icon"></i>
+                    <div class="notice-banner-text">
+                        <h3>Complete Your Banking Information</h3>
+                        <p>Set up your banking details to start receiving commission payouts</p>
                     </div>
-                    <button onclick="scrollToBanking()" style="background: var(--ds-color-primary); color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 500; transition: background-color 0.2s; font-size: 0.9rem;">
-                        Complete Now
-                    </button>
                 </div>
             </div>
 
@@ -168,12 +163,13 @@
                 </div>
                 
                 <!-- Banking Information Notice -->
-                <div class="banking-notice" style="background: #fef7e6; border: 1px solid #f0d7a7; border-radius: 4px; padding: 16px; margin-bottom: 20px;">
-                    <div style="display: flex; align-items: center;">
-                        <i class="fas fa-info-circle" style="color: var(--ds-color-primary); margin-right: 12px; font-size: 1.1rem;"></i>
-                        <p style="margin: 0; color: var(--ds-color-gray-70); font-size: 0.9rem;">
-                            <strong>Required for payouts:</strong> Complete your banking information to receive commission payments. This information is required for first-time setup and can be modified later through support.
-                        </p>
+                <div class="notice-banner">
+                    <div class="notice-banner-content">
+                        <i class="fas fa-info-circle notice-banner-icon"></i>
+                        <div class="notice-banner-text">
+                            <h3>Complete Banking Information Required</h3>
+                            <p><strong>Required for payouts:</strong> Complete your banking information to receive commission payments. This information is required for first-time setup and can be modified later through support.</p>
+                        </div>
                     </div>
                 </div>
                 

@@ -92,12 +92,12 @@
             <h1 class="bel-h1">Earnings & Orders</h1>
             
             <!-- Important Notice for New Users -->
-            <div class="notice-banner" style="background: var(--ds-color-primary-light-30); border: 1px solid var(--ds-color-primary-light-50); border-radius: 4px; padding: 16px; margin-bottom: 24px; border-left: 4px solid var(--ds-color-primary);">
-                <div style="display: flex; align-items: center;">
-                    <i class="fas fa-exclamation-triangle" style="color: var(--ds-color-primary); margin-right: 12px; font-size: 1.2rem;"></i>
-                    <div>
-                        <h4 style="margin: 0 0 4px 0; color: var(--ds-color-gray-90); font-size: var(--fs-base); font-weight: var(--fw-semibold);">Complete Banking Information Required</h4>
-                        <p style="margin: 0; color: var(--ds-color-gray-80); font-size: var(--fs-sm);">You need to complete your banking information to receive earnings. <a href="first-login-account.html#banking" style="color: var(--ds-color-primary); font-weight: var(--fw-medium);">Complete now →</a></p>
+            <div class="notice-banner">
+                <div class="notice-banner-content">
+                    <i class="fas fa-exclamation-triangle notice-banner-icon"></i>
+                    <div class="notice-banner-text">
+                        <h4>Complete Banking Information Required</h4>
+                        <p>You need to complete your banking information to receive earnings. <a href="first-login-account.html#banking">Complete now →</a></p>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                         </div>
                         <div class="bel-card-icon"><i class="fas fa-dollar-sign"></i></div>
                     </div>
-                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); background: var(--ds-color-gray-30);"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No earnings yet</span></div>
+                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); "><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No earnings yet</span></div>
                 </div>
                 <div class="bel-card" style="margin-bottom: 0px;">
                     <div class="bel-card-layout">
@@ -121,7 +121,7 @@
                         </div>
                         <div class="bel-card-icon"><i class="fas fa-clock"></i></div>
                     </div>
-                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); background: var(--ds-color-gray-30);"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No pending amount</span></div>
+                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); "><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No pending amount</span></div>
                 </div>
                 <div class="bel-card" style="margin-bottom: 0px;">
                     <div class="bel-card-layout">
@@ -131,7 +131,7 @@
                         </div>
                         <div class="bel-card-icon"><i class="fas fa-shopping-cart"></i></div>
                     </div>
-                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); background: var(--ds-color-gray-30);"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No orders yet</span></div>
+                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); "><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No orders yet</span></div>
                 </div>
                 <div class="bel-card" style="margin-bottom: 0px;">
                     <div class="bel-card-layout">
@@ -478,7 +478,6 @@
             style.textContent = `
                 .trend-indicator.neutral {
                     color: var(--ds-color-gray-70);
-                    background: var(--ds-color-gray-30);
                 }
             `;
             document.head.appendChild(style);

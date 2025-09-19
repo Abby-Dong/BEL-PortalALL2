@@ -244,6 +244,13 @@
         
         .BEL-LP-language-options button:hover {
             background-color: #f5f5f5;
+            color: var(--primary-color);
+            transform: translateX(2px);
+        }
+        
+        .BEL-LP-language-options button:active {
+            background-color: #e0e0e0;
+            transform: translateX(0);
         }
         
         .BEL-LP-language-options button:first-child {
@@ -302,10 +309,63 @@
             margin-left: 25px;
             font-weight: 600;
             color: var(--secondary-color);
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 0;
         }
         .BEL-LP-header .BEL-LP-main-nav a:hover {
             color: var(--primary-color);
+            transform: translateY(-1px);
+        }
+        .BEL-LP-header .BEL-LP-main-nav a:hover::after {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+        .BEL-LP-header .BEL-LP-main-nav a:active {
+            transform: translateY(0);
+            color: var(--primary-color);
+        }
+        .BEL-LP-header .BEL-LP-main-nav .current-page {
+            margin-left: 25px;
+            font-weight: 600;
+            color: var(--primary-color);
+            cursor: default;
+            position: relative;
+            padding: 8px 0;
+        }
+        .BEL-LP-header .BEL-LP-main-nav .current-page::after {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        .BEL-LP-header .BEL-LP-main-nav .current-page-active {
+            margin-left: 25px;
+            font-weight: 600;
+            color: var(--primary-color) !important;
+            cursor: default !important;
+            position: relative;
+            padding: 8px 0;
+            pointer-events: none;
+        }
+        .BEL-LP-header .BEL-LP-main-nav .current-page-active::after {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
         }
         
         /* ADDITION: Hamburger Menu Styles */
@@ -684,6 +744,9 @@
             .BEL-LP-header .BEL-LP-main-nav a:not(.BEL-LP-btn) {
                 display: none;
             }
+            .BEL-LP-header .BEL-LP-main-nav .current-page {
+                display: none;
+            }
             .BEL-LP-header .BEL-LP-main-nav .BEL-LP-language-switcher {
                 display: flex;
             }
@@ -691,6 +754,15 @@
                 font-size: 0.9rem;
                 padding: 10px 20px;
                 margin-left: 0;
+                transition: all 0.3s ease;
+            }
+            .BEL-LP-header .BEL-LP-main-nav .BEL-LP-btn:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            .BEL-LP-header .BEL-LP-main-nav .BEL-LP-btn:active {
+                transform: translateY(0);
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             }
             .BEL-LP-hamburger-menu {
                 display: none;
@@ -739,8 +811,8 @@
                 <span>BEL</span>
             </div>
             <nav class="BEL-LP-main-nav">
-                <a href="#how-it-works">How to Start?</a>
-                <a href="#faq">FAQ</a>
+                <a href="BELLandingpage.html" id="nav-home">How to Start?</a>
+                <a href="about-us.html" id="nav-about">About Us</a>
                 <div class="BEL-LP-language-switcher">
                     <i class="fas fa-globe" onclick="toggleLanguageDropdown()"></i>
                     <div class="BEL-LP-language-dropdown" id="languageDropdown">
@@ -751,7 +823,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="login.html" class="BEL-LP-btn BEL-LP-btn-orange">Log In</a>
+                <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-orange">Log In</a>
             </nav>
             <button class="BEL-LP-hamburger-menu" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
@@ -807,7 +879,7 @@
                         <h3>Builder</h3>
                         <p class="BEL-LP-tier-description">Ideal for those new to affiliate marketing or the IIoT space.</p>
                     </div>
-                    <a href="login.html" class="BEL-LP-btn BEL-LP-btn-primary">Get Started</a>
+                    <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-primary">Get Started</a>
                 </div>
 
                 <div class="BEL-LP-tier-card">
@@ -818,7 +890,7 @@
                         <h3>Enabler</h3>
                         <p class="BEL-LP-tier-description">For growing partners ready to expand their promotional efforts.</p>
                     </div>
-                    <a href="login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
+                    <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
                 </div>
 
                 <div class="BEL-LP-tier-card">
@@ -829,7 +901,7 @@
                         <h3>Exploder</h3>
                         <p class="BEL-LP-tier-description">For established partners scaling their success and revenue.</p>
                     </div>
-                    <a href="login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
+                    <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
                 </div>
 
                 <div class="BEL-LP-tier-card">
@@ -840,7 +912,7 @@
                         <h3>Leader</h3>
                         <p class="BEL-LP-tier-description">For industry leaders seeking a deep strategic partnership.</p>
                     </div>
-                    <a href="login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
+                    <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
                 </div>
             </div>
             
@@ -907,7 +979,7 @@
         <div class="BEL-LP-container">
             <h2>Ready to Join the IoTMart BEL Family?</h2>
             <p>Take action now and start your influence journey. Partner with the world's leading Industrial IoT platform to unlock unlimited business opportunities.</p>
-            <a href="login.html" class="BEL-LP-btn BEL-LP-btn-w-b">Apply to Become a BEL Partner</a>
+            <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-w-b">Apply to Become a BEL Partner</a>
         </div>
     </section>
 
@@ -920,6 +992,9 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Set current page navigation state
+            setCurrentPageState();
+            
             const navMenu = document.querySelector('.BEL-LP-main-nav');
             const hamburger = document.querySelector('.BEL-LP-hamburger-menu');
             const navLinks = document.querySelectorAll('.BEL-LP-main-nav a');
@@ -981,7 +1056,10 @@
             }
             
             // Initialize default language
-            updateContent('en');
+            // Initialize with stored language or default to English
+            const storedLanguage = getStoredLanguage();
+            currentLanguage = storedLanguage;
+            updateContent(storedLanguage);
         });
 
         // Language switching functionality
@@ -989,7 +1067,7 @@
             en: {
                 nav: {
                     howToStart: "How to Start?",
-                    faq: "FAQ",
+                    aboutUs: "About Us",
                     becomeNow: "Log In"
                 },
                 hero: {
@@ -1137,7 +1215,7 @@
             zh: {
                 nav: {
                     howToStart: "如何開始？",
-                    faq: "常見問題",
+                    aboutUs: "關於我們",
                     becomeNow: "立即成為BEL"
                 },
                 hero: {
@@ -1285,7 +1363,7 @@
             ko: {
                 nav: {
                     howToStart: "시작 방법",
-                    faq: "자주 묻는 질문",
+                    aboutUs: "회사 소개",
                     becomeNow: "지금 BEL 되기"
                 },
                 hero: {
@@ -1432,7 +1510,7 @@
             }
         };
 
-        let currentLanguage = 'en';
+        let currentLanguage = 'en'; // Default to English
 
         function toggleLanguageDropdown() {
             const dropdown = document.getElementById('languageDropdown');
@@ -1452,16 +1530,47 @@
             const dropdown = document.getElementById('languageDropdown');
             dropdown.classList.remove('show');
             
+            // Save language preference to localStorage
+            localStorage.setItem('belLanguage', lang);
+            
             // Update all content
             updateContent(lang);
+        }
+
+        function getStoredLanguage() {
+            return localStorage.getItem('belLanguage') || 'en';
+        }
+
+        function setCurrentPageState() {
+            // Determine current page based on URL
+            const currentPage = window.location.pathname;
+            const isHomePage = currentPage.includes('BELLandingpage.html') || currentPage.endsWith('/') || currentPage === '';
+            const isAboutPage = currentPage.includes('about-us.html');
+            
+            const homeLink = document.getElementById('nav-home');
+            const aboutLink = document.getElementById('nav-about');
+            
+            if (isHomePage) {
+                // Set home as current page
+                homeLink.classList.add('current-page-active');
+                homeLink.removeAttribute('href');
+                homeLink.style.cursor = 'default';
+                homeLink.style.color = 'var(--primary-color)';
+            } else if (isAboutPage) {
+                // Set about as current page
+                aboutLink.classList.add('current-page-active');
+                aboutLink.removeAttribute('href');
+                aboutLink.style.cursor = 'default';
+                aboutLink.style.color = 'var(--primary-color)';
+            }
         }
 
         function updateContent(lang) {
             const t = translations[lang];
             
             // Update navigation
-            document.querySelector('a[href="#how-it-works"]').textContent = t.nav.howToStart;
-            document.querySelector('a[href="#faq"]').textContent = t.nav.faq;
+            document.getElementById('nav-home').textContent = t.nav.howToStart;
+            document.getElementById('nav-about').textContent = t.nav.aboutUs;
             document.querySelector('.BEL-LP-btn-orange').textContent = t.nav.becomeNow;
             
             // Update hero section
