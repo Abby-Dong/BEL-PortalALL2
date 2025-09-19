@@ -986,7 +986,7 @@ async function loadUserProfileHeader() {
                     </div>
                     <hr class="divider">
                     <a href="my-account.html" class="panel-link">My Account</a>
-                    <a href="../login.html" id="logout-link" class="panel-link">Log Out</a>
+                    <a href="../BEL-Login/login.html" id="logout-link" class="panel-link">Log Out</a>
                 `;
 
                 // Add logout functionality
@@ -997,7 +997,7 @@ async function loadUserProfileHeader() {
                         // Clear session storage
                         sessionStorage.removeItem('bel_user_session');
                         // Redirect to login page
-                        window.location.href = '../login.html';
+                        window.location.href = '../BEL-Login/login.html';
                     });
                 }
             }

@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEL Partner Program | Getting Started FAQs - IoTMart Business Ecosystem Leader</title>
+    <meta name="description" content="New partner guide for IoTMart BEL Program. Find answers to frequently asked questions and get started with your Business Ecosystem Leader journey. Complete FAQ resource for new partners.">
+    <meta name="keywords" content="IoT, Business Ecosystem Leader, Partner Program, Affiliate Marketing, Industrial IoT, Advantech, Commission, Technology Partnership">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles & Reset - Blue Theme Design System */
+        :root {
+            /* -- Primary Colors -- */
+            --ds-color-primary: #F39800;
+            --ds-color-primary-dark: #e57b03;
+            --ds-color-primary-light-70: #f7c265;
+            --ds-color-primary-light-50: #fbe0b2;
+            --ds-color-primary-light-30: #fdeacc;
+            --ds-color-primary-light-10: #faf3e6;
+
+            /* -- Brand Colors -- */
+            --ds-color-brand: #004280;
+            --ds-color-brand-dark: #003160;
+            --ds-color-brand-light-75: #336899;
+            --ds-color-brand-light-50: #80a0bf;
+            --ds-color-brand-light-30: #dfebf7;
+
+            /* -- Grayscale -- */
+            --ds-color-gray-90: #0c0c0c;
+            --ds-color-gray-80: #434447;
+            --ds-color-gray-70: #737b7d;
+            --ds-color-gray-60: #b6bfc1;
+            --ds-color-gray-50: #cfd2d5;
+            --ds-color-gray-40: #e8ecef;
+            --ds-color-gray-30: #f6f7f9;
+            --ds-color-white: #ffffff;
+
+            /* -- System Colors -- */
+            --ds-color-error-dark: #b52f2f;
+            --ds-color-error: #db3a3a;
+            --ds-color-error-light: #ffeeee;
+            --ds-color-success-dark: #025324;
+            --ds-color-success: #00893a;
+            --ds-color-success-light: #d0e6d4;
+            --ds-color-link: #006EFF;
+
+            /* -- Other Colors -- */
+            --ot-color-gray-65: #9499A1;
+            --ot-color-gray-45: #e0e0e0;
+            --ot-color-lightblue-10: #e6f0ff;
+            --bel-sidebar-active-bg: rgba(255, 255, 255, 0.2);
+
+            /* -- Typography -- */
+            --heading-font-h1h2: 'Poppins', 'Inter', sans-serif; /* Special font for H1, H2 */
+            --heading-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --body-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* Container utility class */
+        .BEL-LP-container {
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--body-font);
+            line-height: 1.4;
+            color: var(--ds-color-gray-80);
+            background-color: var(--ds-color-gray-30);
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Additional body font family for Tailwind compatibility */
+        .tailwind-body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+        }
+
+        /* FAQ Tailwind styling enhancements */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+            padding: 0 1.5rem;
+        }
+        .faq-item.active .faq-answer {
+            padding: 1rem 1.5rem 1.5rem 1.5rem;
+        }
+        .icon {
+            transition: transform 0.3s ease-in-out;
+        }
+        .faq-item.active .icon {
+            transform: rotate(45deg);
+        }
+        /* Styled scrollbar for better user experience */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--ds-color-gray-40);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--ds-color-gray-60);
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--ds-color-gray-80);
+        }
+        
+        /* OPTIMIZATION: Prevent scrolling when mobile nav is open */
+        body.nav-open {
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none !important;
+            color: var(--ds-color-link);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.5em;
+            letter-spacing: 0.02rem;
+        }
+
+        h1, h2 {
+            font-family: var(--heading-font-h1h2);
+        }
+
+        h2 {
+            color: var(--ds-color-gray-90); /* Rich black for better visibility and impact */
+        }
+
+        .BEL-LP-container {
+            padding-left: 9vw;
+            padding-right: 9vw;
+        }
+
+        @media (max-width: 1399px) and (min-width: 1025px) {
+            .BEL-LP-container {
+                padding-left: 4vw;
+                padding-right: 4vw;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 768px) {
+            .BEL-LP-container {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .BEL-LP-container {
+                padding-left: 6vw;
+                padding-right: 6vw;
+            }
+        }
+        .BEL-LP-text-center { text-align: center; }
+        .BEL-LP-text-primary { color: var(--ds-color-link); }
+        .BEL-LP-text-white { color: var(--ds-color-white); }
+        .BEL-LP-bg-primary { background-color: var(--ds-color-link); }
+        .BEL-LP-bg-dark { background-color: var(--ds-color-gray-90); }
+        .BEL-LP-py-5 { padding-top: 3rem; padding-bottom: 3rem; }
+        .BEL-LP-mb-4 { margin-bottom: 1.5rem; }
+
+        .BEL-LP-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: var(--heading-font);
+            width: auto;
+        }
+
+        .BEL-LP-btn-primary {
+            background-color: var(--ds-color-link);
+            color: var(--ds-color-white) !important;
+            box-shadow: 0 4px 15px rgba(0, 110, 255, 0.4);
+        }
+        .BEL-LP-btn-primary:hover {
+            background-color: var(--ds-color-brand-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 110, 255, 0.6);
+        }
+
+        .BEL-LP-btn-orange {
+            background-color: #F39800;
+            color: var(--ds-color-white) !important;
+        }
+        .BEL-LP-btn-orange:hover {
+            background-color: #e08800;
+            transform: translateY(-2px);
+        }
+
+        .BEL-LP-btn-w-b {
+            background-color: var(--ds-color-white);
+            color: var(--ds-color-link) !important;
+            transform: translateY(-2px);
+        }
+        .BEL-LP-btn-w-b:hover {
+            background-color: #b3d1ff;
+            color: var(--ds-color-link) !important;
+            transform: translateY(-2px);
+        }
+        
+        /* Header & Hero Section */
+        .BEL-LP-header {
+            background-color: var(--ds-color-white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Increased z-index */
+        }
+        .BEL-LP-header .BEL-LP-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        
+        /* Logo and Hamburger Menu Group */
+        .BEL-LP-logo-hamburger-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Language Switcher */
+        .BEL-LP-language-switcher {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 0 1rem;
+        }
+        
+        .BEL-LP-language-switcher > i {
+            font-size: 1.2rem;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .BEL-LP-language-switcher > i:hover {
+            color: #F39800;
+        }
+        
+        .BEL-LP-language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            min-width: 120px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+        
+        .BEL-LP-language-dropdown.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .BEL-LP-language-options {
+            padding: 0;
+        }
+        
+        .BEL-LP-language-options button {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            border: none;
+            background: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #333;
+            transition: background-color 0.2s ease;
+        }
+        
+        .BEL-LP-language-options button:hover {
+            background-color: #f5f5f5;
+            color: var(--ds-color-link);
+            transform: translateX(2px);
+        }
+        
+        .BEL-LP-language-options button:active {
+            background-color: #e0e0e0;
+            transform: translateX(0);
+        }
+        
+        .BEL-LP-language-options button:first-child {
+            border-radius: 4px 4px 0 0;
+        }
+        
+        .BEL-LP-language-options button:last-child {
+            border-radius: 0 0 4px 4px;
+        }
+        
+        .BEL-LP-language-options button {
+            background: none;
+            border: none;
+            padding: 10px 15px;
+            width: 100%;
+            text-align: left;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .BEL-LP-language-options button:hover {
+            background-color: var(--ds-color-gray-30);
+        }
+        
+        .BEL-LP-language-options button:first-child {
+            border-radius: 4px 4px 0 0;
+        }
+        
+        .BEL-LP-language-options button:last-child {
+            border-radius: 0 0 4px 4px;
+        }
+        .BEL-LP-header .BEL-LP-logo {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--ot-color-gray-65);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1001; /* Ensure logo is above nav on mobile */
+        }
+        .BEL-LP-logo span{
+            margin-top: 8px;
+        }
+        .BEL-LP-header .BEL-LP-logo img {
+            height: 24px;
+        }
+        .BEL-LP-header .BEL-LP-main-nav {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .BEL-LP-header .BEL-LP-main-nav a {
+            font-weight: 600;
+            color: var(--ds-color-gray-70);
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px;
+            text-decoration: none;
+        }
+        .BEL-LP-header .BEL-LP-main-nav a:hover {
+            color: var(--ds-color-link);
+            transform: translateY(-1px);
+        }
+        .BEL-LP-header .BEL-LP-main-nav a:hover::after {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--ds-color-link);
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+        .BEL-LP-header .BEL-LP-main-nav a:active {
+            transform: translateY(0);
+            color: var(--ds-color-link);
+        }
+        .BEL-LP-header .BEL-LP-main-nav .current-page {
+            font-weight: 600;
+            color: var(--ds-color-link);
+            cursor: default;
+            position: relative;
+            padding: 8px;
+        }
+        .BEL-LP-header .BEL-LP-main-nav .current-page::after {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--ds-color-link);
+        }
+        .BEL-LP-header .BEL-LP-main-nav .current-page-active {
+            font-weight: 600;
+            color: var(--ds-color-link) !important;
+            cursor: default !important;
+            position: relative;
+            padding: 8px;
+            pointer-events: none;
+        }
+        .BEL-LP-header .BEL-LP-main-nav .current-page-active::after {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--ds-color-link);
+        }
+        
+        /* ADDITION: Hamburger Menu Styles */
+        .BEL-LP-hamburger-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--ds-color-gray-80);
+            z-index: 1001; /* Ensure it's clickable */
+        }
+
+        /* Mobile Navigation Menu Active State */
+        @media (max-width: 768px) {
+            .BEL-LP-main-nav.active {
+                display: flex !important;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--ds-color-white);
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+                gap: 40px;
+                padding: 40px;
+            }
+            .BEL-LP-header .BEL-LP-main-nav {
+                gap: 40px;
+            }
+            
+            .BEL-LP-main-nav.active a:active {
+                display: block !important;
+                color: var(--ds-color-gray-80);
+                font-size: 1.1rem;
+            }
+            .BEL-LP-main-nav.active a {
+                display: block !important;
+                color: var(--ds-color-gray-80);
+                font-size: 1.1rem;
+                margin-left: 0px;
+            }
+            
+            .BEL-LP-main-nav.active .current-page {
+                display: block !important;
+            }
+             .BEL-LP-header .BEL-LP-main-nav .current-page-active {
+                margin-left: 0px;
+            }
+        }
+        .BEL-LP-hero {
+            color: var(--ds-color-white);
+            padding-top: 64px; 
+            padding-bottom: 64px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), 
+                        var(--ds-color-brand-dark);
+        }
+        .BEL-LP-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://irp.cdn-website.com/56869327/dms3rep/multi/GettyImages-917505146.jpg') no-repeat bottom center/cover;
+            opacity: 0.35;
+            z-index: 1;
+        }
+        .BEL-LP-hero .BEL-LP-container {
+            position: relative;
+            z-index: 2;
+        }
+        .BEL-LP-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+        .BEL-LP-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            line-height: 1.4;
+            font-weight: 300;
+            text-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+        .BEL-LP-hero  .BEL-LP-btn {
+            margin: 0 10px;
+        }
+        .BEL-LP-buttons {
+            margin: 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:12px;
+        }
+        .BEL-LP-hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .BEL-LP-hero-stats .BEL-LP-stat-item { text-align: center; }
+        .BEL-LP-hero-stats .BEL-LP-stat-item strong {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--ds-color-white);
+            margin-bottom: 8px;
+        }
+        .BEL-LP-hero-stats .BEL-LP-stat-item span {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Benefits Section */
+        .BEL-LP-benefits { background-color: var(--ds-color-white); padding: 80px 0; text-align: center; }
+        .BEL-LP-benefits h2 { font-size: 2.5rem; margin: 0 auto 36px auto; position: relative; display: inline-block; }
+        .BEL-LP-benefits h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: #F39800; border-radius: 2px; }
+        .BEL-LP-benefit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;  }
+        .BEL-LP-benefit-card { background-color: var(--ds-color-gray-30); padding: 20px; border-radius: 12px; transition: transform 0.3s ease; }
+        .BEL-LP-benefit-card:hover { transform: translateY(-10px); }
+        .BEL-LP-benefit-card i { font-size: 3rem; color: var(--ds-color-link); margin-bottom: 20px; }
+        .BEL-LP-benefit-card h3 { font-size: 1.5rem; color: var(--ds-color-gray-80); margin-bottom: 15px; }
+        .BEL-LP-benefit-card p { color: var(--ds-color-gray-70); font-size: 0.9rem; }
+
+        /* How It Works Section */
+        .BEL-LP-how-it-works { background: linear-gradient(135deg, var(--ot-color-lightblue-10), var(--ds-color-white)); padding: 80px 0; text-align: center; }
+        .BEL-LP-how-it-works h2 { font-size: 2.5rem; margin: 0 auto 64px auto; position: relative; display: inline-block; }
+        .BEL-LP-how-it-works h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: var(--ds-color-link); border-radius: 2px; }
+        .BEL-LP-steps-container { margin-top:32px; display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 50px; position: relative; }
+        .BEL-LP-steps-container::before { content: ''; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 80%; height: 2px; background-color: var(--ds-color-link); z-index: 0; display: none; }
+        @media (min-width: 768px) { .BEL-LP-steps-container::before { display: block; } }
+        .BEL-LP-step-card { flex: 0 0 360px; padding: 25px; border-radius: 12px; background-color: var(--ds-color-white); position: relative; z-index: 1; text-align: center; transition: transform 0.3s ease; }
+        .BEL-LP-step-card:hover { transform: translateY(-8px); }
+        .BEL-LP-step-card .BEL-LP-icon-circle { width: 100px; height: 100px; background-color: var(--ds-color-link); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: -60px auto 25px auto; box-shadow: 0 5px 15px rgba(0, 110, 255, 0.4); border: 5px solid var(--ds-color-gray-30); color: var(--ds-color-white); font-size: 2.5rem; }
+        .BEL-LP-step-card h3 { font-size: 1.75rem; color: var(--ds-color-gray-90); margin-bottom: 15px; }
+        .BEL-LP-step-card p { font-size: 1rem; color: var(--ds-color-gray-70); }
+
+        /* Success Stories Section */
+        .BEL-LP-success-stories { background-color: var(--ds-color-gray-30); padding: 80px 0; text-align: center; }
+        .BEL-LP-success-stories h2 { font-size: 2.5rem; margin: 0 auto 36px auto; position: relative; display: inline-block; }
+        .BEL-LP-success-stories h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: #F39800; border-radius: 2px; }
+        .BEL-LP-section-subtitle { text-align: center; font-size: 1.1rem; color: var(--ds-color-gray-70); max-width: 800px; margin: 0 auto 48px auto; }
+        .BEL-LP-testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
+        .BEL-LP-testimonial-card { background-color: var(--ds-color-white); padding: 30px; border-radius: 12px; transition: transform 0.3s ease; }
+        .BEL-LP-testimonial-card:hover { transform: translateY(-5px); }
+        .BEL-LP-testimonial-header { display: flex; align-items: center; margin-bottom: 20px; }
+        .BEL-LP-testimonial-header .BEL-LP-avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-right: 15px; border: 3px solid var(--ds-color-link); }
+        .BEL-LP-partner-info h4 { margin: 0; font-size: 1.1rem; color: var(--ds-color-gray-80); }
+        .BEL-LP-partner-info span { font-size: 0.9rem; color: var(--ds-color-gray-70); }
+        .BEL-LP-testimonial-card p { text-align: left; font-size: 1rem; line-height: 1.6; color: var(--ds-color-gray-80); margin-bottom: 20px; font-style: italic; }
+        .BEL-LP-testimonial-card .BEL-LP-stats { display: flex; gap: 20px; font-size: 0.9rem; }
+        .BEL-LP-testimonial-card .BEL-LP-stats span { color: var(--ds-color-gray-70); }
+        .BEL-LP-testimonial-card .BEL-LP-stats strong { color: var(--ds-color-link); font-weight: 700; }
+
+        /* Pricing Section */
+        .BEL-LP-pricing { background-color: var(--ds-color-white); padding: 80px 0; text-align: center; }
+        .BEL-LP-pricing h2 { font-size: 2.5rem; margin: 0 auto 36px auto; position: relative; display: inline-block; }
+        .BEL-LP-pricing h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: #F39800; border-radius: 2px; }
+        .BEL-LP-tiers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; margin-bottom: 50px; position: relative; }
+        @media (max-width: 992px) { .BEL-LP-tiers-grid::before { display: none; } }
+
+        /* --- START: Optimized Pricing Section Styles --- */
+
+        .BEL-LP-pricing .BEL-LP-tiers-grid {
+            align-items: center; /* Vertically align cards */
+            margin-top: 60px;
+        }
+
+        .BEL-LP-tier-card {
+            background-color: var(--ds-color-white);
+            border: 1px solid var(--ot-color-gray-45);
+            padding: 24px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            text-align: center;
+            height: 100%; /* Make cards equal height */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .BEL-LP-tier-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .BEL-LP-tier-header {
+            min-height: 90px; /* Ensures alignment */
+        }
+
+        .BEL-LP-tier-card h3 {
+            font-size: 1.5rem;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 10px;
+        }
+        
+        .BEL-LP-tier-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 0px auto;
+        }
+        
+        .BEL-LP-tier-icon i {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .BEL-LP-tier-description {
+            font-size: 0.9rem;
+            color: var(--ds-color-gray-70);
+        }
+
+        .BEL-LP-tier-commission {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--ds-color-link);
+            line-height: 1;
+        }
+
+        .BEL-LP-tier-commission span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--ds-color-gray-70);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .BEL-LP-commission-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+
+            color: var(--ds-color-gray-80);
+        }
+
+        .BEL-LP-tier-features {
+            list-style: none;
+            text-align: left;
+            margin-top: auto; /* Pushes features down */
+            padding-top: 20px;
+            border-top: 1px solid var(--ot-color-gray-45);
+            flex-grow: 1; /* Allows list to take up space */
+        }
+
+        .BEL-LP-tier-features li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+
+        .BEL-LP-tier-features li i {
+            font-size: 1.1rem;
+        }
+
+        .BEL-LP-tier-features .fa-check { color: var(--ds-color-success); }
+        .BEL-LP-tier-features .fa-times { color: var(--ds-color-error); opacity: 0.6; }
+
+        /* Horizontal tier features layout */
+        .BEL-LP-tier-features-horizontal {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 2fr);
+            margin-top: 20px;
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
+            gap:16px;
+            align-self: center;
+        }
+
+        .BEL-LP-tier-features-horizontal li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+            padding: 4px;
+            background-color: transparent;
+            border-radius: 0;
+            border: none;
+        }
+
+        .BEL-LP-tier-features-horizontal li i {
+            font-size: 1.2rem;
+        }
+
+        .BEL-LP-tier-features-horizontal .fa-check { color: var(--ds-color-success); }
+
+
+        .BEL-LP-tier-card .BEL-LP-btn {
+            margin-top: 16px;
+            width: 100%;
+        }
+
+        .BEL-LP-btn-outline-dark {
+            background-color: transparent;
+            color: var(--ds-color-gray-80) !important;
+            border: 2px solid var(--ds-color-gray-80);
+        }
+        .BEL-LP-btn-outline-dark:hover {
+            background-color: var(--ds-color-gray-80);
+            color: var(--ds-color-white) !important;
+        }
+
+        /* Styles for the highlighted "Popular" tier */
+        .BEL-LP-tier-popular {
+            border: 2px solid var(--ds-color-link);
+            transform: scale(1.05); /* Make it stand out */
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 110, 255, 0.2);
+        }
+
+        .BEL-LP-tier-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background-color: var(--ds-color-link);
+            color: var(--ds-color-white);
+            width: 160px;
+        }
+
+        /* --- END: Optimized Pricing Section Styles --- */
+
+
+        /* FAQ Section */
+        .BEL-LP-faq { background-color: var(--ds-color-white); padding: 80px 0; text-align: center; }
+        .BEL-LP-faq h2 { font-size: 2.5rem; margin: 0 auto 36px auto; position: relative; display: inline-block; }
+        .BEL-LP-faq h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: #F39800; border-radius: 2px; }
+        .BEL-LP-faq-list { max-width: 800px; margin: 0 auto; }
+        .BEL-LP-faq-item { border-bottom: 1px solid var(--ot-color-gray-45); padding: 20px 0; }
+        .BEL-LP-faq-question { width: 100%; background: none; border: none; text-align: left; padding: 0; font-size: 1.15rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--ds-color-gray-80); font-family: var(--heading-font); }
+        .BEL-LP-faq-question i { font-size: 1.2rem; color: var(--ds-color-link); transition: transform 0.2s ease; }
+        .BEL-LP-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease-out; padding: 0 20px; color: var(--ds-color-gray-70); font-size: 0.95rem; }
+        .BEL-LP-faq-answer p { text-align: left; line-height: 1.6; }
+        .BEL-LP-faq-item.active .BEL-LP-faq-answer { max-height: 200px; padding: 15px 20px; } /* Increased max-height for longer answers */
+        .BEL-LP-faq-item.active .BEL-LP-faq-question i { transform: rotate(180deg); }
+
+        /* Call to Action Section */
+        .BEL-LP-cta { background: linear-gradient(45deg, var(--ds-color-brand-dark), var(--ds-color-brand)); color: var(--ds-color-white); padding: 80px 0; text-align: center; }
+        .BEL-LP-cta h2 { font-size: 3rem; margin-bottom: 25px; font-weight: 800; color: var(--ds-color-white); }
+        .BEL-LP-cta p { font-size: 1.25rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+        /* Footer */
+        .BEL-LP-footer { background-color: var(--ds-color-gray-90); color: var(--ds-color-white); padding: 40px 0; text-align: center; font-size: 0.9rem; }
+        .BEL-LP-footer a { color: var(--ds-color-link); margin: 0 10px; }
+        .BEL-LP-footer p { margin-top: 15px; }
+
+        /* Responsive Adjustments */
+        @media (max-width: 928px) {
+            .BEL-LP-tiers-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 25px; 
+            }
+            .BEL-LP-tier-popular {
+                transform: scale(1.02); /* Slightly reduce the pop-out effect on tablet */
+            }
+            .BEL-LP-tier-header {
+                min-height: 100px;
+            }
+            .BEL-LP-benefits-list { grid-template-columns: 1fr; }
+            .BEL-LP-benefit-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .BEL-LP-hero h1 { font-size: 3rem; }
+            .BEL-LP-hero p { font-size: 1.1rem; }
+            .BEL-LP-hero-stats { flex-direction: column; gap: 30px; }
+            
+            /* Mobile logo size */
+            .BEL-LP-header .BEL-LP-logo {
+                font-size: 12px;
+            }
+            .BEL-LP-header .BEL-LP-logo img {
+                height: 16px;
+            }
+            
+            /* Mobile language switcher */
+            .BEL-LP-language-switcher {
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin: 0 0.5rem;
+            }
+            
+            /* CHANGE: Mobile navigation styles - only show CTA button and language switcher */
+            .BEL-LP-header .BEL-LP-main-nav {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                order: 3;
+                gap: 10px;
+            }
+            .BEL-LP-header .BEL-LP-main-nav a:not(.BEL-LP-btn) {
+                display: none;
+            }
+            .BEL-LP-header .BEL-LP-main-nav .current-page {
+                display: none;
+            }
+            .BEL-LP-header .BEL-LP-main-nav .BEL-LP-language-switcher {
+                display: flex;
+            }
+            .BEL-LP-header .BEL-LP-main-nav .BEL-LP-btn {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+                margin-left: 0;
+                transition: all 0.3s ease;
+            }
+            .BEL-LP-header .BEL-LP-main-nav .BEL-LP-btn:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            .BEL-LP-header .BEL-LP-main-nav .BEL-LP-btn:active {
+                transform: translateY(0);
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .BEL-LP-hamburger-menu {
+                display: block;
+            }
+            
+            .BEL-LP-benefit-grid, .BEL-LP-testimonials-grid, .BEL-LP-tiers-grid, .BEL-LP-benefits-list {
+                grid-template-columns: 1fr;
+            }
+            .BEL-LP-tier-popular {
+                transform: scale(1); /* No scaling on mobile to prevent layout issues */
+                order: -1; /* Place the popular plan at the top on mobile */
+            }
+            .BEL-LP-tier-features-horizontal {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 0;
+            }
+            .BEL-LP-tier-features-horizontal li {
+                padding: 12px 16px;
+            }
+            .BEL-LP-steps-container { flex-direction: column; align-items: center; }
+            .BEL-LP-steps-container::before { display: none; }
+            .BEL-LP-step-card { flex: 0 0 100%; max-width: 350px; margin-top: 60px; }
+            .BEL-LP-step-card .BEL-LP-icon-circle { margin-top: -60px; }
+            .BEL-LP-cta h2 { font-size: 2.5rem; }
+            .BEL-LP-cta p { font-size: 1.1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .BEL-LP-hero { padding: 80px 0; }
+            .BEL-LP-hero h1 { font-size: 2.5rem; }
+            .BEL-LP-hero p { font-size: 1rem; }
+            .BEL-LP-hero .BEL-LP-buttons .BEL-LP-btn { display: block; margin: 15px auto; width: 80%; }
+            .BEL-LP-hero-stats .BEL-LP-stat-item strong { font-size: 2rem; }
+            .BEL-LP-benefits, .BEL-LP-how-it-works, .BEL-LP-success-stories, .BEL-LP-pricing, .BEL-LP-faq, .BEL-LP-cta { padding: 96px 0; }
+            .BEL-LP-benefits h2, .BEL-LP-how-it-works h2, .BEL-LP-success-stories h2, .BEL-LP-pricing h2, .BEL-LP-faq h2, .BEL-LP-cta h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="BEL-LP-header">
+        <div class="BEL-LP-container">
+            <div class="BEL-LP-logo-hamburger-group">
+                <button class="BEL-LP-hamburger-menu" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="BEL-LP-logo">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="IoTMart Logo">
+                    <span>BEL</span>
+                </div>
+            </div>
+            <nav class="BEL-LP-main-nav">
+                <a href="BELLandingpage.html" id="nav-home">How to Join?</a>
+                <a href="about-us.html" id="nav-about">About Us</a>
+                <a href="Starter-Guide.html" id="nav-starter-guide" class="current-page-active">Starter Guide</a>
+                <div class="BEL-LP-language-switcher">
+                    <i class="fas fa-globe" onclick="toggleLanguageDropdown()"></i>
+                    <div class="BEL-LP-language-dropdown" id="languageDropdown">
+                        <div class="BEL-LP-language-options">
+                            <button onclick="switchLanguage('en')">English</button>
+                            <button onclick="switchLanguage('zh')">中文</button>
+                            <button onclick="switchLanguage('ko')">한국어</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="BEL-LP-btn BEL-LP-btn-orange">
+                <a href="../BEL-Login/login.html" >Log In</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section for Starter Guide -->
+    <section class="BEL-LP-hero">
+        <div class="BEL-LP-container" style="text-align: center;">
+            <h1 id="hero-title">BEL Partner Program | Getting Started FAQs</h1>
+            <p id="hero-subtitle">
+                Welcome to the BEL (Business Ecosystem Leader) family! To help you get started smoothly and accelerate your business growth, we've prepared the most common questions and answers that new partners encounter.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <div class="tailwind-body bg-slate-50 text-slate-800">
+        <div class="container mx-auto px-4 py-8 md:py-16 max-w-4xl">
+            
+            <header class="text-center mb-10">
+                <h1 id="faq-main-title" class="text-3xl md:text-4xl font-bold text-slate-900">BEL Partner Program | Getting Started FAQs</h1>
+                <p id="faq-main-subtitle" class="mt-4 text-base md:text-lg text-slate-600 max-w-3xl mx-auto">Welcome to the BEL (Business Ecosystem Leader) family! To help you get started smoothly and accelerate your business growth, we've prepared the most common questions and answers that new partners encounter.</p>
+            </header>
+
+            <!-- Search Input -->
+            <div class="mb-8 sticky top-4 z-10">
+                <div class="relative">
+                    <input type="text" id="searchInput" placeholder="Search questions or keywords..." class="w-full pl-12 pr-4 py-3 bg-white border border-slate-300 rounded-full shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-150 ease-in-out">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div id="faq-container">
+                
+                <h2 id="section1-title" class="text-xl md:text-2xl font-bold text-slate-800 mt-10 mb-4 border-b pb-3">1. Application & Eligibility</h2>
+                <div class="space-y-4">
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
+                            <span id="q1-question">Q1: Who can apply to become an IoTMart BEL partner?</span>
+                            <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="prose max-w-none text-slate-600"><p id="q1-answer">Basically, any individual or company with a passion for Industrial IoT (IIoT) and legitimate promotional channels is sincerely welcome to join us. We especially look forward to partners with technical backgrounds, industry influence, or professional knowledge such as system integrators, industry consultants, and technical content creators, because we believe that your professional influence is the key force driving industry progress.</p></div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
+                            <span id="q2-question">Q2: Does joining the BEL program require payment?</span>
+                            <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="prose max-w-none text-slate-600"><p id="q2-answer">Our cooperation philosophy is "create value together, share success together," so the BEL Partner Program is completely free. We look forward to establishing a long-term and mutually beneficial partnership with you, rather than adding to your costs.</p></div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
+                            <span id="q3-question">Q3: How long does application review take?</span>
+                            <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="prose max-w-none text-slate-600"><p id="q3-answer">After you submit your application, our team will review it as soon as possible. To expedite the process, please ensure that the information you provide is complete and accurate. After approval, you will immediately receive notification and obtain exclusive referral codes and links, allowing you to log in to the powerful BEL management platform.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="section2-title" class="text-xl md:text-2xl font-bold text-slate-800 mt-10 mb-4 border-b pb-3">2. Promotion & Tools</h2>
+                <div class="space-y-4">
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
+                            <span id="q4-question">Q4: Where can I find my exclusive promotional link?</span>
+                            <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="prose max-w-none text-slate-600"><p id="q4-answer">After logging into your BEL partner portal, you can easily find it in the "One-stop Promotional Resources" section. This link is exclusively yours, and it is the only credential for the system to track all your referral performance, so please be sure to use this link for promotion.</p></div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
+                            <span id="q5-question">Q5: What marketing support materials do you provide?</span>
+                            <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="prose max-w-none text-slate-600"><p id="q5-answer">We deeply understand that quality content is the key to success. In the "Get Resource" section of the management platform, we have prepared rich and professional marketing resources for you, including brand promotional videos, product introductions, application cases, graphic materials, and various copywriting templates, aimed at helping you easily plan and execute professional, effective marketing campaigns.</p></div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
+                            <span id="q6-question">Q6: How should I track my promotional performance?</span>
+                            <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="prose max-w-none text-slate-600"><p id="q6-answer">You can log into the "Intuitive Data Dashboard" of the BEL partner portal at any time. The dashboard will display your link clicks, order conversion rates, and revenue performance with real-time visual charts. Our conversion rate standard is "Clicks to Orders." These transparent data can empower you, help you deeply understand your audience, and continuously optimize promotional strategies for better returns.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="section3-title" class="text-xl md:text-2xl font-bold text-slate-800 mt-10 mb-4 border-b pb-3">3. Commissions & Payments</h2>
+                <div class="space-y-4">
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
+                            <span id="q7-question">Q7: How are commissions (rewards) calculated?</span>
+                            <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="prose max-w-none text-slate-600"><p id="q7-answer">We have designed a completely transparent commission calculation mechanism to ensure that every effort you make receives precise rewards. All amounts are ultimately based on US dollars (USD). If the original currency of the order is not US dollars, the conversion rate will be based on the company's regulations at the time.</p></div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
+                            <span id="q8-question">Q8: What kind of orders count as "valid orders"?</span>
+                            <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="prose max-w-none text-slate-600"><p id="q8-answer">To ensure transaction validity and fairness, an order must meet all the following conditions for the system to finally determine it as a "Valid Order (Completed)" and distribute commissions.</p></div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
+                            <span id="q9-question">Q9: When are rewards distributed?</span>
+                            <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="prose max-w-none text-slate-600"><p id="q9-answer">We will automatically send your approved commission net amount from the previous cycle to your designated account on the 12th of each month.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="section4-title" class="text-xl md:text-2xl font-bold text-slate-800 mt-10 mb-4 border-b pb-3">4. Program Rules & Support</h2>
+                <div class="space-y-4">
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
+                            <span id="q10-question">Q10: How can I improve my partner level? What are the rewards for each level?</span>
+                            <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="prose max-w-none text-slate-600"><p id="q10-answer">We have planned a clear growth path for you. Your partner level will be evaluated and adjusted on January 1st of each year based on your total accumulated turnover for the previous year. Higher levels represent richer rewards and more prestigious treatment.</p></div>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
+                            <span id="q11-question">Q11: If I encounter problems, who can I seek help from?</span>
+                            <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="prose max-w-none text-slate-600"><p id="q11-answer">Your success is our success. If you encounter any challenges during the promotion process, we provide multiple support channels.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="no-results" class="text-center py-10 hidden">
+                    <p class="text-slate-500 text-lg">No matching results found.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <section class="BEL-LP-cta">
+        <div class="BEL-LP-container">
+            <h2>Ready to Join the IoTMart BEL Family?</h2>
+            <p>Take action now and start your influence journey. Partner with the world's leading Industrial IoT platform to unlock unlimited business opportunities.</p>
+            <a href="../BEL-Login/login.html" class="BEL-LP-btn BEL-LP-btn-w-b">Apply to Become a BEL Partner</a>
+        </div>
+    </section>
+
+    <footer class="BEL-LP-footer">
+        <div class="BEL-LP-container">
+            <p>&copy; 2025 Advantech IoTMart. All rights reserved.</p>
+            <p> <a href="#terms">Terms & Conditions</a> | <a href="#privacy">Privacy Policy</a> | <a href="#faq">FAQ</a> | <a href="mailto:bel-support@iotmart.com">Contact Support</a> </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current page navigation state
+            setCurrentPageState();
+            
+            const navMenu = document.querySelector('.BEL-LP-main-nav');
+            const hamburger = document.querySelector('.BEL-LP-hamburger-menu');
+            const navLinks = document.querySelectorAll('.BEL-LP-main-nav a');
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if(target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    // ADDITION: Close mobile menu when a link is clicked
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        hamburger.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                        document.body.classList.remove('nav-open');
+                    }
+                });
+            });
+
+            // New FAQ Accordion functionality for Tailwind structure
+            const faqItems = document.querySelectorAll('.faq-item');
+            const searchInput = document.getElementById('searchInput');
+            const noResultsMessage = document.getElementById('no-results');
+            const allFaqItems = Array.from(document.querySelectorAll('.faq-item'));
+            const allSectionHeadings = Array.from(document.querySelectorAll('#faq-container > h2'));
+
+            // Accordion functionality
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 32 + "px"; // 32px for padding
+                    } else {
+                        item.classList.remove('active');
+                        answer.style.maxHeight = null;
+                    }
+                });
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase().trim();
+                let totalVisibleCount = 0;
+
+                allSectionHeadings.forEach(heading => {
+                    const section = heading.nextElementSibling;
+                    const itemsInSection = section.querySelectorAll('.faq-item');
+                    let sectionVisibleCount = 0;
+
+                    itemsInSection.forEach(item => {
+                        const questionText = item.querySelector('.faq-question span').textContent.toLowerCase();
+                        const answerText = item.querySelector('.faq-answer').textContent.toLowerCase();
+                        const isVisible = questionText.includes(searchTerm) || answerText.includes(searchTerm);
+                        
+                        if (isVisible) {
+                            item.style.display = 'block';
+                            sectionVisibleCount++;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    if (sectionVisibleCount > 0) {
+                        heading.style.display = 'block';
+                        section.style.display = 'block';
+                        totalVisibleCount += sectionVisibleCount;
+                    } else {
+                        heading.style.display = 'none';
+                        section.style.display = 'none';
+                    }
+                });
+
+                if (totalVisibleCount === 0 && searchTerm.length > 0) {
+                    noResultsMessage.style.display = 'block';
+                } else {
+                    noResultsMessage.style.display = 'none';
+                }
+
+                if(searchTerm.length === 0) {
+                    allSectionHeadings.forEach(h => h.style.display = 'block');
+                    allFaqItems.forEach(i => i.style.display = 'block');
+                }
+            });
+
+            // Make header sticky more fancy
+            const header = document.querySelector('.BEL-LP-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                    header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
+                    header.style.backdropFilter = 'blur(5px)';
+                } else {
+                    header.style.backgroundColor = 'var(--ds-color-white)';
+                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+                    header.style.backdropFilter = 'none';
+                }
+            });
+
+            // ADDITION: Hamburger menu toggle functionality
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    document.body.classList.toggle('nav-open');
+                    const icon = hamburger.querySelector('i');
+                    if (navMenu.classList.contains('active')) {
+                        icon.classList.replace('fa-bars', 'fa-times');
+                    } else {
+                        icon.classList.replace('fa-times', 'fa-bars');
+                    }
+                });
+            }
+            
+            // Initialize default language
+            // Initialize with stored language or default to English
+            const storedLanguage = getStoredLanguage();
+            currentLanguage = storedLanguage;
+            updateContent(storedLanguage);
+        });
+
+        // Language switching functionality
+        const translations = {
+            en: {
+                nav: {
+                    howToStart: "How to Join?",
+                    aboutUs: "About Us",
+                    starterGuide: "Starter Guide",
+                    becomeNow: "Log In"
+                },
+                hero: {
+                    title: "BEL Partner Program | Getting Started FAQs",
+                    subtitle: "Welcome to the BEL (Business Ecosystem Leader) family! To help you get started smoothly and accelerate your business growth, we've prepared the most common questions and answers that new partners encounter."
+                },
+                faq: {
+                    searchPlaceholder: "Search questions or keywords...",
+                    section1Title: "1. Application & Eligibility",
+                    section2Title: "2. Promotion & Tools", 
+                    section3Title: "3. Rebate Rewards & Payments",
+                    section4Title: "4. Program Rules & Support",
+                    q1: {
+                        question: "Q1: Who can apply to become an IoTMart BEL partner?",
+                        answer: "Any individual or company with a passion for Industrial IoT (IIoT) and legitimate promotional channels is sincerely welcome to join us. We especially look forward to partners with technical backgrounds, industry influence, or professional knowledge such as system integrators, industry consultants, and technical content creators, because we believe that your professional influence is the key force driving industry progress."
+                    },
+                    q2: {
+                        question: "Q2: Does joining the BEL program require payment?",
+                        answer: "Our cooperation philosophy is \"create value together, share success together,\" so the BEL Partner Program is completely free. We look forward to establishing a long-term and mutually beneficial partnership with you, rather than adding to your costs."
+                    },
+                    q3: {
+                        question: "Q3: How long does application review take?",
+                        answer: "After you submit your application, our team will review it as soon as possible. To expedite the process, please ensure that the information you provide is complete and accurate. After approval, you will immediately receive notification and obtain exclusive referral codes and links, allowing you to log in to the powerful BEL management platform."
+                    },
+                    q4: {
+                        question: "Q4: Where can I find my exclusive promotional link?",
+                        answer: "After logging into your BEL partner portal, you can easily find it in the \"Sales Engagement\" section. This link is exclusively yours, and it is the only credential for the system to track all your referral performance, so please be sure to use this link for promotion."
+                    },
+                    q5: {
+                        question: "Q5: What marketing support materials do you provide?",
+                        answer: "We deeply understand that quality content is the key to success. In the \"Get Resource\" section of the management platform, we have prepared rich and professional marketing resources for you, including brand promotional videos, product introductions, application cases, graphic materials, and various copywriting templates, aimed at helping you easily plan and execute professional, effective marketing campaigns."
+                    },
+                    q6: {
+                        question: "Q6: How should I track my promotional performance?",
+                        answer: "You can log into the \"Sales Engagement\" section of the BEL partner portal at any time, where there is an intuitive data dashboard. The dashboard will display your link clicks, order conversion rates, and revenue performance with real-time visual charts. Our conversion rate standard is \"Clicks to Orders.\" These transparent data can empower you, help you deeply understand your audience, and continuously optimize promotional strategies for better returns."
+                    },
+                    q7: {
+                        question: "Q7: How are rebate rewards calculated?",
+                        answer: "We have designed a completely transparent rebate reward calculation mechanism to ensure that every effort you make receives precise rewards. All amounts are ultimately based on US dollars (USD). If the original currency of the order is not US dollars, the conversion rate will be based on the company's regulations at the time:<br><br><strong>Order Amount:</strong> The total order amount when the customer places an order, converted to US dollars according to the exchange rate at the time.<br><strong>Product Actual Amount:</strong> This is the basis for calculating rebate rewards. The calculation method is \"Order Amount\" minus all additional costs, including discounts, taxes, and shipping fees.<br><strong>Gross Payout:</strong> \"Product Actual Amount\" multiplied by your current \"BEL level corresponding reward percentage.\"<br><strong>Net Payout:</strong> After deducting 20% statutory withholding tax (WHT) from the \"Gross Amount,\" this is the final amount you actually receive.<br><br><strong>Example:</strong> Assuming you are Builder level (2%) and referred an order of $100, including $5 shipping, $5 tax, and $10 discount.<br>• Product Actual Amount: $100 - $5 - $5 - $10 = $80<br>• Gross Amount: $80 × 2% = $1.6<br>• Net Amount: $1.6 - ($1.6 × 20%) = $1.28<br><br>You will ultimately receive $1.28 in rebate rewards."
+                    },
+                    q8: {
+                        question: "Q8: What kind of orders count as \"valid orders\"?",
+                        answer: "To ensure transaction validity and fairness, an order must meet all the following conditions for the system to finally determine it as a \"Valid Order (Completed)\" and distribute rebate rewards:<br><br>• The customer correctly used your exclusive referral code during checkout.<br>• The order status is stable, from \"order completion\" to \"product delivery\" until the legal \"appreciation period\" ends, without any order cancellations or returns.<br>&nbsp;&nbsp;- International site appreciation period: 14 days<br>&nbsp;&nbsp;- European site appreciation period: 30 days<br><br><strong>Order Status Explanation:</strong><br>• <strong>Processing:</strong> All statuses before the appreciation period ends.<br>• <strong>Canceled:</strong> Customer canceled order or applied for return.<br>• <strong>Completed:</strong> Valid orders that meet all conditions and can calculate rebate rewards."
+                    },
+                    q9: {
+                        question: "Q9: When are rebate rewards distributed?",
+                        answer: "We will automatically send your approved rebate reward net amount from the previous cycle to your designated account on the 12th of each month. Your account balance must reach a minimum of $100 USD (payment threshold) to receive payment on the payment date."
+                    },
+                    q10: {
+                        question: "Q10: How can I improve my partner level? What are the rewards for each level?",
+                        answer: "We have planned a clear growth path for you. Your partner level will be evaluated and adjusted on January 1st of each year based on your total accumulated turnover for the previous year. Higher levels represent richer rewards and more prestigious treatment.<br><br><strong>Reward percentages and promotion standards for each level:</strong><br>• <strong>Builder:</strong> 2% (Your starting point)<br>• <strong>Enabler:</strong> 2% (Annual turnover of $20,000)<br>• <strong>Explorer:</strong> 3% (Annual turnover of $100,000)<br>• <strong>Leader:</strong> 5% (Annual turnover of $200,000)"
+                    },
+                    q11: {
+                        question: "Q11: If I encounter problems, who can I seek help from?",
+                        answer: "Your success is our success. If you encounter any challenges during the promotion process, we provide multiple support channels:<br><br>• <strong>Self-service inquiry:</strong> You can always check the \"Frequently Asked Questions (FAQ)\" in the portal to quickly find answers.<br>• <strong>Official support:</strong> If you need further assistance, feel free to contact our official support team through the contact form, and we will ensure your issues are resolved quickly.<br>• <strong>Exclusive service:</strong> For higher-level partners, we will provide dedicated customer managers and one-on-one strategic consulting services to fully support your business growth."
+                    }
+                },
+                cta: {
+                    title: "Ready to Join the IoTMart BEL Family?",
+                    subtitle: "Take action now and start your influence journey. Partner with the world's leading Industrial IoT platform to unlock unlimited business opportunities.",
+                    button: "Apply to Become a BEL Partner"
+                },
+                footer: {
+                    copyright: "© 2025 Advantech IoTMart. All rights reserved.",
+                    terms: "Terms & Conditions",
+                    privacy: "Privacy Policy", 
+                    faq: "FAQ",
+                    contact: "Contact Support"
+                }
+            },
+            zh: {
+                nav: {
+                    howToStart: "如何加入？",
+                    aboutUs: "關於我們",
+                    starterGuide: "新手指南",
+                    becomeNow: "登入"
+                },
+                hero: {
+                    title: "BEL 合作夥伴計畫 | 新手上路 FAQs",
+                    subtitle: "歡迎您加入 BEL (Business Ecosystem Leader) 的大家庭！為了幫助您順利啟程並加速您的事業發展，我們精心準備了新手夥伴最常遇到的問題與解答。"
+                },
+                faq: {
+                    searchPlaceholder: "搜尋問題或關鍵字...",
+                    section1Title: "一、申請與資格",
+                    section2Title: "二、推廣與工具", 
+                    section3Title: "三、回饋金與支付",
+                    section4Title: "四、計畫規則與支援",
+                    q1: {
+                        question: "Q1: 誰可以申請成為 IoTMart BEL 合作夥伴？",
+                        answer: "任何對工業物聯網 (IIoT) 充滿熱情，並擁有合法推廣管道的個人或公司，我們都誠摯歡迎您的加入。我們尤其期待具備技術背景、行業影響力或專業知識的系統整合商、產業顧問、技術內容創作者等夥伴，因為我們相信，您的專業影響力是推動產業進步的關鍵力量。"
+                    },
+                    q2: {
+                        question: "Q2: 加入 BEL 計畫需要付費嗎？",
+                        answer: "我們的合作理念是「共創價值，共享成功」，因此 BEL 合作夥伴計畫完全免費。我們期待與您建立一個長期且互利的合作關係，而非增加您的成本。"
+                    },
+                    q3: {
+                        question: "Q3: 申請審核需要多久時間？",
+                        answer: "在您提交申請後，我們的團隊會盡快進行審核。為了加速流程，請確保您提供的資料完整且正確。審核通過後，您將立即收到通知，並獲得專屬的推薦碼與推薦連結，即可登入功能強大的 BEL 管理平台。"
+                    },
+                    q4: {
+                        question: "Q4: 我可以在哪裡找到我的專屬推廣連結？",
+                        answer: "登入您的 BEL 夥伴入口網站後，您可以在 Sales Engagement 區塊中輕鬆找到。這個連結是您個人專屬的，它是系統追蹤您所有推薦成效的唯一憑證，請務必使用此連結進行推廣。"
+                    },
+                    q5: {
+                        question: "Q5: 你們提供哪些行銷輔助材料？",
+                        answer: "我們深知優質的內容是成功的關鍵。在管理平台的 Get Resource 內，我們為您準備了豐富且專業的行銷資源，包含品牌宣傳影片、產品介紹、應用案例、圖文素材以及多種文案模板，旨在幫助您輕鬆規劃並執行專業、有效的行銷活動。"
+                    },
+                    q6: {
+                        question: "Q6: 我該如何追蹤我的推廣成效？",
+                        answer: "您可以隨時登入 BEL 夥伴入口網站的 Sales Engagement 區塊，裡面有直覺化的數據儀表板。儀表板上會以即時的視覺化圖表，呈現您的連結點擊數、訂單轉換率與收益成效。我們的轉換率標準為「點擊轉換訂單 (Clicks to Orders)」，這些透明的數據能賦予您力量，幫助您深入了解受眾，並持續優化推廣策略以獲得更佳回報。"
+                    },
+                    q7: {
+                        question: "Q7: 佣金（回饋金）是如何計算的？",
+                        answer: "我們設計了完全透明的佣金計算機制，確保您的每一分努力都能獲得精準的回報。所有金額最終皆以美金 (USD) 為準，若訂單原始貨幣非美金，其轉換匯率將以本公司當時採用的規定為準：<br><br><strong>訂單金額 (Order Amount):</strong> 顧客下單時的訂單總額，會依當時匯率轉換為美金。<br><strong>產品實際額 (Product Actual Amount):</strong> 這是計算佣金的基礎。計算方式為「訂單金額」扣除所有附加成本，包括折扣 (Discount)、稅額 (Tax) 及運費 (Shipping Fee)。<br><strong>毛額 (Gross Payout):</strong> 「產品實際額」乘以您當前「BEL 等級對應的回饋 % 數」。<br><strong>淨額 (Net Payout):</strong> 從「毛額」中扣除 20% 的法定扣繳稅額 (WHT) 後，即是您最終實際獲得的款項。<br><br><strong>範例：</strong> 假設您是 Builder 等級 (2%)，推薦了一筆 100 美元的訂單，其中包含 5 元運費、5 元稅費及 10 元折扣。<br>• 產品實際額：$100 - $5 - $5 - $10 = $80<br>• 毛額：$80 × 2% = $1.6<br>• 淨額：$1.6 - ($1.6 × 20%) = $1.28<br><br>您最終將實得 $1.28 美元的回饋金。"
+                    },
+                    q8: {
+                        question: "Q8: 什麼樣的訂單才能算是「有效訂單」？",
+                        answer: "為了確保交易的有效性與公平性，一筆訂單需要滿足以下所有條件，系統才會最終判定為「有效訂單 (Completed)」並發放回饋金：<br><br>• 顧客在結帳時，正確使用了您的專屬推薦碼。<br>• 訂單狀態穩定，從「下單完成」到「商品送達」，直至法定「鑑賞期」結束，都沒有發生取消訂單或退貨的情況。<br>&nbsp;&nbsp;- 國際站鑑賞期為 14 天<br>&nbsp;&nbsp;- 歐洲站鑑賞期為 30 天<br><br><strong>訂單狀態說明：</strong><br>• <strong>Processing (處理中):</strong> 指訂單在鑑賞期結束前的所有狀態。<br>• <strong>Canceled (已取消):</strong> 指顧客取消訂單或已申請退貨。<br>• <strong>Completed (已完成):</strong> 符合所有條件，可計算回饋金的有效訂單。"
+                    },
+                    q9: {
+                        question: "Q9: 回饋金什麼時候發放？",
+                        answer: "我們會在每個月的 12 號，自動將您上一個週期已核可的回饋金淨額，發送至您指定的帳戶。您的帳戶內可提領金額須累積達到 $100 美元（支付門檻），方可於支付日收到款項。"
+                    },
+                    q10: {
+                        question: "Q10: 我可以如何提升我的夥伴等級？各等級的回饋是多少？",
+                        answer: "我們為您規劃了清晰的成長路徑。您的夥伴等級會在每年的 1 月 1 號，根據您前一整個年度所累積的總營業額進行評估與調整。等級越高，代表著更豐厚的回饋與更尊榮的禮遇。<br><br><strong>各等級回饋 % 數與晉升標準：</strong><br>• <strong>Builder (建造者):</strong> 2% (您的起點)<br>• <strong>Enabler (推動者):</strong> 2% (年度營業額達 2 萬美元)<br>• <strong>Explorer (探險家):</strong> 3% (年度營業額達 10 萬美元)<br>• <strong>Leader (領導者):</strong> 5% (年度營業額達 20 萬美元)"
+                    },
+                    q11: {
+                        question: "Q11: 如果我遇到問題，可以向誰尋求幫助？",
+                        answer: "您的成功就是我們的成功。若您在推廣過程中遇到任何挑戰，我們提供了多元的支援管道：<br><br>• <strong>自助查詢:</strong> 您可以隨時查閱入口網站內的「常見問題集 (FAQ)」，快速找到答案。<br>• <strong>官方支援:</strong> 若需要進一步協助，歡迎透過聯絡表單聯繫我們的官方支援團隊，我們將確保您的問題被迅速解決。<br>• <strong>專屬服務:</strong> 對於更高等級的夥伴，我們將提供專屬的客戶經理與一對一的策略諮詢服務，全力支援您的事業成長。"
+                    }
+                },
+                cta: {
+                    title: "準備好加入IoTMart BEL大家庭了嗎？",
+                    subtitle: "現在就行動，開始您的影響力之旅。與世界領先的工業物聯網平台合作，解鎖無限商機。",
+                    button: "申請成為BEL合作夥伴"
+                },
+                footer: {
+                    copyright: "© 2025 研華IoTMart。保留所有權利。",
+                    terms: "條款與條件",
+                    privacy: "隱私政策", 
+                    faq: "常見問題",
+                    contact: "聯繫支援"
+                }
+            },
+            ko: {
+                nav: {
+                    howToStart: "참여 방법",
+                    aboutUs: "회사 소개",
+                    starterGuide: "시작 가이드",
+                    becomeNow: "로그인"
+                },
+                hero: {
+                    title: "BEL 파트너 프로그램 | 신규 가이드 FAQ",
+                    subtitle: "BEL (Business Ecosystem Leader) 패밀리에 오신 것을 환영합니다! 원활한 시작과 비즈니스 성장 가속화를 위해 신규 파트너가 가장 자주 접하는 질문과 답변을 준비했습니다."
+                },
+                faq: {
+                    searchPlaceholder: "질문이나 키워드를 검색하세요...",
+                    section1Title: "1. 신청 및 자격",
+                    section2Title: "2. 홍보 및 도구", 
+                    section3Title: "3. 리베이트 리워드 및 지불",
+                    section4Title: "4. 프로그램 규칙 및 지원",
+                    q1: {
+                        question: "Q1: 누가 IoTMart BEL 파트너가 될 수 있나요?",
+                        answer: "산업용 IoT (IIoT)에 대한 열정과 합법적인 홍보 채널을 가진 개인이나 회사는 모두 환영합니다. 특히 기술 배경, 업계 영향력 또는 전문 지식을 갖춘 시스템 통합업체, 산업 컨설턴트, 기술 콘텐츠 크리에이터 등의 파트너를 기대합니다. 귀하의 전문적 영향력이 산업 발전을 이끄는 핵심 동력이라고 믿기 때문입니다."
+                    },
+                    q2: {
+                        question: "Q2: BEL 프로그램 가입에 비용이 필요한가요?",
+                        answer: "우리의 협력 철학은 '함께 가치를 창조하고 성공을 공유한다'이므로 BEL 파트너 프로그램은 완전 무료입니다. 귀하의 비용을 증가시키기보다는 장기적이고 상호 이익이 되는 파트너십을 구축하고자 합니다."
+                    },
+                    q3: {
+                        question: "Q3: 신청 심사에는 얼마나 걸리나요?",
+                        answer: "신청서를 제출하신 후 저희 팀이 최대한 빠르게 검토해 드립니다. 프로세스를 가속화하려면 제공하신 정보가 완전하고 정확한지 확인해 주세요. 승인 후 즉시 알림을 받고 전용 추천 코드와 링크를 얻어 강력한 BEL 관리 플랫폼에 로그인할 수 있습니다."
+                    },
+                    q4: {
+                        question: "Q4: 전용 홍보 링크는 어디에서 찾을 수 있나요?",
+                        answer: "BEL 파트너 포털에 로그인한 후 'Sales Engagement' 섹션에서 쉽게 찾을 수 있습니다. 이 링크는 귀하만의 고유한 것으로, 모든 추천 성과를 추적하는 시스템의 유일한 자격 증명이므로 홍보 시 반드시 이 링크를 사용해 주세요."
+                    },
+                    q5: {
+                        question: "Q5: 어떤 마케팅 지원 자료를 제공하나요?",
+                        answer: "우수한 콘텐츠가 성공의 핵심이라는 것을 잘 알고 있습니다. 관리 플랫폼의 'Get Resource' 섹션에서 브랜드 홍보 동영상, 제품 소개, 응용 사례, 그래픽 자료 및 다양한 카피라이팅 템플릿을 포함한 풍부하고 전문적인 마케팅 리소스를 준비했습니다. 이는 전문적이고 효과적인 마케팅 캠페인을 쉽게 계획하고 실행할 수 있도록 도와드립니다."
+                    },
+                    q6: {
+                        question: "Q6: 홍보 성과를 어떻게 추적해야 하나요?",
+                        answer: "언제든지 BEL 파트너 포털의 'Sales Engagement' 섹션에 로그인할 수 있으며, 여기에 직관적인 데이터 대시보드가 있습니다. 대시보드는 실시간 시각적 차트를 통해 링크 클릭 수, 주문 전환율 및 수익 성과를 보여줍니다. 우리의 전환율 표준은 'Clicks to Orders'입니다. 이러한 투명한 데이터는 귀하에게 힘을 부여하여 대상 고객을 깊이 이해하고 더 나은 수익을 위해 홍보 전략을 지속적으로 최적화할 수 있도록 도와줍니다."
+                    },
+                    q7: {
+                        question: "Q7: 리베이트 리워드는 어떻게 계산되나요?",
+                        answer: "완전히 투명한 리베이트 리워드 계산 메커니즘을 설계하여 귀하의 모든 노력이 정확한 보상을 받도록 보장합니다. 모든 금액은 궁극적으로 미국 달러(USD)를 기준으로 하며, 주문의 원래 통화가 미국 달러가 아닌 경우 당시 회사가 채택한 규정에 따른 환율을 적용합니다:<br><br><strong>주문 금액(Order Amount):</strong> 고객이 주문할 때의 총 주문 금액으로, 당시 환율에 따라 미국 달러로 변환됩니다.<br><strong>제품 실제 금액(Product Actual Amount):</strong> 리베이트 리워드 계산의 기초입니다. 계산 방법은 '주문 금액'에서 할인(Discount), 세금(Tax) 및 배송비(Shipping Fee)를 포함한 모든 추가 비용을 차감합니다.<br><strong>총액(Gross Payout):</strong> '제품 실제 금액'에 현재 'BEL 레벨에 해당하는 리워드 %'를 곱합니다.<br><strong>순액(Net Payout):</strong> '총액'에서 20% 법정 원천징수세(WHT)를 차감한 후 실제로 받는 최종 금액입니다.<br><br><strong>예시:</strong> Builder 레벨(2%)이고 $100 주문을 추천했다고 가정하면, $5 배송비, $5 세금, $10 할인이 포함됩니다.<br>• 제품 실제 금액: $100 - $5 - $5 - $10 = $80<br>• 총액: $80 × 2% = $1.6<br>• 순액: $1.6 - ($1.6 × 20%) = $1.28<br><br>최종적으로 $1.28의 리베이트 리워드를 받게 됩니다."
+                    },
+                    q8: {
+                        question: "Q8: 어떤 주문이 '유효한 주문'으로 간주되나요?",
+                        answer: "거래의 유효성과 공정성을 보장하기 위해 주문이 다음 모든 조건을 충족해야 시스템이 최종적으로 '유효한 주문(Completed)'으로 판정하고 리베이트 리워드를 지급합니다:<br><br>• 고객이 체크아웃 시 귀하의 전용 추천 코드를 올바르게 사용했습니다.<br>• 주문 상태가 안정적이어야 하며, '주문 완료'부터 '상품 배송'까지, 법정 '감상 기간' 종료까지 주문 취소나 반품이 발생하지 않았습니다.<br>&nbsp;&nbsp;- 국제 사이트 감상 기간: 14일<br>&nbsp;&nbsp;- 유럽 사이트 감상 기간: 30일<br><br><strong>주문 상태 설명:</strong><br>• <strong>Processing (처리 중):</strong> 감상 기간 종료 전 모든 상태를 말합니다.<br>• <strong>Canceled (취소됨):</strong> 고객이 주문을 취소했거나 반품을 신청한 상태입니다.<br>• <strong>Completed (완료됨):</strong> 모든 조건을 충족하여 리베이트 리워드를 계산할 수 있는 유효한 주문입니다."
+                    },
+                    q9: {
+                        question: "Q9: 리워드는 언제 지급되나요?",
+                        answer: "매월 12일에 지난 주기에 승인된 커미션 순액을 지정된 계좌로 자동 송금해 드립니다. 지급일에 지급을 받으려면 계좌 잔액이 최소 $100 USD(지급 한도액)에 도달해야 합니다."
+                    },
+                    q10: {
+                        question: "Q10: 파트너 레벨을 어떻게 향상시킬 수 있나요? 각 레벨의 리워드는 얼마인가요?",
+                        answer: "명확한 성장 경로를 계획해 드렸습니다. 파트너 레벨은 매년 1월 1일에 지난 한 해 동안 누적된 총 매출액을 기반으로 평가 및 조정됩니다. 레벨이 높을수록 더 풍부한 리워드와 더 권위 있는 대우를 의미합니다.<br><br><strong>각 레벨의 리워드 % 및 승진 기준:</strong><br>• <strong>Builder (건설자):</strong> 2% (시작점)<br>• <strong>Enabler (촉진자):</strong> 2% (연간 매출 $20,000 달성)<br>• <strong>Explorer (탐험가):</strong> 3% (연간 매출 $100,000 달성)<br>• <strong>Leader (리더):</strong> 5% (연간 매출 $200,000 달성)"
+                    },
+                    q11: {
+                        question: "Q11: 문제가 발생하면 누구에게 도움을 요청할 수 있나요?",
+                        answer: "귀하의 성공이 곧 저희의 성공입니다. 홍보 과정에서 어떤 도전에 직면하더라도 다양한 지원 채널을 제공합니다:<br><br>• <strong>셀프 서비스 문의:</strong> 포털의 '자주 묻는 질문(FAQ)'을 언제든지 확인하여 빠르게 답변을 찾을 수 있습니다.<br>• <strong>공식 지원:</strong> 추가 도움이 필요하시면 연락 양식을 통해 공식 지원팀에 문의해 주세요. 문제가 신속히 해결되도록 보장해 드립니다.<br>• <strong>전용 서비스:</strong> 더 높은 레벨의 파트너에게는 전용 고객 관리자와 일대일 전략 컨설팅 서비스를 제공하여 비즈니스 성장을 전폭적으로 지원합니다."
+                    }
+                },
+                cta: {
+                    title: "IoTMart BEL 패밀리에 합류할 준비가 되셨나요?",
+                    subtitle: "지금 행동하여 영향력 여정을 시작하세요. 세계 최고의 산업용 IoT 플랫폼과 파트너십을 맺고 무한한 비즈니스 기회를 열어보세요.",
+                    button: "BEL 파트너 신청하기"
+                },
+                footer: {
+                    copyright: "© 2025 Advantech IoTMart. 모든 권리 보유.",
+                    terms: "이용 약관",
+                    privacy: "개인정보 보호정책", 
+                    faq: "FAQ",
+                    contact: "지원 문의"
+                }
+            }
+        };
+
+        let currentLanguage = 'en'; // Default to English
+
+        function toggleLanguageDropdown() {
+            const dropdown = document.getElementById('languageDropdown');
+            dropdown.classList.toggle('show');
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                const switcher = document.querySelector('.BEL-LP-language-switcher');
+                if (!switcher.contains(e.target)) {
+                    dropdown.classList.remove('show');
+                }
+            });
+        }
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            const dropdown = document.getElementById('languageDropdown');
+            dropdown.classList.remove('show');
+            
+            // Save language preference to localStorage
+            localStorage.setItem('belLanguage', lang);
+            
+            // Update all content
+            updateContent(lang);
+        }
+
+        function getStoredLanguage() {
+            return localStorage.getItem('belLanguage') || 'en';
+        }
+
+        function setCurrentPageState() {
+            // Determine current page based on URL
+            const currentPage = window.location.pathname;
+            const isHomePage = currentPage.includes('BELLandingpage.html') || currentPage.endsWith('/') || currentPage === '';
+            const isAboutPage = currentPage.includes('about-us.html');
+            const isStarterGuidePage = currentPage.includes('Starter-Guide.html');
+            
+            const homeLink = document.getElementById('nav-home');
+            const aboutLink = document.getElementById('nav-about');
+            const starterGuideLink = document.getElementById('nav-starter-guide');
+            
+            if (isHomePage) {
+                // Set home as current page
+                homeLink.classList.add('current-page-active');
+                homeLink.removeAttribute('href');
+                homeLink.style.cursor = 'default';
+                homeLink.style.color = 'var(--ds-color-link)';
+            } else if (isAboutPage) {
+                // Set about as current page
+                aboutLink.classList.add('current-page-active');
+                aboutLink.removeAttribute('href');
+                aboutLink.style.cursor = 'default';
+                aboutLink.style.color = 'var(--ds-color-link)';
+            } else if (isStarterGuidePage) {
+                // Set starter guide as current page
+                starterGuideLink.classList.add('current-page-active');
+                starterGuideLink.removeAttribute('href');
+                starterGuideLink.style.cursor = 'default';
+                starterGuideLink.style.color = 'var(--ds-color-link)';
+            }
+        }
+
+        function updateContent(lang) {
+            const t = translations[lang];
+            
+            // Update navigation
+            document.getElementById('nav-home').textContent = t.nav.howToStart;
+            document.getElementById('nav-about').textContent = t.nav.aboutUs;
+            document.getElementById('nav-starter-guide').textContent = t.nav.starterGuide;
+            document.querySelector('.BEL-LP-btn-orange').textContent = t.nav.becomeNow;
+            
+            // Update hero section
+            document.getElementById('hero-title').textContent = t.hero.title;
+            document.getElementById('hero-subtitle').textContent = t.hero.subtitle;
+            
+            // Update FAQ section - new structure
+            document.getElementById('faq-main-title').textContent = t.faq.mainTitle;
+            document.getElementById('faq-main-subtitle').textContent = t.faq.mainSubtitle;
+            document.getElementById('searchInput').placeholder = t.faq.searchPlaceholder;
+            
+            // Update section titles
+            document.getElementById('section1-title').textContent = t.faq.section1Title;
+            document.getElementById('section2-title').textContent = t.faq.section2Title;
+            document.getElementById('section3-title').textContent = t.faq.section3Title;
+            document.getElementById('section4-title').textContent = t.faq.section4Title;
+            
+            // Update individual FAQ items using IDs
+            const faqQuestions = [
+                'q1-question', 'q2-question', 'q3-question', 'q4-question', 'q5-question', 'q6-question', 
+                'q7-question', 'q8-question', 'q9-question', 'q10-question', 'q11-question'
+            ];
+            const faqAnswers = [
+                'q1-answer', 'q2-answer', 'q3-answer', 'q4-answer', 'q5-answer', 'q6-answer',
+                'q7-answer', 'q8-answer', 'q9-answer', 'q10-answer', 'q11-answer'
+            ];
+            
+            faqQuestions.forEach((questionId, index) => {
+                const questionEl = document.getElementById(questionId);
+                const answerEl = document.getElementById(faqAnswers[index]);
+                const faqKey = `q${index + 1}`;
+                
+                if (questionEl && answerEl && t.faq[faqKey]) {
+                    questionEl.textContent = t.faq[faqKey].question;
+                    answerEl.innerHTML = t.faq[faqKey].answer; // Using innerHTML to support HTML formatting
+                }
+            });
+            
+            // Update CTA section
+            document.querySelector('.BEL-LP-cta h2').textContent = t.cta.title;
+            document.querySelector('.BEL-LP-cta p').textContent = t.cta.subtitle;
+            document.querySelector('.BEL-LP-cta .BEL-LP-btn').textContent = t.cta.button;
+            
+            // Update footer
+            document.querySelector('.BEL-LP-footer p:first-child').textContent = t.footer.copyright;
+            const footerLinks = document.querySelectorAll('.BEL-LP-footer p:last-child a');
+            footerLinks[0].textContent = t.footer.terms;
+            footerLinks[1].textContent = t.footer.privacy;
+            footerLinks[2].textContent = t.footer.faq;
+            footerLinks[3].textContent = t.footer.contact;
+        }
+    </script>
+</body>
+</html>

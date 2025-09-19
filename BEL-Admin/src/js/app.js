@@ -11,7 +11,7 @@ function checkAuthentication() {
     
     if (!userSession) {
         // No session found, redirect to login
-        window.location.href = 'login.html';
+        window.location.href = 'BEL-Login/login.html';
         return false;
     }
     
@@ -25,7 +25,7 @@ function checkAuthentication() {
         if (hoursDiff > 8) {
             sessionStorage.removeItem('bel_user_session');
             alert('Your session has expired. Please log in again.');
-            window.location.href = 'login.html';
+            window.location.href = 'BEL-Login/login.html';
             return false;
         }
         
@@ -35,7 +35,7 @@ function checkAuthentication() {
     } catch (error) {
         console.error('Session validation error:', error);
         sessionStorage.removeItem('bel_user_session');
-        window.location.href = 'login.html';
+        window.location.href = 'BEL-Login/login.html';
         return false;
     }
 }
@@ -68,7 +68,7 @@ function logout() {
     if (confirmLogout) {
         sessionStorage.removeItem('bel_user_session');
         localStorage.removeItem('bel_remember_me');
-        window.location.href = 'login.html';
+        window.location.href = '/BEL-Login/login.html';
     }
 }
 

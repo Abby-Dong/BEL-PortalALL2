@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join IoTMart BEL Partner Program | Become Our Business Ecosystem Leader</title>
     <meta name="description" content="Join the IoTMart BEL        /* How It Works Section */
-        .BEL-LP-how-it-works { background: linear-gradient(135deg, var(--primary-light-10), var(--text-light)); padding: 80px 0; text-align: center; }
+        .BEL-LP-how-it-works { background: linear-gradient(135deg, var(--ot-color-lightblue-10), var(--ds-color-white)); padding: 80px 0; text-align: center; }
         .BEL-LP-how-it-works h2 { font-size: 2.5rem; margin: 0 auto 36px auto; position: relative; display: inline-block; }
         .BEL-LP-how-it-works h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: #F39800; border-radius: 2px; }tner Program and leverage your influence to promote industry-leading IoT solutions. Earn generous commissions while building lasting partnerships with Advantech IoTMart.">
     <meta name="keywords" content="IoT, Business Ecosystem Leader, Partner Program, Affiliate Marketing, Industrial IoT, Advantech, Commission, Technology Partnership">
@@ -14,36 +14,45 @@
     <style>
         /* General Styles & Reset - Blue Theme Design System */
         :root {
-            /* -- Primary Colors (Blue Theme) -- */
-            --primary-color: #006EFF; /* Vibrant blue */
-            --primary-dark: #003160; /* Dark blue */
-            --primary-medium: #004280; /* Medium blue */
-            --primary-light-70: #4d94ff;
-            --primary-light-50: #80b3ff;
-            --primary-light-30: #b3d1ff;
-            --primary-light-10: #e6f0ff;
+            /* -- Primary Colors -- */
+            --ds-color-primary: #F39800;
+            --ds-color-primary-dark: #e57b03;
+            --ds-color-primary-light-70: #f7c265;
+            --ds-color-primary-light-50: #fbe0b2;
+            --ds-color-primary-light-30: #fdeacc;
+            --ds-color-primary-light-10: #faf3e6;
 
-            /* -- Brand Colors (Blue Variations) -- */
-            --brand-color: #004280; /* Medium brand blue */
-            --brand-dark: #003160; /* Deep brand blue */
-            --brand-light-75: #4d94ff;
-            --brand-light-50: #80b3ff;
-            --brand-light-30: #e6f0ff;
+            /* -- Brand Colors -- */
+            --ds-color-brand: #004280;
+            --ds-color-brand-dark: #003160;
+            --ds-color-brand-light-75: #336899;
+            --ds-color-brand-light-50: #80a0bf;
+            --ds-color-brand-light-30: #dfebf7;
+
+            /* -- Grayscale -- */
+            --ds-color-gray-90: #0c0c0c;
+            --ds-color-gray-80: #434447;
+            --ds-color-gray-70: #737b7d;
+            --ds-color-gray-60: #b6bfc1;
+            --ds-color-gray-50: #cfd2d5;
+            --ds-color-gray-40: #e8ecef;
+            --ds-color-gray-30: #f6f7f9;
+            --ds-color-white: #ffffff;
 
             /* -- System Colors -- */
-            --secondary-color: #737b7d; /* Gray 70 */
-            --accent-color: #00893a; /* Success color */
-            --error-color: #db3a3a;
-            --link-color: #006EFF;
+            --ds-color-error-dark: #b52f2f;
+            --ds-color-error: #db3a3a;
+            --ds-color-error-light: #ffeeee;
+            --ds-color-success-dark: #025324;
+            --ds-color-success: #00893a;
+            --ds-color-success-light: #d0e6d4;
+            --ds-color-link: #006EFF;
 
-            /* -- Background & Text Colors -- */
-            --light-bg: #f6f7f9; /* Gray 30 */
-            --dark-bg: #0c0c0c; /* Gray 90 */
-            --text-dark: #434447; /* Gray 80 */
-            --text-light: #ffffff;
-            --text-muted: #9499A1; /* OT Gray 65 */
-            --rich-black: #010B13; /* Rich black for headings */
-            --ot-color-gray-45: #e0e0e0; /* Additional gray for borders */
+            /* -- Other Colors -- */
+            --ot-color-gray-65: #9499A1;
+            --ot-color-gray-45: #e0e0e0;
+            --ot-color-lightblue-10: #e6f0ff;
+            --bel-sidebar-active-bg: rgba(255, 255, 255, 0.2);
 
             /* -- Typography -- */
             --heading-font-h1h2: 'Poppins', 'Inter', sans-serif; /* Special font for H1, H2 */
@@ -60,8 +69,8 @@
         body {
             font-family: var(--body-font);
             line-height: 1.4;
-            color: var(--text-dark);
-            background-color: var(--light-bg);
+            color: var(--ds-color-gray-80);
+            background-color: var(--ds-color-gray-30);
             overflow-x: hidden; /* Prevent horizontal scroll */
         }
         
@@ -71,8 +80,8 @@
         }
 
         a {
-            text-decoration: none;
-            color: var(--primary-color);
+            text-decoration: none !important;
+            color: var(--ds-color-link);
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -88,7 +97,7 @@
         }
 
         h2 {
-            color: var(--rich-black); /* Rich black for better visibility and impact */
+            color: var(--ds-color-gray-90); /* Rich black for better visibility and impact */
         }
 
         .BEL-LP-container {
@@ -117,10 +126,10 @@
             }
         }
         .BEL-LP-text-center { text-align: center; }
-        .BEL-LP-text-primary { color: var(--primary-color); }
-        .BEL-LP-text-white { color: var(--text-light); }
-        .BEL-LP-bg-primary { background-color: var(--primary-color); }
-        .BEL-LP-bg-dark { background-color: var(--dark-bg); }
+        .BEL-LP-text-primary { color: var(--ds-color-link); }
+        .BEL-LP-text-white { color: var(--ds-color-white); }
+        .BEL-LP-bg-primary { background-color: var(--ds-color-link); }
+        .BEL-LP-bg-dark { background-color: var(--ds-color-gray-90); }
         .BEL-LP-py-5 { padding-top: 3rem; padding-bottom: 3rem; }
         .BEL-LP-mb-4 { margin-bottom: 1.5rem; }
 
@@ -134,22 +143,23 @@
             cursor: pointer;
             border: none;
             font-family: var(--heading-font);
+            width: auto;
         }
 
         .BEL-LP-btn-primary {
-            background-color: var(--primary-color);
-            color: var(--text-light) !important;
+            background-color: var(--ds-color-link);
+            color: var(--ds-color-white) !important;
             box-shadow: 0 4px 15px rgba(0, 110, 255, 0.4);
         }
         .BEL-LP-btn-primary:hover {
-            background-color: var(--primary-dark);
+            background-color: var(--ds-color-brand-dark);
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 110, 255, 0.6);
         }
 
         .BEL-LP-btn-orange {
             background-color: #F39800;
-            color: var(--text-light) !important;
+            color: var(--ds-color-white) !important;
         }
         .BEL-LP-btn-orange:hover {
             background-color: #e08800;
@@ -157,19 +167,19 @@
         }
 
         .BEL-LP-btn-w-b {
-            background-color: var(--text-light);
-            color: var(--primary-color) !important;
+            background-color: var(--ds-color-white);
+            color: var(--ds-color-link) !important;
             transform: translateY(-2px);
         }
         .BEL-LP-btn-w-b:hover {
             background-color: #b3d1ff;
-            color: var(--primary-color) !important;
+            color: var(--ds-color-link) !important;
             transform: translateY(-2px);
         }
         
         /* Header & Hero Section */
         .BEL-LP-header {
-            background-color: var(--text-light);
+            background-color: var(--ds-color-white);
             padding: 15px 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             position: sticky;
@@ -181,6 +191,13 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
+        }
+        
+        /* Logo and Hamburger Menu Group */
+        .BEL-LP-logo-hamburger-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
         /* Language Switcher */
@@ -244,7 +261,7 @@
         
         .BEL-LP-language-options button:hover {
             background-color: #f5f5f5;
-            color: var(--primary-color);
+            color: var(--ds-color-link);
             transform: translateX(2px);
         }
         
@@ -271,11 +288,11 @@
             font-weight: 500;
             cursor: pointer;
             transition: background-color 0.2s ease;
-            color: var(--text-dark);
+            color: var(--ds-color-gray-80);
         }
         
         .BEL-LP-language-options button:hover {
-            background-color: var(--light-bg);
+            background-color: var(--ds-color-gray-30);
         }
         
         .BEL-LP-language-options button:first-child {
@@ -288,7 +305,7 @@
         .BEL-LP-header .BEL-LP-logo {
             font-size: 20px;
             font-weight: 500;
-            color: var(--text-muted);
+            color: var(--ot-color-gray-65);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -306,15 +323,15 @@
             gap: 10px;
         }
         .BEL-LP-header .BEL-LP-main-nav a {
-            margin-left: 25px;
             font-weight: 600;
-            color: var(--secondary-color);
+            color: var(--ds-color-gray-70);
             transition: all 0.3s ease;
             position: relative;
-            padding: 8px 0;
+            padding: 8px;
+            text-decoration: none;
         }
         .BEL-LP-header .BEL-LP-main-nav a:hover {
-            color: var(--primary-color);
+            color: var(--ds-color-link);
             transform: translateY(-1px);
         }
         .BEL-LP-header .BEL-LP-main-nav a:hover::after {
@@ -324,18 +341,17 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: var(--primary-color);
+            background-color: var(--ds-color-link);
             opacity: 0.6;
             transition: opacity 0.3s ease;
         }
         .BEL-LP-header .BEL-LP-main-nav a:active {
             transform: translateY(0);
-            color: var(--primary-color);
+            color: var(--ds-color-link);
         }
         .BEL-LP-header .BEL-LP-main-nav .current-page {
-            margin-left: 25px;
             font-weight: 600;
-            color: var(--primary-color);
+            color: var(--ds-color-link);
             cursor: default;
             position: relative;
             padding: 8px 0;
@@ -347,12 +363,11 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: var(--primary-color);
+            background-color: var(--ds-color-link);
         }
         .BEL-LP-header .BEL-LP-main-nav .current-page-active {
-            margin-left: 25px;
             font-weight: 600;
-            color: var(--primary-color) !important;
+            color: var(--ds-color-link) !important;
             cursor: default !important;
             position: relative;
             padding: 8px 0;
@@ -365,7 +380,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: var(--primary-color);
+            background-color: var(--ds-color-link);
         }
         
         /* ADDITION: Hamburger Menu Styles */
@@ -375,12 +390,51 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--text-dark);
+            color: var(--ds-color-gray-80);
             z-index: 1001; /* Ensure it's clickable */
         }
 
+        /* Mobile Navigation Menu Active State */
+        @media (max-width: 768px) {
+            .BEL-LP-main-nav.active {
+                display: flex !important;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--ds-color-white);
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                z-index: 1000;
+                gap: 40px;
+                padding: 40px;
+            }
+            .BEL-LP-header .BEL-LP-main-nav {
+                gap: 40px;
+            }
+            
+            .BEL-LP-main-nav.active a:active {
+                display: block !important;
+                color: var(--ds-color-gray-80);
+                font-size: 1.1rem;
+            }
+            .BEL-LP-main-nav.active a {
+                display: block !important;
+                color: var(--ds-color-gray-80);
+                font-size: 1.1rem;
+                margin-left: 0px;
+            }
+            
+            .BEL-LP-main-nav.active .current-page {
+                display: block !important;
+            }
+             .BEL-LP-header .BEL-LP-main-nav .current-page-active {
+                margin-left: 0px;
+            }
+        }
+
         .BEL-LP-hero {
-            color: var(--text-light);
+            color: var(--ds-color-white);
             padding-top: 64px; 
             padding-bottom: 64px;
             text-align: center;
@@ -397,7 +451,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://www.advantech.com/images/default-source/iot-edge-ai/main-banner/2023_iot_edge_ai_solution_mainbanner_1920x600_web.jpg') no-repeat center center/cover;
             opacity: 0.15;
             z-index: 1;
         }
@@ -442,7 +495,7 @@
             display: block;
             font-size: 2.5rem;
             font-weight: 800;
-            color: var(--text-light);
+            color: var(--ds-color-white);
             margin-bottom: 8px;
         }
         .BEL-LP-hero-stats .BEL-LP-stat-item span {
@@ -453,48 +506,48 @@
         }
         
         /* Benefits Section */
-        .BEL-LP-benefits { background-color: var(--text-light); padding: 80px 0; text-align: center; }
+        .BEL-LP-benefits { background-color: var(--ds-color-white); padding: 80px 0; text-align: center; }
         .BEL-LP-benefits h2 { font-size: 2.5rem; margin: 0 auto 36px auto; position: relative; display: inline-block; }
         .BEL-LP-benefits h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: #F39800; border-radius: 2px; }
         .BEL-LP-benefit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;  }
-        .BEL-LP-benefit-card { background-color: var(--light-bg); padding: 20px; border-radius: 12px; transition: transform 0.3s ease; }
+        .BEL-LP-benefit-card { background-color: var(--ds-color-gray-30); padding: 20px; border-radius: 12px; transition: transform 0.3s ease; }
         .BEL-LP-benefit-card:hover { transform: translateY(-10px); }
-        .BEL-LP-benefit-card i { font-size: 3rem; color: var(--primary-color); margin-bottom: 20px; }
-        .BEL-LP-benefit-card h3 { font-size: 1.5rem; color: var(--text-dark); margin-bottom: 15px; }
-        .BEL-LP-benefit-card p { color: var(--secondary-color); font-size: 0.9rem; }
+        .BEL-LP-benefit-card i { font-size: 3rem; color: var(--ds-color-link); margin-bottom: 20px; }
+        .BEL-LP-benefit-card h3 { font-size: 1.5rem; color: var(--ds-color-gray-80); margin-bottom: 15px; }
+        .BEL-LP-benefit-card p { color: var(--ds-color-gray-70); font-size: 0.9rem; }
 
         /* How It Works Section */
-        .BEL-LP-how-it-works { background: linear-gradient(135deg, var(--primary-light-10), var(--text-light)); padding: 80px 0; text-align: center; }
+        .BEL-LP-how-it-works { background: linear-gradient(135deg, var(--ot-color-lightblue-10), var(--ds-color-white)); padding: 80px 0; text-align: center; }
         .BEL-LP-how-it-works h2 { font-size: 2.5rem; margin: 0 auto 64px auto; position: relative; display: inline-block; }
-        .BEL-LP-how-it-works h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: var(--primary-color); border-radius: 2px; }
+        .BEL-LP-how-it-works h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: var(--ds-color-link); border-radius: 2px; }
         .BEL-LP-steps-container { margin-top:32px; display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 50px; position: relative; }
-        .BEL-LP-steps-container::before { content: ''; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 80%; height: 2px; background-color: var(--primary-color); z-index: 0; display: none; }
+        .BEL-LP-steps-container::before { content: ''; position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 80%; height: 2px; background-color: var(--ds-color-link); z-index: 0; display: none; }
         @media (min-width: 768px) { .BEL-LP-steps-container::before { display: block; } }
-        .BEL-LP-step-card { flex: 0 0 360px; padding: 25px; border-radius: 12px; background-color: var(--text-light); position: relative; z-index: 1; text-align: center; transition: transform 0.3s ease; }
+        .BEL-LP-step-card { flex: 0 0 360px; padding: 25px; border-radius: 12px; background-color: var(--ds-color-white); position: relative; z-index: 1; text-align: center; transition: transform 0.3s ease; }
         .BEL-LP-step-card:hover { transform: translateY(-8px); }
-        .BEL-LP-step-card .BEL-LP-icon-circle { width: 100px; height: 100px; background-color: var(--primary-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: -60px auto 25px auto; box-shadow: 0 5px 15px rgba(0, 110, 255, 0.4); border: 5px solid var(--light-bg); color: var(--text-light); font-size: 2.5rem; }
-        .BEL-LP-step-card h3 { font-size: 1.75rem; color: var(--rich-black); margin-bottom: 15px; }
-        .BEL-LP-step-card p { font-size: 1rem; color: var(--secondary-color); }
+        .BEL-LP-step-card .BEL-LP-icon-circle { width: 100px; height: 100px; background-color: var(--ds-color-link); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: -60px auto 25px auto; box-shadow: 0 5px 15px rgba(0, 110, 255, 0.4); border: 5px solid var(--ds-color-gray-30); color: var(--ds-color-white); font-size: 2.5rem; }
+        .BEL-LP-step-card h3 { font-size: 1.75rem; color: var(--ds-color-gray-90); margin-bottom: 15px; }
+        .BEL-LP-step-card p { font-size: 1rem; color: var(--ds-color-gray-70); }
 
         /* Success Stories Section */
-        .BEL-LP-success-stories { background-color: var(--light-bg); padding: 80px 0; text-align: center; }
+        .BEL-LP-success-stories { background-color: var(--ds-color-gray-30); padding: 80px 0; text-align: center; }
         .BEL-LP-success-stories h2 { font-size: 2.5rem; margin: 0 auto 36px auto; position: relative; display: inline-block; }
         .BEL-LP-success-stories h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: #F39800; border-radius: 2px; }
-        .BEL-LP-section-subtitle { text-align: center; font-size: 1.1rem; color: var(--secondary-color); max-width: 800px; margin: 0 auto 48px auto; }
+        .BEL-LP-section-subtitle { text-align: center; font-size: 1.1rem; color: var(--ds-color-gray-70); max-width: 800px; margin: 0 auto 48px auto; }
         .BEL-LP-testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
-        .BEL-LP-testimonial-card { background-color: var(--text-light); padding: 30px; border-radius: 12px; transition: transform 0.3s ease; }
+        .BEL-LP-testimonial-card { background-color: var(--ds-color-white); padding: 30px; border-radius: 12px; transition: transform 0.3s ease; }
         .BEL-LP-testimonial-card:hover { transform: translateY(-5px); }
         .BEL-LP-testimonial-header { display: flex; align-items: center; margin-bottom: 20px; }
-        .BEL-LP-testimonial-header .BEL-LP-avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-right: 15px; border: 3px solid var(--primary-color); }
-        .BEL-LP-partner-info h4 { margin: 0; font-size: 1.1rem; color: var(--text-dark); }
-        .BEL-LP-partner-info span { font-size: 0.9rem; color: var(--secondary-color); }
-        .BEL-LP-testimonial-card p { text-align: left; font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin-bottom: 20px; font-style: italic; }
+        .BEL-LP-testimonial-header .BEL-LP-avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-right: 15px; border: 3px solid var(--ds-color-link); }
+        .BEL-LP-partner-info h4 { margin: 0; font-size: 1.1rem; color: var(--ds-color-gray-80); }
+        .BEL-LP-partner-info span { font-size: 0.9rem; color: var(--ds-color-gray-70); }
+        .BEL-LP-testimonial-card p { text-align: left; font-size: 1rem; line-height: 1.6; color: var(--ds-color-gray-80); margin-bottom: 20px; font-style: italic; }
         .BEL-LP-testimonial-card .BEL-LP-stats { display: flex; gap: 20px; font-size: 0.9rem; }
-        .BEL-LP-testimonial-card .BEL-LP-stats span { color: var(--secondary-color); }
-        .BEL-LP-testimonial-card .BEL-LP-stats strong { color: var(--primary-color); font-weight: 700; }
+        .BEL-LP-testimonial-card .BEL-LP-stats span { color: var(--ds-color-gray-70); }
+        .BEL-LP-testimonial-card .BEL-LP-stats strong { color: var(--ds-color-link); font-weight: 700; }
 
         /* Pricing Section */
-        .BEL-LP-pricing { background-color: var(--text-light); padding: 80px 0; text-align: center; }
+        .BEL-LP-pricing { background-color: var(--ds-color-white); padding: 80px 0; text-align: center; }
         .BEL-LP-pricing h2 { font-size: 2.5rem; margin: 0 auto 36px auto; position: relative; display: inline-block; }
         .BEL-LP-pricing h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: #F39800; border-radius: 2px; }
         .BEL-LP-tiers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; margin-bottom: 50px; position: relative; }
@@ -508,7 +561,7 @@
         }
 
         .BEL-LP-tier-card {
-            background-color: var(--text-light);
+            background-color: var(--ds-color-white);
             border: 1px solid var(--ot-color-gray-45);
             padding: 24px;
             border-radius: 16px;
@@ -530,7 +583,7 @@
 
         .BEL-LP-tier-card h3 {
             font-size: 1.5rem;
-            color: var(--rich-black);
+            color: var(--ds-color-gray-90);
             margin-bottom: 10px;
         }
         
@@ -550,20 +603,20 @@
 
         .BEL-LP-tier-description {
             font-size: 0.9rem;
-            color: var(--secondary-color);
+            color: var(--ds-color-gray-70);
         }
 
         .BEL-LP-tier-commission {
             font-size: 3.5rem;
             font-weight: 800;
-            color: var(--primary-color);
+            color: var(--ds-color-link);
             line-height: 1;
         }
 
         .BEL-LP-tier-commission span {
             font-size: 1rem;
             font-weight: 500;
-            color: var(--secondary-color);
+            color: var(--ds-color-gray-70);
             display: block;
             margin-bottom: 5px;
         }
@@ -572,7 +625,7 @@
             font-size: 0.9rem;
             font-weight: 600;
 
-            color: var(--text-dark);
+            color: var(--ds-color-gray-80);
         }
 
         .BEL-LP-tier-features {
@@ -596,8 +649,8 @@
             font-size: 1.1rem;
         }
 
-        .BEL-LP-tier-features .fa-check { color: var(--accent-color); }
-        .BEL-LP-tier-features .fa-times { color: var(--error-color); opacity: 0.6; }
+        .BEL-LP-tier-features .fa-check { color: var(--ds-color-success); }
+        .BEL-LP-tier-features .fa-times { color: var(--ds-color-error); opacity: 0.6; }
 
         /* Horizontal tier features layout */
         .BEL-LP-tier-features-horizontal {
@@ -627,7 +680,7 @@
             font-size: 1.2rem;
         }
 
-        .BEL-LP-tier-features-horizontal .fa-check { color: var(--accent-color); }
+        .BEL-LP-tier-features-horizontal .fa-check { color: var(--ds-color-success); }
 
 
         .BEL-LP-tier-card .BEL-LP-btn {
@@ -637,17 +690,17 @@
 
         .BEL-LP-btn-outline-dark {
             background-color: transparent;
-            color: var(--text-dark) !important;
-            border: 2px solid var(--text-dark);
+            color: var(--ds-color-gray-80) !important;
+            border: 2px solid var(--ds-color-gray-80);
         }
         .BEL-LP-btn-outline-dark:hover {
-            background-color: var(--text-dark);
-            color: var(--text-light) !important;
+            background-color: var(--ds-color-gray-80);
+            color: var(--ds-color-white) !important;
         }
 
         /* Styles for the highlighted "Popular" tier */
         .BEL-LP-tier-popular {
-            border: 2px solid var(--primary-color);
+            border: 2px solid var(--ds-color-link);
             transform: scale(1.05); /* Make it stand out */
             position: relative;
             box-shadow: 0 10px 40px rgba(0, 110, 255, 0.2);
@@ -665,8 +718,8 @@
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            background-color: var(--primary-color);
-            color: var(--text-light);
+            background-color: var(--ds-color-link);
+            color: var(--ds-color-white);
             width: 160px;
         }
 
@@ -674,26 +727,26 @@
 
 
         /* FAQ Section */
-        .BEL-LP-faq { background-color: var(--text-light); padding: 80px 0; text-align: center; }
+        .BEL-LP-faq { background-color: var(--ds-color-white); padding: 80px 0; text-align: center; }
         .BEL-LP-faq h2 { font-size: 2.5rem; margin: 0 auto 36px auto; position: relative; display: inline-block; }
         .BEL-LP-faq h2::after { content: ''; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); width: 80px; height: 4px; background-color: #F39800; border-radius: 2px; }
         .BEL-LP-faq-list { max-width: 800px; margin: 0 auto; }
         .BEL-LP-faq-item { border-bottom: 1px solid var(--ot-color-gray-45); padding: 20px 0; }
-        .BEL-LP-faq-question { width: 100%; background: none; border: none; text-align: left; padding: 0; font-size: 1.15rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text-dark); font-family: var(--heading-font); }
-        .BEL-LP-faq-question i { font-size: 1.2rem; color: var(--primary-color); transition: transform 0.2s ease; }
-        .BEL-LP-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease-out; padding: 0 20px; color: var(--secondary-color); font-size: 0.95rem; }
+        .BEL-LP-faq-question { width: 100%; background: none; border: none; text-align: left; padding: 0; font-size: 1.15rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--ds-color-gray-80); font-family: var(--heading-font); }
+        .BEL-LP-faq-question i { font-size: 1.2rem; color: var(--ds-color-link); transition: transform 0.2s ease; }
+        .BEL-LP-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease-out; padding: 0 20px; color: var(--ds-color-gray-70); font-size: 0.95rem; }
         .BEL-LP-faq-answer p { text-align: left; line-height: 1.6; }
         .BEL-LP-faq-item.active .BEL-LP-faq-answer { max-height: 200px; padding: 15px 20px; } /* Increased max-height for longer answers */
         .BEL-LP-faq-item.active .BEL-LP-faq-question i { transform: rotate(180deg); }
 
         /* Call to Action Section */
-        .BEL-LP-cta { background: linear-gradient(45deg, var(--primary-dark), var(--primary-medium)); color: var(--text-light); padding: 80px 0; text-align: center; }
-        .BEL-LP-cta h2 { font-size: 3rem; margin-bottom: 25px; font-weight: 800; color: var(--text-light); }
+        .BEL-LP-cta { background: linear-gradient(45deg, var(--ds-color-brand-dark), var(--ds-color-brand)); color: var(--ds-color-white); padding: 80px 0; text-align: center; }
+        .BEL-LP-cta h2 { font-size: 3rem; margin-bottom: 25px; font-weight: 800; color: var(--ds-color-white); }
         .BEL-LP-cta p { font-size: 1.25rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
 
         /* Footer */
-        .BEL-LP-footer { background-color: var(--dark-bg); color: var(--text-light); padding: 40px 0; text-align: center; font-size: 0.9rem; }
-        .BEL-LP-footer a { color: var(--primary-color); margin: 0 10px; }
+        .BEL-LP-footer { background-color: var(--ds-color-gray-90); color: var(--ds-color-white); padding: 40px 0; text-align: center; font-size: 0.9rem; }
+        .BEL-LP-footer a { color: var(--ds-color-link); margin: 0 10px; }
         .BEL-LP-footer p { margin-top: 15px; }
 
         /* Responsive Adjustments */
@@ -765,7 +818,7 @@
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             }
             .BEL-LP-hamburger-menu {
-                display: none;
+                display: block;
             }
             
             .BEL-LP-benefit-grid, .BEL-LP-testimonials-grid, .BEL-LP-tiers-grid, .BEL-LP-benefits-list {
@@ -806,13 +859,19 @@
 
     <header class="BEL-LP-header">
         <div class="BEL-LP-container">
-            <div class="BEL-LP-logo">
-                <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="IoTMart Logo">
-                <span>BEL</span>
+            <div class="BEL-LP-logo-hamburger-group">
+                <button class="BEL-LP-hamburger-menu" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="BEL-LP-logo">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/iotmart-logo.svg" alt="IoTMart Logo">
+                    <span>BEL</span>
+                </div>
             </div>
             <nav class="BEL-LP-main-nav">
-                <a href="BELLandingpage.html" id="nav-home">How to Start?</a>
+                <a href="BELLandingpage.html" id="nav-home">How to Join?</a>
                 <a href="about-us.html" id="nav-about">About Us</a>
+                <a href="Starter-Guide.html" id="nav-starter-guide">Starter Guide</a>
                 <div class="BEL-LP-language-switcher">
                     <i class="fas fa-globe" onclick="toggleLanguageDropdown()"></i>
                     <div class="BEL-LP-language-dropdown" id="languageDropdown">
@@ -823,11 +882,10 @@
                         </div>
                     </div>
                 </div>
-                <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-orange">Log In</a>
+                <div class="BEL-LP-btn BEL-LP-btn-orange">
+                <a href="../BEL-Login/login.html" >Log In</a>
+                </div>
             </nav>
-            <button class="BEL-LP-hamburger-menu" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </header>
 
@@ -879,7 +937,7 @@
                         <h3>Builder</h3>
                         <p class="BEL-LP-tier-description">Ideal for those new to affiliate marketing or the IIoT space.</p>
                     </div>
-                    <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-primary">Get Started</a>
+                    <a href="../BEL-Login/login.html" class="BEL-LP-btn BEL-LP-btn-primary">Get Started</a>
                 </div>
 
                 <div class="BEL-LP-tier-card">
@@ -890,7 +948,7 @@
                         <h3>Enabler</h3>
                         <p class="BEL-LP-tier-description">For growing partners ready to expand their promotional efforts.</p>
                     </div>
-                    <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
+                    <a href="../BEL-Login/login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
                 </div>
 
                 <div class="BEL-LP-tier-card">
@@ -901,7 +959,7 @@
                         <h3>Exploder</h3>
                         <p class="BEL-LP-tier-description">For established partners scaling their success and revenue.</p>
                     </div>
-                    <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
+                    <a href="../BEL-Login/login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
                 </div>
 
                 <div class="BEL-LP-tier-card">
@@ -912,7 +970,7 @@
                         <h3>Leader</h3>
                         <p class="BEL-LP-tier-description">For industry leaders seeking a deep strategic partnership.</p>
                     </div>
-                    <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
+                    <a href="../BEL-Login/login.html" class="BEL-LP-btn BEL-LP-btn-outline-dark">APPLY NOW</a>
                 </div>
             </div>
             
@@ -979,7 +1037,7 @@
         <div class="BEL-LP-container">
             <h2>Ready to Join the IoTMart BEL Family?</h2>
             <p>Take action now and start your influence journey. Partner with the world's leading Industrial IoT platform to unlock unlimited business opportunities.</p>
-            <a href="../login.html" class="BEL-LP-btn BEL-LP-btn-w-b">Apply to Become a BEL Partner</a>
+            <a href="../BEL-Login/login.html" class="BEL-LP-btn BEL-LP-btn-w-b">Apply to Become a BEL Partner</a>
         </div>
     </section>
 
@@ -1035,7 +1093,7 @@
                     header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
                     header.style.backdropFilter = 'blur(5px)';
                 } else {
-                    header.style.backgroundColor = 'var(--text-light)';
+                    header.style.backgroundColor = 'var(--ds-color-white)';
                     header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
                     header.style.backdropFilter = 'none';
                 }
@@ -1066,8 +1124,9 @@
         const translations = {
             en: {
                 nav: {
-                    howToStart: "How to Start?",
+                    howToStart: "How to Join?",
                     aboutUs: "About Us",
+                    starterGuide: "Starter Guide",
                     becomeNow: "Log In"
                 },
                 hero: {
@@ -1214,9 +1273,10 @@
             },
             zh: {
                 nav: {
-                    howToStart: "如何開始？",
+                    howToStart: "如何加入？",
                     aboutUs: "關於我們",
-                    becomeNow: "立即成為BEL"
+                    starterGuide: "新手指南",
+                    becomeNow: "登入"
                 },
                 hero: {
                     title: "加入IoTMart BEL合作夥伴計劃",
@@ -1362,9 +1422,10 @@
             },
             ko: {
                 nav: {
-                    howToStart: "시작 방법",
+                    howToStart: "참여 방법",
                     aboutUs: "회사 소개",
-                    becomeNow: "지금 BEL 되기"
+                    starterGuide: "시작 가이드",
+                    becomeNow: "로그인"
                 },
                 hero: {
                     title: "IoTMart BEL 파트너 프로그램에 참여하세요",
@@ -1555,13 +1616,13 @@
                 homeLink.classList.add('current-page-active');
                 homeLink.removeAttribute('href');
                 homeLink.style.cursor = 'default';
-                homeLink.style.color = 'var(--primary-color)';
+                homeLink.style.color = 'var(--ds-color-link)';
             } else if (isAboutPage) {
                 // Set about as current page
                 aboutLink.classList.add('current-page-active');
                 aboutLink.removeAttribute('href');
                 aboutLink.style.cursor = 'default';
-                aboutLink.style.color = 'var(--primary-color)';
+                aboutLink.style.color = 'var(--ds-color-link)';
             }
         }
 
@@ -1571,6 +1632,7 @@
             // Update navigation
             document.getElementById('nav-home').textContent = t.nav.howToStart;
             document.getElementById('nav-about').textContent = t.nav.aboutUs;
+            document.getElementById('nav-starter-guide').textContent = t.nav.starterGuide;
             document.querySelector('.BEL-LP-btn-orange').textContent = t.nav.becomeNow;
             
             // Update hero section
