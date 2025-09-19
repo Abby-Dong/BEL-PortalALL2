@@ -354,7 +354,7 @@
             color: var(--ds-color-link);
             cursor: default;
             position: relative;
-            padding: 8px 0;
+            padding: 8px;
         }
         .BEL-LP-header .BEL-LP-main-nav .current-page::after {
             content: '';
@@ -370,7 +370,7 @@
             color: var(--ds-color-link) !important;
             cursor: default !important;
             position: relative;
-            padding: 8px 0;
+            padding: 8px;
             pointer-events: none;
         }
         .BEL-LP-header .BEL-LP-main-nav .current-page-active::after {
@@ -868,9 +868,10 @@
                     <span>BEL</span>
                 </div>
             </div>
+            <div style="display: flex; gap: 8px;">
             <nav class="BEL-LP-main-nav">
-                <a href="BELLandingpage.html" id="nav-home">How to Join?</a>
-                <a href="about-us.html" id="nav-about">About Us</a>
+                <a href="index.html" id="nav-home" class="current-page-active">How to Join?</a>
+                <a href="about-us.html" id="nav-about" >About Us</a>
                 <a href="Starter-Guide.html" id="nav-starter-guide">Starter Guide</a>
                 <div class="BEL-LP-language-switcher">
                     <i class="fas fa-globe" onclick="toggleLanguageDropdown()"></i>
@@ -882,10 +883,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="BEL-LP-btn BEL-LP-btn-orange">
-                <a href="../BEL-Login/login.html" >Log In</a>
-                </div>
             </nav>
+            <a href="../BEL-Login/login.html" class="BEL-LP-btn BEL-LP-btn-orange">Log In</a>
+            </div>
         </div>
     </header>
 
@@ -1605,7 +1605,7 @@
         function setCurrentPageState() {
             // Determine current page based on URL
             const currentPage = window.location.pathname;
-            const isHomePage = currentPage.includes('BELLandingpage.html') || currentPage.endsWith('/') || currentPage === '';
+            const isHomePage = currentPage.includes('index.html') || currentPage.endsWith('/') || currentPage === '';
             const isAboutPage = currentPage.includes('about-us.html');
             
             const homeLink = document.getElementById('nav-home');

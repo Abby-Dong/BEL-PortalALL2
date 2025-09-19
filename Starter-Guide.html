@@ -101,25 +101,6 @@
         .faq-item.active .icon {
             transform: rotate(45deg);
         }
-        /* Styled scrollbar for better user experience */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: var(--ds-color-gray-40);
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: var(--ds-color-gray-60);
-            border-radius: 4px;
-            transition: background-color 0.2s ease;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--ds-color-gray-80);
-        }
         
         /* OPTIMIZATION: Prevent scrolling when mobile nav is open */
         body.nav-open {
@@ -914,8 +895,9 @@
                     <span>BEL</span>
                 </div>
             </div>
+            <div style="display: flex; gap: 8px;">
             <nav class="BEL-LP-main-nav">
-                <a href="BELLandingpage.html" id="nav-home">How to Join?</a>
+                <a href="index.html" id="nav-home">How to Join?</a>
                 <a href="about-us.html" id="nav-about">About Us</a>
                 <a href="Starter-Guide.html" id="nav-starter-guide" class="current-page-active">Starter Guide</a>
                 <div class="BEL-LP-language-switcher">
@@ -928,10 +910,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="BEL-LP-btn BEL-LP-btn-orange">
-                <a href="../BEL-Login/login.html" >Log In</a>
-                </div>
             </nav>
+            <a href="../BEL-Login/login.html" class="BEL-LP-btn BEL-LP-btn-orange">Log In</a>
+            </div>
         </div>
     </header>
 
@@ -992,7 +973,7 @@
                             <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                         </button>
                         <div class="faq-answer">
-                            <div class="prose max-w-none text-slate-600"><p id="q3-answer">After you submit your application, our team will review it as soon as possible. To expedite the process, please ensure that the information you provide is complete and accurate. After approval, you will immediately receive notification and obtain exclusive referral codes and links, allowing you to log in to the powerful BEL management platform.</p></div>
+                            <div class="prose max-w-none text-slate-600"><p id="q3-answer">After you submit your application, our team will review it as soon as possible. To expedite the process, please ensure that the information you provide is complete and accurate. After approval, you will immediately receive notification and obtain exclusive referral codes and links, allowing you to log in to the powerful BEL Portal.</p></div>
                         </div>
                     </div>
                 </div>
@@ -1001,7 +982,7 @@
                 <div class="space-y-4">
                     <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
                         <button class="faq-question w-full flex justify-between items-center text-left p-6 font-semibold text-lg text-slate-800 hover:bg-slate-50 focus:outline-none">
-                            <span id="q4-question">Q4: Where can I find my exclusive promotional link?</span>
+                            <span id="q4-question">Q4: Where can I find my exclusive Referral Link?</span>
                             <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                         </button>
                         <div class="faq-answer">
@@ -1014,7 +995,7 @@
                             <svg class="icon w-6 h-6 text-slate-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                         </button>
                         <div class="faq-answer">
-                            <div class="prose max-w-none text-slate-600"><p id="q5-answer">We deeply understand that quality content is the key to success. In the "Get Resource" section of the management platform, we have prepared rich and professional marketing resources for you, including brand promotional videos, product introductions, application cases, graphic materials, and various copywriting templates, aimed at helping you easily plan and execute professional, effective marketing campaigns.</p></div>
+                            <div class="prose max-w-none text-slate-600"><p id="q5-answer">We deeply understand that quality content is the key to success. In the "Get Resource" section of the BEL Portal, we have prepared rich and professional marketing resources for you, including brand promotional videos, product introductions, application cases, graphic materials, and various copywriting templates, aimed at helping you easily plan and execute professional, effective marketing campaigns.</p></div>
                         </div>
                     </div>
                     <div class="faq-item bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
@@ -1265,15 +1246,15 @@
                     },
                     q3: {
                         question: "Q3: How long does application review take?",
-                        answer: "After you submit your application, our team will review it as soon as possible. To expedite the process, please ensure that the information you provide is complete and accurate. After approval, you will immediately receive notification and obtain exclusive referral codes and links, allowing you to log in to the powerful BEL management platform."
+                        answer: "After you submit your application, our team will review it as soon as possible. To expedite the process, please ensure that the information you provide is complete and accurate. After approval, you will immediately receive notification and obtain exclusive referral codes and links, allowing you to log in to the powerful BEL Portal."
                     },
                     q4: {
-                        question: "Q4: Where can I find my exclusive promotional link?",
+                        question: "Q4: Where can I find my exclusive Referral Link?",
                         answer: "After logging into your BEL partner portal, you can easily find it in the \"Sales Engagement\" section. This link is exclusively yours, and it is the only credential for the system to track all your referral performance, so please be sure to use this link for promotion."
                     },
                     q5: {
                         question: "Q5: What marketing support materials do you provide?",
-                        answer: "We deeply understand that quality content is the key to success. In the \"Get Resource\" section of the management platform, we have prepared rich and professional marketing resources for you, including brand promotional videos, product introductions, application cases, graphic materials, and various copywriting templates, aimed at helping you easily plan and execute professional, effective marketing campaigns."
+                        answer: "We deeply understand that quality content is the key to success. In the \"Get Resource\" section of the BEL Portal, we have prepared rich and professional marketing resources for you, including brand promotional videos, product introductions, application cases, graphic materials, and various copywriting templates, aimed at helping you easily plan and execute professional, effective marketing campaigns."
                     },
                     q6: {
                         question: "Q6: How should I track my promotional performance?",
@@ -1499,7 +1480,7 @@
         function setCurrentPageState() {
             // Determine current page based on URL
             const currentPage = window.location.pathname;
-            const isHomePage = currentPage.includes('BELLandingpage.html') || currentPage.endsWith('/') || currentPage === '';
+            const isHomePage = currentPage.includes('index.html') || currentPage.endsWith('/') || currentPage === '';
             const isAboutPage = currentPage.includes('about-us.html');
             const isStarterGuidePage = currentPage.includes('Starter-Guide.html');
             

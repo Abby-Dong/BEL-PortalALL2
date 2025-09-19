@@ -632,9 +632,10 @@
                     <span>BEL</span>
                 </div>
             </div>
+            <div style="display: flex; gap: 8px;">
             <nav class="BEL-LP-main-nav">
-                <a href="BELLandingpage.html" id="nav-home">How to Join?</a>
-                <a href="about-us.html" id="nav-about">About Us</a>
+                <a href="index.html" id="nav-home">How to Join?</a>
+                <a href="about-us.html" id="nav-about"  class="current-page-active">About Us</a>
                 <a href="Starter-Guide.html" id="nav-starter-guide">Starter Guide</a>
                 <div class="BEL-LP-language-switcher">
                     <i class="fas fa-globe" onclick="toggleLanguageDropdown()"></i>
@@ -646,10 +647,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="BEL-LP-btn BEL-LP-btn-orange">
-                <a href="../BEL-Login/login.html" >Log In</a>
-                </div>
             </nav>
+            <a href="../BEL-Login/login.html" class="BEL-LP-btn BEL-LP-btn-orange">Log In</a>
+            </div>
         </div>
     </header>
 
@@ -713,7 +713,7 @@
                     <i class="fas fa-share-alt" style="font-size: 3rem; color: var(--ds-color-link); margin-bottom: 20px;"></i>
                     <h3 id="promotion-resources-title" style="font-size: 1.4rem; font-weight: 800; margin-bottom: 15px; color: var(--ds-color-gray-80);">One-Stop Promotional Resources</h3>
                     <p id="promotion-resources-text" style="color: var(--ds-color-gray-70); font-size: 0.9rem;">
-                        Provide you with exclusive promotional links and QR codes that can be easily shared with one click to major social platforms or websites. Make every promotion precise and effective, simplifying marketing processes.
+                        Provide you with exclusive Referral Links and QR codes that can be easily shared with one click to major social platforms or websites. Make every promotion precise and effective, simplifying marketing processes.
                     </p>
                 </div>
                 <div class="BEL-LP-benefit-card">
@@ -928,7 +928,7 @@
                     dashboardTitle: "Intuitive Data Dashboard",
                     dashboardText: "Clear visual charts that present click, conversion, and revenue performance in real-time. Help you stay on top of promotional performance and quickly analyze sales trends to develop optimal strategies.",
                     promotionResourcesTitle: "One-Stop Promotional Resources",
-                    promotionResourcesText: "Provide you with exclusive promotional links and QR codes that can be easily shared with one click to major social platforms or websites. Make every promotion precise and effective, simplifying marketing processes.",
+                    promotionResourcesText: "Provide you with exclusive Referral Links and QR codes that can be easily shared with one click to major social platforms or websites. Make every promotion precise and effective, simplifying marketing processes.",
                     revenueManagementTitle: "Transparent Revenue & Order Management",
                     revenueManagementText: "Every order and commission income is recorded in detail and presented transparently. You can easily track all transaction statuses, achieving efficient financial reconciliation and performance management.",
                     resourceCenterTitle: "Integrated Digital Resource Center",
@@ -1047,7 +1047,7 @@
         function setCurrentPageState() {
             // Determine current page based on URL
             const currentPage = window.location.pathname;
-            const isHomePage = currentPage.includes('BELLandingpage.html') || currentPage.endsWith('/') || currentPage === '';
+            const isHomePage = currentPage.includes('index.html') || currentPage.endsWith('/') || currentPage === '';
             const isAboutPage = currentPage.includes('about-us.html');
             
             const homeLink = document.getElementById('nav-home');
