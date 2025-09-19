@@ -145,16 +145,16 @@ class LoginManager {
                     
                     if (loginResult.user.role === 'administrator' || loginResult.user.role === 'manager') {
                         // Admin/Manager users go to admin dashboard
-                        console.log('Redirecting to admin dashboard: /BEL-Admin/index.html');
-                        window.location.href = '/BEL-Admin/index.html';
+                        console.log('Redirecting to admin dashboard: ../BEL-Admin/index.html');
+                        window.location.href = '../BEL-Admin/index.html';
                     } else if (loginResult.user.role === 'newuser' && loginResult.user.isFirstLogin) {
                         // New users go to first-login flow
-                        console.log('Redirecting to first login flow: /BEL-UserPortal-A/first-login.html');
-                        window.location.href = '/BEL-UserPortal-A/first-login.html';
+                        console.log('Redirecting to first login flow: ../BEL-UserPortal-A/first-login.html');
+                        window.location.href = '../BEL-UserPortal-A/first-login.html';
                     } else if (loginResult.user.role === 'user' || loginResult.user.role === 'partner') {
                         // Regular users go to user portal
-                        console.log('Redirecting to user portal: /BEL-UserPortal-A/index.html');
-                        window.location.href = '/BEL-UserPortal-A/index.html';
+                        console.log('Redirecting to user portal: ../BEL-UserPortal-A/index.html');
+                        window.location.href = '../BEL-UserPortal-A/index.html';
                     }
                 }, 1500);
             } else {

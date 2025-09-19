@@ -68,7 +68,7 @@ function logout() {
     if (confirmLogout) {
         sessionStorage.removeItem('bel_user_session');
         localStorage.removeItem('bel_remember_me');
-        window.location.href = '/BEL-Login/login.html';
+        window.location.href = '../BEL-Login/login.html';
     }
 }
 
