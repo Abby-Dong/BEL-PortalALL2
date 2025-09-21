@@ -1,86 +1,79 @@
 [
   {
     "id": 1,
-    "question": "How are partner benefits determined?",
-    "answer": "Partner benefits are determined based on your current partner level and performance metrics. Each level offers different privileges including marketing materials, support levels, and account management services. The levels are: Builder (entry level), Enabler (20+ performance points), Explorer (35+ performance points), and Leader (50+ performance points). For detailed information, please refer to the Legal Terms page.",
-    "category": "benefits",
-    "tags": ["benefits", "partner levels", "performance"]
+    "question": "How are my Rebate Rewards determined?",
+    "answer": "We have designed a completely transparent rebate reward calculation mechanism to ensure that every effort you make receives precise rewards. All amounts are ultimately based in US dollars (USD). If the original currency of the order is not US dollars, the conversion rate will be based on the company's regulations at the time:\n\n• Order Amount: The total order amount when the customer places an order, converted to US dollars according to the exchange rate at the time.\n• Product Actual Amount: This is the basis for calculating rebate rewards. The calculation method is \"Order Amount\" minus all additional costs, including discounts, taxes, and shipping fees.\n• Gross Payout: \"Product Actual Amount\" multiplied by your current \"BEL level corresponding reward percentage.\"\n• Net Payout: After deducting 20% statutory withholding tax (WHT) from the \"Gross Amount,\" this is the final amount you actually receive.",
+    "category": "rewards",
+    "tags": ["rebate rewards", "calculation", "payout"]
   },
   {
     "id": 2,
-    "question": "When are partner benefits delivered?", 
-    "answer": "Partner benefits are assessed and delivered monthly based on your current level and performance metrics. Benefit assessments are completed on the 5th of each month. Benefits include marketing materials, priority support, and account management services according to your partner level. You will receive email notifications when new benefits become available.",
-    "category": "benefits",
-    "tags": ["benefits", "timeline", "delivery"]
+    "question": "When will I receive my Rebate Rewards?",
+    "answer": "We will automatically send your approved rebate reward net amount from the previous cycle to your designated account on the 12th of each month. Your Payout Amounts must reach a minimum of $100 USD (payment threshold) to receive payment on the payment date.",
+    "category": "rewards",
+    "tags": ["rebate rewards", "payment", "timeline"]
   },
   {
     "id": 3,
+    "question": "What is the procedure if a customer returns a product?",
+    "answer": "Rebate Rewards are contingent upon completed and final sales. Should a customer return a product within the designated cooling-off period, the transaction is considered invalid, and the associated reward is voided. Only successful, non-refunded transactions are eligible for rewards. Your dashboard provides a real-time, accurate status of all transactions.",
+    "category": "returns",
+    "tags": ["returns", "refunds", "rewards"]
+  },
+  {
+    "id": 4,
     "question": "How do I track my referrals?",
-    "answer": "You can track your referrals through the Dashboard and Earnings & Orders pages. The Dashboard shows real-time statistics including referral link traffic, referral ID usage, and total orders. The Earnings & Orders page provides detailed order tracking with customer information and order status.",
+    "answer": "You can monitor your referral performance by logging into the partner portal and accessing your dashboard. The dashboard provides a comprehensive overview of your key metrics, including clicks, conversion rates, and real-time earnings, offering the insights necessary to refine and optimize your strategy.",
     "category": "tracking",
     "tags": ["referrals", "dashboard", "tracking"]
   },
   {
-    "id": 4,
-    "question": "What are the different partner levels?",
-    "answer": "The BEL Portal has 4 partner levels: Builder (entry level), Enabler (20+ performance points), Explorer (35+ performance points), and Leader (50+ performance points). Your level is determined by your performance metrics and business contribution. Higher levels unlock enhanced benefits including better marketing materials, priority support, and dedicated account management.",
-    "category": "levels",
-    "tags": ["partner levels", "benefits", "progression"]
-  },
-  {
     "id": 5,
-    "question": "How do I update my account information?",
-    "answer": "You can update your account information in the 'My Account' section under 'Profile Information'. Click 'Edit Profile' and update your contact details, business information, and preferences. Changes are saved automatically and will apply to all future program communications.",
-    "category": "account",
-    "tags": ["account information", "profile", "account settings"]
+    "question": "How frequently is the dashboard data updated?",
+    "answer": "The dashboard provides live data. All metrics are updated in real-time as events occur, allowing for immediate feedback on your campaigns and enabling you to make informed decisions promptly.",
+    "category": "tracking",
+    "tags": ["dashboard updates", "real-time", "data refresh"]
   },
   {
     "id": 6,
-    "question": "Can I use multiple referral methods?",
-    "answer": "Yes, you can use both your referral link and referral ID. The referral link can be shared directly or embedded in your marketing materials. The referral ID can be manually entered by customers during checkout. Both methods will be tracked and attributed to your account for performance tracking.",
-    "category": "referrals",
-    "tags": ["referral link", "referral ID", "methods"]
+    "question": "What are the different partner level?",
+    "answer": "We have planned a clear growth path for you. Your partner level will be evaluated and adjusted on January 1st of each year based on your total accumulated turnover for the previous year. Higher levels represent richer rewards and more prestigious treatment.\n\nReward percentages and promotion standards for each level:\n\n• Builder: 2% (Your starting point)\n• Enabler: 2% (Annual turnover of $20,000)\n• Explorer: 3% (Annual turnover of $100,000)\n• Leader: 5% (Annual turnover of $200,000)",
+    "category": "levels",
+    "tags": ["partner levels", "rewards", "progression"]
   },
   {
     "id": 7,
-    "question": "What marketing resources are available?",
-    "answer": "The Resource Center provides various marketing materials including product banners, promotional videos, technical brochures, and social media assets. All materials are professionally designed and ready to use in your marketing campaigns. You can download them directly from the Resource Center page.",
-    "category": "marketing",
-    "tags": ["marketing materials", "resource center", "downloads"]
-  },
-  {
-    "id": 8,
-    "question": "How do I submit a support ticket?",
-    "answer": "You can submit a support ticket through the 'Support & FAQ' page by clicking the 'Submit Support Ticket' button. Please select the appropriate category (Account Issues, Payment & Payout, Technical Support, Marketing Resources, or General Inquiry) and provide detailed information about your question or issue. We typically respond within 24 hours during business days.",
-    "category": "support",
-    "tags": ["support ticket", "help", "customer service", "contact support"]
-  },
-  {
-    "id": 9,
-    "question": "Are there any fees associated with the program?",
-    "answer": "The BEL Portal program itself is free to join and participate in. There are no membership fees or charges for accessing the platform, marketing materials, or partner benefits. All program benefits are provided at no cost to qualified partners.",
+    "question": "Is there a cost to join this opportunity?",
+    "answer": "No. There are no application fees or membership dues required to join the partner program. We believe in mutual success, and your expertise and passion are the only prerequisites for participation.",
     "category": "program",
     "tags": ["fees", "program costs", "membership"]
   },
   {
-    "id": 10,
-    "question": "Can I change my referral ID?",
-    "answer": "Referral IDs are typically assigned automatically and cannot be changed to maintain tracking integrity. However, if you have a specific business need, you can contact our support team to discuss possible options. Any changes to referral IDs may affect historical tracking data.",
+    "id": 8,
+    "question": "Am I permitted to use multiple promotional methods?",
+    "answer": "Yes. We encourage a multi-channel promotional strategy. You may share your unique referral link or code on your website, blog, social media platforms, newsletters, and other appropriate forums to maximize your reach and earnings potential.",
+    "category": "referrals",
+    "tags": ["referral methods", "promotion", "multi-channel"]
+  },
+  {
+    "id": 9,
+    "question": "Is it possible to change my referral ID?",
+    "answer": "Your referral ID serves as a unique identifier for tracking purposes and is permanently assigned upon account creation to ensure data integrity. Therefore, it is generally not possible to change it. In exceptional circumstances, you may submit a request to our support team for review.",
     "category": "referrals",
     "tags": ["referral ID", "changes", "tracking"]
   },
   {
-    "id": 11,
-    "question": "What happens if a customer returns a product?",
-    "answer": "Returns and refunds are handled according to IoTMart's standard return policy. You can track order statuses including refunded orders in the 'Earnings & Orders' section where they will be marked with a 'Refunded' status. This helps maintain accurate performance tracking and metrics.",
-    "category": "orders",
-    "tags": ["returns", "refunds", "order tracking"]
+    "id": 10,
+    "question": "What marketing resources are available to me?",
+    "answer": "We deeply understand that quality content is the key to success. In the \"Get Resource\" section of the BEL Portal, we have prepared rich and professional marketing resources for you, including brand promotional videos, product introductions, application cases, graphic materials, and various copywriting templates, aimed at helping you easily plan and execute professional, effective marketing campaigns.",
+    "category": "marketing",
+    "tags": ["marketing resources", "content", "materials"]
   },
   {
-    "id": 12,
-    "question": "How often is the dashboard data updated?",
-    "answer": "Dashboard statistics are updated in real-time for most metrics including referral link traffic and referral ID usage. Order data is typically updated within 1-2 hours of order processing. Monthly performance charts are updated daily to reflect the most current information.",
-    "category": "tracking",
-    "tags": ["dashboard updates", "real-time", "data refresh"]
+    "id": 11,
+    "question": "How can I receive assistance if I encounter an issue?",
+    "answer": "We are here to support you. We recommend first consulting the FAQ section in the portal. If you cannot find a solution there, please submit a support ticket through the portal or our website's contact form. Our dedicated support team will respond to your inquiry promptly.",
+    "category": "support",
+    "tags": ["support", "assistance", "help"]
   }
 ]

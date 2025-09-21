@@ -96,7 +96,7 @@
                 <div class="notice-banner-content">
                     <i class="fas fa-exclamation-triangle notice-banner-icon"></i>
                     <div class="notice-banner-text">
-                        <h4>Complete Banking Information Required</h4>
+                        <h3>Complete Banking Information Required</h3>
                         <p>You need to complete your banking information to receive earnings. <a href="first-login-account.html#banking">Complete now →</a></p>
                     </div>
                 </div>
@@ -106,38 +106,38 @@
                 <div class="bel-card" style="margin-bottom: 0px;">
                     <div class="bel-card-layout">
                         <div>
-                            <div class="bel-card-title">Total Earnings</div>
+                            <div class="bel-card-title">Net Payouts</div>
                             <div class="bel-card-value">$0.00</div>
                         </div>
-                        <div class="bel-card-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <div class="bel-card-icon"><i class="fas fa-money-bill-wave"></i></div>
                     </div>
-                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); "><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No earnings yet</span></div>
+                    <div class="trend-indicator neutral"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No earnings yet</span></div>
                 </div>
                 <div class="bel-card" style="margin-bottom: 0px;">
                     <div class="bel-card-layout">
                         <div>
-                            <div class="bel-card-title">Pending Payout</div>
-                            <div class="bel-card-value">$0.00</div>
-                        </div>
-                        <div class="bel-card-icon"><i class="fas fa-clock"></i></div>
-                    </div>
-                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); "><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No pending amount</span></div>
-                </div>
-                <div class="bel-card" style="margin-bottom: 0px;">
-                    <div class="bel-card-layout">
-                        <div>
-                            <div class="bel-card-title">Orders This Month</div>
+                            <div class="bel-card-title">Order Counts</div>
                             <div class="bel-card-value">0</div>
                         </div>
                         <div class="bel-card-icon"><i class="fas fa-shopping-cart"></i></div>
                     </div>
-                    <div class="trend-indicator neutral" style="color: var(--ds-color-gray-70); "><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No orders yet</span></div>
+                    <div class="trend-indicator neutral"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No orders yet</span></div>
+                </div>
+                <div class="bel-card" style="margin-bottom: 0px;">
+                    <div class="bel-card-layout">
+                        <div>
+                            <div class="bel-card-title">Order Amount (Total)</div>
+                            <div class="bel-card-value">$0.00</div>
+                        </div>
+                        <div class="bel-card-icon"><i class="fas fa-chart-line"></i></div>
+                    </div>
+                    <div class="trend-indicator neutral"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No orders yet</span></div>
                 </div>
                 <div class="bel-card" style="margin-bottom: 0px;">
                     <div class="bel-card-layout">
                         <div>
                             <div class="bel-card-title">Commission Rate</div>
-                            <div class="bel-card-value">3%</div>
+                            <div class="bel-card-value">2%</div>
                         </div>
                         <div class="bel-card-icon"><i class="fas fa-percentage"></i></div>
                     </div>
@@ -145,69 +145,15 @@
                 </div>
             </div>
 
-            <!-- Earnings Summary -->
-            <div class="section-title">
-                <h3>Earnings Summary</h3>
-                <div style="display: flex; gap: 10px;">
-                    <select name="period" id="period-select">
-                        <option value="month">This Month</option>
-                        <option value="quarter">This Quarter</option>
-                        <option value="year">This Year</option>
-                    </select>
-                </div>
-            </div>
-            <div class="bel-panel">
-                <div class="empty-state" style="text-align: center; padding: 60px 20px; color: #9ca3af;">
-                    <i class="fas fa-chart-area" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;"></i>
-                    <h3 style="color: #6b7280; margin-bottom: 8px;">No Earnings Data</h3>
-                    <p style="margin: 0;">Your earnings chart will appear here once you start generating sales</p>
-                </div>
-            </div>
-
-            <!-- Orders Tracking -->
-            <div class="section-title">
-                <h3>Recent Orders</h3>
-                <div style="display: flex; gap: 10px;">
-                    <input type="text" class="date-range-picker" id="order-date-range" placeholder="Select date range" readonly>
-                    <select name="status" id="status-filter">
-                        <option value="all">All Status</option>
-                        <option value="pending">Pending</option>
-                        <option value="confirmed">Confirmed</option>
-                        <option value="shipped">Shipped</option>
-                        <option value="delivered">Delivered</option>
-                        <option value="cancelled">Cancelled</option>
-                    </select>
-                </div>
-            </div>
-            <div class="bel-panel">
-                <div class="empty-state" style="text-align: center; padding: 60px 20px; color: #9ca3af;">
-                    <i class="fas fa-shopping-bag" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;"></i>
-                    <h3 style="color: #6b7280; margin-bottom: 8px;">No Orders Yet</h3>
-                    <p style="margin: 0;">Orders made through your referral will appear here</p>
-                    <div style="margin-top: 20px;">
-                        <a href="first-login.html" style="background: var(--ds-color-brand); color: var(--ds-color-white); padding: 10px 20px; border-radius: 6px; text-decoration: none; display: inline-block; font-size: var(--fs-sm); font-weight: var(--fw-medium);">
-                            <i class="fas fa-share" style="margin-right: 8px;"></i>Start Promoting
-                        </a>
-                    </div>
-                </div>
-            </div>
-
             <!-- Payout History -->
-            <div class="section-title">
-                <h3>Payout History</h3>
-                <div style="display: flex; gap: 10px;">
-                    <select name="payout-year" id="payout-year-select">
-                        <option value="2025">2025</option>
-                        <option value="2024">2024</option>
-                        <option value="2023">2023</option>
-                    </select>
-                </div>
+            <div class="section-header-with-controls">
+                <h3 class="bel-h3 bel-h3-reset">Payout History</h3>
             </div>
             <div class="bel-panel">
-                <div class="empty-state" style="text-align: center; padding: 60px 20px; color: #9ca3af;">
+                <div class="empty-state" style="text-align: center; padding: 60px 20px; color: var(--ds-color-gray-60);">
                     <i class="fas fa-credit-card" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;"></i>
-                    <h3 style="color: #6b7280; margin-bottom: 8px;">No Payout History</h3>
-                    <p style="margin: 0;">Your payout history will appear here once you start earning commissions</p>
+                    <h3 style="color: var(--ds-color-gray-70); margin-bottom: 8px;">No Payout History</h3>
+                    <p style="margin: 0;">Your payout history will appear here once you start earning rebates</p>
                     <div style="margin-top: 16px;">
                         <p style="margin: 0; color: var(--ds-color-primary); font-weight: var(--fw-medium); font-size: var(--fs-sm);">
                             <i class="fas fa-info-circle" style="margin-right: 4px;"></i>
@@ -216,6 +162,19 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Orders Tracking -->
+            <div class="section-header-with-controls">
+                <h3 class="bel-h3 bel-h3-reset">Order Tracking</h3>
+            </div>
+            <div class="bel-panel">
+                <div class="empty-state" style="text-align: center; padding: 60px 20px; color: var(--ds-color-gray-60);">
+                    <i class="fas fa-shopping-bag" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;"></i>
+                    <h3 style="color: var(--ds-color-gray-70); margin-bottom: 8px;">No Orders Yet</h3>
+                    <p style="margin: 0;">Orders made through your referral will appear here</p>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -236,9 +195,6 @@
             </div>
             <div class="setup-task-body" id="setup-task-body">
                 <div class="task-item incomplete" data-task="banking">
-                    <div class="task-item-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
                     <div class="task-item-content">
                         <div class="task-item-title">Banking Information</div>
                         <div class="task-item-desc">Set up your payout details, required to receive commission payments and earnings</div>
@@ -298,190 +254,5 @@
         });
     </script>
 
-    <style>
-        /* Fixed Task Modal Styles */
-        .setup-task-modal {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 320px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-            border: 1px solid #e8ecef;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            display: none;
-        }
-        
-        .setup-task-modal.minimized {
-            width: 200px;
-        }
-        
-        .setup-task-content {
-            padding: 0;
-        }
-        
-        .setup-task-header {
-            display: flex;
-            align-items: center;
-            padding: 16px;
-            background: #fef7e6;
-            border-radius: 12px 12px 0 0;
-            border-bottom: 1px solid #f0d7a7;
-        }
-        
-        .task-icon {
-            width: 32px;
-            height: 32px;
-            background: var(--ds-color-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 14px;
-            margin-right: 12px;
-            flex-shrink: 0;
-        }
-        
-        .task-text {
-            flex: 1;
-        }
-        
-        .task-title {
-            font-weight: 600;
-            font-size: 14px;
-            color: var(--ds-color-gray-90);
-            margin-bottom: 2px;
-        }
-        
-        .task-subtitle {
-            font-size: 12px;
-            color: var(--ds-color-gray-80);
-        }
-        
-        .task-close {
-            width: 24px;
-            height: 24px;
-            border: none;
-            background: transparent;
-            color: var(--ds-color-gray-60);
-            cursor: pointer;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            transition: all 0.2s ease;
-        }
-        
-        .task-close:hover {
-            background: rgba(0, 0, 0, 0.1);
-            color: var(--ds-color-gray-80);
-        }
-        
-        .setup-task-body {
-            padding: 16px;
-        }
-        
-        .task-item {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            border-radius: 4px;
-            background: #f8f9fa;
-            border: 1px solid #e8ecef;
-        }
-        
-        .task-item.incomplete {
-            background: #fff3cd;
-            border-color: #ffeaa7;
-        }
-        
-        .task-item.complete {
-            background: #d4edda;
-            border-color: #c3e6cb;
-        }
-        
-        .task-item-icon {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            color: var(--ds-color-primary);
-            font-size: 12px;
-        }
-        
-        .task-item.complete .task-item-icon {
-            color: #28a745;
-        }
-        
-        .task-item-content {
-            flex: 1;
-            min-width: 0;
-        }
-        
-        .task-item-title {
-            font-weight: 600;
-            font-size: 13px;
-            color: var(--ds-color-gray-90);
-            margin-bottom: 2px;
-        }
-        
-        .task-item-desc {
-            font-size: 11px;
-            color: var(--ds-color-gray-80);
-        }
-        
-        .task-item-action {
-            background: var(--ds-color-primary);
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s ease;
-        }
-        
-        .task-item-action:hover {
-            background: #e57b03;
-        }
-        
-        .task-item.complete .task-item-action {
-            background: #28a745;
-            cursor: default;
-        }
-        
-        @media (max-width: 768px) {
-            .setup-task-modal {
-                width: 280px;
-                bottom: 15px;
-                right: 15px;
-            }
-            
-            .setup-task-modal.minimized {
-                width: 160px;
-            }
-        }
-    </style>
-    
-    <script>
-        // Initialize date range picker for new user (no functionality needed yet)
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add empty state styling
-            const style = document.createElement('style');
-            style.textContent = `
-                .trend-indicator.neutral {
-                    color: var(--ds-color-gray-70);
-                }
-            `;
-            document.head.appendChild(style);
-        });
-    </script>
 </body>
 </html>

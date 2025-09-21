@@ -36,7 +36,7 @@
     {
       "name": "Leader",
       "icon": "fas fa-crown",
-      "percentage": "4%",
+      "percentage": "5%",
       "target": "Advanced",
       "requirement": 50,
       "color": "#DB3A3A"

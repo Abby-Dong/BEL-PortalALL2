@@ -108,7 +108,7 @@
             
             <div class="bel-panel">
                 <!-- Empty State for New User -->
-                <div style="text-align: center; padding: 40px 20px; color: var(--ds-color-gray-60);">
+                <div id="empty-state" style="text-align: center; padding: 40px 20px; color: var(--ds-color-gray-60);">
                     <i class="fas fa-ticket-alt" style="font-size: 3rem; margin-bottom: 16px; color: var(--ds-color-gray-40);"></i>
                     <h3 style="margin: 0 0 8px 0; color: var(--ds-color-gray-70); font-size: 1.1rem;">No Support Tickets Yet</h3>
                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.5;">
@@ -116,111 +116,31 @@
                         Click "Submit Support Ticket" above to get help with any questions or issues.
                     </p>
                 </div>
+
+                <!-- Support Tickets Table (initially hidden) -->
+                <div id="tickets-table-container" style="display: none;">
+                    <div class="bel-table-container">
+                        <table class="bel-table" id="support-tickets-table">
+                            <thead>
+                                <tr>
+                                    <th data-sortable data-type="string">Ticket ID</th>
+                                    <th data-sortable data-type="date">Date</th>
+                                    <th data-sortable data-type="string">Subject</th>
+                                    <th data-sortable data-type="string">Status</th>
+                                    <th data-sortable data-type="string">Response</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
 
             <h3 class="bel-h3">Frequently Asked Questions (FAQ)</h3>
             <div class="bel-panel bel-panel-pt-0" id="faq-content">
-                <!-- Common FAQ for New Users -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do I start earning commissions as a new partner?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>To start earning commissions:</p>
-                        <ol>
-                            <li><strong>Complete your banking information</strong> in My Account to enable payouts</li>
-                            <li><strong>Get your referral links</strong> from the Sales Engagement dashboard</li>
-                            <li><strong>Share your links</strong> with potential customers</li>
-                            <li><strong>Track your performance</strong> in Earnings & Orders</li>
-                        </ol>
-                        <p>Commissions are calculated based on successful orders and paid monthly.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>When will I receive my first commission payout?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Commission payouts are processed on the 5th of each month for the previous month's earnings. Requirements:</p>
-                        <ul>
-                            <li>Minimum payout threshold: $100 USD</li>
-                            <li>Banking information must be complete</li>
-                            <li>Account must be in good standing</li>
-                        </ul>
-                        <p>If your balance is under $100, it will roll over to the next month.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do I advance to higher partner levels?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Partner levels are based on performance metrics:</p>
-                        <ul>
-                            <li><strong>Builder</strong> (Current): Starting level for new partners</li>
-                            <li><strong>Explorer</strong>: 10+ successful referrals or $1,000+ in sales</li>
-                            <li><strong>Leader</strong>: 25+ successful referrals or $5,000+ in sales</li>
-                            <li><strong>Champion</strong>: 50+ successful referrals or $15,000+ in sales</li>
-                        </ul>
-                        <p>Higher levels unlock better commission rates and exclusive resources.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What resources are available to help me succeed?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We provide comprehensive resources in the Get Resource section:</p>
-                        <ul>
-                            <li><strong>Product catalogs</strong> with detailed specifications</li>
-                            <li><strong>Marketing materials</strong> including brochures and presentations</li>
-                            <li><strong>Training videos</strong> on product features and benefits</li>
-                            <li><strong>Sales tools</strong> and customer case studies</li>
-                        </ul>
-                        <p>All materials are updated regularly and available for download.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How can I track my referrals and earnings?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The Earnings & Orders section provides comprehensive tracking:</p>
-                        <ul>
-                            <li><strong>Real-time earnings</strong> summary and pending payouts</li>
-                            <li><strong>Order tracking</strong> with status updates</li>
-                            <li><strong>Performance charts</strong> showing your progress</li>
-                            <li><strong>Payout history</strong> with detailed breakdowns</li>
-                        </ul>
-                        <p>Data is updated daily to keep you informed of your performance.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What should I do if I encounter technical issues?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>For technical support:</p>
-                        <ol>
-                            <li><strong>Check this FAQ</strong> for common solutions</li>
-                            <li><strong>Submit a support ticket</strong> using the button above</li>
-                            <li><strong>Include details</strong> about your issue (browser, error messages, etc.)</li>
-                            <li><strong>Expect a response</strong> within 24 hours during business days</li>
-                        </ol>
-                        <p>For urgent matters, contact us directly at <a href="mailto:Service.iotmart@advantech.com" style="color: var(--ds-color-link);">Service.iotmart@advantech.com</a></p>
-                    </div>
-                </div>
+                <div class="loading-message">Loading FAQ content...</div>
             </div>
         </div>
     </main>
@@ -235,11 +155,11 @@
             <form id="contact-support-form">
                 <div class="bel-form-group">
                     <label for="support-subject">Subject *</label>
-                    <input type="text" id="support-subject" placeholder="Enter your subject" required style="color: var(--ds-color-gray-80);">
+                    <input type="text" id="support-subject" placeholder="Enter your subject" required>
                 </div>
                 <div class="bel-form-group">
                     <label for="support-message">Message *</label>
-                    <textarea id="support-message" rows="5" placeholder="Describe your issue or question in detail" required class="bel-textarea-form" style="color: var(--ds-color-gray-80);"></textarea>
+                    <textarea id="support-message" rows="5" placeholder="Describe your issue or question in detail" required class="bel-textarea-form"></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="bel-btn secondary" id="cancel-support-btn">Cancel</button>
@@ -279,200 +199,6 @@
     </div>
     <script src="js/common.js"></script>
 
-    <style>
-        /* Placeholder styling */
-        input::placeholder,
-        textarea::placeholder {
-            color: var(--ds-color-gray-50) !important;
-            opacity: 1;
-        }
-        
-        input::-webkit-input-placeholder,
-        textarea::-webkit-input-placeholder {
-            color: var(--ds-color-gray-50) !important;
-        }
-        
-        input::-moz-placeholder,
-        textarea::-moz-placeholder {
-            color: var(--ds-color-gray-50) !important;
-            opacity: 1;
-        }
-        
-        input:-ms-input-placeholder,
-        textarea:-ms-input-placeholder {
-            color: var(--ds-color-gray-50) !important;
-        }
-        
-        /* Fixed Task Modal Styles */
-        .setup-task-modal {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 320px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-            border: 1px solid #e8ecef;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            display: none;
-        }
-        
-        .setup-task-modal.minimized {
-            width: 200px;
-        }
-        
-        .setup-task-content {
-            padding: 0;
-        }
-        
-        .setup-task-header {
-            display: flex;
-            align-items: center;
-            padding: 16px;
-            background: #fef7e6;
-            border-radius: 12px 12px 0 0;
-            border-bottom: 1px solid #f0d7a7;
-        }
-        
-        .task-icon {
-            width: 32px;
-            height: 32px;
-            background: var(--ds-color-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 14px;
-            margin-right: 12px;
-            flex-shrink: 0;
-        }
-        
-        .task-text {
-            flex: 1;
-        }
-        
-        .task-title {
-            font-weight: 600;
-            font-size: 14px;
-            color: var(--ds-color-gray-90);
-            margin-bottom: 2px;
-        }
-        
-        .task-subtitle {
-            font-size: 12px;
-            color: var(--ds-color-gray-80);
-        }
-        
-        .task-close {
-            width: 24px;
-            height: 24px;
-            border: none;
-            background: transparent;
-            color: var(--ds-color-gray-60);
-            cursor: pointer;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            transition: all 0.2s ease;
-        }
-        
-        .task-close:hover {
-            background: rgba(0, 0, 0, 0.1);
-            color: var(--ds-color-gray-80);
-        }
-        
-        .setup-task-body {
-            padding: 16px;
-        }
-        
-        .task-item {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            border-radius: 4px;
-            background: #f8f9fa;
-            border: 1px solid #e8ecef;
-        }
-        
-        .task-item.incomplete {
-            background: #fff3cd;
-            border-color: #ffeaa7;
-        }
-        
-        .task-item.complete {
-            background: #d4edda;
-            border-color: #c3e6cb;
-        }
-        
-        .task-item-icon {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            color: var(--ds-color-primary);
-            font-size: 12px;
-        }
-        
-        .task-item.complete .task-item-icon {
-            color: #28a745;
-        }
-        
-        .task-item-content {
-            flex: 1;
-            min-width: 0;
-        }
-        
-        .task-item-title {
-            font-weight: 600;
-            font-size: 13px;
-            color: var(--ds-color-gray-90);
-            margin-bottom: 2px;
-        }
-        
-        .task-item-desc {
-            font-size: 11px;
-            color: var(--ds-color-gray-80);
-        }
-        
-        .task-item-action {
-            background: var(--ds-color-primary);
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s ease;
-        }
-        
-        .task-item-action:hover {
-            background: #e57b03;
-        }
-        
-        .task-item.complete .task-item-action {
-            background: #28a745;
-            cursor: default;
-        }
-        
-        @media (max-width: 768px) {
-            .setup-task-modal {
-                width: 280px;
-                bottom: 15px;
-                right: 15px;
-            }
-            
-            .setup-task-modal.minimized {
-                width: 160px;
-            }
-        }
-    </style>
     
     <!-- Fixed Task Modal in Bottom Right -->
     <div id="setup-task-modal" class="setup-task-modal">
@@ -491,9 +217,6 @@
             </div>
             <div class="setup-task-body" id="setup-task-body">
                 <div class="task-item incomplete" data-task="banking">
-                    <div class="task-item-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
                     <div class="task-item-content">
                         <div class="task-item-title">Banking Information</div>
                         <div class="task-item-desc">Set up your payout details, required to receive commission payments and earnings</div>

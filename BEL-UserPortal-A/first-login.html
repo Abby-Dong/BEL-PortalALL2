@@ -100,7 +100,7 @@
                     <h3>Start your promotional journey!</h3>
                     <div style="display: flex; align-items: center; justify-content: flex-start; gap: 12px; margin-bottom: 4px;">
                         <span class="bel-badge builder bel-badge-fitted" style="margin: 0px;"><i class="fas fa-seedling"></i> Builder</span>
-                        <p id="level-progress-text" style="margin: 0; font-size: 14px;line-height: 36px; display: flex; align-items: center;">Reach $50K in sales to advance to 'Enabler' level!</p>
+                        <p id="level-progress-text" style="margin: 0; font-size: 14px;line-height: 16px; display: flex; align-items: center;">Reach $50K in sales to advance to 'Enabler' level!</p>
                     </div>
                     <div class="level-milestone-container">
                         <div class="milestone-track">
@@ -113,10 +113,22 @@
                            </div>
                        </div>
                        <div class="milestone-labels">
-                           <div class="milestone-label active">Builder</div>
-                           <div class="milestone-label">Enabler</div>
-                           <div class="milestone-label">Explorer</div>
-                           <div class="milestone-label">Leader</div>
+                           <div class="milestone-label active">
+                               <div class="milestone-level-name">Builder</div>
+                               <div class="milestone-percentage" style="color: #888; font-size: 10px; margin-top: 2px;">2% | 20K</div>
+                           </div>
+                           <div class="milestone-label">
+                               <div class="milestone-level-name">Enabler</div>
+                               <div class="milestone-percentage" style="color: #888; font-size: 10px; margin-top: 2px;">2% | 100K</div>
+                           </div>
+                           <div class="milestone-label">
+                               <div class="milestone-level-name">Explorer</div>
+                               <div class="milestone-percentage" style="color: #888; font-size: 10px; margin-top: 2px;">3% | 200K</div>
+                           </div>
+                           <div class="milestone-label">
+                               <div class="milestone-level-name">Leader</div>
+                               <div class="milestone-percentage" style="color: #888; font-size: 10px; margin-top: 2px;">5% | Advanced</div>
+                           </div>
                        </div>
                    </div>
                 </div>
@@ -165,7 +177,7 @@
                             </div>
                             <h4 style="margin: 0; color: var(--ds-color-gray-90); font-size: var(--fs-base); font-weight: var(--fw-semibold);">Step 1: Share Your Referral Link</h4>
                         </div>
-                        <p style="color: var(--ds-color-gray-80); margin: 0; font-size: var(--fs-sm);">Use your unique referral link and ID to share with potential customers and start earning commissions.</p>
+                        <p style="color: var(--ds-color-gray-80); margin: 0; font-size: var(--fs-sm);">Use your unique referral link and ID to share with potential customers and start earning rebates.</p>
                     </div>
                     <div class="getting-started-card" style="padding: 20px; background: var(--ds-color-gray-30); border: 1px solid var(--ds-color-gray-40); border-radius: 4px;">
                         <div style="display: flex; align-items: center; margin-bottom: 12px;">
@@ -183,7 +195,7 @@
                             </div>
                             <h4 style="margin: 0; color: var(--ds-color-gray-90); font-size: var(--fs-base); font-weight: var(--fw-semibold);">Step 3: Earn Rewards</h4>
                         </div>
-                        <p style="color: var(--ds-color-gray-80); margin: 0; font-size: var(--fs-sm);">Earn commissions on every successful order, plus upgrade bonuses as you level up!</p>
+                        <p style="color: var(--ds-color-gray-80); margin: 0; font-size: var(--fs-sm);">Earn rebates on every successful order, plus upgrade bonuses as you level up!</p>
                     </div>
                 </div>
             </div>
@@ -303,9 +315,6 @@
             </div>
             <div class="setup-task-body" id="setup-task-body">
                 <div class="task-item incomplete" data-task="banking">
-                    <div class="task-item-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
                     <div class="task-item-content">
                         <div class="task-item-title">Banking Information</div>
                         <div class="task-item-desc">Set up your payout details, required to receive commission payments and earnings</div>
@@ -372,178 +381,6 @@
         });
     </script>
 
-    <style>
-        /* Fixed Task Modal Styles */
-        .setup-task-modal {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 320px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-            border: 1px solid #e8ecef;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            display: none; /* Hidden by default, shown via JavaScript */
-        }
-        
-        .setup-task-modal.minimized {
-            width: 200px;
-        }
-        
-        .setup-task-content {
-            padding: 0;
-        }
-        
-        .setup-task-header {
-            display: flex;
-            align-items: center;
-            padding: 16px;
-            background: #fef7e6;
-            border-radius: 12px 12px 0 0;
-            border-bottom: 1px solid #f0d7a7;
-        }
-        
-        .task-icon {
-            width: 32px;
-            height: 32px;
-            background: var(--ds-color-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 14px;
-            margin-right: 12px;
-            flex-shrink: 0;
-        }
-        
-        .task-text {
-            flex: 1;
-        }
-        
-        .task-title {
-            font-weight: 600;
-            font-size: 14px;
-            color: var(--ds-color-gray-90);
-            margin-bottom: 2px;
-        }
-        
-        .task-subtitle {
-            font-size: 12px;
-            color: var(--ds-color-gray-80);
-        }
-        
-        .task-close {
-            width: 24px;
-            height: 24px;
-            border: none;
-            background: transparent;
-            color: var(--ds-color-gray-60);
-            cursor: pointer;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            transition: all 0.2s ease;
-        }
-        
-        .task-close:hover {
-            background: rgba(0, 0, 0, 0.1);
-            color: var(--ds-color-gray-80);
-        }
-        
-        .setup-task-body {
-            padding: 16px;
-        }
-        
-        .task-item {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            border-radius: 4px;
-            background: #f8f9fa;
-            border: 1px solid #e8ecef;
-        }
-        
-        .task-item.incomplete {
-            background: #fff3cd;
-            border-color: #ffeaa7;
-        }
-        
-        .task-item.complete {
-            background: #d4edda;
-            border-color: #c3e6cb;
-        }
-        
-        .task-item-icon {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            color: var(--ds-color-primary);
-            font-size: 12px;
-        }
-        
-        .task-item.complete .task-item-icon {
-            color: #28a745;
-        }
-        
-        .task-item-content {
-            flex: 1;
-            min-width: 0;
-        }
-        
-        .task-item-title {
-            font-weight: 600;
-            font-size: 13px;
-            color: var(--ds-color-gray-90);
-            margin-bottom: 2px;
-        }
-        
-        .task-item-desc {
-            font-size: 11px;
-            color: var(--ds-color-gray-80);
-        }
-        
-        .task-item-action {
-            background: var(--ds-color-primary);
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s ease;
-        }
-        
-        .task-item-action:hover {
-            background: #e57b03;
-        }
-        
-        .task-item.complete .task-item-action {
-            background: #28a745;
-            cursor: default;
-        }
-        
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .setup-task-modal {
-                width: 280px;
-                bottom: 15px;
-                right: 15px;
-            }
-            
-            .setup-task-modal.minimized {
-                width: 160px;
-            }
-        }
-    </style>
     <script src="js/charts.js"></script>
     
     <script>

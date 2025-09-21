@@ -2948,7 +2948,7 @@ body::-webkit-scrollbar-track,
 .top-performers-card {
     background-color: var(--ds-color-white);
     border: 1px solid var(--ds-color-border);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 0px;
     display: flex;
     flex-direction: row;

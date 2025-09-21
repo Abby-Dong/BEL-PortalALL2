@@ -81,6 +81,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         activeHref = 'resource-center.html';
     } else if (currentPage === 'support-faq.html') {
         activeHref = 'support-faq.html';
+    } else if (currentPage === 'first-login-support-faq.html') {
+        activeHref = 'first-login-support-faq.html';
     } else if (currentPage === 'terms.html') {
         activeHref = 'terms.html';
     }
@@ -556,8 +558,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                     };
                     if (!window.ticketsData) window.ticketsData = [];
                     window.ticketsData.unshift(newTicket);
-                    // 重新渲染表格
+                    
+                    // Handle both main support page and first-login page
                     const ticketsTable = document.getElementById('support-tickets-table');
+                    const emptyState = document.getElementById('empty-state');
+                    const ticketsTableContainer = document.getElementById('tickets-table-container');
+                    
                     if (ticketsTable) {
                         const tbody = ticketsTable.querySelector('tbody');
                         if (tbody) {
@@ -581,6 +587,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 </tr>
                                 `;
                             }).join('');
+                        }
+                        
+                        // Show table and hide empty state for first-login page
+                        if (emptyState && ticketsTableContainer) {
+                            emptyState.style.display = 'none';
+                            ticketsTableContainer.style.display = 'block';
                         }
                     }
                     // Show success modal
@@ -919,12 +931,15 @@ async function initializeGlobalData() {
                 await loadAccountData();
                 break;
             case 'earnings-orders.html':
+            case 'first-login-earnings.html':
                 await loadEarningsData();
                 break;
             case 'resource-center.html':
+            case 'first-login-resource-center.html':
                 await loadResourceCenterData();
                 break;
             case 'support-faq.html':
+            case 'first-login-support-faq.html':
                 await loadSupportFAQData();
                 break;
             case 'terms.html':
@@ -1090,7 +1105,7 @@ async function loadDashboardData() {
                     const currentLevelTarget = currentLevelData ? currentLevelData.target : '';
                     const nextLevelPercentage = nextLevelData ? nextLevelData.percentage : '';
                     
-                    levelText.innerHTML = `<span style="color: #E57B03; font-weight: 600;">Hit $${currentLevelTarget} in sales to advance to the '${nextLevel.name}' level and enjoy a ${nextLevelPercentage} rebates!</span>`;
+                    levelText.innerHTML = `<span>Hit $${currentLevelTarget} in sales to advance to the '${nextLevel.name}' level & enjoy ${nextLevelPercentage} rebates!</span>`;
                 }
             }
             
@@ -1185,7 +1200,7 @@ async function loadDashboardData() {
         
         // Update product analysis
         if (productAnalysis) {
-            const productGrid = document.querySelector('.product-analysis-grid');
+            const productGrid = document.querySelector('.product-sales-grid');
             if (productGrid) {
                 productGrid.innerHTML = `
                     <div>
@@ -1196,9 +1211,17 @@ async function loadDashboardData() {
                     </div>
                     <div>
                         <h4 style="font-size: 1rem; margin-bottom: 10px;">Top 20 Products</h4>
-                        <div class="scrollable-table-container">
+                        <div class="scrollable-table-container" style="max-height: 350px;">
                             <table class="bel-table" style="margin-top:0;">
-                                <thead><tr><th style="width:24px;"></th><th style="width:160px;">Product</th><th>Price</th><th>Units</th><th>Total</th></tr></thead>
+                                <thead>
+                                    <tr>
+                                        <th data-sortable data-type="number" style="width:24px;">Rank</th>
+                                        <th data-sortable data-type="string" style="width:160px;">Product</th>
+                                        <th data-sortable data-type="number">Price</th>
+                                        <th data-sortable data-type="number">Qty</th>
+                                        <th data-sortable data-type="number">Total</th>
+                                    </tr>
+                                </thead>
                                 <tbody>
                                     ${productAnalysis && productAnalysis.topProducts ? productAnalysis.topProducts.map(product => `
                                         <tr>
@@ -1208,7 +1231,7 @@ async function loadDashboardData() {
                                             <td>${product.units || product.orders || '--'}</td>
                                             <td>${product.total || product.sales || '--'}</td>
                                         </tr>
-                                    `).join('') : ''}
+                                    `).join('') : '<tr><td colspan="5" style="text-align: center; padding: 20px; color: #666;">No product data available</td></tr>'}
                                 </tbody>
                             </table>
                         </div>
@@ -1375,7 +1398,8 @@ async function loadAccountData() {
 
 // Load earnings data
 async function loadEarningsData() {
-    if (window.location.pathname.split('/').pop() !== 'earnings-orders.html') return;
+    const currentPage = window.location.pathname.split('/').pop();
+    if (currentPage !== 'earnings-orders.html' && currentPage !== 'first-login-earnings.html') return;
     
     try {
         let earningsSummary = await window.dataLoader.loadEarningsSummary();
@@ -1525,7 +1549,8 @@ async function loadEarningsData() {
 
 // Load resource center data
 async function loadResourceCenterData() {
-    if (window.location.pathname.split('/').pop() !== 'resource-center.html') return;
+    const currentPage = window.location.pathname.split('/').pop();
+    if (currentPage !== 'resource-center.html' && currentPage !== 'first-login-resource-center.html') return;
     
     try {
         const resourceData = await window.dataLoader.loadResourceCenter();
@@ -1562,50 +1587,146 @@ async function loadResourceCenterData() {
 
 // Load support FAQ data
 async function loadSupportFAQData() {
-    if (window.location.pathname.split('/').pop() !== 'support-faq.html') return;
+    const currentPage = window.location.pathname.split('/').pop();
+    if (currentPage !== 'support-faq.html' && currentPage !== 'first-login-support-faq.html') return;
+
+    // Simple Markdown parser for FAQ content
+    function parseMarkdown(text) {
+        // Split by double newlines to create paragraphs
+        const paragraphs = text.split('\n\n');
+        let result = '';
+        
+        for (let paragraph of paragraphs) {
+            paragraph = paragraph.trim();
+            if (!paragraph) continue;
+            
+            // Check if paragraph contains bullet points (starts with •)
+            if (paragraph.includes('\n•')) {
+                const lines = paragraph.split('\n');
+                let listItems = [];
+                let currentP = '';
+                
+                for (let line of lines) {
+                    line = line.trim();
+                    if (line.startsWith('•')) {
+                        if (currentP) {
+                            result += `<p>${currentP}</p>`;
+                            currentP = '';
+                        }
+                        listItems.push(line.substring(1).trim());
+                    } else if (listItems.length > 0 && line) {
+                        listItems[listItems.length - 1] += ' ' + line;
+                    } else if (line) {
+                        if (listItems.length > 0) {
+                            result += '<ul>' + listItems.map(item => `<li>${item}</li>`).join('') + '</ul>';
+                            listItems = [];
+                        }
+                        currentP += (currentP ? ' ' : '') + line;
+                    }
+                }
+                
+                if (currentP) {
+                    result += `<p>${currentP}</p>`;
+                }
+                if (listItems.length > 0) {
+                    result += '<ul>' + listItems.map(item => `<li>${item}</li>`).join('') + '</ul>';
+                }
+            } 
+            // Check if paragraph contains numbered list (starts with 1. 2.)
+            else if (paragraph.match(/^\d+\./m)) {
+                const lines = paragraph.split('\n');
+                let listItems = [];
+                let currentP = '';
+                
+                for (let line of lines) {
+                    line = line.trim();
+                    if (line.match(/^\d+\./)) {
+                        if (currentP) {
+                            result += `<p>${currentP}</p>`;
+                            currentP = '';
+                        }
+                        listItems.push(line.replace(/^\d+\.\s*/, ''));
+                    } else if (listItems.length > 0 && line) {
+                        listItems[listItems.length - 1] += ' ' + line;
+                    } else if (line) {
+                        if (listItems.length > 0) {
+                            result += '<ol>' + listItems.map(item => `<li>${item}</li>`).join('') + '</ol>';
+                            listItems = [];
+                        }
+                        currentP += (currentP ? ' ' : '') + line;
+                    }
+                }
+                
+                if (currentP) {
+                    result += `<p>${currentP}</p>`;
+                }
+                if (listItems.length > 0) {
+                    result += '<ol>' + listItems.map(item => `<li>${item}</li>`).join('') + '</ol>';
+                }
+            }
+            // Regular paragraph
+            else {
+                result += `<p>${paragraph}</p>`;
+            }
+        }
+        
+        return result;
+    }
     
     // Load support tickets - use fake data for now
     try {
         console.log('Loading support tickets...');
         
-        // Use fake data directly (you can replace this with real data loading later)
-    const ticketsData = [
-        {
-            "ticketId": "TICK-2025-001",
-            "subject": "Payment Processing Issue",
-            "message": "I tried to process a payment but it failed with an unknown error. Please help!",
-            "status": "Open",
-            "response": "Pending Review",
-            "lastUpdated": "2025-08-29"
-        },
-        {
-            "ticketId": "TICK-2025-002",
-            "subject": "Referral Link Not Working",
-            "message": "My referral link does not redirect to the registration page. Can you check?",
-            "status": "Open",
-            "response": "Under Investigation",
-            "lastUpdated": "2025-08-30"
-        },
-        {
-            "ticketId": "TICK-2025-003",
-            "subject": "Commission Calculation Query",
-            "message": "Could you explain how the commission is calculated for my last order?",
-            "status": "Closed",
-            "response": "Your commission for order #IMUS00068925 was calculated based on your Explorer level and includes a performance bonus. Commissions are processed monthly on the 5th. View detailed breakdowns in your Earnings & Orders dashboard.",
-            "lastUpdated": "2025-08-22"
-        },
-        {
-            "ticketId": "TICK-2025-004",
-            "subject": "Account Level Promotion Request",
-            "message": "I believe I have met the requirements for a level promotion. Please review my account.",
-            "status": "Closed",
-            "response": "Congratulations! You've been promoted to Leader level effective immediately. Your 47 successful referrals exceeded our requirements. You now have access to exclusive materials and priority support.",
-            "lastUpdated": "2025-08-18"
+        // Check if this is the first-login page (new user)
+        const currentPage = window.location.pathname.split('/').pop();
+        const isFirstLogin = currentPage === 'first-login-support-faq.html';
+        
+        let ticketsData = [];
+        
+        if (!isFirstLogin) {
+            // Use fake data for main support page (you can replace this with real data loading later)
+            ticketsData = [
+                {
+                    "ticketId": "TICK-2025-001",
+                    "subject": "Payment Processing Issue",
+                    "message": "I tried to process a payment but it failed with an unknown error. Please help!",
+                    "status": "Open",
+                    "response": "Pending Review",
+                    "lastUpdated": "2025-08-29"
+                },
+                {
+                    "ticketId": "TICK-2025-002",
+                    "subject": "Referral Link Not Working",
+                    "message": "My referral link does not redirect to the registration page. Can you check?",
+                    "status": "Open",
+                    "response": "Under Investigation",
+                    "lastUpdated": "2025-08-30"
+                },
+                {
+                    "ticketId": "TICK-2025-003",
+                    "subject": "Commission Calculation Query",
+                    "message": "Could you explain how the commission is calculated for my last order?",
+                    "status": "Closed",
+                    "response": "Your commission for order #IMUS00068925 was calculated based on your Explorer level and includes a performance bonus. Commissions are processed monthly on the 5th. View detailed breakdowns in your Earnings & Orders dashboard.",
+                    "lastUpdated": "2025-08-22"
+                },
+                {
+                    "ticketId": "TICK-2025-004",
+                    "subject": "Account Level Promotion Request",
+                    "message": "I believe I have met the requirements for a level promotion. Please review my account.",
+                    "status": "Closed",
+                    "response": "Congratulations! You've been promoted to Leader level effective immediately. Your 47 successful referrals exceeded our requirements. You now have access to exclusive materials and priority support.",
+                    "lastUpdated": "2025-08-18"
+                }
+            ];
         }
-    ];
+        // For first-login page, start with empty tickets array
         
         window.ticketsData = ticketsData;
         const ticketsTable = document.getElementById('support-tickets-table');
+        const emptyState = document.getElementById('empty-state');
+        const ticketsTableContainer = document.getElementById('tickets-table-container');
+        
         if (ticketsTable) {
             const tbody = ticketsTable.querySelector('tbody');
             if (tbody) {
@@ -1630,6 +1751,17 @@ async function loadSupportFAQData() {
                     `;
                 }).join('');
                 console.log('Support tickets table populated successfully');
+            }
+            
+            // For first-login page: show table only if there are tickets
+            if (isFirstLogin && emptyState && ticketsTableContainer) {
+                if (ticketsData.length > 0) {
+                    emptyState.style.display = 'none';
+                    ticketsTableContainer.style.display = 'block';
+                } else {
+                    emptyState.style.display = 'block';
+                    ticketsTableContainer.style.display = 'none';
+                }
             }
         }
     } catch (error) {
@@ -1667,7 +1799,7 @@ async function loadSupportFAQData() {
                     <div class="faq-item">
                         <button class="faq-question">${faq.question}</button>
                         <div class="faq-answer" style="color: #666; font-size: 14px; line-height: 140%;">
-                            <p>${faq.answer}</p>
+                            ${parseMarkdown(faq.answer)}
                         </div>
                     </div>
                 `).join('');
