@@ -159,14 +159,7 @@
                         </a>
                     </div>
                 </div>
-
-            <div class="notice-banner">
-                <div class="notice-banner-content">
-                    <i class="fas fa-exclamation-circle notice-banner-icon"></i>
-                    <div class="notice-banner-text">
-                        <h3>Complete Your Banking Information</h3>                    </div>
-                </div>
-            </div>                
+     
                 <!-- Banking Form -->
                 <form class="banking-form" id="banking-form">
                     <!-- First row: Account Holder Name | Phone Number (50% each) -->
@@ -202,14 +195,25 @@
                             <textarea id="address" rows="3" placeholder="Complete address for bank account verification" required style="resize: vertical; min-height: 80px; width: 100%; color: var(--ds-color-gray-80);"></textarea>
                         </div>
                     </div>
+
+                                    <!-- Disclaimer Notice -->
+                <div class="disclaimer-notice" style="background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 4px; padding: 12px 16px; margin-bottom: 20px;">
+                    <div style="display: flex; align-items: flex-start; gap: 8px;">
+                        <i class="fas fa-exclamation-triangle" style="color: #856404; margin-top: 2px; font-size: 14px;"></i>
+                        <div style="flex: 1;">
+                            <p style="color: #856404; font-size: 13px; margin: 0; line-height: 1.4;">
+                               By submitting this form, you represent and warrant that all banking information provided is complete, accurate, and current. The Company disclaims all liability for any losses, failed transactions, verification delays, or compliance issues arising from inaccurate or incomplete details. Please ensure all information is verified prior to submission.
+                        </div>
+                    </div>
+                </div>    
                     <!-- Form Actions -->
                     <div class="form-actions" style="margin-top: 24px; text-align: right;">
                         <button type="submit" class="bel-btn primary">
                             <i class="fas fa-save" style="margin-right: 6px;"></i>
-                            Save Banking Information
+                            Submit Banking Information
                         </button>
                     </div>
-                </form>
+                </form> 
             </div>
 
             <h3 class="bel-h3">Account Settings</h3>
@@ -235,8 +239,24 @@
         </div>
     </main>
 
-    <!-- Success Modal -->
-    <div class="modal-overlay" id="success-modal">
+    <!-- Profile Success Modal -->
+    <div class="modal-overlay" id="profile-success-modal">
+        <div class="modal-content bel-max-w-400">
+            <div class="bel-modal-center">
+                <div class="bel-mb-20">
+                    <i class="fas fa-check-circle bel-success-icon"></i>
+                </div>
+                <h3 class="bel-modal-title">Changes Saved Successfully</h3>
+                <p class="bel-modal-text">
+                    Your account information has been updated successfully.
+                </p>
+                <button class="bel-btn primary profile-success-modal-close">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banking Success Modal -->
+    <div class="modal-overlay" id="banking-success-modal">
         <div class="modal-content bel-max-w-400">
             <div class="bel-modal-center">
                 <div class="bel-mb-20">
@@ -246,7 +266,7 @@
                 <p class="bel-modal-text">
                     Your banking information has been saved successfully. Your account is now ready to receive commission payouts.
                 </p>
-                <button class="bel-btn primary success-modal-close">Continue</button>
+                <button class="bel-btn primary banking-success-modal-close">Continue</button>
             </div>
         </div>
     </div>
@@ -438,6 +458,9 @@
                     // Show success message (optional)
                     // You can add a toast notification here
                     
+                    // Show profile success modal
+                    document.getElementById('profile-success-modal').classList.add('show');
+                    
                     toggleEditMode(false);
                 });
             }
@@ -574,6 +597,27 @@
             saveBankingInformation();
         });
         
+        // Modal close event listeners
+        document.getElementById('profile-success-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('show');
+            }
+        });
+        
+        document.querySelector('.profile-success-modal-close').addEventListener('click', function() {
+            document.getElementById('profile-success-modal').classList.remove('show');
+        });
+        
+        document.getElementById('banking-success-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('show');
+            }
+        });
+        
+        document.querySelector('.banking-success-modal-close').addEventListener('click', function() {
+            document.getElementById('banking-success-modal').classList.remove('show');
+        });
+        
         function saveBankingInformation() {
             // Mark banking task as completed in localStorage
             localStorage.setItem('bel_banking_completed', 'true');
@@ -585,7 +629,7 @@
             updateUIAfterSave();
             
             // Show success modal
-            document.getElementById('success-modal').classList.add('show');
+            document.getElementById('banking-success-modal').classList.add('show');
         }
         
         function lockBankingForm() {

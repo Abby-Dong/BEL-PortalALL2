@@ -88,52 +88,53 @@
         <div class="bel-main-content" id="bel-main-content">
             <h1 class="bel-h1">My Account</h1>
 
-            <div class="bel-panel editable-panel" id="account-profile-panel">
-                <div class="panel-header">
-                    <h3>Account Profile</h3>
-                    <div>
-                        <button class="bel-btn secondary edit-button">Edit</button>
-                        <div class="save-cancel-buttons">
-                            <button class="bel-btn secondary cancel-button">Cancel</button>
-                            <button class="bel-btn secondary save-button" disabled>Save</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="bel-panel" id="account-profile-panel">
                 
-                <!-- Profile Avatar Section -->
-                <div class="profile-avatar-section">
-                    <div class="avatar-container">
-                        <div class="avatar-preview">
-                            <img id="profile-avatar-img" src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="Profile Avatar">
-                            <div class="avatar-overlay" id="avatar-overlay">
-                                <i class="fas fa-camera"></i>
-                                <span>Change Photo</span>
-                            </div>
+                <!-- Profile Layout -->
+                <div class="profile-layout-container">
+                    <!-- Left: Avatar -->
+                    <div class="profile-avatar-section-new">
+                        <div class="profile-avatar-wrapper">
+                            <img id="profile-avatar-img" src="https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png" alt="Profile Avatar" class="profile-avatar-image">
+                            <button class="profile-avatar-edit-btn" id="avatar-edit-btn" style="display: none;">
+                                <i class="fas fa-pen"></i>
+                            </button>
                         </div>
                         <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
-                        <div class="avatar-info">
-                            <h4>Profile Picture</h4>
-                            <p>Upload a photo to personalize your profile. JPG, PNG files up to 5MB.</p>
-                            <button class="bel-btn secondary avatar-upload-btn" id="avatar-upload-btn">
-                                <i class="fas fa-upload"></i>
-                                Upload Photo
-                            </button>
-                            <button class="bel-btn secondary avatar-remove-btn" id="avatar-remove-btn">
-                                <i class="fas fa-trash"></i>
-                                Remove Photo
-                            </button>
+                    </div>
+
+                    <!-- Center: User Info -->
+                    <div class="profile-user-info">
+                        <!-- Display Mode -->
+                        <div id="profile-display-info" class="profile-display-mode">
+                            <h2 id="profile-display-name" class="profile-user-name">Maxwell Walker</h2>
+                            <p id="profile-display-email" class="profile-user-email">Maxwell.Walker@example.com</p>
+                        </div>
+                        <!-- Edit Mode (hidden by default) -->
+                        <div id="profile-edit-info" class="profile-edit-mode" style="display: none;">
+                            <input type="text" id="profile-input-name" class="profile-input-name" value="Maxwell Walker">
+                            <input type="email" id="profile-input-email" class="profile-input-email" value="Maxwell.Walker@example.com">
                         </div>
                     </div>
-                </div>
 
-                <div class="bel-grid-container grid-cols-3">
-                    <div class="bel-form-group">
-                        <label for="acc-name">Name</label>
-                        <input type="text" id="acc-name" value="Maxwell Walker" readonly>
-                    </div>
-                    <div class="bel-form-group">
-                        <label for="acc-email">Contact Email</label>
-                        <input type="email" id="acc-email" value="Maxwell.Walker@example.com" readonly>
+                    <!-- Right: Action Buttons -->
+                    <div class="profile-actions">
+                        <!-- Default Edit Button -->
+                        <button id="profile-edit-button" class="bel-btn primary profile-edit-btn-main">
+                            <i class="fas fa-edit bel-mr-4"></i>
+                            Edit Profile
+                        </button>
+                        <!-- Edit Mode Buttons (hidden by default) -->
+                        <div id="profile-edit-actions" class="profile-edit-actions-group" style="display: none;">
+                            <button id="profile-save-button" class="bel-btn primary profile-save-btn">
+                                <i class="fas fa-check bel-mr-4"></i>
+                                Save Changes
+                            </button>
+                            <button id="profile-cancel-button" class="bel-btn secondary profile-cancel-btn">
+                                <i class="fas fa-times bel-mr-4"></i>
+                                Cancel
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,7 +149,7 @@
                     </div>
                 </div>
                 <!-- First row: Account Holder Name | Phone Number (50% each) -->
-                <div class="bel-grid-container grid-cols-2 bel-mb-16">
+                <div class="bel-grid-container grid-cols-2 bel-mb-12">
                     <div class="bel-form-group">
                         <label for="account-holder-name">Account Holder Name</label>
                         <div class="bel-text-display" id="account-holder-name">Maxwell Walker</div>
@@ -159,7 +160,7 @@
                     </div>
                 </div>
                 <!-- Second row: Bank Name | SWIFT Code | Account Number (33% each) -->
-                <div class="bel-grid-container grid-cols-3 bel-mb-16">
+                <div class="bel-grid-container grid-cols-3 bel-mb-12">
                     <div class="bel-form-group">
                         <label for="bank-name">Bank Name</label>
                         <div class="bel-text-display" id="bank-name">Bank of America</div>
@@ -228,10 +229,6 @@
                 <h3>Payout Information Policy</h3>
             </div>
             <div>
-                <div class="bel-security-notice-container">
-                    <i class="fas fa-exclamation-triangle bel-warning-icon"></i>
-                    <span class="bel-security-title">Security Notice</span>
-                </div>
                 <p class="bel-modal-text-no-margin">
                     For security and payment processing reasons, payout information can only be set during first login and cannot be modified afterwards.
                 </p>

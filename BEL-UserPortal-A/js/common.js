@@ -156,6 +156,89 @@ document.addEventListener('DOMContentLoaded', async () => {
         
     document.querySelectorAll('.faq-question').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('active')));
         
+    // --- Profile Edit Button Logic ---
+    const profileEditButton = document.getElementById('profile-edit-button');
+    const profileSaveButton = document.getElementById('profile-save-button');
+    const profileCancelButton = document.getElementById('profile-cancel-button');
+    const profileEditActions = document.getElementById('profile-edit-actions');
+    const profileDisplayInfo = document.getElementById('profile-display-info');
+    const profileEditInfo = document.getElementById('profile-edit-info');
+    const avatarEditBtn = document.getElementById('avatar-edit-btn');
+
+    if (profileEditButton && profileSaveButton && profileCancelButton) {
+        // Enter edit mode
+        profileEditButton.addEventListener('click', () => {
+            // Hide default edit button
+            profileEditButton.style.display = 'none';
+            // Show edit actions (save/cancel)
+            profileEditActions.style.display = 'block';
+            // Hide display mode, show edit mode
+            profileDisplayInfo.style.display = 'none';
+            profileEditInfo.style.display = 'block';
+            // Show avatar edit button
+            if (avatarEditBtn) avatarEditBtn.style.display = 'block';
+            
+            // Focus on name input
+            const nameInput = document.getElementById('profile-input-name');
+            if (nameInput) nameInput.focus();
+        });
+
+        // Save changes
+        profileSaveButton.addEventListener('click', () => {
+            // Get input values
+            const nameInput = document.getElementById('profile-input-name');
+            const emailInput = document.getElementById('profile-input-email');
+            
+            if (nameInput && emailInput) {
+                // Update display elements
+                const displayName = document.getElementById('profile-display-name');
+                const displayEmail = document.getElementById('profile-display-email');
+                
+                if (displayName) displayName.textContent = nameInput.value;
+                if (displayEmail) displayEmail.textContent = emailInput.value;
+                
+                // Update header profile info
+                const headerUserName = document.querySelector('.user-profile-panel .user-name');
+                const headerUserEmail = document.querySelector('.user-profile-panel .user-email');
+                if (headerUserName) headerUserName.textContent = nameInput.value;
+                if (headerUserEmail) headerUserEmail.textContent = emailInput.value;
+            }
+            
+            // Exit edit mode
+            exitProfileEditMode();
+            
+            // Show success modal
+            showSuccessModal();
+        });
+
+        // Cancel changes
+        profileCancelButton.addEventListener('click', () => {
+            // Reset input values to original display values
+            const nameInput = document.getElementById('profile-input-name');
+            const emailInput = document.getElementById('profile-input-email');
+            const displayName = document.getElementById('profile-display-name');
+            const displayEmail = document.getElementById('profile-display-email');
+            
+            if (nameInput && displayName) nameInput.value = displayName.textContent;
+            if (emailInput && displayEmail) emailInput.value = displayEmail.textContent;
+            
+            // Exit edit mode
+            exitProfileEditMode();
+        });
+
+        function exitProfileEditMode() {
+            // Show default edit button
+            profileEditButton.style.display = 'inline-flex';
+            // Hide edit actions
+            profileEditActions.style.display = 'none';
+            // Show display mode, hide edit mode
+            profileDisplayInfo.style.display = 'block';
+            profileEditInfo.style.display = 'none';
+            // Hide avatar edit button
+            if (avatarEditBtn) avatarEditBtn.style.display = 'none';
+        }
+    }
+
     // --- My Account Page Edit/Save Logic ---
     document.querySelectorAll('.editable-panel').forEach(panel => {
         const editButton = panel.querySelector('.edit-button');
@@ -466,6 +549,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         payoutInfoModal.addEventListener('click', (e) => {
             if (e.target === payoutInfoModal) {
                 closePayoutModal();
+            }
+        });
+    }
+        
+    // --- Exchange Rate Help Modal Logic ---
+    const exchangeRateModal = document.getElementById('exchange-rate-modal');
+    const exchangeRateHelp = document.getElementById('exchange-rate-help');
+    if (exchangeRateModal && exchangeRateHelp) {
+        const closeModalButton = exchangeRateModal.querySelector('.modal-close-button');
+
+        const openExchangeRateModal = (e) => {
+            e.preventDefault();
+            exchangeRateModal.classList.add('show');
+        };
+        const closeExchangeRateModal = () => exchangeRateModal.classList.remove('show');
+
+        exchangeRateHelp.addEventListener('click', openExchangeRateModal);
+        if (closeModalButton) closeModalButton.addEventListener('click', closeExchangeRateModal);
+        exchangeRateModal.addEventListener('click', (e) => {
+            if (e.target === exchangeRateModal) {
+                closeExchangeRateModal();
             }
         });
     }
@@ -850,7 +954,7 @@ function viewTicket(ticketId) {
         return;
     }
     const modal = document.getElementById('view-detail-modal');
-    const body = document.getElementById('view-detail_body');
+    const body = document.getElementById('view-detail-body');
         if (modal && body) {
             // Modal header: Subject 作為主標題
             const header = document.getElementById('view-detail-modal-header');
@@ -989,6 +1093,12 @@ async function loadUserProfileHeader() {
             const panelContent = document.querySelector('.user-profile-panel .panel-content');
             if (panelContent) {
                 const levelInfo = config.partnerLevels.find(level => level.name === userProfile.level.name);
+                
+                // Determine the correct My Account link based on current page
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const isFirstLoginPage = currentPage.startsWith('first-login');
+                const accountLink = isFirstLoginPage ? 'first-login-account.html' : 'my-account.html';
+                
                 panelContent.innerHTML = `
                     <div class="user-info">
                         <div class="user-name">${userProfile.name}</div>
@@ -1000,7 +1110,7 @@ async function loadUserProfileHeader() {
                         </span>
                     </div>
                     <hr class="divider">
-                    <a href="my-account.html" class="panel-link">My Account</a>
+                    <a href="${accountLink}" class="panel-link">My Account</a>
                     <a href="../BEL-Login/login.html" id="logout-link" class="panel-link">Log Out</a>
                 `;
 
@@ -1519,23 +1629,16 @@ async function loadEarningsData() {
                 const tbody = orderTable.querySelector('tbody');
                 
                 if (tbody) {
-                    tbody.innerHTML = orderTracking.map(order => {
-                        // Split currency and amount with safety checks
-                        const orderAmountParts = (order.orderAmount || '').split(' ');
-                        const currency = orderAmountParts[0] || '';
-                        const amount = orderAmountParts[1] || '';
-                        
-                        return `
+                    tbody.innerHTML = orderTracking.map(order => `
                         <tr>
                             <td>${order.orderPlaced || ''}</td>
                             <td>${order.orderNumber || ''}</td>
-                            <td>${currency}</td>
-                            <td>${amount}</td>
+                            <td>${order.originalOrderAmount || ''}</td>
+                            <td>${order.orderAmountUSD || ''}</td>
                             <td>${order.productActualAmount || ''}</td>
                             <td><span class="status-badge ${order.statusClass || ''}">${order.orderStatus || ''}</span></td>
                         </tr>
-                    `;
-                    }).join('');
+                    `).join('');
                 }
             }
         } else {

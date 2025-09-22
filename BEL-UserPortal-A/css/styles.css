@@ -635,6 +635,22 @@ body::-webkit-scrollbar-track,
 .section-header-with-controls .bel-h3 {
     margin: 0 !important;
 }
+.section-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.section-header-left .bel-help-link {
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: var(--ds-color-link);
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+.section-header-left .bel-help-link:hover {
+    color: var(--ds-color-brand-dark);
+}
 .view-switcher {
     display: flex;
     background-color: transparent;
@@ -1349,6 +1365,7 @@ text-align-last: center;
     background-color: var(--ds-color-success-light);
     color: var(--ds-color-success); 
 }
+
 
 /* Partner Level Badge Variants */
 .bel-badge.primary-color, 
@@ -2587,7 +2604,7 @@ text-align-last: center;
 }
 
 .profile-input-name {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--ds-color-gray-90);
 }

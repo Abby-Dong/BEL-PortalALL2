@@ -204,7 +204,12 @@
             </div>
 
             <div class="section-header-with-controls">
-                <h3 class="bel-h3 bel-h3-reset">Order Tracking</h3>
+                <div class="section-header-left">
+                    <h3 class="bel-h3 bel-h3-reset">Order Tracking</h3>
+                    <a href="#" id="exchange-rate-help" class="bel-help-link">
+                        <i class="fas fa-question-circle bel-mr-4" style="margin-right: 4px;"></i>Exchange Rate Info
+                    </a>
+                </div>
                 <div class="table-controls">
                     <div class="date-filter">
                         <i class="fas fa-calendar-alt"></i>
@@ -219,8 +224,8 @@
                         <tr>
                             <th data-sortable data-type="date">Order Placed</th>
                             <th data-sortable data-type="string">Order Number</th>
-                            <th data-sortable data-type="string">Currency</th>
-                            <th data-sortable data-type="number">Order Amount</th>
+                            <th data-sortable data-type="string">Original Order Amount</th>
+                            <th data-sortable data-type="number">Order Amount(USD)</th>
                             <th data-sortable data-type="number">Product Actual Amount</th>
                             <th data-sortable data-type="string">Order Status</th>
                         </tr>
@@ -232,6 +237,34 @@
             </div>
         </div>
     </main>
+
+    <!-- Exchange Rate Info Modal -->
+    <div class="modal-overlay" id="exchange-rate-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Exchange Rate Policy</h3>
+                <button class="modal-close-button" id="close-exchange-rate-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div style="line-height: 1.6; color: var(--ds-color-gray-80);">
+                    <p>All currency conversions are calculated using our company's official exchange rates which are updated regularly to ensure fair and consistent calculations.</p>
+                    <br><p><strong>Original Order Amount</strong><br> The exact amount and currency used when the customer placed their order.</p>
+                    <p><strong>Order Amount (USD)</strong><br> The USD equivalent calculated using our company's exchange rate at the time the order was placed. This ensures consistency and prevents fluctuations from affecting your commission calculations.</p>
+                <div class="disclaimer-notice" style="background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 4px; padding: 12px 16px;  margin-top: 20px;">
+                    <div style="display: flex; align-items: flex-start; gap: 8px;">
+                        <i class="fas fa-exclamation-triangle" style="color: #856404; margin-top: 2px; font-size: 14px;"></i>
+                        <div style="flex: 1;">
+                            <p style="color: #856404; font-size: 13px; margin: 0; line-height: 1.4;">
+                               Exchange rates are locked at the moment of order placement to ensure your commission calculations remain stable and predictable, regardless of subsequent market fluctuations.
+                        </div>
+                    </div>
+                </div>    
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/data-loader.js"></script>
     <script src="js/common.js"></script>

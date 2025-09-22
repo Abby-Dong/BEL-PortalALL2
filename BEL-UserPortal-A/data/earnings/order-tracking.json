@@ -6,56 +6,72 @@
         {
           "orderPlaced": "2025-08-25",
           "orderNumber": "IMUS00068932", 
-          "orderAmount": "USD 1,200.00",
-          "productActualAmount": "1,150.00",
+          "originalOrderAmount": "USD 1,200.00",
+          "orderAmountUSD": "$1,200.00",
+          "productActualAmount": "$1,150.00",
           "orderStatus": "Processing",
           "statusClass": "status-processing"
         },
         {
           "orderPlaced": "2025-08-22",
           "orderNumber": "IMDE00068901",
-          "orderAmount": "EUR 125.50", 
-          "productActualAmount": "118.75",
+          "originalOrderAmount": "EUR 125.50",
+          "orderAmountUSD": "$135.54",
+          "productActualAmount": "$128.76",
           "orderStatus": "Completed",
           "statusClass": "status-completed"
         },
         {
           "orderPlaced": "2025-08-18",
           "orderNumber": "IMJP00068875",
-          "orderAmount": "JPY 350,000", 
-          "productActualAmount": "330,000",
+          "originalOrderAmount": "JPY 350,000",
+          "orderAmountUSD": "$2,345.00",
+          "productActualAmount": "$2,211.00",
           "orderStatus": "Canceled",
           "statusClass": "status-canceled"
         },
         {
           "orderPlaced": "2025-08-15",
           "orderNumber": "IMUK00068852",
-          "orderAmount": "GBP 680.75", 
-          "productActualAmount": "652.50",
+          "originalOrderAmount": "GBP 680.75",
+          "orderAmountUSD": "$850.94",
+          "productActualAmount": "$815.63",
           "orderStatus": "Completed",
           "statusClass": "status-completed"
         },
         {
           "orderPlaced": "2025-07-30",
           "orderNumber": "IMUS00068799",
-          "orderAmount": "USD 1,500.00", 
-          "productActualAmount": "1,425.00",
+          "originalOrderAmount": "USD 1,500.00",
+          "orderAmountUSD": "$1,500.00",
+          "productActualAmount": "$1,425.00",
           "orderStatus": "Completed",
           "statusClass": "status-completed"
         },
         {
           "orderPlaced": "2025-07-28",
           "orderNumber": "IMDE00068782",
-          "orderAmount": "EUR 380.25", 
-          "productActualAmount": "365.00",
+          "originalOrderAmount": "EUR 380.25",
+          "orderAmountUSD": "$410.91",
+          "productActualAmount": "$394.60",
           "orderStatus": "Completed",
           "statusClass": "status-completed"
         },
         {
           "orderPlaced": "2025-07-25",
           "orderNumber": "IMTW00068770",
-          "orderAmount": "TWD 22,500", 
-          "productActualAmount": "21,000",
+          "originalOrderAmount": "TWD 22,500",
+          "orderAmountUSD": "$697.50",
+          "productActualAmount": "$651.00",
+          "orderStatus": "Completed",
+          "statusClass": "status-completed"
+        },
+        {
+          "orderPlaced": "2025-07-22",
+          "orderNumber": "IMKR00068755",
+          "originalOrderAmount": "KRW 985,000",
+          "orderAmountUSD": "$738.75",
+          "productActualAmount": "$701.81",
           "orderStatus": "Completed",
           "statusClass": "status-completed"
         }
@@ -67,42 +83,65 @@
         {
           "orderPlaced": "2025-08-26",
           "orderNumber": "IMJP00068945", 
-          "orderAmount": "JPY 420,000",
-          "productActualAmount": "395,000",
+          "originalOrderAmount": "JPY 420,000",
+          "orderAmountUSD": "$2,814.00",
+          "productActualAmount": "$2,653.20",
           "orderStatus": "Completed",
           "statusClass": "status-completed"
         },
         {
           "orderPlaced": "2025-08-24",
           "orderNumber": "IMDE00068938",
-          "orderAmount": "EUR 720.50", 
-          "productActualAmount": "685.00",
+          "originalOrderAmount": "EUR 720.50",
+          "orderAmountUSD": "$778.14",
+          "productActualAmount": "$741.22",
           "orderStatus": "Processing",
           "statusClass": "status-processing"
         },
         {
           "orderPlaced": "2025-08-22",
           "orderNumber": "IMUS00068925",
-          "orderAmount": "USD 1,450.00", 
-          "productActualAmount": "1,380.00",
+          "originalOrderAmount": "USD 1,450.00",
+          "orderAmountUSD": "$1,450.00",
+          "productActualAmount": "$1,380.00",
           "orderStatus": "Completed",
           "statusClass": "status-completed"
         },
         {
           "orderPlaced": "2025-08-20",
           "orderNumber": "IMUK00068912",
-          "orderAmount": "GBP 1,320.75", 
-          "productActualAmount": "1,250.00",
+          "originalOrderAmount": "GBP 1,320.75",
+          "orderAmountUSD": "$1,650.94",
+          "productActualAmount": "$1,562.50",
           "orderStatus": "Completed",
           "statusClass": "status-completed"
         },
         {
           "orderPlaced": "2025-08-18",
           "orderNumber": "IMTW00068899",
-          "orderAmount": "TWD 19,500", 
-          "productActualAmount": "18,200",
+          "originalOrderAmount": "TWD 19,500",
+          "orderAmountUSD": "$604.50",
+          "productActualAmount": "$564.20",
           "orderStatus": "Completed",
           "statusClass": "status-completed"
+        },
+        {
+          "orderPlaced": "2025-08-16",
+          "orderNumber": "IMNL00068887",
+          "originalOrderAmount": "EUR 1,250.80",
+          "orderAmountUSD": "$1,350.86",
+          "productActualAmount": "$1,283.32",
+          "orderStatus": "Completed",
+          "statusClass": "status-completed"
+        },
+        {
+          "orderPlaced": "2025-08-14",
+          "orderNumber": "IMAU00068875",
+          "originalOrderAmount": "AUD 1,890.25",
+          "orderAmountUSD": "$1,246.27",
+          "productActualAmount": "$1,183.95",
+          "orderStatus": "Shipped",
+          "statusClass": "status-shipped"
         }
       ]
     }

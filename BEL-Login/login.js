@@ -590,7 +590,7 @@ Once registered with IoTMart, you can use the same credentials to access BEL Man
                 
                 <div style="margin-bottom: 25px;">
                     <label style="display: block; margin-bottom: 5px; color: var(--ds-color-gray-80, #434447); font-weight: 600; font-size: 14px;">
-                        6-Letter Exclusive Code <span style="color: #e74c3c;">*</span>
+                        Referral ID Setting <span style="color: #e74c3c;">*</span>
                     </label>
                     <input type="text" id="exclusive-code" required maxlength="6" pattern="[A-Za-z]{6}" style="
                         width: 100%;
@@ -612,37 +612,6 @@ Once registered with IoTMart, you can use the same credentials to access BEL Man
                     </div>
                 </div>
                 
-                <div style="margin-bottom: 25px;">
-                    <label style="display: block; margin-bottom: 5px; color: var(--ds-color-gray-80, #434447); font-weight: 600; font-size: 14px;">
-                        Primary Sales Region <span style="color: #e74c3c;">*</span>
-                    </label>
-                    <select id="primary-region" required style="
-                        width: 100%;
-                        padding: 12px 15px;
-                        border: 2px solid var(--ds-color-gray-40, #e8ecef);
-                        border-radius: 4px;
-                        font-size: 14px;
-                        box-sizing: border-box;
-                        transition: border-color 0.3s ease;
-                        background-color: white;
-                    ">
-                        <option value="">Select your primary sales region</option>
-                        <option value="AAU / NZ">AAU / NZ (Australia & New Zealand)</option>
-                        <option value="ASEAN">ASEAN (Southeast Asia)</option>
-                        <option value="China">China</option>
-                        <option value="Europe">Europe</option>
-                        <option value="India">India</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Korea">Korea</option>
-                        <option value="LATAM">LATAM (Latin America)</option>
-                        <option value="ME&A">ME&A (Middle East & Africa)</option>
-                        <option value="North America">North America</option>
-                        <option value="Taiwan">Taiwan</option>
-                        <option value="Russia & CIS">Russia & CIS</option>
-                        <option value="Others">Others</option>
-                    </select>
-                    <div id="primary-region-error" class="error-message" style="color: #e74c3c; font-size: 12px; margin-top: 5px; display: none;"></div>
-                </div>
                 
                 <div id="setup-error-message" class="error-message" style="color: #e74c3c; font-size: 14px; margin-bottom: 20px; display: none; text-align: center; background: #fef2f2; padding: 12px; border-radius: 4px; border: 1px solid #fecaca;"></div>
                 
