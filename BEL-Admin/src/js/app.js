@@ -1665,7 +1665,7 @@ if (!checkAuthentication()) {
         },
 
         initializePieChart(year = null, region = null) {
-            console.log('Initializing Level Distribution Pie Chart with filters:', year, region);
+            console.log('Initializing 2-Layer Level Distribution Pie Chart with filters:', year, region);
             const pieCtx = document.getElementById('level-pie-chart');
             if (pieCtx && window.Chart) {
                 console.log('Pie Chart canvas found, updating data...');
@@ -1680,14 +1680,25 @@ if (!checkAuthentication()) {
                 window.levelPieChart = new Chart(pieCtx, {
                     type: 'doughnut',
                     data: {
-                        labels: levelCounts.labels,
-                        datasets: [{
-                            label: 'BEL Count (#)',
-                            data: levelCounts.data,
-                            backgroundColor: levelCounts.colors,
-                            borderColor: '#ffffff',
-                            borderWidth: 2
-                        }]
+                        labels: levelCounts.allLabels,
+                        datasets: [
+                            {
+                                label: 'Level K (Outer)',
+                                data: levelCounts.outerData,
+                                backgroundColor: levelCounts.outerColors,
+                                borderColor: '#ffffff',
+                                borderWidth: 2,
+                                weight: 1
+                            },
+                            {
+                                label: 'Level A (Inner)',
+                                data: levelCounts.innerData,
+                                backgroundColor: levelCounts.innerColors,
+                                borderColor: '#ffffff',
+                                borderWidth: 2,
+                                weight: 0.6
+                            }
+                        ]
                     },
                     options: { 
                         responsive: true, 
@@ -1705,7 +1716,7 @@ if (!checkAuthentication()) {
                                 position: 'left',
                                 align: 'center',
                                 labels: { 
-                                    padding: 8,
+                                    padding: 6,
                                     boxWidth: 10,
                                     boxHeight: 10,
                                     font: {
@@ -1714,36 +1725,53 @@ if (!checkAuthentication()) {
                                     usePointStyle: true,
                                     pointStyle: 'circle',
                                     generateLabels: function(chart) {
+                                        const labels = [];
                                         const data = chart.data;
-                                        if (data.labels.length && data.datasets.length) {
-                                            return data.labels.map((label, i) => {
-                                                const meta = chart.getDatasetMeta(0);
-                                                const style = meta.controller.getStyle(i);
-                                                const value = data.datasets[0].data[i];
-                                                
-                                                return {
-                                                    text: `${label}: ${value}`,
-                                                    fillStyle: style.backgroundColor,
-                                                    strokeStyle: style.borderColor,
-                                                    lineWidth: style.borderWidth,
-                                                    pointStyle: 'circle',
-                                                    hidden: isNaN(value) || meta.data[i].hidden,
-                                                    index: i
-                                                };
-                                            });
-                                        }
-                                        return [];
+                                        
+                                        // Generate labels for both datasets
+                                        data.datasets.forEach((dataset, datasetIndex) => {
+                                            const meta = chart.getDatasetMeta(datasetIndex);
+                                            if (meta && dataset.data) {
+                                                dataset.data.forEach((value, index) => {
+                                                    if (value > 0) { // Only show non-zero values
+                                                        const style = meta.controller.getStyle(index);
+                                                        const levelType = datasetIndex === 0 ? 'K' : 'A';
+                                                        const levelName = data.labels[index];
+                                                        
+                                                        labels.push({
+                                                            text: `${levelName}-${levelType}: ${value}`,
+                                                            fillStyle: style.backgroundColor,
+                                                            strokeStyle: style.borderColor,
+                                                            lineWidth: style.borderWidth,
+                                                            pointStyle: 'circle',
+                                                            hidden: isNaN(value) || meta.data[index].hidden,
+                                                            datasetIndex: datasetIndex,
+                                                            index: index
+                                                        });
+                                                    }
+                                                });
+                                            }
+                                        });
+                                        
+                                        return labels;
                                     }
                                 } 
                             },
                             tooltip: {
                                 callbacks: {
+                                    title: function(context) {
+                                        const ctx = context[0];
+                                        const levelType = ctx.datasetIndex === 0 ? 'K' : 'A';
+                                        const levelName = ctx.label;
+                                        return `${levelName}-${levelType}`;
+                                    },
                                     label: function(context) {
-                                        const label = context.label || '';
                                         const value = context.parsed;
-                                        const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                        const dataset = context.dataset;
+                                        const total = dataset.data.reduce((a, b) => a + b, 0);
                                         const percentage = total > 0 ? ((value / total) * 100).toFixed(1) : '0.0';
-                                        return `${label}: ${value} (${percentage}%)`;
+                                        const layerName = context.datasetIndex === 0 ? 'Outer Layer' : 'Inner Layer';
+                                        return `${layerName}: ${value} (${percentage}%)`;
                                     }
                                 }
                             }
@@ -1759,29 +1787,34 @@ if (!checkAuthentication()) {
         },
 
         /**
-         * Calculate real-time level distribution from BEL profiles data
+         * Calculate real-time level distribution from BEL profiles data for 2-layer pie chart
          * @param {string} year - Year to calculate (defaults to current selected year)
-         * @returns {Object} Level distribution with labels, data, and colors
+         * @returns {Object} Level distribution with outer (K) and inner (A) layer data
          */
         calculateLevelDistribution(year = null, region = null) {
             if (!APP_DATA.belProfiles?.leaderboard) {
                 return {
-                    labels: ["Builder-K", "Builder-A", "Enabler-K", "Enabler-A", "Exploder-K", "Exploder-A", "Leader-K", "Leader-A"],
-                    data: [0, 0, 0, 0, 0, 0, 0, 0],
-                    colors: ["#006EFF", "#003d99", "#00893a", "#006b2e", "#f39800", "#cc7700", "#db3a3a", "#b82d2d"]
+                    allLabels: ["Builder", "Enabler", "Exploder", "Leader"],
+                    outerData: [0, 0, 0, 0],
+                    innerData: [0, 0, 0, 0],
+                    outerColors: ["#006EFF", "#00893a", "#f39800", "#db3a3a"],
+                    innerColors: ["#4d9fff", "#4da854", "#f7b24d", "#e55d5d"]
                 };
             }
 
-            // For pie chart: separate by A/K referral prefix
-            const levelCount = {
-                'Builder-K': 0,
-                'Builder-A': 0,
-                'Enabler-K': 0,
-                'Enabler-A': 0,
-                'Exploder-K': 0,
-                'Exploder-A': 0,
-                'Leader-K': 0,
-                'Leader-A': 0
+            // For 2-layer pie chart: separate by A/K referral prefix
+            const levelCountK = {
+                'Builder': 0,
+                'Enabler': 0,
+                'Exploder': 0,
+                'Leader': 0
+            };
+            
+            const levelCountA = {
+                'Builder': 0,
+                'Enabler': 0,
+                'Exploder': 0,
+                'Leader': 0
             };
 
             // Get filtered data based on region
@@ -1793,31 +1826,37 @@ if (!checkAuthentication()) {
                 const level = leader.level;
                 const referralPrefix = leader.id && leader.id.startsWith('A') ? 'A' : 'K';
                 
-                // Split all levels by Referral ID prefix (A, K, or Other)
-                if (level === 'Builder') {
-                    levelCount[`Builder-${referralPrefix}`]++;
-                } else if (level === 'Enabler') {
-                    levelCount[`Enabler-${referralPrefix}`]++;
-                } else if (level === 'Exploder') {
-                    levelCount[`Exploder-${referralPrefix}`]++;
-                } else if (level === 'Leader') {
-                    levelCount[`Leader-${referralPrefix}`]++;
+                // Count K levels (outer layer)
+                if (referralPrefix === 'K' && levelCountK[level] !== undefined) {
+                    levelCountK[level]++;
+                }
+                
+                // Count A levels (inner layer)
+                if (referralPrefix === 'A' && levelCountA[level] !== undefined) {
+                    levelCountA[level]++;
                 }
             });
 
             return {
-                labels: ["Builder-K", "Builder-A", "Enabler-K", "Enabler-A", "Exploder-K", "Exploder-A", "Leader-K", "Leader-A"],
-                data: [
-                    levelCount['Builder-K'],
-                    levelCount['Builder-A'],
-                    levelCount['Enabler-K'],
-                    levelCount['Enabler-A'],
-                    levelCount['Exploder-K'],
-                    levelCount['Exploder-A'],
-                    levelCount['Leader-K'],
-                    levelCount['Leader-A']
+                allLabels: ["Builder", "Enabler", "Exploder", "Leader"],
+                // Outer layer data (K levels) - darker colors
+                outerData: [
+                    levelCountK['Builder'],
+                    levelCountK['Enabler'],
+                    levelCountK['Exploder'],
+                    levelCountK['Leader']
                 ],
-                colors: ["#006EFF", "#003d99", "#00893a", "#006b2e", "#f39800", "#cc7700", "#db3a3a", "#b82d2d"] // A系列使用更深的顏色
+                // Inner layer data (A levels) - lighter colors
+                innerData: [
+                    levelCountA['Builder'],
+                    levelCountA['Enabler'],
+                    levelCountA['Exploder'],
+                    levelCountA['Leader']
+                ],
+                // Outer layer colors (darker shades for K levels)
+                outerColors: ["#006EFF", "#00893a", "#f39800", "#db3a3a"],
+                // Inner layer colors (lighter shades for A levels)
+                innerColors: ["#4d9fff", "#4da854", "#f7b24d", "#e55d5d"]
             };
         },
 

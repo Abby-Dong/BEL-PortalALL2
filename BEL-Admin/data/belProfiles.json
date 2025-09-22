@@ -3242,6 +3242,147 @@
       },
       "region": "North America",
       "countryCode": "US"
+    },
+    {
+      "id": "AUSLEADER",
+      "name": "James Anderson",
+      "email": "james.anderson@enterprise-tech.com.au",
+      "level": "Leader",
+      "monthlyData": {
+        "2024": {
+          "January": {
+            "clicks": 742,
+            "orders": 25,
+            "revenue": 21456
+          },
+          "February": {
+            "clicks": 768,
+            "orders": 28,
+            "revenue": 23789
+          },
+          "March": {
+            "clicks": 781,
+            "orders": 30,
+            "revenue": 26134
+          },
+          "April": {
+            "clicks": 795,
+            "orders": 32,
+            "revenue": 28567
+          },
+          "May": {
+            "clicks": 823,
+            "orders": 31,
+            "revenue": 27891
+          },
+          "June": {
+            "clicks": 856,
+            "orders": 35,
+            "revenue": 31245
+          },
+          "July": {
+            "clicks": 878,
+            "orders": 37,
+            "revenue": 33678
+          },
+          "August": {
+            "clicks": 901,
+            "orders": 38,
+            "revenue": 35123
+          },
+          "September": {
+            "clicks": 925,
+            "orders": 39,
+            "revenue": 36789
+          },
+          "October": {
+            "clicks": 948,
+            "orders": 41,
+            "revenue": 38456
+          },
+          "November": {
+            "clicks": 972,
+            "orders": 43,
+            "revenue": 40234
+          },
+          "December": {
+            "clicks": 995,
+            "orders": 45,
+            "revenue": 42567
+          }
+        },
+        "2025": {
+          "January": {
+            "clicks": 1024,
+            "orders": 47,
+            "revenue": 45123
+          },
+          "February": {
+            "clicks": 1048,
+            "orders": 49,
+            "revenue": 47890
+          },
+          "March": {
+            "clicks": 1073,
+            "orders": 51,
+            "revenue": 50234
+          },
+          "April": {
+            "clicks": 1097,
+            "orders": 53,
+            "revenue": 52789
+          },
+          "May": {
+            "clicks": 1122,
+            "orders": 55,
+            "revenue": 55456
+          },
+          "June": {
+            "clicks": 1146,
+            "orders": 57,
+            "revenue": 58123
+          },
+          "July": {
+            "clicks": 1171,
+            "orders": 59,
+            "revenue": 60890
+          },
+          "August": {
+            "clicks": 1195,
+            "orders": 61,
+            "revenue": 63567
+          },
+          "September": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "October": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "November": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "December": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          }
+        }
+      },
+      "bankingInfo": {
+        "bankName": "Australia and New Zealand Banking",
+        "swiftCode": "ANZBAU3M",
+        "accountHolder": "James Anderson",
+        "phone": "+61-3-9555-1234",
+        "address": "456 Collins Street, Melbourne, VIC 3000, Australia"
+      },
+      "region": "AAU / NZ",
+      "countryCode": "AU"
     }
   ]
 }
