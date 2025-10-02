@@ -1035,6 +1035,36 @@ if (!checkAuthentication()) {
         },
 
         /**
+         * Calculate BEL count based on account creation date
+         * @param {string} year - Year to calculate for
+         * @param {number} month - Month to calculate for (1-12)
+         * @param {string} region - Region to filter by
+         * @returns {number} Number of BELs active at the end of specified month
+         */
+        calculateBelCountByDate(year, month, region = 'all') {
+            if (!APP_DATA.belProfiles?.leaderboard) return 0;
+            
+            // Get filtered data based on region
+            let filteredData = APP_DATA.belProfiles.leaderboard;
+            if (region && region !== 'all') {
+                filteredData = filteredData.filter(leader => leader.region === region);
+            }
+            
+            // Calculate the target date (end of the specified month)
+            const targetDate = new Date(parseInt(year), month - 1, 31);
+            
+            // Count BELs who joined before or during the target month
+            return filteredData.filter(leader => {
+                if (!leader.accountCreatedDate) {
+                    // Fallback: if no creation date, assume early joiner
+                    return true;
+                }
+                const creationDate = new Date(leader.accountCreatedDate);
+                return creationDate <= targetDate;
+            }).length;
+        },
+
+        /**
          * Unified dashboard statistics calculation
          * Combines: calculateSummaryStats + calculateDashboardStatsForSpecificMonth
          * @param {string} year - Year to calculate (defaults to current selected year)
@@ -1071,6 +1101,17 @@ if (!checkAuthentication()) {
             let validAovCount = 0;
             let activeBelCount = 0;
 
+            // Calculate BEL count based on month/year selection and account creation dates
+            if (month !== null) {
+                // For specific month, count BELs who had joined by end of that month
+                activeBelCount = this.calculateBelCountByDate(selectedYear.toString(), month, selectedRegion);
+            } else {
+                // For yearly calculation, count BELs active at end of selected year
+                const endOfYear = selectedYear === 'all' ? 
+                    new Date().getFullYear() : parseInt(selectedYear);
+                activeBelCount = this.calculateBelCountByDate(endOfYear.toString(), 12, selectedRegion);
+            }
+
             filteredLeaderboard.forEach(leader => {
                 let userClicks = 0;
                 let userOrders = 0;
@@ -1089,11 +1130,6 @@ if (!checkAuthentication()) {
                                 userClicks = monthData.clicks || 0;
                                 userOrders = monthData.orders || 0;
                                 userRevenue = monthData.revenue || 0;
-                                
-                                // Only count BELs who had activity in this month
-                                if (userClicks > 0 || userOrders > 0 || userRevenue > 0) {
-                                    activeBelCount++;
-                                }
                             }
                         }
                     } else {
@@ -1140,11 +1176,6 @@ if (!checkAuthentication()) {
                                     userRevenue += monthData.revenue || 0;
                                 }
                             });
-                        }
-                        
-                        // For yearly calculation, count all filtered BELs
-                        if (month === null) {
-                            activeBelCount = filteredLeaderboard.length;
                         }
                     }
                 }

@@ -4,6 +4,7 @@
       "id": "ATWADVANT",
       "name": "Maxwell Walker",
       "email": "maxwell.walker@wellwolf.com",
+      "accountCreatedDate": "2024-01-15",
       "level": "Exploder",
       "monthlyData": {
         "2024": {
@@ -149,29 +150,29 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 276,
-            "orders": 6,
-            "revenue": 4597
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 252,
-            "orders": 4,
-            "revenue": 3297
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 293,
-            "orders": 5,
-            "revenue": 3801
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 268,
-            "orders": 5,
-            "revenue": 4379
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 290,
-            "orders": 6,
-            "revenue": 4775
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
             "clicks": 303,
@@ -280,7 +281,8 @@
         "address": "813 Lincoln Street, Chicago, IL 60601, USA"
       },
       "region": "North America",
-      "countryCode": "US"
+      "countryCode": "US",
+      "accountCreatedDate": "2024-06-09"
     },
     {
       "id": "KDEIMULER",
@@ -290,64 +292,64 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 413,
-            "orders": 11,
-            "revenue": 9317
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 363,
-            "orders": 9,
-            "revenue": 7563
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 405,
-            "orders": 11,
-            "revenue": 8032
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 410,
-            "orders": 9,
-            "revenue": 7316
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 456,
-            "orders": 11,
-            "revenue": 8955
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 461,
-            "orders": 11,
-            "revenue": 8081
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 448,
-            "orders": 10,
-            "revenue": 7559
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 412,
-            "orders": 9,
-            "revenue": 8345
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
-            "clicks": 464,
-            "orders": 10,
-            "revenue": 8602
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "October": {
-            "clicks": 409,
-            "orders": 10,
-            "revenue": 7808
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "November": {
-            "clicks": 437,
-            "orders": 12,
-            "revenue": 8890
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "December": {
-            "clicks": 462,
-            "orders": 11,
-            "revenue": 9730
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           }
         },
         "2025": {
@@ -421,7 +423,8 @@
         "address": "347 Jefferson Street, New York, NY 10001, USA"
       },
       "region": "Europe",
-      "countryCode": "DE"
+      "countryCode": "DE",
+      "accountCreatedDate": "2025-01-18"
     },
     {
       "id": "KFRDUBOIS",
@@ -431,24 +434,24 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 278,
-            "orders": 5,
-            "revenue": 4498
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 249,
-            "orders": 4,
-            "revenue": 3196
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 282,
-            "orders": 5,
-            "revenue": 3983
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 288,
-            "orders": 5,
-            "revenue": 4542
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
             "clicks": 276,
@@ -562,7 +565,8 @@
         "address": "711 Cedar Street, Toronto, ON M5V, USA"
       },
       "region": "Europe",
-      "countryCode": "FR"
+      "countryCode": "FR",
+      "accountCreatedDate": "2024-05-15"
     },
     {
       "id": "KJPTANAKA",
@@ -572,44 +576,44 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 655,
-            "orders": 20,
-            "revenue": 15779
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 611,
-            "orders": 23,
-            "revenue": 17964
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 645,
-            "orders": 24,
-            "revenue": 19597
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 675,
-            "orders": 27,
-            "revenue": 22498
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 712,
-            "orders": 23,
-            "revenue": 16727
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 777,
-            "orders": 29,
-            "revenue": 24271
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 774,
-            "orders": 29,
-            "revenue": 25659
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 815,
-            "orders": 32,
-            "revenue": 24951
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
             "clicks": 824,
@@ -703,7 +707,8 @@
         "address": "536 Pine Street, Los Angeles, CA 90210, USA"
       },
       "region": "Japan",
-      "countryCode": "JP"
+      "countryCode": "JP",
+      "accountCreatedDate": "2024-09-16"
     },
     {
       "id": "KITROSSIT",
@@ -713,14 +718,14 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 384,
-            "orders": 10,
-            "revenue": 7704
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 367,
-            "orders": 9,
-            "revenue": 8092
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
             "clicks": 433,
@@ -844,7 +849,8 @@
         "address": "967 Pine Avenue, New York, NY 10001, USA"
       },
       "region": "Europe",
-      "countryCode": "IT"
+      "countryCode": "IT",
+      "accountCreatedDate": "2024-03-10"
     },
     {
       "id": "KKRNOAHIM",
@@ -854,71 +860,71 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 265,
-            "orders": 5,
-            "revenue": 4594
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 262,
-            "orders": 6,
-            "revenue": 4539
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 291,
-            "orders": 6,
-            "revenue": 4808
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 259,
-            "orders": 5,
-            "revenue": 4331
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 267,
-            "orders": 5,
-            "revenue": 4635
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 271,
-            "orders": 6,
-            "revenue": 4812
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 327,
-            "orders": 5,
-            "revenue": 4179
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 289,
-            "orders": 6,
-            "revenue": 4907
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
-            "clicks": 285,
-            "orders": 5,
-            "revenue": 4256
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "October": {
-            "clicks": 316,
-            "orders": 5,
-            "revenue": 4905
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "November": {
-            "clicks": 327,
-            "orders": 7,
-            "revenue": 5887
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "December": {
-            "clicks": 314,
-            "orders": 7,
-            "revenue": 5673
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           }
         },
         "2025": {
           "January": {
-            "clicks": 352,
-            "orders": 6,
-            "revenue": 5428
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
             "clicks": 334,
@@ -985,7 +991,8 @@
         "address": "175 Main Street, Chicago, IL 60601, USA"
       },
       "region": "Korea",
-      "countryCode": "KR"
+      "countryCode": "KR",
+      "accountCreatedDate": "2025-02-02"
     },
     {
       "id": "KDESCHMIT",
@@ -995,49 +1002,49 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 268,
-            "orders": 5,
-            "revenue": 4001
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 275,
-            "orders": 5,
-            "revenue": 4142
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 272,
-            "orders": 6,
-            "revenue": 4946
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 255,
-            "orders": 5,
-            "revenue": 4129
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 272,
-            "orders": 5,
-            "revenue": 4604
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 280,
-            "orders": 5,
-            "revenue": 4961
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 309,
-            "orders": 6,
-            "revenue": 5610
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 307,
-            "orders": 7,
-            "revenue": 5519
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
-            "clicks": 319,
-            "orders": 7,
-            "revenue": 5431
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "October": {
             "clicks": 287,
@@ -1126,7 +1133,8 @@
         "address": "558 Maple Avenue, Toronto, ON M5V, USA"
       },
       "region": "Europe",
-      "countryCode": "DE"
+      "countryCode": "DE",
+      "accountCreatedDate": "2024-10-20"
     },
     {
       "id": "KMXGARCIA",
@@ -1136,71 +1144,71 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 509,
-            "orders": 15,
-            "revenue": 12543
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 550,
-            "orders": 14,
-            "revenue": 11132
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 515,
-            "orders": 14,
-            "revenue": 11626
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 490,
-            "orders": 13,
-            "revenue": 9875
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 518,
-            "orders": 16,
-            "revenue": 12720
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 551,
-            "orders": 16,
-            "revenue": 12403
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 577,
-            "orders": 16,
-            "revenue": 12564
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 593,
-            "orders": 15,
-            "revenue": 12098
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
-            "clicks": 579,
-            "orders": 15,
-            "revenue": 13010
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "October": {
-            "clicks": 623,
-            "orders": 19,
-            "revenue": 17072
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "November": {
-            "clicks": 655,
-            "orders": 17,
-            "revenue": 14998
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "December": {
-            "clicks": 619,
-            "orders": 18,
-            "revenue": 16307
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           }
         },
         "2025": {
           "January": {
-            "clicks": 637,
-            "orders": 16,
-            "revenue": 12338
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
             "clicks": 656,
@@ -1267,7 +1275,8 @@
         "address": "760 Pine Street, New York, NY 10001, USA"
       },
       "region": "North America",
-      "countryCode": "MX"
+      "countryCode": "MX",
+      "accountCreatedDate": "2025-02-01"
     },
     {
       "id": "KCNMIAWAN",
@@ -1277,81 +1286,81 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 390,
-            "orders": 9,
-            "revenue": 7087
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 421,
-            "orders": 10,
-            "revenue": 8373
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 393,
-            "orders": 10,
-            "revenue": 8024
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 422,
-            "orders": 9,
-            "revenue": 7396
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 421,
-            "orders": 11,
-            "revenue": 8306
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 397,
-            "orders": 8,
-            "revenue": 6271
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 391,
-            "orders": 9,
-            "revenue": 7102
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 445,
-            "orders": 11,
-            "revenue": 9401
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
-            "clicks": 468,
-            "orders": 12,
-            "revenue": 10602
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "October": {
-            "clicks": 474,
-            "orders": 12,
-            "revenue": 10236
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "November": {
-            "clicks": 480,
-            "orders": 11,
-            "revenue": 9777
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "December": {
-            "clicks": 507,
-            "orders": 12,
-            "revenue": 9533
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           }
         },
         "2025": {
           "January": {
-            "clicks": 460,
-            "orders": 11,
-            "revenue": 8863
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 512,
-            "orders": 11,
-            "revenue": 8701
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 486,
-            "orders": 12,
-            "revenue": 8689
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
             "clicks": 536,
@@ -1408,7 +1417,8 @@
         "address": "263 Madison Avenue, Los Angeles, CA 90210, USA"
       },
       "region": "China",
-      "countryCode": "CN"
+      "countryCode": "CN",
+      "accountCreatedDate": "2025-04-12"
     },
     {
       "id": "KAUJOISON",
@@ -1549,7 +1559,8 @@
         "address": "662 Park Street, Chicago, IL 60601, USA"
       },
       "region": "AAU / NZ",
-      "countryCode": "AU"
+      "countryCode": "AU",
+      "accountCreatedDate": "2024-01-11"
     },
     {
       "id": "KKRALEXIM",
@@ -1559,64 +1570,64 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 518,
-            "orders": 16,
-            "revenue": 12764
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 564,
-            "orders": 16,
-            "revenue": 13581
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 526,
-            "orders": 16,
-            "revenue": 13912
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 499,
-            "orders": 12,
-            "revenue": 10640
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 558,
-            "orders": 17,
-            "revenue": 13235
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 547,
-            "orders": 14,
-            "revenue": 12166
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 593,
-            "orders": 17,
-            "revenue": 13853
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 538,
-            "orders": 15,
-            "revenue": 11750
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
-            "clicks": 551,
-            "orders": 15,
-            "revenue": 13001
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "October": {
-            "clicks": 620,
-            "orders": 19,
-            "revenue": 15509
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "November": {
-            "clicks": 580,
-            "orders": 14,
-            "revenue": 10606
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "December": {
-            "clicks": 598,
-            "orders": 16,
-            "revenue": 13117
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           }
         },
         "2025": {
@@ -1690,7 +1701,8 @@
         "address": "677 Pine Avenue, New York, NY 10001, USA"
       },
       "region": "Korea",
-      "countryCode": "KR"
+      "countryCode": "KR",
+      "accountCreatedDate": "2025-01-05"
     },
     {
       "id": "AUSTOLIVM",
@@ -1700,44 +1712,44 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 287,
-            "orders": 6,
-            "revenue": 4621
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 294,
-            "orders": 5,
-            "revenue": 4183
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 312,
-            "orders": 6,
-            "revenue": 5142
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 295,
-            "orders": 6,
-            "revenue": 4856
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 308,
-            "orders": 7,
-            "revenue": 5394
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 321,
-            "orders": 7,
-            "revenue": 5683
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 334,
-            "orders": 7,
-            "revenue": 5921
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 346,
-            "orders": 8,
-            "revenue": 6247
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
             "clicks": 329,
@@ -1831,7 +1843,8 @@
         "address": "123 Collins Street, Melbourne, VIC 3000, Australia"
       },
       "region": "North America",
-      "countryCode": "US"
+      "countryCode": "US",
+      "accountCreatedDate": "2024-09-24"
     },
     {
       "id": "ACAFLORET",
@@ -1841,59 +1854,59 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 425,
-            "orders": 12,
-            "revenue": 9840
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 458,
-            "orders": 13,
-            "revenue": 10692
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 442,
-            "orders": 11,
-            "revenue": 9238
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 467,
-            "orders": 14,
-            "revenue": 11456
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 435,
-            "orders": 12,
-            "revenue": 9875
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 489,
-            "orders": 15,
-            "revenue": 12340
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 512,
-            "orders": 16,
-            "revenue": 13125
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 495,
-            "orders": 14,
-            "revenue": 11789
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
-            "clicks": 478,
-            "orders": 13,
-            "revenue": 10567
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "October": {
-            "clicks": 521,
-            "orders": 17,
-            "revenue": 14235
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "November": {
-            "clicks": 534,
-            "orders": 15,
-            "revenue": 12890
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "December": {
             "clicks": 548,
@@ -1972,7 +1985,8 @@
         "address": "789 Bay Street, Toronto, ON M5G 2N5, Canada"
       },
       "region": "North America",
-      "countryCode": "CA"
+      "countryCode": "CA",
+      "accountCreatedDate": "2024-12-31"
     },
     {
       "id": "ASGRACHEL",
@@ -1982,59 +1996,59 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 396,
-            "orders": 10,
-            "revenue": 8234
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 412,
-            "orders": 11,
-            "revenue": 9145
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 435,
-            "orders": 12,
-            "revenue": 9876
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 387,
-            "orders": 9,
-            "revenue": 7654
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 441,
-            "orders": 13,
-            "revenue": 10567
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 458,
-            "orders": 12,
-            "revenue": 9890
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 472,
-            "orders": 14,
-            "revenue": 11234
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 489,
-            "orders": 15,
-            "revenue": 12345
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
-            "clicks": 456,
-            "orders": 13,
-            "revenue": 10789
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "October": {
-            "clicks": 493,
-            "orders": 16,
-            "revenue": 13456
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "November": {
-            "clicks": 517,
-            "orders": 17,
-            "revenue": 14123
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "December": {
             "clicks": 534,
@@ -2113,7 +2127,8 @@
         "address": "12 Marina Boulevard, Singapore 018982"
       },
       "region": "ASEAN",
-      "countryCode": "SG"
+      "countryCode": "SG",
+      "accountCreatedDate": "2024-12-29"
     },
     {
       "id": "AJPKARATO",
@@ -2123,49 +2138,49 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 415,
-            "orders": 11,
-            "revenue": 8965
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 387,
-            "orders": 10,
-            "revenue": 8124
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 432,
-            "orders": 12,
-            "revenue": 9876
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 408,
-            "orders": 10,
-            "revenue": 8453
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 456,
-            "orders": 13,
-            "revenue": 10234
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 471,
-            "orders": 12,
-            "revenue": 9567
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 438,
-            "orders": 11,
-            "revenue": 8890
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 495,
-            "orders": 14,
-            "revenue": 11345
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
-            "clicks": 463,
-            "orders": 12,
-            "revenue": 9786
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "October": {
             "clicks": 489,
@@ -2254,7 +2269,8 @@
         "address": "2-1-1 Marunouchi, Chiyoda-ku, Tokyo 100-8176, Japan"
       },
       "region": "Japan",
-      "countryCode": "JP"
+      "countryCode": "JP",
+      "accountCreatedDate": "2024-10-03"
     },
     {
       "id": "ATHMALICE",
@@ -2264,19 +2280,19 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 295,
-            "orders": 6,
-            "revenue": 4825
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 312,
-            "orders": 7,
-            "revenue": 5342
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 287,
-            "orders": 6,
-            "revenue": 4976
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
             "clicks": 301,
@@ -2395,7 +2411,8 @@
         "address": "456 Sukhumvit Road, Bangkok 10110, Thailand"
       },
       "region": "ASEAN",
-      "countryCode": "TH"
+      "countryCode": "TH",
+      "accountCreatedDate": "2024-04-22"
     },
     {
       "id": "AINMARTIN",
@@ -2405,64 +2422,64 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 398,
-            "orders": 10,
-            "revenue": 8245
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 425,
-            "orders": 11,
-            "revenue": 9156
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 441,
-            "orders": 12,
-            "revenue": 9987
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 389,
-            "orders": 9,
-            "revenue": 7765
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 456,
-            "orders": 13,
-            "revenue": 10678
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 472,
-            "orders": 12,
-            "revenue": 9991
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 485,
-            "orders": 14,
-            "revenue": 11345
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 503,
-            "orders": 15,
-            "revenue": 12456
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
-            "clicks": 468,
-            "orders": 13,
-            "revenue": 10890
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "October": {
-            "clicks": 517,
-            "orders": 16,
-            "revenue": 13567
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "November": {
-            "clicks": 534,
-            "orders": 17,
-            "revenue": 14234
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "December": {
-            "clicks": 548,
-            "orders": 18,
-            "revenue": 15345
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           }
         },
         "2025": {
@@ -2536,7 +2553,8 @@
         "address": "45 MG Road, Mumbai, Maharashtra 400001, India"
       },
       "region": "India",
-      "countryCode": "IN"
+      "countryCode": "IN",
+      "accountCreatedDate": "2025-01-24"
     },
     {
       "id": "AVNROBERT",
@@ -2546,44 +2564,44 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 312,
-            "orders": 7,
-            "revenue": 5674
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 328,
-            "orders": 8,
-            "revenue": 6145
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 345,
-            "orders": 8,
-            "revenue": 6523
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 332,
-            "orders": 7,
-            "revenue": 5892
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 359,
-            "orders": 9,
-            "revenue": 7234
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 367,
-            "orders": 9,
-            "revenue": 7458
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 374,
-            "orders": 8,
-            "revenue": 6987
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 391,
-            "orders": 10,
-            "revenue": 8123
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
             "clicks": 385,
@@ -2677,7 +2695,8 @@
         "address": "266 Nguyen Trai Street, District 1, Ho Chi Minh City, Vietnam"
       },
       "region": "ASEAN",
-      "countryCode": "VN"
+      "countryCode": "VN",
+      "accountCreatedDate": "2024-09-19"
     },
     {
       "id": "ABRMATEUS",
@@ -2818,7 +2837,8 @@
         "address": "Av. Paulista 1000, São Paulo, SP 01310-100, Brazil"
       },
       "region": "LATAM",
-      "countryCode": "BR"
+      "countryCode": "BR",
+      "accountCreatedDate": "2024-06-25"
     },
     {
       "id": "AITDAVIES",
@@ -2959,7 +2979,8 @@
         "address": "25 The Strand, London WC2N 5HR, United Kingdom"
       },
       "region": "Europe",
-      "countryCode": "IT"
+      "countryCode": "IT",
+      "accountCreatedDate": "2024-09-27"
     },
     {
       "id": "AFRAJAMES",
@@ -3100,7 +3121,8 @@
         "address": "45 Avenue des Champs-Élysées, Paris 75008, France"
       },
       "region": "Europe",
-      "countryCode": "FR"
+      "countryCode": "FR",
+      "accountCreatedDate": "2024-09-23"
     },
     {
       "id": "AUSLISAON",
@@ -3172,39 +3194,39 @@
         },
         "2025": {
           "January": {
-            "clicks": 167,
-            "orders": 3,
-            "revenue": 2234
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 189,
-            "orders": 4,
-            "revenue": 2890
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 212,
-            "orders": 4,
-            "revenue": 3234
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 234,
-            "orders": 5,
-            "revenue": 3789
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 256,
-            "orders": 5,
-            "revenue": 4123
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 278,
-            "orders": 6,
-            "revenue": 4567
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 301,
-            "orders": 6,
-            "revenue": 4891
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
             "clicks": 323,
@@ -3241,7 +3263,8 @@
         "address": "234 George Street, Sydney, NSW 2000, Australia"
       },
       "region": "North America",
-      "countryCode": "US"
+      "countryCode": "US",
+      "accountCreatedDate": "2025-08-19"
     },
     {
       "id": "AUSLEADER",
@@ -3251,101 +3274,101 @@
       "monthlyData": {
         "2024": {
           "January": {
-            "clicks": 742,
-            "orders": 25,
-            "revenue": 21456
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 768,
-            "orders": 28,
-            "revenue": 23789
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 781,
-            "orders": 30,
-            "revenue": 26134
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 795,
-            "orders": 32,
-            "revenue": 28567
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 823,
-            "orders": 31,
-            "revenue": 27891
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 856,
-            "orders": 35,
-            "revenue": 31245
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 878,
-            "orders": 37,
-            "revenue": 33678
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
-            "clicks": 901,
-            "orders": 38,
-            "revenue": 35123
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "September": {
-            "clicks": 925,
-            "orders": 39,
-            "revenue": 36789
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "October": {
-            "clicks": 948,
-            "orders": 41,
-            "revenue": 38456
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "November": {
-            "clicks": 972,
-            "orders": 43,
-            "revenue": 40234
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "December": {
-            "clicks": 995,
-            "orders": 45,
-            "revenue": 42567
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           }
         },
         "2025": {
           "January": {
-            "clicks": 1024,
-            "orders": 47,
-            "revenue": 45123
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "February": {
-            "clicks": 1048,
-            "orders": 49,
-            "revenue": 47890
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "March": {
-            "clicks": 1073,
-            "orders": 51,
-            "revenue": 50234
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "April": {
-            "clicks": 1097,
-            "orders": 53,
-            "revenue": 52789
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "May": {
-            "clicks": 1122,
-            "orders": 55,
-            "revenue": 55456
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "June": {
-            "clicks": 1146,
-            "orders": 57,
-            "revenue": 58123
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "July": {
-            "clicks": 1171,
-            "orders": 59,
-            "revenue": 60890
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
           },
           "August": {
             "clicks": 1195,
@@ -3382,7 +3405,168 @@
         "address": "456 Collins Street, Melbourne, VIC 3000, Australia"
       },
       "region": "AAU / NZ",
-      "countryCode": "AU"
+      "countryCode": "AU",
+      "accountCreatedDate": "2025-08-03"
+    },
+    {
+      "id": "KKRJIHYUN",
+      "name": "Kim Ji-hyun",
+      "email": "kim.jihyun@wellwolf.com",
+      "accountCreatedDate": "2025-09-05",
+      "level": "Explorer",
+      "monthlyData": {
+        "2025": {
+          "January": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "February": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "March": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "April": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "May": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "June": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "July": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "August": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "September": {
+            "clicks": 324,
+            "orders": 8,
+            "revenue": 4850
+          },
+          "October": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "November": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "December": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          }
+        }
+      },
+      "bankingInfo": {
+        "bankName": "KB Kookmin Bank",
+        "swiftCode": "CZNBKRSE",
+        "accountHolder": "Kim Ji-hyun",
+        "phone": "+82-2-2073-7000",
+        "address": "84 Namdaemun-ro, Jung-gu, Seoul 04533, South Korea"
+      },
+      "region": "Asia Pacific",
+      "countryCode": "KR"
+    },
+    {
+      "id": "AUKJAMESS",
+      "name": "James Smith",
+      "email": "james.smith@wellwolf.com",
+      "accountCreatedDate": "2025-09-08",
+      "level": "Explorer",
+      "monthlyData": {
+        "2025": {
+          "January": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "February": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "March": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "April": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "May": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "June": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "July": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "August": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "September": {
+            "clicks": 287,
+            "orders": 6,
+            "revenue": 3720
+          },
+          "October": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "November": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          },
+          "December": {
+            "clicks": 0,
+            "orders": 0,
+            "revenue": 0
+          }
+        }
+      },
+      "bankingInfo": {
+        "bankName": "Barclays Bank UK PLC",
+        "swiftCode": "BARCGB22",
+        "accountHolder": "James Smith",
+        "phone": "+44-345-734-5345",
+        "address": "1 Churchill Place, London E14 5HP, United Kingdom"
+      },
+      "region": "Europe",
+      "countryCode": "UK"
     }
   ]
 }
