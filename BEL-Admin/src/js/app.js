@@ -1241,8 +1241,8 @@ if (!checkAuthentication()) {
             }
             
             // Get month names
-            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                              'July', 'August', 'September', 'October', 'November', 'December'];
+            const monthNames = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.',
+                              'Jul.', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'];
             const targetMonthName = monthNames[targetMonth - 1];
             
             // Use unified stats function for specific months
@@ -1281,13 +1281,35 @@ if (!checkAuthentication()) {
                 }
             };
             
+            // Format month name to short form (e.g., "September" -> "Sep.")
+            const shortMonthName = targetMonthName.substring(0, 3) + '.';
+            
+            // Special formatting for BEL Count trend
+            const formatBelCountTrend = (growth, monthName) => {
+                if (growth > 0) {
+                    return {
+                        value: `+${growth}`,
+                        status: 'positive',
+                        text: `Increase in ${monthName}`
+                    };
+                } else if (growth < 0) {
+                    return {
+                        value: `${growth}`,
+                        status: 'negative', 
+                        text: `Decrease in ${monthName}`
+                    };
+                } else {
+                    return {
+                        value: `No change`,
+                        status: 'neutral',
+                        text: ``
+                    };
+                }
+            };
+            
             return {
                 targetMonthName,
-                belCountTrend: {
-                    value: formatTrendValue(belCountGrowth),
-                    status: belCountGrowth >= 0 ? 'positive' : 'negative',
-                    text: `${belCountGrowth >= 0 ? 'Increased' : 'Decreased'} in ${targetMonthName} (MoM)`
-                },
+                belCountTrend: formatBelCountTrend(belCountGrowth, shortMonthName),
                 totalClicksTrend: {
                     value: formatTrendValue(totalClicksGrowth),
                     status: totalClicksGrowth >= 0 ? 'positive' : 'negative',
@@ -1314,6 +1336,574 @@ if (!checkAuthentication()) {
                     text: `${aovGrowth >= 0 ? 'Increased' : 'Decreased'} in ${targetMonthName} (MoM)`
                 }
             };
+        },
+
+        /**
+         * Open statistics modal with yearly data and 12-month line chart
+         */
+        openStatsModal(statType, statTitle) {
+            console.log('openStatsModal called with:', statType, statTitle);
+            
+            const selectedYear = this.getSelectedYear();
+            const selectedRegion = window.selectedDashboardRegion || 'all';
+            
+            console.log('Selected year:', selectedYear, 'Selected region:', selectedRegion);
+            
+            // Generate monthly data for the selected year
+            const monthlyData = this.calculateMonthlyStatsForYear(selectedYear, selectedRegion, statType);
+            
+            console.log('Monthly data generated:', monthlyData);
+            
+            // Remove any existing stats modal
+            const existingModal = document.getElementById('stats-modal');
+            if (existingModal) {
+                existingModal.remove();
+            }
+            
+            // Determine if this is cumulative data and create appropriate title
+            const isCumulative = ['belCount'].includes(statType);
+            const analysisType = isCumulative ? 'Cumulative Analysis' : 'Performance Analysis';
+            const yearLabel = selectedYear === 'all' ? 'All Years' : selectedYear;
+            const regionLabel = selectedRegion && selectedRegion !== 'all' ? ` - ${selectedRegion}` : '';
+            
+            // Create modal HTML using existing modal structure
+            const modalHtml = `
+                <div class="modal-overlay show" id="stats-modal" style="z-index: 10000;">
+                    <div class="modal-content" style="max-width: fit-content; min-width:80vw; max-height: 90vh; overflow-y: auto;" onclick="event.stopPropagation()">
+                        <div class="modal-header">
+                            <h3>${statTitle} ${analysisType} - ${yearLabel}${regionLabel}</h3>
+                            <button class="close-button" id="stats-modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body" style="padding: 0px 20px 20px 20px;">
+                            <!-- Line Chart Container -->
+                            <div style="margin-bottom: 30px;">
+                                <div style="position: relative; height: 160px; background: var(--ds-color-gray-30); border-radius: 4px; padding: 15px;">
+                                    <canvas id="stats-line-chart" style="max-height: 270px;"></canvas>
+                                </div>
+                            </div>
+                            
+                            <!-- Monthly Data Table -->
+                            <div>
+                                <h4 style="margin-bottom: 15px;">Monthly ${isCumulative ? 'Cumulative' : 'Performance'} Data</h4>
+                                <div class="scrollable-table-container" style="max-height: 400px;">
+                                    <table class="bel-table" id="monthly-stats-table">
+                                        ${this.generateTransposedTableHTML(monthlyData, statType)}
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Add modal to page
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+            
+            // Set up event listeners for the modal
+            const modal = document.getElementById('stats-modal');
+            const closeButton = document.getElementById('stats-modal-close');
+            
+            // Close modal when clicking on overlay
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    this.closeStatsModal();
+                }
+            });
+            
+            // Close modal when clicking close button
+            closeButton.addEventListener('click', () => {
+                this.closeStatsModal();
+            });
+            
+            // Initialize line chart and setup table functionality
+            setTimeout(() => {
+                this.initializeStatsLineChart(monthlyData, statType, statTitle);
+                // Make table sortable
+                const table = document.querySelector('#stats-modal .bel-table');
+                if (table) {
+                    TableUtils.makeTableSortable(table);
+                }
+            }, 100);
+        },
+
+        /**
+         * Calculate monthly statistics for a specific year and metric
+         */
+        calculateMonthlyStatsForYear(year, region, statType) {
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                              'July', 'August', 'September', 'October', 'November', 'December'];
+            
+            const monthlyData = [];
+            
+            // Determine max month to display (current month - 1 for current year)
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            const currentMonth = currentDate.getMonth(); // 0-based (0 = January, 9 = October)
+            
+            if (year === 'all') {
+                // For "All Years", aggregate all available years
+                const allAvailableYears = new Set();
+                if (APP_DATA.belProfiles?.leaderboard) {
+                    APP_DATA.belProfiles.leaderboard.forEach(leader => {
+                        if (leader.monthlyData) {
+                            Object.keys(leader.monthlyData).forEach(y => allAvailableYears.add(y));
+                        }
+                    });
+                }
+                
+                const sortedYears = Array.from(allAvailableYears).sort();
+                
+                monthNames.forEach((monthName, monthIndex) => {
+                    let totalValue = 0;
+                    
+                    sortedYears.forEach(currentYear => {
+                        const monthStats = this.calculateDashboardStats(currentYear, region, monthIndex + 1);
+                        const value = this.getStatValue(monthStats, statType);
+                        totalValue += value;
+                    });
+                    
+                    monthlyData.push({
+                        month: monthName,
+                        value: totalValue,
+                        monthIndex: monthIndex
+                    });
+                });
+            } else {
+                // For specific year, limit months if it's current year
+                const maxMonthIndex = (parseInt(year) === currentYear) ? currentMonth : 11; // Show up to current month for current year
+                
+                monthNames.forEach((monthName, monthIndex) => {
+                    // Skip future months for current year
+                    if (monthIndex > maxMonthIndex) {
+                        return;
+                    }
+                    
+                    const monthStats = this.calculateDashboardStats(year, region, monthIndex + 1);
+                    const value = this.getStatValue(monthStats, statType);
+                    
+                    monthlyData.push({
+                        month: monthName,
+                        value: value,
+                        monthIndex: monthIndex
+                    });
+                });
+            }
+            
+            return monthlyData;
+        },
+
+        /**
+         * Extract specific stat value from dashboard stats
+         */
+        getStatValue(stats, statType) {
+            switch (statType) {
+                case 'belCount': return stats.belCount;
+                case 'totalClicks': return stats.totalClicks;
+                case 'totalOrders': return stats.totalOrders;
+                case 'revenue': return stats.totalRevenue;
+                case 'convRate': return stats.avgConvRate;
+                case 'aov': return stats.avgAov;
+                default: return 0;
+            }
+        },
+
+        /**
+         * Get previous year December value for January comparison
+         */
+        getPreviousYearDecemberValue(selectedYear, selectedRegion, statType) {
+            if (selectedYear === 'all') return 0;
+            
+            const prevYear = (parseInt(selectedYear) - 1).toString();
+            const decemberStats = this.calculateDashboardStats(prevYear, selectedRegion, 12); // December = month 12
+            return this.getStatValue(decemberStats, statType);
+        },
+
+        /**
+         * Generate table rows for monthly data with professional terminology
+         */
+        generateMonthlyTableRows(monthlyData, statType) {
+            const isCumulative = ['belCount'].includes(statType);
+            
+            return monthlyData.map((data, index) => {
+                const prevValue = index > 0 ? monthlyData[index - 1].value : 0;
+                const change = data.value - prevValue;
+                const changePercent = prevValue > 0 ? ((change / prevValue) * 100) : 0;
+                
+                const formatValue = (value) => {
+                    switch (statType) {
+                        case 'belCount':
+                        case 'totalClicks':
+                        case 'totalOrders':
+                            return value.toLocaleString();
+                        case 'revenue':
+                        case 'aov':
+                            return utils.formatMoney(value);
+                        case 'convRate':
+                            return value.toFixed(2) + '%';
+                        default:
+                            return value.toString();
+                    }
+                };
+                
+                const changeClass = change > 0 ? 'positive' : change < 0 ? 'negative' : 'neutral';
+                const changeIcon = change > 0 ? '↗' : change < 0 ? '↘' : '→';
+                
+                // Professional terminology for cumulative vs performance data
+                const changeLabel = isCumulative ? 
+                    (change > 0 ? 'Net Additions' : change < 0 ? 'Net Reduction' : 'No Change') :
+                    (change > 0 ? 'Increase' : change < 0 ? 'Decrease' : 'No Change');
+                
+                const growthLabel = isCumulative ? 'Growth Rate' : 'Period Change';
+                
+                return `
+                    <tr>
+                        <td>${data.month}</td>
+                        <td data-sort-value="${data.value}">${formatValue(data.value)}</td>
+                        <td data-sort-value="${change}" class="trend-indicator ${changeClass}" title="${changeLabel}">
+                            ${changeIcon} ${formatValue(Math.abs(change))}
+                        </td>
+                        <td data-sort-value="${changePercent}" class="trend-indicator ${changeClass}" title="${growthLabel}">
+                            ${index === 0 ? 'Baseline' : `${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(1)}%`}
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        },
+
+        /**
+         * Initialize line chart for statistics modal
+         */
+        initializeStatsLineChart(monthlyData, statType, statTitle) {
+            console.log('Initializing stats line chart...');
+            const ctx = document.getElementById('stats-line-chart');
+            console.log('Chart canvas element:', ctx);
+            console.log('Chart.js available:', !!window.Chart);
+            
+            if (!ctx || !window.Chart) {
+                console.error('Chart canvas or Chart.js not available');
+                return;
+            }
+            
+            // Destroy existing chart if any
+            if (window.statsLineChart) {
+                window.statsLineChart.destroy();
+            }
+            
+            // Create complete 12-month chart data
+            const allMonthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                                 'July', 'August', 'September', 'October', 'November', 'December'];
+            const labels = allMonthNames.map(month => month.substring(0, 3)); // Short month names
+            
+            // Determine current month limit
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            const selectedYear = this.getSelectedYear();
+            const currentMonth = currentDate.getMonth(); // 0-based
+            const maxMonthIndex = (parseInt(selectedYear) === currentYear) ? currentMonth : 11;
+            
+            // Create data array with null for future months
+            const data = allMonthNames.map((monthName, monthIndex) => {
+                if (monthIndex > maxMonthIndex) {
+                    return null; // No line drawn for future months
+                }
+                
+                // Find actual data for this month
+                const monthData = monthlyData.find(d => d.monthIndex === monthIndex);
+                return monthData ? monthData.value : 0;
+            });
+            
+            // Determine chart title based on data type
+            const isCumulative = ['belCount'].includes(statType);
+            const chartTitle = isCumulative ? `${statTitle} (Cumulative)` : statTitle;
+            
+            window.statsLineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: chartTitle,
+                        data: data,
+                        borderColor: '#006EFF',
+                        backgroundColor: '#006EFF',
+                        borderWidth: 3,
+                        fill: false,
+                        pointBackgroundColor: '#006EFF',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: function(context) {
+                            // Hide points for null values (future months)
+                            return context.parsed.y === null ? 0 : 6;
+                        },
+                        pointHoverRadius: function(context) {
+                            // Hide hover effect for null values
+                            return context.parsed.y === null ? 0 : 8;
+                        },
+                        tension: 0,
+                        spanGaps: false // Don't connect across null values
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(context) {
+                                    const isCumulative = ['belCount'].includes(statType);
+                                    const monthName = allMonthNames[context[0].dataIndex];
+                                    return isCumulative ? `Cumulative as of ${monthName}` : monthName;
+                                },
+                                label: function(context) {
+                                    const value = context.parsed.y;
+                                    
+                                    // Skip tooltip for null values (future months)
+                                    if (value === null) {
+                                        return null;
+                                    }
+                                    
+                                    const isCumulative = ['belCount'].includes(statType);
+                                    let formattedValue;
+                                    
+                                    switch (statType) {
+                                        case 'belCount':
+                                        case 'totalClicks':
+                                        case 'totalOrders':
+                                            formattedValue = value.toLocaleString();
+                                            break;
+                                        case 'revenue':
+                                        case 'aov':
+                                            formattedValue = utils.formatMoney(value);
+                                            break;
+                                        case 'convRate':
+                                            formattedValue = value.toFixed(2) + '%';
+                                            break;
+                                        default:
+                                            formattedValue = value.toString();
+                                    }
+                                    
+                                    const prefix = isCumulative ? 'Total Active: ' : '';
+                                    return `${prefix}${formattedValue}`;
+                                },
+                                // Filter out null values from tooltip
+                                filter: function(tooltipItem) {
+                                    return tooltipItem.parsed.y !== null;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    switch (statType) {
+                                        case 'belCount':
+                                        case 'totalClicks':
+                                        case 'totalOrders':
+                                            return value >= 1000 ? (value / 1000) + 'k' : value;
+                                        case 'revenue':
+                                        case 'aov':
+                                            return '$' + (value >= 1000 ? (value / 1000) + 'k' : value);
+                                        case 'convRate':
+                                            return value.toFixed(1) + '%';
+                                        default:
+                                            return value;
+                                    }
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: true
+                            }
+                        }
+                    }
+                }
+            });
+        },
+
+        /**
+         * Generate transposed table HTML (months as columns - default view)
+         */
+        generateTransposedTableHTML(monthlyData, statType) {
+            const isCumulative = ['belCount'].includes(statType);
+            
+            const formatValue = (value) => {
+                switch (statType) {
+                    case 'belCount':
+                    case 'totalClicks':
+                    case 'totalOrders':
+                        return value.toLocaleString();
+                    case 'revenue':
+                    case 'aov':
+                        return utils.formatMoney(value);
+                    case 'convRate':
+                        return value.toFixed(2) + '%';
+                    default:
+                        return value.toString();
+                }
+            };
+            
+            // Get previous year December value for January comparison
+            const selectedYear = this.getSelectedYear();
+            const selectedRegion = window.selectedDashboardRegion || 'all';
+            const prevYearDecValue = this.getPreviousYearDecemberValue(selectedYear, selectedRegion, statType);
+            
+            // Create all 12 months array for complete table
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                              'July', 'August', 'September', 'October', 'November', 'December'];
+            
+            // Current date info for determining which months to show data for
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            const currentMonth = currentDate.getMonth(); // 0-based
+            const maxMonthIndex = (parseInt(selectedYear) === currentYear) ? currentMonth : 11;
+            
+            // Calculate change data with all 12 months
+            const processedData = monthNames.map((monthName, monthIndex) => {
+                // Find actual data for this month
+                const actualData = monthlyData.find(d => d.monthIndex === monthIndex);
+                
+                // Determine if we should show data for this month
+                const hasData = actualData && monthIndex <= maxMonthIndex;
+                const value = hasData ? actualData.value : null;
+                
+                // Calculate previous value for comparison
+                let prevValue;
+                if (monthIndex === 0) {
+                    // January compares with previous year December
+                    prevValue = prevYearDecValue;
+                } else {
+                    // Other months compare with previous month in same year
+                    const prevMonthData = monthlyData.find(d => d.monthIndex === monthIndex - 1);
+                    prevValue = prevMonthData ? prevMonthData.value : 0;
+                }
+                
+                // Calculate change and percentage
+                const change = hasData ? (value - prevValue) : null;
+                const changePercent = hasData && prevValue > 0 ? ((change / prevValue) * 100) : null;
+                
+                return {
+                    month: monthName,
+                    monthIndex: monthIndex,
+                    value: value,
+                    change: change,
+                    changePercent: changePercent,
+                    hasData: hasData,
+                    formattedValue: hasData ? formatValue(value) : '-',
+                    formattedChange: change !== null ? formatValue(Math.abs(change)) : '-',
+                    formattedChangePercent: change !== null ? 
+                        (monthIndex === 0 && prevValue === 0 ? 'Baseline' : 
+                         `${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(1)}%`) : '-'
+                };
+            });
+            
+            // Create transposed table HTML (months as columns)
+            const headerRow = `
+                <tr>
+                    <th data-sortable="metric">Metric</th>
+                    ${processedData.map(data => `<th data-sortable="${data.month}" data-type="text">${data.month.substring(0, 3)}</th>`).join('')}
+                </tr>
+            `;
+            
+            // Calculate cumulative totals for each month
+            let cumulativeTotal = 0;
+            const cumulativeData = processedData.map(data => {
+                if (data.hasData && data.value !== null) {
+                    if (isCumulative) {
+                        // For cumulative metrics like belCount, use the actual value as cumulative
+                        cumulativeTotal = data.value;
+                    } else {
+                        // For non-cumulative metrics, add to running total
+                        cumulativeTotal += data.value;
+                    }
+                }
+                return {
+                    ...data,
+                    cumulativeTotal: cumulativeTotal,
+                    formattedCumulative: data.hasData ? formatValue(cumulativeTotal) : '-'
+                };
+            });
+
+            // Each metric as a row
+            const metrics = [
+                { 
+                    key: 'change', 
+                    label: 'Period Change',
+                    getData: (data) => {
+                        if (!data.hasData || data.change === null) return '-';
+                        const changeClass = data.change > 0 ? 'positive' : data.change < 0 ? 'negative' : 'neutral';
+                        const changeIcon = data.change > 0 ? '↗' : data.change < 0 ? '↘' : '→';
+                        return `<span class="trend-indicator ${changeClass}">${changeIcon} ${data.formattedChange}</span>`;
+                    },
+                    getSortValue: (data) => data.change || 0
+                },
+                { 
+                    key: 'value', 
+                    label: 'Monthly Value',
+                    getData: (data) => data.formattedValue,
+                    getSortValue: (data) => data.value || 0,
+                    isHidden: isCumulative  // 為累計型指標（如BEL count）隱藏Monthly Value行
+                },
+                { 
+                    key: 'cumulative', 
+                    label: 'Cumulative Total',
+                    getData: (data) => data.formattedCumulative,
+                    getSortValue: (data) => data.cumulativeTotal || 0,
+                    isGrayBackground: true,  // 標記需要灰色背景
+                    isHidden: ['aov', 'convRate'].includes(statType)  // Hide Cumulative Total for AoV and C2O CVR metrics
+                }
+            ];
+            
+            const bodyRows = metrics
+                .filter(metric => !metric.isHidden)  // 過濾掉被標記為隱藏的行
+                .map(metric => {
+                    const rowStyle = metric.isGrayBackground ? ' style="background-color: #f5f5f5;"' : '';
+                    const dataToUse = metric.key === 'cumulative' ? cumulativeData : processedData;
+                    
+                    return `
+                        <tr${rowStyle}>
+                            <td><strong>${metric.label}</strong></td>
+                            ${dataToUse.map(data => {
+                                const cellStyle = metric.isGrayBackground ? ' style="background-color: #f5f5f5;"' : '';
+                                return `<td data-sort-value="${metric.getSortValue(data)}"${cellStyle}>${metric.getData(data)}</td>`;
+                            }).join('')}
+                        </tr>
+                    `;
+                }).join('');
+            
+            return `
+                <thead>
+                    ${headerRow}
+                </thead>
+                <tbody>
+                    ${bodyRows}
+                </tbody>
+            `;
+        },
+
+
+
+        /**
+         * Close statistics modal
+         */
+        closeStatsModal() {
+            console.log('Closing stats modal...');
+            const modal = document.getElementById('stats-modal');
+            if (modal) {
+                // Destroy chart before removing modal
+                if (window.statsLineChart) {
+                    console.log('Destroying chart...');
+                    window.statsLineChart.destroy();
+                    window.statsLineChart = null;
+                }
+                modal.remove();
+                console.log('Stats modal closed');
+            }
         },
 
         renderSummaryStats(year = null, region = null) {
@@ -1403,12 +1993,19 @@ if (!checkAuthentication()) {
                 }
             };
             
-            statsContainer.innerHTML = Object.values(stats).map(stat => `
-                <div class="bel-card">
+            // Check if we should show YTD indicator (when a specific year is selected)
+            const selectedYear = year || this.getSelectedYear();
+            const shouldShowYTD = selectedYear && selectedYear !== 'all';
+            
+            statsContainer.innerHTML = Object.entries(stats).map(([statKey, stat]) => `
+                <div class="bel-card clickable-stat-card" data-stat-type="${statKey}" data-stat-title="${stat.title}" style="cursor: pointer;">
                     <div style="width: 100%;display: flex; flex-direction: row; justify-content: space-between;">
                         <div>
                             <div class="bel-card-title">${stat.title}</div>
-                            <div class="bel-card-value">${stat.value}</div>
+                            <div class="bel-card-value">
+                                ${stat.value}
+                                ${shouldShowYTD ? '<span class="bel-card-value-ytd">(YTD)</span>' : ''}
+                            </div>
                         </div>
                         <div class="bel-card-icon"><i class="${stat.icon}"></i></div>
                     </div>
@@ -1419,6 +2016,27 @@ if (!checkAuthentication()) {
                     </div>
                 </div>
             `).join('');
+            
+            // Add event listeners to all stat cards
+            this.setupStatsCardEventListeners();
+        },
+
+        /**
+         * Setup event listeners for stats cards
+         */
+        setupStatsCardEventListeners() {
+            const statCards = document.querySelectorAll('.clickable-stat-card');
+            console.log('Setting up event listeners for', statCards.length, 'stat cards');
+            
+            statCards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const statType = card.getAttribute('data-stat-type');
+                    const statTitle = card.getAttribute('data-stat-title');
+                    console.log('Stat card clicked:', statType, statTitle);
+                    this.openStatsModal(statType, statTitle);
+                });
+            });
         },
 
         /**
@@ -2196,7 +2814,7 @@ if (!checkAuthentication()) {
                                         } else if (label.includes('Clicks')) {
                                             label += `${(context.parsed.y * 1000).toLocaleString()}`;
                                         } else if (label.includes('C2O CVR (%)')) {
-                                            label += `${context.parsed.y}%`;
+                                            label += `${context.parsed.y.toFixed(2)}%`;
                                         } else {
                                             label += context.parsed.y;
                                         }
@@ -5774,7 +6392,7 @@ if (!checkAuthentication()) {
             const currentYear = new Date().getFullYear();
             const targetYear = selectedYear && selectedYear !== 'all' ? parseInt(selectedYear) : currentYear;
             
-            // Process all BEL payout records
+            // Process all BEL payout records for payout amount
             window.PAYOUT_DATA.belPayoutHistory.forEach(bel => {
                 // Filter by selected region if specified
                 if (selectedRegion && selectedRegion !== 'all' && bel.belRegion !== selectedRegion) {
@@ -5789,21 +6407,22 @@ if (!checkAuthentication()) {
                     return payout.year === targetYear;
                 });
                 
-                // Sum up payout amounts and count active BELs
+                // Sum up payout amounts
                 if (filteredPayouts.length > 0) {
-                    activeBelIds.add(bel.belId);
                     filteredPayouts.forEach(payout => {
                         totalPayoutAmount += payout.netPayout || 0;
                     });
                 }
             });
             
-            // Calculate order count from belProfiles.json leaderboard data
+            // Calculate order count and active BEL count from belProfiles.json leaderboard data
             belProfilesData.forEach(leader => {
                 // Apply region filter
                 if (selectedRegion && selectedRegion !== 'all' && leader.region !== selectedRegion) {
                     return;
                 }
+                
+                let hasOrders = false;
                 
                 // Sum orders from monthly data based on year filter
                 if (leader.monthlyData) {
@@ -5814,6 +6433,7 @@ if (!checkAuthentication()) {
                                 const monthData = leader.monthlyData[year][month];
                                 if (monthData && monthData.orders) {
                                     totalOrderCount += monthData.orders;
+                                    hasOrders = true;
                                 }
                             });
                         });
@@ -5825,10 +6445,16 @@ if (!checkAuthentication()) {
                                 const monthData = yearData[month];
                                 if (monthData && monthData.orders) {
                                     totalOrderCount += monthData.orders;
+                                    hasOrders = true;
                                 }
                             });
                         }
                     }
+                }
+                
+                // Count as active BEL if has orders in the selected period
+                if (hasOrders) {
+                    activeBelIds.add(leader.id);
                 }
             });
             
@@ -5867,8 +6493,8 @@ if (!checkAuthentication()) {
             }
             
             // Get month names
-            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                              'July', 'August', 'September', 'October', 'November', 'December'];
+            const monthNames = ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.',
+                              'Jul.', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'];
             const targetMonthName = monthNames[targetMonth - 1];
             
             // Calculate target month stats (e.g., August)
@@ -5904,6 +6530,32 @@ if (!checkAuthentication()) {
                 }
             };
             
+            // Format month name to short form (e.g., "September" -> "Sep.")
+            const shortMonthName = targetMonthName.substring(0, 3) + '.';
+            
+            // Special formatting for BEL Count trend
+            const formatBelCountTrend = (growth, monthName) => {
+                if (growth > 0) {
+                    return {
+                        value: `+${growth}`,
+                        status: 'positive',
+                        text: `Increase in ${monthName}`
+                    };
+                } else if (growth < 0) {
+                    return {
+                        value: `${growth}`,
+                        status: 'negative', 
+                        text: `Decrease in ${monthName}`
+                    };
+                } else {
+                    return {
+                        value: `No change`,
+                        status: 'neutral',
+                        text: ``
+                    };
+                }
+            };
+            
             return {
                 targetMonthName,
                 payoutAmountTrend: {
@@ -5911,11 +6563,7 @@ if (!checkAuthentication()) {
                     status: payoutAmountGrowth >= 0 ? 'positive' : 'negative',
                     text: `${payoutAmountGrowth >= 0 ? 'Increased' : 'Decreased'} in ${targetMonthName} (MoM)`
                 },
-                belCountTrend: {
-                    value: formatTrendValue(belCountGrowth),
-                    status: belCountGrowth >= 0 ? 'positive' : 'negative',
-                    text: `${belCountGrowth >= 0 ? 'Increased' : 'Decreased'} in ${targetMonthName} (MoM)`
-                },
+                belCountTrend: formatBelCountTrend(belCountGrowth, shortMonthName),
                 orderCountTrend: {
                     value: formatTrendValue(orderCountGrowth),
                     status: orderCountGrowth >= 0 ? 'positive' : 'negative',
@@ -6020,7 +6668,7 @@ if (!checkAuthentication()) {
                 `${(stats.totalOrderCount / 1000).toFixed(0)}k` : 
                 stats.totalOrderCount.toLocaleString();
             
-            // Define the three cards as requested
+            // Define the three cards as requested with stat type mapping
             const cardsData = [
                 {
                     title: 'Net Payout Amount ($)',
@@ -6028,7 +6676,8 @@ if (!checkAuthentication()) {
                     icon: 'fas fa-dollar-sign',
                     trend: trends.payoutAmountTrend.value,
                     trendText: trends.payoutAmountTrend.text,
-                    status: trends.payoutAmountTrend.status
+                    status: trends.payoutAmountTrend.status,
+                    statType: 'payoutAmount'
                 },
                 {
                     title: 'Active BEL Count (#)',
@@ -6036,7 +6685,8 @@ if (!checkAuthentication()) {
                     icon: 'fas fa-users',
                     trend: trends.belCountTrend.value,
                     trendText: trends.belCountTrend.text,
-                    status: trends.belCountTrend.status
+                    status: trends.belCountTrend.status,
+                    statType: 'activeBelCount'
                 },
                 {
                     title: 'Total Orders (#)',
@@ -6044,17 +6694,24 @@ if (!checkAuthentication()) {
                     icon: 'fas fa-shopping-cart',
                     trend: trends.orderCountTrend.value,
                     trendText: trends.orderCountTrend.text,
-                    status: trends.orderCountTrend.status
+                    status: trends.orderCountTrend.status,
+                    statType: 'totalOrders'
                 }
             ];
             
-            // Render the cards
+            // Check if we should show YTD indicator (when a specific year is selected)
+            const shouldShowYTD = selectedYear && selectedYear !== 'all';
+            
+            // Render the cards with clickable functionality
             statsContainer.innerHTML = cardsData.map(card => `
-                <div class="bel-card">
+                <div class="bel-card clickable-stat-card" data-stat-type="${card.statType}" data-stat-title="${card.title}" style="cursor: pointer;">
                     <div style="width: 100%;display: flex; flex-direction: row; justify-content: space-between;">
                         <div>
                             <div class="bel-card-title">${card.title}</div>
-                            <div class="bel-card-value">${card.value}</div>
+                            <div class="bel-card-value">
+                                ${card.value}
+                                ${shouldShowYTD ? '<span class="bel-card-value-ytd">(YTD)</span>' : ''}
+                            </div>
                         </div>
                         <div class="bel-card-icon"><i class="${card.icon}"></i></div>
                     </div>
@@ -6065,6 +6722,598 @@ if (!checkAuthentication()) {
                     </div>
                 </div>
             `).join('');
+            
+            // Add event listeners to all payout stat cards
+            this.setupPayoutStatsCardEventListeners();
+        },
+
+        /**
+         * Setup event listeners for payout stats cards
+         */
+        setupPayoutStatsCardEventListeners() {
+            const statCards = document.querySelectorAll('#payouts-order .clickable-stat-card');
+            console.log('Setting up event listeners for', statCards.length, 'payout stat cards');
+            
+            statCards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const statType = card.getAttribute('data-stat-type');
+                    const statTitle = card.getAttribute('data-stat-title');
+                    console.log('Payout stat card clicked:', statType, statTitle);
+                    this.openPayoutStatsModal(statType, statTitle);
+                });
+            });
+        },
+
+        /**
+         * Open payout statistics modal with yearly data and 12-month line chart
+         */
+        openPayoutStatsModal(statType, statTitle) {
+            console.log('openPayoutStatsModal called with:', statType, statTitle);
+            
+            const selectedYear = Dashboard.getSelectedYear();
+            const selectedRegion = window.selectedDashboardRegion || 'all';
+            
+            console.log('Selected year:', selectedYear, 'Selected region:', selectedRegion);
+            
+            // Generate monthly data for the selected year
+            const monthlyData = this.calculatePayoutMonthlyStatsForYear(selectedYear, selectedRegion, statType);
+            
+            console.log('Monthly payout data generated:', monthlyData);
+            
+            // Remove any existing stats modal
+            const existingModal = document.getElementById('payout-stats-modal');
+            if (existingModal) {
+                existingModal.remove();
+            }
+            
+            // Determine if this is cumulative data and create appropriate title
+            const isCumulative = [].includes(statType); // Remove 'activeBelCount' from cumulative metrics
+            const analysisType = isCumulative ? 'Cumulative Analysis' : 'Performance Analysis';
+            const yearLabel = selectedYear === 'all' ? 'All Years' : selectedYear;
+            const regionLabel = selectedRegion && selectedRegion !== 'all' ? ` - ${selectedRegion}` : '';
+            
+            // Create modal HTML using existing modal structure
+            const modalHtml = `
+                <div class="modal-overlay show" id="payout-stats-modal" style="z-index: 10000;">
+                    <div class="modal-content" style="max-width: 85vw; max-height: 90vh; overflow-y: auto;" onclick="event.stopPropagation()">
+                        <div class="modal-header">
+                            <h3>${statTitle} ${analysisType} - ${yearLabel}${regionLabel}</h3>
+                            <button class="close-button" id="payout-stats-modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body" style="padding: 0px 20px 20px 20px;">
+                            <!-- Line Chart Container -->
+                            <div style="margin-bottom: 30px;">
+                                <div style="position: relative; height: 160px; background: var(--ds-color-gray-30); border-radius: 4px; padding: 15px;">
+                                    <canvas id="payout-stats-line-chart" style="max-height: 270px;"></canvas>
+                                </div>
+                            </div>
+                            
+                            <!-- Monthly Data Table -->
+                            <div>
+                                <h4 style="margin-bottom: 15px;">Monthly ${isCumulative ? 'Cumulative' : 'Performance'} Data</h4>
+                                <div class="scrollable-table-container" style="max-height: 400px;">
+                                    <table class="bel-table" id="payout-monthly-stats-table">
+                                        ${this.generatePayoutTransposedTableHTML(monthlyData, statType)}
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Add modal to page
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+            
+            // Set up event listeners for the modal
+            const modal = document.getElementById('payout-stats-modal');
+            const closeButton = document.getElementById('payout-stats-modal-close');
+            
+            // Close modal when clicking on overlay
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    this.closePayoutStatsModal();
+                }
+            });
+            
+            // Close modal when clicking close button
+            closeButton.addEventListener('click', () => {
+                this.closePayoutStatsModal();
+            });
+            
+            // Initialize line chart and setup table functionality
+            setTimeout(() => {
+                this.initializePayoutStatsLineChart(monthlyData, statType, statTitle);
+                // Make table sortable
+                const table = document.querySelector('#payout-stats-modal .bel-table');
+                if (table) {
+                    TableUtils.makeTableSortable(table);
+                }
+            }, 100);
+        },
+
+        /**
+         * Close payout statistics modal
+         */
+        closePayoutStatsModal() {
+            console.log('Closing payout stats modal...');
+            const modal = document.getElementById('payout-stats-modal');
+            if (modal) {
+                // Destroy chart before removing modal
+                if (window.payoutStatsLineChart) {
+                    console.log('Destroying payout chart...');
+                    window.payoutStatsLineChart.destroy();
+                    window.payoutStatsLineChart = null;
+                }
+                modal.remove();
+                console.log('Payout stats modal closed');
+            }
+        },
+
+        /**
+         * Calculate monthly payout statistics for a specific year and metric
+         */
+        calculatePayoutMonthlyStatsForYear(year, region, statType) {
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                              'July', 'August', 'September', 'October', 'November', 'December'];
+            
+            const monthlyData = [];
+            
+            // Determine max month to display (current month - 1 for current year)
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            const currentMonth = currentDate.getMonth(); // 0-based (0 = January, 9 = October)
+            
+            if (year === 'all') {
+                // For "All Years", aggregate all available years
+                const allAvailableYears = new Set();
+                if (APP_DATA.belProfiles?.leaderboard) {
+                    APP_DATA.belProfiles.leaderboard.forEach(leader => {
+                        if (leader.monthlyData) {
+                            Object.keys(leader.monthlyData).forEach(year => {
+                                allAvailableYears.add(year);
+                            });
+                        }
+                    });
+                }
+                
+                const sortedYears = Array.from(allAvailableYears).sort();
+                
+                monthNames.forEach((monthName, monthIndex) => {
+                    let totalValue = 0;
+                    
+                    sortedYears.forEach(currentYear => {
+                        const monthStats = this.calculatePayoutStatsForMonth(currentYear, region, monthIndex + 1);
+                        totalValue += this.getPayoutStatValue(monthStats, statType);
+                    });
+                    
+                    monthlyData.push({
+                        month: monthName,
+                        value: totalValue,
+                        monthIndex: monthIndex
+                    });
+                });
+            } else {
+                // For specific year, limit months if it's current year
+                const maxMonthIndex = (parseInt(year) === currentYear) ? currentMonth : 11; // Show up to current month for current year
+                
+                monthNames.forEach((monthName, monthIndex) => {
+                    // Skip future months for current year
+                    if (monthIndex > maxMonthIndex) {
+                        return;
+                    }
+                    
+                    const monthStats = this.calculatePayoutStatsForMonth(year, region, monthIndex + 1);
+                    const value = this.getPayoutStatValue(monthStats, statType);
+                    
+                    monthlyData.push({
+                        month: monthName,
+                        value: value,
+                        monthIndex: monthIndex
+                    });
+                });
+            }
+            
+            return monthlyData;
+        },
+
+        /**
+         * Calculate payout statistics for a specific month
+         */
+        calculatePayoutStatsForMonth(year, region, month) {
+            if (!APP_DATA.belProfiles?.leaderboard || !window.PAYOUT_DATA?.belPayoutHistory) {
+                return {
+                    totalPayoutAmount: 0,
+                    activeBelCount: 0,
+                    totalOrderCount: 0
+                };
+            }
+
+            // Get filtered data based on region
+            let filteredData = APP_DATA.belProfiles.leaderboard;
+            if (region && region !== 'all') {
+                filteredData = filteredData.filter(leader => leader.region === region);
+            }
+
+            let totalPayoutAmount = 0;
+            let activeBelCount = 0;
+            let totalOrderCount = 0;
+
+            // Calculate BEL count based on having orders in the specific month
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                              'July', 'August', 'September', 'October', 'November', 'December'];
+            const monthName = monthNames[month - 1];
+            
+            activeBelCount = filteredData.filter(leader => {
+                if (!leader.monthlyData || !leader.monthlyData[year.toString()]) return false;
+                const monthData = leader.monthlyData[year.toString()][monthName];
+                return monthData && (monthData.orders || 0) > 0;
+            }).length;
+
+            // Calculate payout amount from actual payout data
+            window.PAYOUT_DATA.belPayoutHistory.forEach(bel => {
+                // Apply region filter if specified
+                if (region && region !== 'all' && bel.belRegion !== region) {
+                    return;
+                }
+                
+                // Find payouts for the specific month
+                const monthPayouts = bel.payoutHistory.filter(payout => 
+                    payout.year === parseInt(year) && payout.month === month
+                );
+                
+                if (monthPayouts.length > 0) {
+                    monthPayouts.forEach(payout => {
+                        totalPayoutAmount += payout.netPayout || 0;
+                    });
+                }
+            });
+
+            // Calculate orders from belProfiles monthly data
+            filteredData.forEach(leader => {
+                if (leader.monthlyData && leader.monthlyData[year]) {
+                    const monthName = new Date(2000, month - 1, 1).toLocaleString('en-US', { month: 'long' });
+                    const monthData = leader.monthlyData[year][monthName];
+                    
+                    if (monthData) {
+                        // Add orders
+                        totalOrderCount += monthData.orders || 0;
+                    }
+                }
+            });
+
+            return {
+                totalPayoutAmount,
+                activeBelCount,
+                totalOrderCount
+            };
+        },
+
+        /**
+         * Extract specific stat value from payout stats
+         */
+        getPayoutStatValue(stats, statType) {
+            switch (statType) {
+                case 'payoutAmount': return stats.totalPayoutAmount;
+                case 'activeBelCount': return stats.activeBelCount;
+                case 'totalOrders': return stats.totalOrderCount;
+                default: return 0;
+            }
+        },
+
+        /**
+         * Generate transposed table HTML for payout statistics
+         */
+        generatePayoutTransposedTableHTML(monthlyData, statType) {
+            const isCumulative = [].includes(statType); // Remove 'activeBelCount' from cumulative metrics
+            
+            const formatValue = (value) => {
+                switch (statType) {
+                    case 'activeBelCount':
+                    case 'totalOrders':
+                        return value.toLocaleString();
+                    case 'payoutAmount':
+                        return utils.formatMoney(value);
+                    default:
+                        return value.toString();
+                }
+            };
+            
+            // Get previous year December value for January comparison
+            const selectedYear = Dashboard.getSelectedYear();
+            const selectedRegion = window.selectedDashboardRegion || 'all';
+            const prevYearDecValue = this.getPreviousYearDecemberPayoutValue(selectedYear, selectedRegion, statType);
+            
+            // Create all 12 months array for complete table
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                              'July', 'August', 'September', 'October', 'November', 'December'];
+            
+            // Current date info for determining which months to show data for
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            const currentMonth = currentDate.getMonth(); // 0-based
+            const maxMonthIndex = (parseInt(selectedYear) === currentYear) ? currentMonth : 11;
+            
+            // Calculate change data with all 12 months
+            const processedData = monthNames.map((monthName, monthIndex) => {
+                // Find actual data for this month
+                const actualData = monthlyData.find(d => d.monthIndex === monthIndex);
+                
+                // Determine if we should show data for this month
+                const hasData = actualData && monthIndex <= maxMonthIndex;
+                const value = hasData ? actualData.value : null;
+                
+                // Calculate previous value for comparison
+                let prevValue;
+                if (monthIndex === 0) {
+                    // January compares with previous year December
+                    prevValue = prevYearDecValue;
+                } else {
+                    // Other months compare with previous month in same year
+                    const prevMonthData = monthlyData.find(d => d.monthIndex === monthIndex - 1);
+                    prevValue = prevMonthData ? prevMonthData.value : 0;
+                }
+                
+                // Calculate change and percentage
+                const change = hasData ? (value - prevValue) : null;
+                const changePercent = hasData && prevValue > 0 ? ((change / prevValue) * 100) : null;
+                
+                return {
+                    month: monthName,
+                    monthIndex: monthIndex,
+                    value: value,
+                    change: change,
+                    changePercent: changePercent,
+                    hasData: hasData,
+                    formattedValue: hasData ? formatValue(value) : '-',
+                    formattedChange: change !== null ? formatValue(Math.abs(change)) : '-',
+                    formattedChangePercent: change !== null ? 
+                        (monthIndex === 0 && prevValue === 0 ? 'Baseline' : 
+                         `${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(1)}%`) : '-'
+                };
+            });
+            
+            // Create transposed table HTML (months as columns)
+            const headerRow = `
+                <tr>
+                    <th data-sortable="metric">Metric</th>
+                    ${processedData.map(data => `<th data-sortable="${data.month}" data-type="text">${data.month.substring(0, 3)}</th>`).join('')}
+                </tr>
+            `;
+            
+            // Calculate cumulative totals for each month
+            let cumulativeTotal = 0;
+            const cumulativeData = processedData.map(data => {
+                if (data.hasData && data.value !== null) {
+                    // For activeBelCount, use the actual value as cumulative (not additive)
+                    // For other metrics, add to running total
+                    if (statType === 'activeBelCount') {
+                        cumulativeTotal = data.value;
+                    } else {
+                        cumulativeTotal += data.value;
+                    }
+                }
+                return {
+                    ...data,
+                    cumulativeTotal: cumulativeTotal,
+                    formattedCumulative: data.hasData ? formatValue(cumulativeTotal) : '-'
+                };
+            });
+
+            // Each metric as a row
+            const metrics = [
+                { 
+                    key: 'change', 
+                    label: 'Period Change',
+                    getData: (data) => {
+                        if (!data.hasData || data.change === null) return '-';
+                        const changeClass = data.change > 0 ? 'positive' : data.change < 0 ? 'negative' : 'neutral';
+                        const changeIcon = data.change > 0 ? '↗' : data.change < 0 ? '↘' : '→';
+                        return `<span class="trend-indicator ${changeClass}">${changeIcon} ${data.formattedChange}</span>`;
+                    },
+                    getSortValue: (data) => data.change || 0
+                },
+                { 
+                    key: 'value', 
+                    label: 'Monthly Value',
+                    getData: (data) => data.formattedValue,
+                    getSortValue: (data) => data.value || 0,
+                    isHidden: false  // 所有指標都顯示 Monthly Value 行
+                },
+                { 
+                    key: 'cumulative', 
+                    label: 'Cumulative Total',
+                    getData: (data) => data.formattedCumulative,
+                    getSortValue: (data) => data.cumulativeTotal || 0,
+                    isGrayBackground: true,  // 標記需要灰色背景
+                    isHidden: ['activeBelCount', 'avgAov', 'avgConvRate'].includes(statType)  // 這些指標不顯示累計總計
+                }
+            ];
+            
+            const bodyRows = metrics
+                .filter(metric => !metric.isHidden)  // 過濾掉被標記為隱藏的行
+                .map(metric => {
+                    const rowStyle = metric.isGrayBackground ? ' style="background-color: #f5f5f5;"' : '';
+                    const dataToUse = metric.key === 'cumulative' ? cumulativeData : processedData;
+                    
+                    return `
+                        <tr${rowStyle}>
+                            <td><strong>${metric.label}</strong></td>
+                            ${dataToUse.map(data => {
+                                const cellStyle = metric.isGrayBackground ? ' style="background-color: #f5f5f5;"' : '';
+                                return `<td data-sort-value="${metric.getSortValue(data)}"${cellStyle}>${metric.getData(data)}</td>`;
+                            }).join('')}
+                        </tr>
+                    `;
+                }).join('');
+            
+            return `
+                <thead>
+                    ${headerRow}
+                </thead>
+                <tbody>
+                    ${bodyRows}
+                </tbody>
+            `;
+        },
+
+        /**
+         * Get previous year December value for January comparison
+         */
+        getPreviousYearDecemberPayoutValue(selectedYear, selectedRegion, statType) {
+            if (selectedYear === 'all') return 0;
+            
+            const prevYear = (parseInt(selectedYear) - 1).toString();
+            const decemberStats = this.calculatePayoutStatsForMonth(prevYear, selectedRegion, 12); // December = month 12
+            return this.getPayoutStatValue(decemberStats, statType);
+        },
+
+        /**
+         * Initialize line chart for payout statistics modal
+         */
+        initializePayoutStatsLineChart(monthlyData, statType, statTitle) {
+            console.log('Initializing payout stats line chart...');
+            const ctx = document.getElementById('payout-stats-line-chart');
+            console.log('Chart canvas element:', ctx);
+            console.log('Chart.js available:', !!window.Chart);
+            
+            if (!ctx || !window.Chart) {
+                console.error('Chart canvas or Chart.js not available');
+                return;
+            }
+            
+            // Destroy existing chart if any
+            if (window.payoutStatsLineChart) {
+                window.payoutStatsLineChart.destroy();
+            }
+            
+            // Create complete 12-month chart data
+            const allMonthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                                 'July', 'August', 'September', 'October', 'November', 'December'];
+            const labels = allMonthNames.map(month => month.substring(0, 3)); // Short month names
+            
+            // Determine current month limit
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            const selectedYear = Dashboard.getSelectedYear();
+            const currentMonth = currentDate.getMonth(); // 0-based
+            const maxMonthIndex = (parseInt(selectedYear) === currentYear) ? currentMonth : 11;
+            
+            // Create data array with null for future months
+            const data = allMonthNames.map((monthName, monthIndex) => {
+                if (monthIndex > maxMonthIndex) {
+                    return null; // No line drawn for future months
+                }
+                
+                // Find actual data for this month
+                const monthData = monthlyData.find(d => d.monthIndex === monthIndex);
+                return monthData ? monthData.value : 0;
+            });
+            
+            // Determine chart title based on data type
+            const isCumulative = [].includes(statType); // Remove 'activeBelCount' from cumulative metrics
+            const chartTitle = isCumulative ? `${statTitle} (Cumulative)` : statTitle;
+            
+            window.payoutStatsLineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: chartTitle,
+                        data: data,
+                        borderColor: '#006EFF',
+                        backgroundColor: '#006EFF',
+                        borderWidth: 3,
+                        fill: false,
+                        pointBackgroundColor: '#006EFF',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: function(context) {
+                            // Hide points for null values (future months)
+                            return context.parsed.y === null ? 0 : 6;
+                        },
+                        pointHoverRadius: function(context) {
+                            // Hide hover effect for null values
+                            return context.parsed.y === null ? 0 : 8;
+                        },
+                        tension: 0,
+                        spanGaps: false // Don't connect across null values
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(context) {
+                                    const isCumulative = ['activeBelCount'].includes(statType);
+                                    const monthName = allMonthNames[context[0].dataIndex];
+                                    return isCumulative ? `Cumulative as of ${monthName}` : monthName;
+                                },
+                                label: function(context) {
+                                    const value = context.parsed.y;
+                                    
+                                    // Skip tooltip for null values (future months)
+                                    if (value === null) {
+                                        return null;
+                                    }
+                                    
+                                    const isCumulative = ['activeBelCount'].includes(statType);
+                                    let formattedValue;
+                                    
+                                    switch (statType) {
+                                        case 'activeBelCount':
+                                        case 'totalOrders':
+                                            formattedValue = value.toLocaleString();
+                                            break;
+                                        case 'payoutAmount':
+                                            formattedValue = utils.formatMoney(value);
+                                            break;
+                                        default:
+                                            formattedValue = value.toString();
+                                    }
+                                    
+                                    const prefix = isCumulative ? 'Total Active: ' : '';
+                                    return `${prefix}${formattedValue}`;
+                                },
+                                // Filter out null values from tooltip
+                                filter: function(tooltipItem) {
+                                    return tooltipItem.parsed.y !== null;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    switch (statType) {
+                                        case 'activeBelCount':
+                                        case 'totalOrders':
+                                            return value.toLocaleString();
+                                        case 'payoutAmount':
+                                            return utils.formatMoney(value);
+                                        default:
+                                            return value;
+                                    }
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: true
+                            }
+                        }
+                    }
+                }
+            });
         },
 
         injectContent() {
@@ -8600,8 +9849,9 @@ if (!checkAuthentication()) {
         setupLogout();
     }, 1000);
 
-    // Expose BELModal to global scope for external access
+    // Expose BELModal and Dashboard to global scope for external access
     window.BELModal = BELModal;
+    window.Dashboard = Dashboard;
 
 });
 

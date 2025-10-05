@@ -940,13 +940,20 @@ body::-webkit-scrollbar-track,
     line-height: var(--lh-tight); 
 }
 
+.bel-card-value-ytd {
+    font-size: 10px;
+    color: var(--ds-color-gray-60);
+    font-weight: var(--fw-normal);
+    vertical-align: baseline;
+}
+
 .bel-card .trend-indicator { 
     display: flex; 
     align-items: center; 
     gap: 5px; 
     font-size: var(--fs-sm); 
     font-weight: var(--fw-semibold); 
-    margin-top: 8px; 
+    margin-top: 4px; 
 }
 
 .bel-card .trend-indicator.positive { 
@@ -955,6 +962,10 @@ body::-webkit-scrollbar-track,
 
 .bel-card .trend-indicator.negative { 
     color: var(--ds-color-error); 
+}
+
+.bel-card .trend-indicator.neutral { 
+    color: var(--ds-color-gray-60); 
 }
 
 .bel-card .trend-indicator i { 
@@ -1773,6 +1784,20 @@ body::-webkit-scrollbar-track,
     background: var(--ds-color-gray-70);
 }
 
+/* Statistics Modal Enhancements - No additional overlay styles needed */
+
+/* Clickable stats cards */
+.bel-card[onclick],
+.clickable-stat-card {
+    transition: all 0.2s ease;
+    border: 1px solid var(--ds-color-white);
+}
+
+.bel-card[onclick]:hover,
+.clickable-stat-card:hover {
+    border: 1px solid var(--ds-color-link);
+}
+
 .custom-modal-header {
     display: flex;
     justify-content: space-between;
@@ -1801,6 +1826,7 @@ body::-webkit-scrollbar-track,
     align-items: center; 
     border-bottom: 1px solid var(--ot-color-gray-45); 
     padding-bottom: 8px; 
+    padding-top: 16px;
 }
 
 .modal-header h3 { 
@@ -1917,7 +1943,7 @@ body::-webkit-scrollbar-track,
     }
     
     .modal-content {
-        padding: 15px;
+        padding: 0px 16px 16px 16px;
         max-height: calc(100vh - 10px);
         width: calc(100% - 10px);
         border-radius: 2px;
@@ -2484,7 +2510,7 @@ body::-webkit-scrollbar-track,
         padding: 20px;
         max-height: calc(100vh - 20px);
         width: calc(100% - 20px);
-        margin: 0;
+        margin: auto;
     }
     
     .modal-body-grid {
@@ -3046,5 +3072,24 @@ body::-webkit-scrollbar-track,
     .top-performer-value {
         font-size: 0.6rem;
     }
+}
+
+/* ==========================================================================
+   Table Trend Indicators
+   ========================================================================== */
+.bel-table .trend-indicator {
+    font-weight: var(--fw-semibold);
+}
+
+.bel-table .trend-indicator.positive {
+    color: var(--ds-color-success);
+}
+
+.bel-table .trend-indicator.negative {
+    color: var(--ds-color-error);
+}
+
+.bel-table .trend-indicator.neutral {
+    color: var(--ds-color-gray-60);
 }
 
