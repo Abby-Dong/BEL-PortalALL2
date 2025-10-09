@@ -55,6 +55,9 @@
     /* -- Font Families -- */
     --font-family-base: "heebo", "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-family-mono: monospace;
+    --heading-font-h1h2: 'Poppins', 'Inter', sans-serif; /* Special font for H1, H2 */
+    --heading-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --body-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
     /* -- Font Weights -- */
     --fw-normal: 400;
@@ -64,6 +67,7 @@
     --fw-extrabold: 800;
 
     /* -- Font Sizes (Typographic Scale) -- */
+    --fs-xxs: 0.625rem;    /* 10px - for micro text, YTD labels */
     --fs-xs: 0.75rem;      /* 12px - for tags, small text */
     --fs-sm: 0.875rem;     /* 14px - for table data, captions, inputs */
     --fs-base: 1rem;       /* 16px - for body text, buttons */
