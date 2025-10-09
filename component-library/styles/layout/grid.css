@@ -1,0 +1,77 @@
+/* ==========================================================================
+   UNIFIED GRID LAYOUT STYLES
+   ========================================================================== */
+/* Base grid container styles */
+.bel-grid-container,
+.bel-stats-cards,
+.metric-cards-grid,
+.performance-charts-grid,
+.product-analysis-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.bel-stats-cards {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.metric-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.performance-charts-grid,
+.product-analysis-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Modal specific metric cards grid */
+.modal-content .metric-cards-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+/* Helper grids */
+.grid-cols-2 { grid-template-columns: 1fr 1fr; }
+.grid-cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+
+.performance-grid { 
+    display: flex; 
+    flex-direction: row; 
+    gap: 24px; 
+    align-items: center; 
+}
+.performance-grid > div:first-child { flex: 3; min-width: 0; }
+.performance-grid > div:last-child { flex: 7; min-width: 0; }
+
+.product-sales-grid { 
+    display: flex; 
+    flex-direction: row; 
+    gap: 16px; 
+    align-items: flex-start; 
+}
+.product-sales-grid > div:first-child { flex: 1; min-width: 0; }
+.product-sales-grid > div:last-child { flex: 1; min-width: 0; }
+
+.filters-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+    gap: 16px; 
+    align-items: end; 
+}
+.filters-grid .bel-form-group { gap: 4px; }
+.filters-grid .bel-form-group label { 
+    font-size: var(--fs-xs); 
+    font-weight: var(--fw-semibold); 
+    color: var(--ds-color-gray-80); 
+}
+.filters-actions { 
+    grid-column: 1 / -1; 
+    display: flex; 
+    gap: 10px; 
+    justify-content: flex-end; 
+}

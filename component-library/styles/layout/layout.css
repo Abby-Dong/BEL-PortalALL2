@@ -1,0 +1,51 @@
+/* ==========================================================================
+   MAIN LAYOUT
+   ========================================================================== */
+.bel-container { 
+    display: flex; 
+    flex-grow: 1; 
+    padding-top: var(--bel-header-height); 
+}
+
+.bel-sidebar { 
+    width: var(--bel-sidebar-width); 
+    background-color: var(--ds-color-brand-dark); 
+    padding: 20px; 
+    position: fixed; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    overflow-y: auto; 
+    transition: transform 0.3s ease; 
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); 
+}
+
+.bel-sidebar-logo { 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 4px; 
+    border-bottom: 1px solid rgba(255,255,255,0.1); 
+}
+
+.bel-sidebar-logo img { 
+    padding: 4px; 
+    border-radius: 2px; 
+    width: 240px; 
+}
+
+.bel-sidebar-logo span { 
+    font-size: var(--fs-base); 
+    font-weight: var(--fw-medium); 
+    letter-spacing: 0.05rem; 
+    margin-top: 8px; 
+    color: var(--ot-color-gray-65); 
+}
+
+.bel-main-content { 
+    margin-left: var(--bel-sidebar-width); 
+    padding: 30px; 
+    flex-grow: 1; 
+    max-width: calc(100% - var(--bel-sidebar-width)); 
+    overflow-x: hidden; 
+}

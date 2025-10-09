@@ -1,0 +1,145 @@
+/* ==========================================================================
+   UNIFIED BUTTON STYLES
+   ========================================================================== */
+
+/* Base button styles - applies to all button types */
+.bel-btn, 
+.bel-btn-s, 
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: var(--fw-semibold);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    text-decoration: none !important;
+}
+
+/* Button size variants */
+.bel-btn {
+    padding: 8px 16px;
+    font-size: var(--fs-base);
+}
+
+.bel-btn-s {
+    padding: 8px 16px;
+    font-size: var(--fs-sm);
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background-color: var(--ds-color-gray-30);
+    border: 1px solid var(--ot-color-gray-45);
+    border-radius: 50px;
+}
+
+/* Button color variants - Primary */
+.bel-btn.primary, 
+.bel-btn-s.primary {
+    background-color: var(--ds-color-link);
+    color: var(--ds-color-white);
+}
+
+.bel-btn.primary:hover, 
+.bel-btn-s.primary:hover {
+    background-color: var(--ds-color-brand);
+}
+
+/* Button color variants - Secondary */
+.bel-btn.secondary, 
+.bel-btn-s.secondary {
+    background-color: var(--ds-color-gray-40);
+    color: var(--ds-color-gray-80);
+}
+
+.bel-btn.secondary:hover, 
+.bel-btn-s.secondary:hover {
+    background-color: var(--ds-color-gray-50);
+}
+
+/* Button color variants - Brand */
+.bel-btn.brand, 
+.bel-btn-s.brand {
+    background-color: var(--ds-color-primary);
+    color: var(--ds-color-white);
+}
+
+.bel-btn.brand:hover, 
+.bel-btn-s.brand:hover {
+    background-color: var(--ds-color-primary-dark);
+}
+
+/* Button color variants - Danger */
+.bel-btn.danger, 
+.bel-btn-s.danger {
+    background-color: var(--ds-color-error);
+    color: var(--ds-color-white);
+}
+
+.bel-btn.danger:hover, 
+.bel-btn-s.danger:hover {
+    background-color: var(--ds-color-error-dark);
+}
+
+/* Button state variants */
+.bel-btn:not(.secondary), 
+.bel-btn-s:not(.secondary) {
+    color: var(--ds-color-white) !important;
+}
+
+.bel-btn.active, 
+.bel-btn-s.active {
+    background-color: var(--ds-color-link) !important;
+    color: var(--ds-color-white) !important;
+}
+
+.bel-btn.secondary.active, 
+.bel-btn-s.secondary.active {
+    background-color: var(--ds-color-link) !important;
+    color: var(--ds-color-white) !important;
+}
+
+/* Filter button specific styles */
+.filter-btn:hover {
+    background-color: var(--ot-color-gray-45);
+}
+
+.filter-btn.active {
+    background-color: var(--ds-color-link);
+    color: var(--ds-color-white);
+    border-color: var(--ds-color-link);
+}
+
+/* --- View Switcher --- */
+.view-switcher { 
+    display: flex; 
+    background-color: transparent; 
+    border-radius: 4px; 
+    padding: 5px; 
+}
+
+.view-switcher .view-btn { 
+    padding: 8px 15px; 
+    border: none; 
+    background-color: transparent; 
+    font-weight: var(--fw-semibold); 
+    cursor: pointer; 
+    border-radius: 4px; 
+    transition: all 0.2s ease-in-out; 
+    color: var(--ds-color-gray-80); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-switcher .view-btn.active { 
+    background-color: var(--ds-color-brand-light-30); 
+    color: var(--ds-color-link); 
+}
+
+.view-switcher .view-btn i { 
+    margin-right: 5px; 
+}

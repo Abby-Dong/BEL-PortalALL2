@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Base Typography Styles
+   ========================================================================== */
+p, li, label, .bel-sidebar-nav-link span {
+    font-size: var(--fs-base);
+}
+
+.small-text {
+    font-size: var(--fs-sm);
+}
+
+.extra-small-text {
+    font-size: var(--fs-xs);
+}
+
+.micro-text {
+    font-size: var(--fs-xxs);
+}
+
+.bel-table td {
+    font-size: var(--fs-sm);
+}
+
+.settings-row .current-value .dot-password {
+    font-family: var(--font-family-mono);
+    font-size: var(--fs-xl);
+}
+
+.text-muted {
+    color: #777;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   UNIFIED HEADING STYLES
+   ========================================================================== */
+/* Base heading styles */
+.bel-h1,
+.bel-h3,
+.dashboard-welcome,
+.section-title {
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-snug);
+    text-align: start;
+    color: var(--ds-color-gray-90);
+    margin-top: 0;
+}
+
+.bel-h1 {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-extrabold);
+    margin-bottom: 24px;
+}
+
+.bel-h3 {
+    font-size: var(--fs-h3);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.dashboard-welcome {
+    font-size: var(--fs-h2);
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-size: var(--fs-h4);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header-with-controls { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 3rem; 
+    margin-bottom: 0.5rem; 
+}
+
+.section-header-with-controls .bel-h3 { 
+    margin: 0 !important; 
+}

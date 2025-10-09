@@ -1,0 +1,92 @@
+/* ==========================================================================
+   1. ROOT VARIABLES DEFINITION
+   ========================================================================== */
+:root {
+    /* -- Primary Colors -- */
+    --ds-color-primary: #F39800;
+    --ds-color-primary-dark: #e57b03;
+    --ds-color-primary-light-70: #f7c265;
+    --ds-color-primary-light-50: #fbe0b2;
+    --ds-color-primary-light-30: #fdeacc;
+    --ds-color-primary-light-10: #faf3e6;
+
+    /* -- Brand Colors -- */
+    --ds-color-brand: #004280;
+    --ds-color-brand-dark: #003160;
+    --ds-color-brand-light-75: #336899;
+    --ds-color-brand-light-50: #80a0bf;
+    --ds-color-brand-light-30: #dfebf7;
+
+    /* -- Grayscale -- */
+    --ds-color-gray-90: #0c0c0c;
+    --ds-color-gray-80: #434447;
+    --ds-color-gray-70: #737b7d;
+    --ds-color-gray-60: #b6bfc1;
+    --ds-color-gray-50: #cfd2d5;
+    --ds-color-gray-40: #e8ecef;
+    --ds-color-gray-30: #f6f7f9;
+    --ds-color-white: #ffffff;
+
+    /* -- System Colors -- */
+    --ds-color-error-dark: #b52f2f;
+    --ds-color-error: #db3a3a;
+    --ds-color-error-light: #ffeeee;
+    --ds-color-success-dark: #025324;
+    --ds-color-success: #00893a;
+    --ds-color-success-light: #d0e6d4;
+    --ds-color-link: #006EFF;
+
+    /* -- Other Colors -- */
+    --ot-color-gray-65: #9499A1;
+    --ot-color-gray-45: #e0e0e0;
+    --bel-sidebar-active-bg: rgba(255, 255, 255, 0.2);
+    
+    /* -- Layout Sizes -- */
+    --bel-sidebar-width: 260px;
+    --bel-header-height: 56px;
+
+    /* -- Scrollbar -- */
+    --scrollbar-size: 8px;
+    --scrollbar-track: transparent;
+    
+    /* ==========================================================================
+       Typography Root Variables
+       ========================================================================== */
+    /* -- Font Families -- */
+    --font-family-base: "heebo", "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-mono: monospace;
+
+    /* -- Font Weights -- */
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    /* -- Font Sizes (Typographic Scale) -- */
+    --fs-xs: 0.75rem;      /* 12px - for tags, small text */
+    --fs-sm: 0.875rem;     /* 14px - for table data, captions, inputs */
+    --fs-base: 1rem;       /* 16px - for body text, buttons */
+    --fs-lg: 1.125rem;     /* 18px - for larger body text, subtitles */
+    --fs-xl: 1.25rem;      /* 20px - for panel headers, icons */
+    
+    /* -- Heading Sizes -- */
+    --fs-h4: 1.4rem;       /* Section titles */
+    --fs-h3: 1.6rem;       /* Sub-headings */
+    --fs-h2: 1.8rem;       /* Welcome messages */
+    --fs-h1: 2.2rem;       /* Main page titles */
+
+    /* -- Display Sizes -- */
+    --fs-display-sm: 2.3rem; /* Small card values */
+    --fs-display-md: 3rem;   /* Large summary values */
+    
+    /* -- Line Heights -- */
+    --lh-tight: 1.1;       /* For display numbers */
+    --lh-snug: 1.2;        /* For headings */
+    --lh-normal: 1.4;      /* For dense text blocks */
+    --lh-base: 1.6;        /* For main body text */
+
+    /* -- Letter Spacing -- */
+    --ls-normal: normal;
+    --ls-wide: 0.5px;      /* For uppercase titles */
+}

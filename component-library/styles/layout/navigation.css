@@ -1,0 +1,82 @@
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+/* --- Sidebar Navigation --- */
+.bel-sidebar-menu-title { 
+    color: rgba(255, 255, 255, 0.8); 
+    font-size: var(--fs-xs); 
+    font-weight: var(--fw-semibold); 
+    text-transform: uppercase; 
+    letter-spacing: var(--ls-wide); 
+    margin-top: 12px; 
+    margin-bottom: 12px; 
+    padding-left: 15px; 
+}
+
+.bel-sidebar-nav-link { 
+    color: rgba(255, 255, 255, 0.5); 
+    padding: 12px 12px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    transition: background-color 0.2s ease, color 0.5s ease; 
+    border-radius: 4px; 
+    margin-bottom: 5px; 
+}
+
+.bel-sidebar-nav-link i { 
+    font-size: var(--fs-lg); 
+    width: 20px; 
+    text-align: center; 
+}
+
+.bel-sidebar-nav-link.active { 
+    background-color: var(--bel-sidebar-active-bg); 
+    color: var(--ds-color-gray-30); 
+    font-weight: var(--fw-semibold); 
+}
+
+.bel-sidebar-nav-link:hover { 
+    background-color: var(--bel-sidebar-active-bg); 
+    color: var(--ds-color-gray-30); 
+}
+
+/* --- Tab Navigation (in Modals) --- */
+.tab-navigation { 
+    display: flex; 
+    border-bottom: 2px solid var(--ot-color-gray-45); 
+    margin-bottom: 20px; 
+}
+
+.tab-link { 
+    border: none; 
+    background: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-size: var(--fs-base); 
+    font-weight: var(--fw-semibold); 
+    color: var(--ds-color-gray-70); 
+    position: relative; 
+    transition: color 0.2s ease; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-link i { margin-right: 8px; }
+.tab-link:hover { color: var(--ds-color-link); }
+.tab-link.active { 
+    color: var(--ds-color-link); 
+    border-bottom: 3px solid var(--ds-color-link); 
+    margin-bottom: -2px; 
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.tab-content h4 { 
+    font-size: var(--fs-lg); 
+    font-weight: var(--fw-bold); 
+    margin-top: 0; 
+    margin-bottom: 1rem; 
+}

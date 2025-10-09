@@ -1,0 +1,130 @@
+/* ==========================================================================
+   CARDS & PANELS
+   ========================================================================== */
+.bel-card, .bel-panel { 
+    background-color: var(--ds-color-white); 
+    border-radius: 4px; 
+    padding: 16px; 
+    display: flex; 
+    flex-direction: column; 
+    position: relative; 
+}
+
+.bel-card.gray-bg { 
+    background-color: var(--ds-color-gray-30); 
+}
+
+.bel-card-content { 
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.bel-card-title { 
+    font-size: var(--fs-sm); 
+    font-weight: var(--fw-semibold); 
+    color: var(--ds-color-gray-90); 
+}
+
+.bel-card-value { 
+    font-size: var(--fs-display-sm); 
+    font-weight: var(--fw-extrabold); 
+    color: var(--ds-color-gray-90); 
+    line-height: var(--lh-tight); 
+}
+
+.bel-card-value-ytd {
+    font-size: 10px;
+    color: var(--ds-color-gray-60);
+    font-weight: var(--fw-normal);
+    vertical-align: baseline;
+}
+
+.bel-card .trend-indicator { 
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+    font-size: var(--fs-sm); 
+    font-weight: var(--fw-semibold); 
+    margin-top: 4px; 
+}
+
+.bel-card .trend-indicator.positive { 
+    color: var(--ds-color-success); 
+}
+
+.bel-card .trend-indicator.negative { 
+    color: var(--ds-color-error); 
+}
+
+.bel-card .trend-indicator.neutral { 
+    color: var(--ds-color-gray-60); 
+}
+
+.bel-card .trend-indicator i { 
+    font-size: var(--fs-sm); 
+}
+
+.bel-card .trend-indicator-text { 
+    font-weight: normal; 
+    color: var(--ot-color-gray-65); 
+}
+
+.bel-card-icon { 
+    font-size: var(--fs-2xl); 
+    color: var(--ds-color-primary); 
+    background-color: var(--ds-color-primary-light-10); 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.panel-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 12px; 
+}
+
+.panel-header h3 { 
+    margin: 0; 
+    font-size: var(--fs-xl); 
+}
+
+/* Clickable stat cards */
+.bel-card[onclick],
+.clickable-stat-card {
+    transition: all 0.2s ease;
+    border: 1px solid var(--ds-color-white);
+}
+
+.bel-card[onclick]:hover,
+.clickable-stat-card:hover {
+    border: 1px solid var(--ds-color-link);
+}
+
+/* Metric cards inside modals */
+.metric-card { 
+    background-color: var(--ds-color-gray-30); 
+    border-radius: 4px; 
+    padding: 15px; 
+    text-align: center; 
+}
+
+.metric-card span { 
+    display: block; 
+    font-size: var(--fs-sm); 
+    font-weight: var(--fw-semibold); 
+    color: var(--ds-color-gray-70); 
+    margin-bottom: 5px; 
+}
+
+.metric-card strong { 
+    display: block; 
+    font-size: var(--fs-h3); 
+    font-weight: var(--fw-extrabold); 
+    color: var(--ds-color-link); 
+}

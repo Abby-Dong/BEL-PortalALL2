@@ -1,0 +1,58 @@
+/* ==========================================================================
+   PAGE-SPECIFIC: ORDER FILTER PANEL
+   ========================================================================== */
+.filter-panel {
+    background: var(--ds-color-gray-30);
+    border: 1px solid var(--ds-color-gray-40);
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 16px;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; max-height: 0; padding-top: 0; padding-bottom: 0; }
+    to { opacity: 1; max-height: 300px; padding-top: 16px; padding-bottom: 16px; }
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 0;
+}
+.filter-row:last-of-type { margin-bottom: 0; }
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 220px;
+    flex: 1 1 260px;
+}
+.filter-group label {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    color: var(--ds-color-gray-80);
+}
+
+.date-range-inputs,
+.amount-range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.date-separator,
+.amount-separator {
+    font-size: var(--fs-sm);
+    color: var(--ds-color-gray-70);
+    font-weight: var(--fw-medium);
+}
+
+.filter-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    padding-top: 8px;
+    border-top: 1px solid var(--ds-color-gray-40);
+}

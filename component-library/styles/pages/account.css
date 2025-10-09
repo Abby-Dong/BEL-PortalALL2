@@ -1,0 +1,60 @@
+/* ==========================================================================
+   PAGE-SPECIFIC: ACCOUNT MANAGEMENT
+   ========================================================================== */
+.bel-acct-mgmt-card {
+    background-color: var(--ds-color-white);
+    padding: 16px;
+    border-radius: 4px;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    border: 1px solid var(--ot-color-gray-45);
+}
+
+.bel-acct-mgmt-card:hover {
+    transform: translateY(-4px);
+}
+
+.bel-acct-mgmt-text-xl-var { 
+    font-size: var(--fs-xl); 
+    font-weight: var(--fw-bold); 
+    color: var(--ds-color-gray-80); 
+}
+
+.bel-acct-mgmt-text-xs-var { 
+    font-size: var(--fs-xs); 
+    color: var(--ds-color-gray-70); 
+}
+
+.bel-acct-mgmt-text-gray-40-var { 
+    color: var(--ds-color-gray-60); 
+    font-size: var(--fs-base); 
+}
+
+.bel-acct-mgmt-text-clicks-var,
+.bel-acct-mgmt-text-orders-var,
+.bel-acct-mgmt-text-cvr-var { 
+    font-weight: var(--fw-bold); 
+    color: var(--ds-color-gray-80); 
+}
+
+.bel-acct-mgmt-bg-brand-var { 
+    background-color: var(--ds-color-brand); 
+}
+
+.bel-acct-mgmt-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    color: var(--ds-color-link);
+    font-weight: var(--fw-semibold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s, text-decoration 0.2s;
+    font-size: var(--fs-sm);
+}
+
+.bel-acct-mgmt-cta-btn:hover {
+    color: var(--ds-color-brand-dark);
+    text-decoration: none;
+}

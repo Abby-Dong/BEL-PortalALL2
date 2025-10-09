@@ -1,0 +1,37 @@
+/* ==========================================================================
+   BEL Management Portal - Main Import Stylesheet
+   ========================================================================== */
+
+/* 1. Base Styles */
+@import url('base/variables.css');
+@import url('base/base.css');
+@import url('base/typography.css');
+
+/* 2. Layout */
+@import url('layout/layout.css');
+@import url('layout/header.css');
+@import url('layout/navigation.css');
+@import url('layout/grid.css');
+
+/* 3. Components */
+@import url('components/buttons.css');
+@import url('components/forms.css');
+@import url('components/cards.css');
+@import url('components/tables.css');
+@import url('components/badges.css');
+@import url('components/modals.css');
+@import url('components/charts.css');
+@import url('components/tooltips.css');
+
+/* 4. Page-Specific Styles */
+@import url('pages/account.css');
+@import url('pages/dashboard.css');
+@import url('pages/orders.css');
+@import url('pages/support.css');
+
+/* 5. Utilities & Scrollbar */
+@import url('utilities/scrollbar.css');
+@import url('utilities/helpers.css');
+
+/* 6. Responsive Styles (Last) */
+@import url('base/responsive.css');

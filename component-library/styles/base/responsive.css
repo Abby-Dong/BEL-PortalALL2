@@ -1,0 +1,313 @@
+/* ==========================================================================
+   RESPONSIVE STYLES
+   ========================================================================== */
+
+/* --- Form Responsive --- */
+@media (max-width: 768px) {
+    .bel-header-filters {
+        gap: 8px;
+    }
+    
+    .bel-select--compact {
+        min-width: 100px;
+        font-size: var(--fs-xs);
+        padding: 4px 8px;
+    }
+    
+    .bel-select,
+    .bel-input {
+        font-size: var(--fs-xs);
+        padding: 6px 10px;
+    }
+
+    .modal-content .metric-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    /* Banking info grid mobile optimization */
+    .banking-info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
+
+    .filter-row {
+        gap: 12px;
+    }
+    
+    .filter-actions {
+        justify-content: stretch;
+    }
+    
+    .filter-actions .bel-btn {
+        flex: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .bel-header-right {
+        gap: 8px;
+    }
+    
+    .bel-header-filters {
+        gap: 6px;
+    }
+    
+    .bel-select--compact {
+        min-width: 80px;
+        font-size: var(--fs-xs);
+        padding: 4px 6px;
+    }
+    
+    .bel-select,
+    .bel-input {
+        font-size: var(--fs-xs);
+        padding: 4px 8px;
+    }
+    
+    .modal-content .metric-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+}
+
+
+/* --- Grid & Layout Responsive --- */
+@media (max-width: 1200px) { 
+    .bel-stats-cards { 
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    } 
+}
+
+@media (max-width: 1024px) {
+    .performance-charts-grid,
+    .product-analysis-grid {
+        grid-template-columns: 1fr;
+    }
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-cols-2,
+    .grid-cols-3,
+    .grid-cols-6,
+    .performance-grid,
+    .product-sales-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .performance-grid {
+        flex-direction: column;
+    }
+    
+    .performance-grid > div:first-child,
+    .performance-grid > div:last-child {
+        flex: none;
+        width: 100%;
+    }
+    
+    .product-sales-grid {
+        flex-direction: column;
+    }
+    
+    .product-sales-grid > div:first-child,
+    .product-sales-grid > div:last-child {
+        flex: none;
+        width: 100%;
+    }
+    
+    .pie-chart-container {
+        height: 220px;
+        margin-bottom: 20px;
+    }
+    
+    .pie-chart-section {
+        max-width: 100%;
+    }
+    
+    .flex-center {
+        height: auto;
+    }
+    
+    .top-performers-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .top-performers-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .top-performer-item {
+        padding: 6px;
+        gap: 8px;
+        flex: none;
+    }
+    
+    .top-performer-avatar,
+    .top-performer-item .real-photo-avatar {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .top-performer-name {
+        font-size: var(--fs-xs);
+    }
+    
+    .top-performer-value {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bel-sidebar-logo img { 
+        width: 160px; 
+    } 
+    
+    .bel-sidebar-logo span { 
+        font-size: var(--fs-xs); 
+    }
+    
+    .bel-header { 
+        width: 100%; 
+        margin-left: 0; 
+        padding: 0 15px; 
+        justify-content: space-between; 
+    }
+    
+    .bel-header-content { 
+        justify-content: flex-end; 
+    }
+    
+    .bel-hamburger-menu { 
+        display: block !important; 
+        margin-right: auto; 
+    }
+    
+    .bel-sidebar { 
+        transform: translateX(-100%); 
+        z-index: 999; 
+        top: 0; 
+        bottom: 0; 
+        left: 0; 
+        height: 100vh; 
+        padding-top: 90px; 
+    }
+    
+    .bel-sidebar.open { 
+        transform: translateX(0); 
+    }
+    
+    .bel-main-content { 
+        margin-left: 0; 
+        padding: 20px; 
+        max-width: 100%; 
+    }
+    
+    .bel-grid-container { 
+        grid-template-columns: 1fr; 
+    }
+    
+    /* Modal optimizations for mobile */
+    .modal-overlay {
+        padding: 10px;
+        align-items: flex-start;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        max-height: calc(100vh - 20px);
+        width: calc(100% - 20px);
+        margin: auto;
+    }
+    
+    .modal-body-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    .tab-navigation {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .tab-link {
+        white-space: nowrap;
+        min-width: fit-content;
+    }
+    
+    .bel-stats-cards { 
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    }
+    
+    .performance-grid { 
+        flex-direction: column; 
+    }
+    
+    .performance-grid > div:first-child,
+    .performance-grid > div:last-child {
+        flex: none;
+        width: 100%;
+    }
+    
+    .product-sales-grid { 
+        flex-direction: column; 
+    }
+    
+    .product-sales-grid > div:first-child,
+    .product-sales-grid > div:last-child {
+        flex: none;
+        width: 100%;
+    }
+    
+    .pie-chart-container {
+        height: 200px;
+        margin-bottom: 15px;
+    }
+    
+    .pie-chart-section {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) { 
+    .grid-cols-2, 
+    .product-analysis-grid, 
+    .grid-cols-3, 
+    .grid-cols-6, 
+    .performance-charts-grid,
+    .product-sales-grid { 
+        grid-template-columns: 1fr; 
+    } 
+}
+
+@container (max-width: 300px) { 
+    .product-analysis-grid { 
+        grid-template-columns: 1fr; 
+    } 
+}
+
+
+/* --- Utility Grid Responsive --- */
+@media (min-width: 640px) {
+    .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1280px) {
+    .xl\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}

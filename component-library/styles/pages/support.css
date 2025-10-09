@@ -1,0 +1,34 @@
+/* ==========================================================================
+   PAGE-SPECIFIC: SUPPORT & COMMUNICATION
+   ========================================================================== */
+.support-question-box { background: #f8fafc; border-left: 4px solid #3b82f6; padding: 16px; border-radius: 4px; margin-bottom: 20px; }
+.support-bel-profile { display: flex; align-items: flex-start; gap: 12px; }
+.support-bel-avatar { flex-shrink: 0; width: 40px; height: 40px; }
+.support-profile-info { flex: 1; }
+.support-profile-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.support-bel-name { font-size: 1rem; color: #1f2937; font-weight: 600; }
+.support-referral-id { color: #6b7280; font-size: 0.85rem; }
+.support-message { line-height: 1.5; color: #374151; font-size: 0.95rem; }
+
+.support-conversation-section { margin-bottom: 0px; }
+.support-conversation-title { font-weight: 600; color: #374151; margin-bottom: 12px; font-size: 1rem; }
+.support-replies-container { display: flex; flex-direction: column; gap: 12px; }
+.support-reply-item { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 4px; padding: 12px; }
+.support-reply-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.support-reply-content { color: #374151; line-height: 1.6; margin-bottom: 8px; }
+.support-reply-meta { color: #9ca3af; font-size: 0.75rem; }
+
+.support-reply-section { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 4px; padding: 16px; }
+.support-reply-form-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.support-reply-form-title { font-weight: 600; color: #374151; }
+.support-reply-textarea { width: 100%; min-height: 100px; border: 1px solid #d1d5db; border-radius: 4px; padding: 12px; font-family: inherit; font-size: 0.95rem; line-height: 1.5; resize: vertical; margin-bottom: 12px; }
+.support-reply-actions { display: flex; justify-content: flex-end; gap: 12px; }
+
+/* Attachments */
+.support-attachment-section { border-top: 1px solid var(--ds-color-gray-40); padding-top: 12px; }
+.attachment-upload-area:hover { border-color: var(--ds-color-gray-60); background-color: var(--ds-color-gray-30); }
+.attached-files-list { max-height: 200px; overflow-y: auto; }
+.attached-file-item:hover { background-color: var(--ds-color-gray-40); }
+.attached-file-item .remove-attachment-btn:hover { background-color: var(--ds-color-error-light); color: var(--ds-color-error); }
+.reply-attachments .attachment-item:hover { background-color: var(--ds-color-gray-40); }
+.reply-attachments .download-attachment:hover { background-color: var(--ds-color-gray-30); color: var(--ds-color-link); }

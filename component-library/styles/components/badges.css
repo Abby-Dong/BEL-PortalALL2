@@ -1,0 +1,172 @@
+/* ==========================================================================
+   UNIFIED BADGE STYLES
+   ========================================================================== */
+/* Base badge styles - applies to all badge types */
+.bel-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    white-space: nowrap;
+}
+
+/* Badge color variants - Primary/Orange theme */
+.bel-badge.primary-color,
+.bel-badge.pending,
+.bel-badge.exploder,
+.bel-badge.iotmart,
+.bel-badge.campaign-launch-badge {
+    background-color: var(--ds-color-primary-light-10);
+    color: var(--ds-color-primary);
+}
+
+/* Badge color variants - Success/Green theme */
+.bel-badge.completed,
+.bel-badge.enabler,
+.bel-badge.payout-reminder-badge {
+    background-color: var(--ds-color-success-light);
+    color: var(--ds-color-success);
+}
+
+/* Badge color variants - Brand/Blue theme */
+.bel-badge.processing,
+.bel-badge.builder,
+.bel-badge.approved,
+.bel-badge.advantech,
+.bel-badge.system-badge,
+.bel-badge.policy-update-badge {
+    background-color: var(--ds-color-brand-light-30);
+    color: var(--ds-color-link);
+}
+
+/* Special policy update badge */
+.bel-badge.policy-update-badge {
+    background-color: var(--ds-color-brand);
+    color: var(--ds-color-white);
+}
+
+/* Badge color variants - Error/Red theme */
+.bel-badge.canceled,
+.bel-badge.rejected,
+.bel-badge.danger,
+.bel-badge.leader,
+.bel-badge.important-badge {
+    background-color: var(--ds-color-error-light);
+    color: var(--ds-color-error);
+}
+
+/* Badge color variants - Secondary/Gray theme */
+.bel-badge.secondary-color {
+    background-color: var(--ds-color-gray-40);
+    color: var(--ds-color-gray-80);
+}
+
+/* Badge color variants - New simplified color system */
+.bel-badge.green {
+    background-color: var(--ds-color-success-light);
+    color: var(--ds-color-success);
+}
+
+.bel-badge.blue {
+    background-color: var(--ds-color-brand-light-30);
+    color: var(--ds-color-link);
+}
+
+.bel-badge.red {
+    background-color: var(--ds-color-error-light);
+    color: var(--ds-color-error);
+}
+
+.bel-badge.orange {
+    background-color: var(--ds-color-primary-light-10);
+    color: var(--ds-color-primary);
+}
+
+.bel-badge.gray {
+    background-color: var(--ds-color-gray-40);
+    color: var(--ds-color-gray-80);
+}
+
+.bel-badge.bright {
+    background-color: var(--ds-color-link);
+    color: var(--ds-color-white);
+    font-weight: var(--fw-bold);
+}
+
+.bel-badge.brand {
+    background: var(--ds-color-brand-light-30);
+    color: var(--ds-color-brand);
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.bel-badge.danger { 
+    background-color: #FFEFEE; 
+    color: #B52F2F; 
+}
+
+.bel-badge.secondary-color {
+    background-color: #e3f2fd;
+    color: #2196f3;
+}
+
+.bel-badge.brand {
+    background: var(--ds-color-brand-light-30);
+    color: var(--ds-color-brand);
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Legacy tag styling - for compatibility */
+.bel-badge.default {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ds-color-gray-80);
+    background-color: var(--ds-color-gray-40);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Notification badges */
+.bel-notification-item .bel-badge { 
+    font-size: var(--fs-xs); 
+    padding: 2px 6px; 
+    border-radius: 4px; 
+    margin-right: 8px; 
+}
+
+.bel-notification-item .bel-badge.admin-alert { 
+    background-color: var(--ds-color-error); 
+    color: var(--ds-color-white); 
+    font-weight: var(--fw-bold);
+}
+
+.bel-notification-item .bel-badge.admin-system { 
+    background-color: var(--ds-color-gray-80); 
+    color: var(--ds-color-white); 
+}
+
+.bel-notification-item .bel-badge.admin-user { 
+    background-color: var(--ds-color-link); 
+    color: var(--ds-color-white); 
+}
+
+/* Additional badge color variants for compatibility */
+.bel-badge.admin {
+    background-color: var(--ds-color-link);
+    color: var(--ds-color-white);
+    font-weight: var(--fw-bold);
+}
+
+.bel-badge.hot-selling {
+    background: var(--ds-color-brand-light-30);
+    color: var(--ds-color-brand);
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+}

@@ -1,0 +1,39 @@
+/* ==========================================================================
+   CHARTS
+   ========================================================================== */
+.chart-container { 
+    position: relative; 
+    width: 100%; 
+}
+
+.pie-chart-container { 
+    height: 280px;
+    width: 100%;
+    max-width: 100%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    position: relative;
+}
+
+.pie-chart-section {
+    flex: 0 1 auto;
+    max-width: 500px;
+}
+
+.line-chart-container { 
+    aspect-ratio: 2 / 1; 
+    max-height: 300px; 
+}
+
+.bar-chart-container { 
+    min-height: 350px; 
+}
+
+/* Modal chart styling */
+.modal-content .chart-container {
+    background: var(--ds-color-gray-30);
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 1rem;
+}

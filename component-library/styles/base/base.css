@@ -1,0 +1,51 @@
+/* ==========================================================================
+   2. GLOBAL & ELEMENT STYLES
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-normal);
+    line-height: var(--lh-base);
+    color: var(--ds-color-gray-80);
+    background-color: var(--ds-color-gray-30);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--ds-color-link);
+}
+
+a.referral-id-link {
+    font-weight: var(--fw-semibold);
+    text-decoration: none;
+}
+
+a.referral-id-link:hover {
+    text-decoration: underline;
+}
+
+input, select, textarea, button {
+    font-family: inherit;
+}
+
+.content-section { 
+    display: none; 
+}
+
+.content-section.active { 
+    display: block; 
+}

@@ -1,0 +1,49 @@
+/* ==========================================================================
+   SCROLLBARS
+   ========================================================================== */
+body, .bel-sidebar, .scrollable-table-container, .modal-content { 
+    scrollbar-width: thin; 
+    scrollbar-color: var(--ds-color-gray-40) var(--scrollbar-track); 
+}
+
+body::-webkit-scrollbar, 
+.bel-sidebar::-webkit-scrollbar, 
+.scrollable-table-container::-webkit-scrollbar,
+.modal-content::-webkit-scrollbar { 
+    width: var(--scrollbar-size); 
+    height: var(--scrollbar-size); 
+}
+
+body::-webkit-scrollbar-thumb, 
+.bel-sidebar::-webkit-scrollbar-thumb, 
+.scrollable-table-container::-webkit-scrollbar-thumb { 
+    background-color: var(--ds-color-gray-40); 
+    border-radius: 999px; 
+    border: 2px solid transparent; 
+    background-clip: padding-box; 
+}
+
+body::-webkit-scrollbar-thumb:hover, 
+.bel-sidebar::-webkit-scrollbar-thumb:hover, 
+.scrollable-table-container::-webkit-scrollbar-thumb:hover { 
+    background-color: var(--ds-color-gray-40); 
+}
+
+body::-webkit-scrollbar-track, 
+.bel-sidebar::-webkit-scrollbar-track, 
+.scrollable-table-container::-webkit-scrollbar-track { 
+    background: var(--scrollbar-track); 
+}
+
+/* Custom scrollbar for modal */
+.modal-content::-webkit-scrollbar-track {
+    background: var(--ds-color-gray-30);
+    border-radius: 4px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--ds-color-gray-60);
+    border-radius: 4px;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--ds-color-gray-70);
+}

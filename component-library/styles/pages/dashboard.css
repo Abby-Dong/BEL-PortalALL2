@@ -1,0 +1,85 @@
+/* ==========================================================================
+   PAGE-SPECIFIC: DASHBOARD & EARNINGS
+   ========================================================================== */
+   
+/* Earnings Summary */
+.earnings-summary-panel { 
+    text-align: center; 
+}
+.earnings-summary-panel .total-title { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 5px; 
+    font-size: var(--fs-lg); 
+    font-weight: var(--fw-semibold); 
+    color: var(--ds-color-gray-80); 
+}
+.earnings-summary-panel .total-value { 
+    font-size: var(--fs-display-md); 
+    font-weight: var(--fw-extrabold); 
+    color: var(--ds-color-primary); 
+}
+.sub-earnings { 
+    display: flex; 
+    justify-content: center; 
+    gap: 40px; 
+    margin-top: 8px; 
+    padding-top: 8px; 
+    border-top: 1px solid var(--ot-color-gray-45); 
+}
+.sub-earnings > div { text-align: center; }
+.sub-earnings .sub-title { 
+    font-size: var(--fs-sm); 
+    color: var(--ds-color-gray-70); 
+    font-weight: var(--fw-semibold); 
+}
+.sub-earnings .sub-value { 
+    font-size: var(--fs-h2); 
+    font-weight: var(--fw-bold); 
+}
+
+/* Sales Performance Insights */
+.sales-summary {
+    background: var(--ds-color-white);
+    border: 1px solid var(--ds-color-gray-40);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.summary-header h4 { margin: 0 0 1rem 0; color: var(--ds-color-gray-90); font-size: 1rem; font-weight: 600; }
+.summary-stats { display: flex; gap: 2rem; }
+.stat-item { display: flex; flex-direction: column; gap: 0.25rem; }
+.stat-label { font-size: 0.8rem; color: var(--ds-color-gray-70); font-weight: 500; }
+.stat-value { font-size: 1rem; font-weight: 600; color: var(--ds-color-gray-90); }
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.75rem;
+    border: 1px solid var(--ds-color-gray-40);
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    background: var(--ds-color-white);
+    width: 100%;
+    box-sizing: border-box;
+}
+.product-info { flex: 1; }
+.product-name { font-weight: 600; color: var(--ds-color-gray-90); margin-bottom: 0.25rem; font-family: inherit; font-size: 0.85rem; }
+.product-description { font-size: 0.75rem; color: var(--ds-color-gray-70); margin-bottom: 0.5rem; line-height: 1.3; font-family: inherit; }
+.product-stats { display: flex; gap: 1rem; font-size: 0.8rem; }
+.quantity { color: var(--ds-color-success); font-weight: 500; }
+.revenue { color: var(--ds-color-brand); font-weight: 500; }
+
+/* Top Performers */
+.top-performers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.top-performer-section { display: flex; flex-direction: column; gap: 12px; }
+.top-performers-card { background-color: var(--ds-color-white); border: 1px solid var(--ds-color-border); border-radius: 4px; padding: 0px; display: flex; flex-direction: row; }
+.top-performers-container { display: flex; flex-direction: row; gap: 8px; flex-wrap: wrap; }
+.top-performer-item { display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 4px; transition: background-color 0.2s ease; flex: 1; min-width: 0; cursor: pointer; }
+.top-performer-avatar, .top-performer-item .real-photo-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--ds-color-link); flex-shrink: 0; }
+.top-performer-info { flex: 1; min-width: 0; }
+.top-performer-name { font-size: var(--fs-sm); font-weight: var(--fw-semibold); color: var(--ds-color-gray-90); margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.top-performer-value { font-size: var(--fs-xs); font-weight: var(--fw-medium); color: var(--ds-color-gray-70); }
+.top-performer-avatar.generated-avatar { display: flex; align-items: center; justify-content: center; font-weight: var(--fw-bold); font-size: var(--fs-sm); color: var(--ds-color-white); }
