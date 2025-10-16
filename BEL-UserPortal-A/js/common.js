@@ -178,6 +178,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Show avatar edit button
             if (avatarEditBtn) avatarEditBtn.style.display = 'block';
             
+            // Make email input readonly
+            const emailInput = document.getElementById('profile-input-email');
+            if (emailInput) emailInput.setAttribute('readonly', 'readonly');
+            
             // Focus on name input
             const nameInput = document.getElementById('profile-input-name');
             if (nameInput) nameInput.focus();
@@ -236,6 +240,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             profileEditInfo.style.display = 'none';
             // Hide avatar edit button
             if (avatarEditBtn) avatarEditBtn.style.display = 'none';
+            
+            // Remove readonly from email input
+            const emailInput = document.getElementById('profile-input-email');
+            if (emailInput) emailInput.removeAttribute('readonly');
         }
     }
 
@@ -347,10 +355,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     // --- Profile Avatar Upload Logic ---
-    const avatarUploadBtn = document.getElementById('avatar-upload-btn');
+    const avatarUploadBtn = document.getElementById('avatar-edit-btn');
     const avatarRemoveBtn = document.getElementById('avatar-remove-btn');
     const avatarUploadInput = document.getElementById('avatar-upload');
-    const avatarPreview = document.querySelector('.avatar-preview');
+    const avatarPreview = document.querySelector('.profile-avatar-wrapper');
     const avatarImg = document.getElementById('profile-avatar-img');
     const defaultAvatarUrl = 'https://irp.cdn-website.com/56869327/dms3rep/multi/AVATAR-G.png';
 
@@ -381,18 +389,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Handle avatar upload button click - only works in edit mode
     if (avatarUploadBtn && avatarUploadInput) {
         avatarUploadBtn.addEventListener('click', () => {
-            const panel = document.getElementById('account-profile-panel');
-            if (panel && panel.classList.contains('edit-mode')) {
-                avatarUploadInput.click();
-            }
+            avatarUploadInput.click();
         });
     }
 
     // Handle avatar preview click - only works in edit mode
     if (avatarPreview && avatarUploadInput) {
         avatarPreview.addEventListener('click', () => {
-            const panel = document.getElementById('account-profile-panel');
-            if (panel && panel.classList.contains('edit-mode')) {
+            // Check if avatar edit button is visible (indicates edit mode)
+            if (avatarUploadBtn && avatarUploadBtn.style.display === 'block') {
                 avatarUploadInput.click();
             }
         });
