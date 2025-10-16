@@ -3531,7 +3531,7 @@ if (!checkAuthentication()) {
                     .map(record => ({
                         name: record.name,
                         id: record.id,
-                        displayText: searchField === 'name' ? record.name : `${record.id} - ${record.name}`,
+                        displayText: searchField === 'name' ? record.name : `${record.id}`,
                         searchField
                     }));
 
@@ -4073,47 +4073,65 @@ if (!checkAuthentication()) {
             const bankingInfo = record.bankingInfo;
             
             // Elements for displaying banking information
-            const bankNameDisplay = document.getElementById('bank-name-display');
+            const beneficiaryNameDisplay = document.getElementById('beneficiary-name-display');
+            const beneficiaryBankDisplay = document.getElementById('beneficiary-bank-display');
+            const branchNameDisplay = document.getElementById('branch-name-display');
             const swiftCodeDisplay = document.getElementById('swift-code-display');
-            const accountHolderDisplay = document.getElementById('account-holder-display');
-            const phoneDisplay = document.getElementById('phone-display');
-            const addressDisplay = document.getElementById('address-display');
+            const accountNumberDisplay = document.getElementById('account-number-display');
+            const ibanCodeDisplay = document.getElementById('iban-code-display');
+            const countryDisplay = document.getElementById('country-display');
+            const officeAddressDisplay = document.getElementById('office-address-display');
             
             // Elements for editing banking information
-            const bankNameEdit = document.getElementById('bank-name-edit');
+            const beneficiaryNameEdit = document.getElementById('beneficiary-name-edit');
+            const beneficiaryBankEdit = document.getElementById('beneficiary-bank-edit');
+            const branchNameEdit = document.getElementById('branch-name-edit');
             const swiftCodeEdit = document.getElementById('swift-code-edit');
-            const accountHolderEdit = document.getElementById('account-holder-edit');
-            const phoneEdit = document.getElementById('phone-edit');
-            const addressEdit = document.getElementById('address-edit');
+            const accountNumberEdit = document.getElementById('account-number-edit');
+            const ibanCodeEdit = document.getElementById('iban-code-edit');
+            const countryEdit = document.getElementById('country-edit');
+            const officeAddressEdit = document.getElementById('office-address-edit');
             
             if (bankingInfo) {
                 // Update display elements
-                if (bankNameDisplay) bankNameDisplay.textContent = bankingInfo.bankName || '-';
+                if (beneficiaryNameDisplay) beneficiaryNameDisplay.textContent = bankingInfo.beneficiaryName || record.name || '-';
+                if (beneficiaryBankDisplay) beneficiaryBankDisplay.textContent = bankingInfo.beneficiaryBank || bankingInfo.bankName || '-';
+                if (branchNameDisplay) branchNameDisplay.textContent = bankingInfo.branchName || '-';
                 if (swiftCodeDisplay) swiftCodeDisplay.textContent = bankingInfo.swiftCode || '-';
-                if (accountHolderDisplay) accountHolderDisplay.textContent = bankingInfo.accountHolder || '-';
-                if (phoneDisplay) phoneDisplay.textContent = bankingInfo.phone || '-';
-                if (addressDisplay) addressDisplay.textContent = bankingInfo.address || '-';
+                if (accountNumberDisplay) accountNumberDisplay.textContent = bankingInfo.accountNumber || '-';
+                if (ibanCodeDisplay) ibanCodeDisplay.textContent = bankingInfo.ibanCode || '-';
+                if (countryDisplay) countryDisplay.textContent = bankingInfo.country || '-';
+                if (officeAddressDisplay) officeAddressDisplay.textContent = bankingInfo.officeAddress || bankingInfo.address || '-';
                 
                 // Update edit elements
-                if (bankNameEdit) bankNameEdit.value = bankingInfo.bankName || '';
+                if (beneficiaryNameEdit) beneficiaryNameEdit.value = bankingInfo.beneficiaryName || record.name || '';
+                if (beneficiaryBankEdit) beneficiaryBankEdit.value = bankingInfo.beneficiaryBank || bankingInfo.bankName || '';
+                if (branchNameEdit) branchNameEdit.value = bankingInfo.branchName || '';
                 if (swiftCodeEdit) swiftCodeEdit.value = bankingInfo.swiftCode || '';
-                if (accountHolderEdit) accountHolderEdit.value = bankingInfo.accountHolder || '';
-                if (phoneEdit) phoneEdit.value = bankingInfo.phone || '';
-                if (addressEdit) addressEdit.value = bankingInfo.address || '';
+                if (accountNumberEdit) accountNumberEdit.value = bankingInfo.accountNumber || '';
+                if (ibanCodeEdit) ibanCodeEdit.value = bankingInfo.ibanCode || '';
+                if (countryEdit) countryEdit.value = bankingInfo.country || '';
+                if (officeAddressEdit) officeAddressEdit.value = bankingInfo.officeAddress || bankingInfo.address || '';
             } else {
                 // No banking info available, show placeholder
-                if (bankNameDisplay) bankNameDisplay.textContent = '-';
+                if (beneficiaryNameDisplay) beneficiaryNameDisplay.textContent = record.name || '-';
+                if (beneficiaryBankDisplay) beneficiaryBankDisplay.textContent = '-';
+                if (branchNameDisplay) branchNameDisplay.textContent = '-';
                 if (swiftCodeDisplay) swiftCodeDisplay.textContent = '-';
-                if (accountHolderDisplay) accountHolderDisplay.textContent = '-';
-                if (phoneDisplay) phoneDisplay.textContent = '-';
-                if (addressDisplay) addressDisplay.textContent = '-';
+                if (accountNumberDisplay) accountNumberDisplay.textContent = '-';
+                if (ibanCodeDisplay) ibanCodeDisplay.textContent = '-';
+                if (countryDisplay) countryDisplay.textContent = '-';
+                if (officeAddressDisplay) officeAddressDisplay.textContent = '-';
                 
                 // Clear edit elements
-                if (bankNameEdit) bankNameEdit.value = '';
+                if (beneficiaryNameEdit) beneficiaryNameEdit.value = record.name || '';
+                if (beneficiaryBankEdit) beneficiaryBankEdit.value = '';
+                if (branchNameEdit) branchNameEdit.value = '';
                 if (swiftCodeEdit) swiftCodeEdit.value = '';
-                if (accountHolderEdit) accountHolderEdit.value = '';
-                if (phoneEdit) phoneEdit.value = '';
-                if (addressEdit) addressEdit.value = '';
+                if (accountNumberEdit) accountNumberEdit.value = '';
+                if (ibanCodeEdit) ibanCodeEdit.value = '';
+                if (countryEdit) countryEdit.value = '';
+                if (officeAddressEdit) officeAddressEdit.value = '';
             }
         },
 
@@ -5023,25 +5041,31 @@ if (!checkAuthentication()) {
 
         proceedWithBankingUpdate(reason) {
             // Get all the edit fields
-            const bankName = ui.modal?.querySelector('#bank-name-edit')?.value;
+            const beneficiaryName = ui.modal?.querySelector('#beneficiary-name-edit')?.value;
+            const beneficiaryBank = ui.modal?.querySelector('#beneficiary-bank-edit')?.value;
+            const branchName = ui.modal?.querySelector('#branch-name-edit')?.value;
             const swiftCode = ui.modal?.querySelector('#swift-code-edit')?.value;
-            const accountHolder = ui.modal?.querySelector('#account-holder-edit')?.value;
-            const phone = ui.modal?.querySelector('#phone-edit')?.value;
-            const address = ui.modal?.querySelector('#address-edit')?.value;
+            const accountNumber = ui.modal?.querySelector('#account-number-edit')?.value;
+            const ibanCode = ui.modal?.querySelector('#iban-code-edit')?.value;
+            const country = ui.modal?.querySelector('#country-edit')?.value;
+            const officeAddress = ui.modal?.querySelector('#office-address-edit')?.value;
 
-            // Validate required fields
-            if (!bankName || !swiftCode || !accountHolder || !phone || !address) {
-                this.showCustomAlert('All fields are required for banking information.', 'error');
+            // Validate required fields (IBAN is optional)
+            if (!beneficiaryName || !beneficiaryBank || !branchName || !swiftCode || !accountNumber || !country || !officeAddress) {
+                this.showCustomAlert('All fields except IBAN Code are required for banking information.', 'error');
                 return;
             }
 
             // Update display fields
             const displays = {
-                '#bank-name-display': bankName,
+                '#beneficiary-name-display': beneficiaryName,
+                '#beneficiary-bank-display': beneficiaryBank,
+                '#branch-name-display': branchName,
                 '#swift-code-display': swiftCode,
-                '#account-holder-display': accountHolder,
-                '#phone-display': phone,
-                '#address-display': address
+                '#account-number-display': accountNumber,
+                '#iban-code-display': ibanCode || '-',
+                '#country-display': country,
+                '#office-address-display': officeAddress
             };
 
             Object.entries(displays).forEach(([selector, value]) => {
@@ -5051,11 +5075,14 @@ if (!checkAuthentication()) {
 
             // Save to edit history with reason
             this.saveBankingEditHistory({
-                bankName,
+                beneficiaryName,
+                beneficiaryBank,
+                branchName,
                 swiftCode,
-                accountHolder,
-                phone,
-                address,
+                accountNumber,
+                ibanCode,
+                country,
+                officeAddress,
                 reason,
                 timestamp: new Date().toISOString(),
                 userId: appState.currentReferralId
@@ -5167,26 +5194,38 @@ if (!checkAuthentication()) {
                             <div style="font-size: 0.85rem; color: #666;">${date}</div>
                         </div>
                         <div style="margin-bottom: 5px;"><strong>Modified by:</strong> ${change.changedBy}</div>
-                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 10px;">
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px;">
                             <div>
-                                <div style="font-size: 0.85rem; color: #666;">Bank Name</div>
-                                <div style="font-weight: 500;">${change.bankName}</div>
+                                <div style="font-size: 0.85rem; color: #666;">Beneficiary Name</div>
+                                <div style="font-weight: 500;">${change.beneficiaryName || change.accountHolder || '-'}</div>
                             </div>
                             <div>
-                                <div style="font-size: 0.85rem; color: #666;">SWIFT Code</div>
-                                <div style="font-weight: 500;">${change.swiftCode}</div>
+                                <div style="font-size: 0.85rem; color: #666;">Beneficiary Bank</div>
+                                <div style="font-weight: 500;">${change.beneficiaryBank || change.bankName || '-'}</div>
                             </div>
                             <div>
-                                <div style="font-size: 0.85rem; color: #666;">Account Holder</div>
-                                <div style="font-weight: 500;">${change.accountHolder}</div>
+                                <div style="font-size: 0.85rem; color: #666;">Branch Name</div>
+                                <div style="font-weight: 500;">${change.branchName || '-'}</div>
                             </div>
                             <div>
-                                <div style="font-size: 0.85rem; color: #666;">Phone</div>
-                                <div style="font-weight: 500;">${change.phone}</div>
+                                <div style="font-size: 0.85rem; color: #666;">Swift Code</div>
+                                <div style="font-weight: 500;">${change.swiftCode || '-'}</div>
                             </div>
-                            <div style="grid-column: 1 / -1;">
-                                <div style="font-size: 0.85rem; color: #666;">Address</div>
-                                <div style="font-weight: 500;">${change.address}</div>
+                            <div>
+                                <div style="font-size: 0.85rem; color: #666;">Account No</div>
+                                <div style="font-weight: 500;">${change.accountNumber || '-'}</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.85rem; color: #666;">IBAN Code</div>
+                                <div style="font-weight: 500;">${change.ibanCode || '-'}</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.85rem; color: #666;">Country</div>
+                                <div style="font-weight: 500;">${change.country || '-'}</div>
+                            </div>
+                            <div style="grid-column: 2 / -1;">
+                                <div style="font-size: 0.85rem; color: #666;">Office Street / Office Postal Code</div>
+                                <div style="font-weight: 500;">${change.officeAddress || change.address || '-'}</div>
                             </div>
                         </div>
                         ${change.reason ? `<div style="margin-top: 10px; padding: 8px; background: #fff3cd; border-radius: 4px; font-size: 0.9rem;"><strong>Reason:</strong> ${change.reason}</div>` : ''}
@@ -6007,16 +6046,30 @@ if (!checkAuthentication()) {
 
             if (rangeLabel) {
                 const from = total === 0 ? 0 : startIndex + 1;
-                const to = endIndex;
+                const to = Math.min(endIndex, total);
                 rangeLabel.textContent = `${from}–${to} of ${total}`;
             }
 
+            // 確保按鈕狀態正確
             if (prevBtn) {
-                prevBtn.disabled = appState.accountGridPage === 1;
+                const isFirstPage = appState.accountGridPage <= 1;
+                prevBtn.disabled = isFirstPage;
+                prevBtn.classList.toggle('disabled', isFirstPage);
             }
 
             if (nextBtn) {
-                nextBtn.disabled = endIndex >= total;
+                const totalPages = Math.ceil(total / appState.accountGridRowsPerPage);
+                const isLastPage = appState.accountGridPage >= totalPages || total === 0;
+                nextBtn.disabled = isLastPage;
+                nextBtn.classList.toggle('disabled', isLastPage);
+                
+                console.log('Grid pagination UI update:', {
+                    currentPage: appState.accountGridPage,
+                    totalPages,
+                    total,
+                    isLastPage,
+                    disabled: nextBtn.disabled
+                });
             }
 
             if (rowsSelect) {
@@ -6034,16 +6087,30 @@ if (!checkAuthentication()) {
 
             if (rangeLabel) {
                 const from = total === 0 ? 0 : startIndex + 1;
-                const to = endIndex;
+                const to = Math.min(endIndex, total);
                 rangeLabel.textContent = `${from}–${to} of ${total}`;
             }
 
+            // 確保按鈕狀態正確
             if (prevBtn) {
-                prevBtn.disabled = appState.accountListPage === 1;
+                const isFirstPage = appState.accountListPage <= 1;
+                prevBtn.disabled = isFirstPage;
+                prevBtn.classList.toggle('disabled', isFirstPage);
             }
 
             if (nextBtn) {
-                nextBtn.disabled = endIndex >= total;
+                const totalPages = Math.ceil(total / appState.accountListRowsPerPage);
+                const isLastPage = appState.accountListPage >= totalPages || total === 0;
+                nextBtn.disabled = isLastPage;
+                nextBtn.classList.toggle('disabled', isLastPage);
+                
+                console.log('List pagination UI update:', {
+                    currentPage: appState.accountListPage,
+                    totalPages,
+                    total,
+                    isLastPage,
+                    disabled: nextBtn.disabled
+                });
             }
 
             if (rowsSelect) {
@@ -6054,22 +6121,50 @@ if (!checkAuthentication()) {
         },
 
         setupAccountPagination() {
-            // Grid view pagination
+            // 清除之前的事件監聽器，防止重複綁定
             const gridPrevBtn = document.getElementById('account-grid-prev-page');
             const gridNextBtn = document.getElementById('account-grid-next-page');
             const gridRowsSelect = document.getElementById('account-grid-rows-per-page');
 
-            if (gridPrevBtn) {
-                gridPrevBtn.addEventListener('click', () => {
+            // 克隆節點來清除所有事件監聽器
+            if (gridPrevBtn && gridPrevBtn.parentNode) {
+                const newGridPrevBtn = gridPrevBtn.cloneNode(true);
+                gridPrevBtn.parentNode.replaceChild(newGridPrevBtn, gridPrevBtn);
+            }
+            if (gridNextBtn && gridNextBtn.parentNode) {
+                const newGridNextBtn = gridNextBtn.cloneNode(true);
+                gridNextBtn.parentNode.replaceChild(newGridNextBtn, gridNextBtn);
+            }
+            if (gridRowsSelect && gridRowsSelect.parentNode) {
+                const newGridRowsSelect = gridRowsSelect.cloneNode(true);
+                gridRowsSelect.parentNode.replaceChild(newGridRowsSelect, gridRowsSelect);
+            }
+
+            // 重新獲取清理後的元素
+            const cleanGridPrevBtn = document.getElementById('account-grid-prev-page');
+            const cleanGridNextBtn = document.getElementById('account-grid-next-page');
+            const cleanGridRowsSelect = document.getElementById('account-grid-rows-per-page');
+
+            if (cleanGridPrevBtn) {
+                cleanGridPrevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Grid Previous clicked, current page:', appState.accountGridPage);
+                    
                     if (appState.accountGridPage > 1) {
                         appState.accountGridPage--;
+                        console.log('Moving to page:', appState.accountGridPage);
                         this.renderAccountCards();
                     }
                 });
             }
 
-            if (gridNextBtn) {
-                gridNextBtn.addEventListener('click', () => {
+            if (cleanGridNextBtn) {
+                cleanGridNextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Grid Next clicked, current page:', appState.accountGridPage);
+                    
                     // Get current filtered data count
                     const appData = window.APP_DATA || APP_DATA;
                     if (!appData?.belProfiles?.leaderboard) return;
@@ -6107,37 +6202,77 @@ if (!checkAuthentication()) {
                     const totalCards = accountData.length;
                     const maxPage = Math.ceil(totalCards / appState.accountGridRowsPerPage);
                     
+                    console.log('Pagination debug:', {
+                        totalCards,
+                        maxPage,
+                        currentPage: appState.accountGridPage,
+                        rowsPerPage: appState.accountGridRowsPerPage
+                    });
+                    
                     if (appState.accountGridPage < maxPage) {
                         appState.accountGridPage++;
+                        console.log('Moving to page:', appState.accountGridPage);
                         this.renderAccountCards();
+                    } else {
+                        console.log('Already on last page');
                     }
                 });
             }
 
-            if (gridRowsSelect) {
-                gridRowsSelect.addEventListener('change', (e) => {
-                    appState.accountGridRowsPerPage = parseInt(e.target.value, 10);
+            if (cleanGridRowsSelect) {
+                cleanGridRowsSelect.addEventListener('change', (e) => {
+                    e.preventDefault();
+                    console.log('Rows per page changed to:', e.target.value);
+                    appState.accountGridRowsPerPage = parseInt(e.target.value, 10) || 12;
                     appState.accountGridPage = 1; // Reset to first page
                     this.renderAccountCards();
                 });
             }
 
-            // List view pagination
+            // List view pagination - 同樣清除事件監聽器
             const listPrevBtn = document.getElementById('account-list-prev-page');
             const listNextBtn = document.getElementById('account-list-next-page');
             const listRowsSelect = document.getElementById('account-list-rows-per-page');
 
-            if (listPrevBtn) {
-                listPrevBtn.addEventListener('click', () => {
+            // 克隆節點來清除所有事件監聽器
+            if (listPrevBtn && listPrevBtn.parentNode) {
+                const newListPrevBtn = listPrevBtn.cloneNode(true);
+                listPrevBtn.parentNode.replaceChild(newListPrevBtn, listPrevBtn);
+            }
+            if (listNextBtn && listNextBtn.parentNode) {
+                const newListNextBtn = listNextBtn.cloneNode(true);
+                listNextBtn.parentNode.replaceChild(newListNextBtn, listNextBtn);
+            }
+            if (listRowsSelect && listRowsSelect.parentNode) {
+                const newListRowsSelect = listRowsSelect.cloneNode(true);
+                listRowsSelect.parentNode.replaceChild(newListRowsSelect, listRowsSelect);
+            }
+
+            // 重新獲取清理後的元素
+            const cleanListPrevBtn = document.getElementById('account-list-prev-page');
+            const cleanListNextBtn = document.getElementById('account-list-next-page');
+            const cleanListRowsSelect = document.getElementById('account-list-rows-per-page');
+
+            if (cleanListPrevBtn) {
+                cleanListPrevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('List Previous clicked, current page:', appState.accountListPage);
+                    
                     if (appState.accountListPage > 1) {
                         appState.accountListPage--;
+                        console.log('Moving to page:', appState.accountListPage);
                         this.renderAccountList();
                     }
                 });
             }
 
-            if (listNextBtn) {
-                listNextBtn.addEventListener('click', () => {
+            if (cleanListNextBtn) {
+                cleanListNextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('List Next clicked, current page:', appState.accountListPage);
+                    
                     // Get current filtered data count
                     const appData = window.APP_DATA || APP_DATA;
                     if (!appData?.belProfiles?.leaderboard) return;
@@ -6175,16 +6310,28 @@ if (!checkAuthentication()) {
                     const totalRows = accountData.length;
                     const maxPage = Math.ceil(totalRows / appState.accountListRowsPerPage);
                     
+                    console.log('List pagination debug:', {
+                        totalRows,
+                        maxPage,
+                        currentPage: appState.accountListPage,
+                        rowsPerPage: appState.accountListRowsPerPage
+                    });
+                    
                     if (appState.accountListPage < maxPage) {
                         appState.accountListPage++;
+                        console.log('Moving to page:', appState.accountListPage);
                         this.renderAccountList();
+                    } else {
+                        console.log('Already on last page');
                     }
                 });
             }
 
-            if (listRowsSelect) {
-                listRowsSelect.addEventListener('change', (e) => {
-                    appState.accountListRowsPerPage = parseInt(e.target.value, 10);
+            if (cleanListRowsSelect) {
+                cleanListRowsSelect.addEventListener('change', (e) => {
+                    e.preventDefault();
+                    console.log('List rows per page changed to:', e.target.value);
+                    appState.accountListRowsPerPage = parseInt(e.target.value, 10) || 10;
                     appState.accountListPage = 1; // Reset to first page
                     this.renderAccountList();
                 });

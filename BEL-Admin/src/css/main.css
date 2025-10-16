@@ -1988,6 +1988,11 @@ body::-webkit-scrollbar-track,
             grid-template-columns: 1fr !important;
             gap: 10px;
         }
+        
+        /* Ensure all banking grid rows stack on mobile */
+        .banking-info-grid[style*="240px"] {
+            grid-template-columns: 1fr !important;
+        }
     }
     
     .banking-display,

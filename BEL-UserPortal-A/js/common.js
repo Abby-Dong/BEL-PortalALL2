@@ -1431,40 +1431,47 @@ async function loadAccountData() {
                 // Find the existing grid containers and update them
                 const gridContainers = payoutPanel.querySelectorAll('.bel-grid-container');
                 if (gridContainers.length >= 3) {
-                    // First row: Account Holder Name | Phone Number (50% each)
+                    // First row: Beneficiary Name | Beneficiary Bank | Branch Name of Beneficiary Bank (33% each)
                     gridContainers[0].innerHTML = `
                         <div class="bel-form-group">
-                            <label for="account-holder-name">Account Holder Name</label>
-                            <div class="bel-text-display" id="account-holder-name">${userProfile.name}</div>
+                            <label for="beneficiary-name">Beneficiary Name</label>
+                            <div class="bel-text-display" id="beneficiary-name">${userProfile.name}</div>
                         </div>
                         <div class="bel-form-group">
-                            <label for="phone-number">Phone Number</label>
-                            <div class="bel-text-display" id="phone-number">+1 (555) 123-4567</div>
+                            <label for="beneficiary-bank">Beneficiary Bank</label>
+                            <div class="bel-text-display" id="beneficiary-bank">${userProfile.bankInfo.bankName}</div>
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="branch-name">Branch Name of Beneficiary Bank</label>
+                            <div class="bel-text-display" id="branch-name">San Francisco Main Branch</div>
                         </div>
                     `;
                     
-                    
-                    //  Second row: Bank Name | SWIFT Code | Account Number (33% each)
+                    // Second row: Swift Code | Account No | IBAN Code (33% each)
                     gridContainers[1].innerHTML = `
                         <div class="bel-form-group">
-                            <label for="bank-name">Bank Name</label>
-                            <div class="bel-text-display" id="bank-name">${userProfile.bankInfo.bankName}</div>
-                        </div>
-                        <div class="bel-form-group">
-                            <label for="swift-code">SWIFT Code</label>
+                            <label for="swift-code">Swift Code (11 Digits)</label>
                             <div class="bel-text-display" id="swift-code">${userProfile.bankInfo.swiftCode}</div>
                         </div>
                         <div class="bel-form-group">
-                            <label for="account-number">Account Number</label>
+                            <label for="account-number">Account No</label>
                             <div class="bel-text-display" id="account-number">****${userProfile.bankInfo.accountNumber.slice(-4)}</div>
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="iban-code">IBAN Code (For Europe Only)</label>
+                            <div class="bel-text-display" id="iban-code">-</div>
                         </div>
                     `;
 
-                    // Third row: Address (full width)
+                    // Third row: Country | Office Street / Office Postal Code
                     gridContainers[2].innerHTML = `
                         <div class="bel-form-group">
-                            <label for="address">Address</label>
-                            <div class="bel-text-display" id="address">1234 Technology Innovation Boulevard, Suite 567, Silicon Valley Business District, San Francisco, California 94102, United States of America</div>
+                            <label for="country">Country</label>
+                            <div class="bel-text-display" id="country">United States</div>
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="office-address">Office Street / Office Postal Code</label>
+                            <div class="bel-text-display" id="office-address">1234 Technology Innovation Boulevard, Suite 567, Silicon Valley Business District, San Francisco, CA 94102</div>
                         </div>
                     `;
                 }
@@ -1633,7 +1640,7 @@ async function loadEarningsData() {
                         <tr>
                             <td>${order.orderPlaced || ''}</td>
                             <td>${order.orderNumber || ''}</td>
-                            <td>${order.originalOrderAmount || ''}</td>
+                            <td>${order.originalOrderCurrency || ''}</td>
                             <td>${order.orderAmountUSD || ''}</td>
                             <td>${order.productActualAmount || ''}</td>
                             <td><span class="status-badge ${order.statusClass || ''}">${order.orderStatus || ''}</span></td>

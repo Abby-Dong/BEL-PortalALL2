@@ -1440,6 +1440,22 @@ text-align-last: center;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.grid-cols-4 {
+    grid-template-columns: 240px 1fr;
+    gap: 24px;
+}
+
+.grid-col-span-3 {
+    grid-column: span 1;
+}
+
+/* Responsive grid for mobile */
+@media (max-width: 768px) {
+    .grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
 .product-analysis-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

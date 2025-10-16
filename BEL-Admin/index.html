@@ -604,29 +604,44 @@
                         </div>
                         <div class="banking-info-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 24px;">
                             <div class="bel-form-group">
-                                <label>Bank Name</label>
-                                <div class="banking-display" id="bank-name-display">-</div>
-                                <input type="text" id="bank-name-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
+                                <label>Beneficiary Name</label>
+                                <div class="banking-display" id="beneficiary-name-display">-</div>
+                                <input type="text" id="beneficiary-name-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
                             </div>
                             <div class="bel-form-group">
-                                <label>SWIFT Code</label>
+                                <label>Beneficiary Bank</label>
+                                <div class="banking-display" id="beneficiary-bank-display">-</div>
+                                <input type="text" id="beneficiary-bank-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
+                            </div>
+                            <div class="bel-form-group">
+                                <label>Branch Name of Beneficiary Bank</label>
+                                <div class="banking-display" id="branch-name-display">-</div>
+                                <input type="text" id="branch-name-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
+                            </div>
+                            <div class="bel-form-group">
+                                <label>Swift Code (11 Digits)</label>
                                 <div class="banking-display" id="swift-code-display">-</div>
                                 <input type="text" id="swift-code-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
                             </div>
                             <div class="bel-form-group">
-                                <label>Account Holder Name (Passport Name)</label>
-                                <div class="banking-display" id="account-holder-display">-</div>
-                                <input type="text" id="account-holder-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
+                                <label>Account No</label>
+                                <div class="banking-display" id="account-number-display">-</div>
+                                <input type="text" id="account-number-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
                             </div>
                             <div class="bel-form-group">
-                                <label>Phone Number</label>
-                                <div class="banking-display" id="phone-display">-</div>
-                                <input type="tel" id="phone-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
+                                <label>IBAN Code (For Europe Only)</label>
+                                <div class="banking-display" id="iban-code-display">-</div>
+                                <input type="text" id="iban-code-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
                             </div>
-                            <div class="bel-form-group" style="grid-column: 1 / -1;">
-                                <label>Address</label>
-                                <div class="banking-display" id="address-display">-</div>
-                                <textarea id="address-edit" class="bel-form-control bel-form-textarea banking-edit" style="display: none; min-height: 80px;"></textarea>
+                            <div class="bel-form-group">
+                                <label>Country</label>
+                                <div class="banking-display" id="country-display">-</div>
+                                <input type="text" id="country-edit" class="bel-form-control bel-form-input banking-edit" style="display: none;" value="">
+                            </div>
+                            <div class="bel-form-group">
+                                <label>Office Street / Office Postal Code</label>
+                                <div class="banking-display" id="office-address-display">-</div>
+                                <textarea id="office-address-edit" class="bel-form-control bel-form-textarea banking-edit" style="display: none; min-height: 60px;"></textarea>
                             </div>
                         </div>
                         

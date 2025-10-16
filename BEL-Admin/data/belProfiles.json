@@ -133,8 +133,15 @@
         }
       },
       "bankingInfo": {
+        "beneficiaryName": "Maxwell Walker",
+        "beneficiaryBank": "Bank of America",
+        "branchName": "San Francisco Main Branch", 
+        "swiftCode": "BOFAUS3NXXX",
+        "accountNumber": "**** **** **** 1234",
+        "ibanCode": "",
+        "country": "United States",
+        "officeAddress": "426 Maple Avenue, Chicago, IL 60601, USA",
         "bankName": "Bank of America",
-        "swiftCode": "BOFAUS3N",
         "accountHolder": "Maxwell Walker",
         "phone": "+1-555-1381",
         "address": "426 Maple Avenue, Chicago, IL 60601, USA"
@@ -274,8 +281,15 @@
         }
       },
       "bankingInfo": {
+        "beneficiaryName": "Olivia Chen",
+        "beneficiaryBank": "Chase Bank",
+        "branchName": "Chicago Downtown Branch",
+        "swiftCode": "CHASUS33XXX",
+        "accountNumber": "**** **** **** 5678",
+        "ibanCode": "",
+        "country": "United States",
+        "officeAddress": "813 Lincoln Street, Chicago, IL 60601, USA",
         "bankName": "Chase Bank",
-        "swiftCode": "CHASUS33",
         "accountHolder": "Olivia Chen",
         "phone": "+1-555-2933",
         "address": "813 Lincoln Street, Chicago, IL 60601, USA"
@@ -416,8 +430,15 @@
         }
       },
       "bankingInfo": {
+        "beneficiaryName": "Liam Müller",
+        "beneficiaryBank": "Deutsche Bank",
+        "branchName": "Berlin Central Branch",
+        "swiftCode": "DEUTDEFFXXX",
+        "accountNumber": "**** **** **** 9012",
+        "ibanCode": "DE89 3704 0044 0532 0130 00",
+        "country": "Germany",
+        "officeAddress": "347 Jefferson Street, New York, NY 10001, USA",
         "bankName": "Chase Bank",
-        "swiftCode": "CHASUS33",
         "accountHolder": "Liam Müller",
         "phone": "+1-555-7230",
         "address": "347 Jefferson Street, New York, NY 10001, USA"
@@ -558,8 +579,15 @@
         }
       },
       "bankingInfo": {
+        "beneficiaryName": "Sophia Dubois",
+        "beneficiaryBank": "BNP Paribas",
+        "branchName": "Paris Opéra Branch",
+        "swiftCode": "BNPAFRPPXXX",
+        "accountNumber": "**** **** **** 3456",
+        "ibanCode": "FR14 2004 1010 0505 0001 3M02 606",
+        "country": "France",
+        "officeAddress": "711 Cedar Street, Toronto, ON M5V, Canada",
         "bankName": "Chase Bank",
-        "swiftCode": "CHASUS33",
         "accountHolder": "Sophia Dubois",
         "phone": "+1-555-1097",
         "address": "711 Cedar Street, Toronto, ON M5V, USA"
@@ -700,8 +728,15 @@
         }
       },
       "bankingInfo": {
+        "beneficiaryName": "Kenji Tanaka",
+        "beneficiaryBank": "Mitsubishi UFJ Bank",
+        "branchName": "Tokyo Main Branch",
+        "swiftCode": "BOTKJPJTXXX",
+        "accountNumber": "**** **** **** 7890",
+        "ibanCode": "",
+        "country": "Japan",
+        "officeAddress": "536 Pine Street, Los Angeles, CA 90210, USA",
         "bankName": "Chase Bank",
-        "swiftCode": "CHASUS33",
         "accountHolder": "Kenji Tanaka",
         "phone": "+1-555-6747",
         "address": "536 Pine Street, Los Angeles, CA 90210, USA"
@@ -842,8 +877,15 @@
         }
       },
       "bankingInfo": {
+        "beneficiaryName": "Isabella Rossi",
+        "beneficiaryBank": "UniCredit Bank",
+        "branchName": "Milan Central Branch",
+        "swiftCode": "UNCRITMM",
+        "accountNumber": "**** **** **** 2468",
+        "ibanCode": "IT60 X054 2811 1010 0000 0123 456",
+        "country": "Italy",
+        "officeAddress": "967 Pine Avenue, New York, NY 10001, USA",
         "bankName": "Bank of America",
-        "swiftCode": "BOFAUS3N",
         "accountHolder": "Isabella Rossi",
         "phone": "+1-555-5021",
         "address": "967 Pine Avenue, New York, NY 10001, USA"
@@ -984,8 +1026,15 @@
         }
       },
       "bankingInfo": {
+        "beneficiaryName": "Noah Kim",
+        "beneficiaryBank": "Kookmin Bank",
+        "branchName": "Seoul Gangnam Branch",
+        "swiftCode": "CZNBKRSE",
+        "accountNumber": "**** **** **** 1357",
+        "ibanCode": "",
+        "country": "South Korea",
+        "officeAddress": "175 Main Street, Chicago, IL 60601, USA",
         "bankName": "Chase Bank",
-        "swiftCode": "CHASUS33",
         "accountHolder": "Noah Kim",
         "phone": "+1-555-1741",
         "address": "175 Main Street, Chicago, IL 60601, USA"
@@ -1126,8 +1175,15 @@
         }
       },
       "bankingInfo": {
+        "beneficiaryName": "Ava Schmidt",
+        "beneficiaryBank": "Deutsche Bank",
+        "branchName": "Frankfurt Main Branch",
+        "swiftCode": "DEUTDEFFXXX",
+        "accountNumber": "**** **** **** 9753",
+        "ibanCode": "DE89 3704 0044 0532 0130 01",
+        "country": "Germany",
+        "officeAddress": "558 Maple Avenue, Toronto, ON M5V, Canada",
         "bankName": "Bank of America",
-        "swiftCode": "BOFAUS3N",
         "accountHolder": "Ava Schmidt",
         "phone": "+1-555-7822",
         "address": "558 Maple Avenue, Toronto, ON M5V, USA"
@@ -1268,8 +1324,15 @@
         }
       },
       "bankingInfo": {
+        "beneficiaryName": "Lucas Garcia",
+        "beneficiaryBank": "BBVA México",
+        "branchName": "Mexico City Central Branch",
+        "swiftCode": "BCMRMXMMXXX",
+        "accountNumber": "**** **** **** 8642",
+        "ibanCode": "",
+        "country": "Mexico",
+        "officeAddress": "760 Pine Street, New York, NY 10001, USA",
         "bankName": "Chase Bank",
-        "swiftCode": "CHASUS33",
         "accountHolder": "Lucas Garcia",
         "phone": "+1-555-4683",
         "address": "760 Pine Street, New York, NY 10001, USA"
@@ -1410,8 +1473,15 @@
         }
       },
       "bankingInfo": {
+        "beneficiaryName": "Mia Wang",
+        "beneficiaryBank": "Bank of China",
+        "branchName": "Shanghai Lujiazui Branch",
+        "swiftCode": "BKCHCNBJ300",
+        "accountNumber": "**** **** **** 1975",
+        "ibanCode": "",
+        "country": "China",
+        "officeAddress": "263 Madison Avenue, Los Angeles, CA 90210, USA",
         "bankName": "Bank of America",
-        "swiftCode": "BOFAUS3N",
         "accountHolder": "Mia Wang",
         "phone": "+1-555-6651",
         "address": "263 Madison Avenue, Los Angeles, CA 90210, USA"
@@ -1552,8 +1622,15 @@
         }
       },
       "bankingInfo": {
+        "beneficiaryName": "Emma Johnson",
+        "beneficiaryBank": "Wells Fargo",
+        "branchName": "Chicago Loop Branch",
+        "swiftCode": "WFBIUS6SXXX",
+        "accountNumber": "**** **** **** 3698",
+        "ibanCode": "",
+        "country": "United States",
+        "officeAddress": "662 Park Street, Chicago, IL 60601, USA",
         "bankName": "Chase Bank",
-        "swiftCode": "CHASUS33",
         "accountHolder": "Emma Johnson",
         "phone": "+1-555-6778",
         "address": "662 Park Street, Chicago, IL 60601, USA"

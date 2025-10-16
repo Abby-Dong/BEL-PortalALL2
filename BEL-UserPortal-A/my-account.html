@@ -148,37 +148,45 @@
                         </a>
                     </div>
                 </div>
-                <!-- First row: Account Holder Name | Phone Number (50% each) -->
-                <div class="bel-grid-container grid-cols-2 bel-mb-12">
-                    <div class="bel-form-group">
-                        <label for="account-holder-name">Account Holder Name</label>
-                        <div class="bel-text-display" id="account-holder-name">Maxwell Walker</div>
-                    </div>
-                    <div class="bel-form-group">
-                        <label for="phone-number">Phone Number</label>
-                        <div class="bel-text-display" id="phone-number">+1 (555) 123-4567</div>
-                    </div>
-                </div>
-                <!-- Second row: Bank Name | SWIFT Code | Account Number (33% each) -->
+                <!-- First row: Beneficiary Name | Beneficiary Bank | Branch Name of Beneficiary Bank (33% each) -->
                 <div class="bel-grid-container grid-cols-3 bel-mb-12">
                     <div class="bel-form-group">
-                        <label for="bank-name">Bank Name</label>
-                        <div class="bel-text-display" id="bank-name">Bank of America</div>
+                        <label for="beneficiary-name">Beneficiary Name</label>
+                        <div class="bel-text-display" id="beneficiary-name">Maxwell Walker</div>
                     </div>
                     <div class="bel-form-group">
-                        <label for="swift-code">SWIFT Code</label>
-                        <div class="bel-text-display" id="swift-code">BOFAUS3N</div>
+                        <label for="beneficiary-bank">Beneficiary Bank</label>
+                        <div class="bel-text-display" id="beneficiary-bank">Bank of America</div>
                     </div>
                     <div class="bel-form-group">
-                        <label for="account-number">Account Number</label>
-                        <div class="bel-text-display" id="account-number">**** **** **** 1234</div>
+                        <label for="branch-name">Branch Name of Beneficiary Bank</label>
+                        <div class="bel-text-display" id="branch-name">San Francisco Main Branch</div>
                     </div>
                 </div>
-                <!--Third  row: Address (full width) -->
-                <div class="bel-grid-container" >
+                <!-- Second row: Swift Code | Account No | IBAN Code (33% each) -->
+                <div class="bel-grid-container grid-cols-3 bel-mb-12">
                     <div class="bel-form-group">
-                        <label for="address">Address</label>
-                        <div class="bel-text-display" id="address">1234 Technology Innovation Boulevard, Suite 567, Silicon Valley Business District, San Francisco, California 94102, United States of America</div>
+                        <label for="swift-code">Swift Code (11 Digits)</label>
+                        <div class="bel-text-display" id="swift-code">BOFAUS3NXXX</div>
+                    </div>
+                    <div class="bel-form-group">
+                        <label for="account-number">Account No</label>
+                        <div class="bel-text-display" id="account-number">**** **** **** 1234</div>
+                    </div>
+                    <div class="bel-form-group">
+                        <label for="iban-code">IBAN Code (For Europe Only)</label>
+                        <div class="bel-text-display" id="iban-code">-</div>
+                    </div>
+                </div>
+                <!-- Third row: Country | Office Street / Office Postal Code -->
+                <div class="bel-grid-container grid-cols-4">
+                    <div class="bel-form-group">
+                        <label for="country">Country</label>
+                        <div class="bel-text-display" id="country">United States</div>
+                    </div>
+                    <div class="bel-form-group">
+                        <label for="office-address">Office Street / Office Postal Code</label>
+                        <div class="bel-text-display" id="office-address">1234 Technology Innovation Boulevard, Suite 567, Silicon Valley Business District, San Francisco, CA 94102</div>
                     </div>
                 </div>
             </div>
