@@ -351,7 +351,7 @@ BELPlatform/
           }
         },
         {
-          "title": "Referral ID Usage", 
+          "title": "Click to Orders CVR (%)", 
           "value": "142",
           "icon": "fas fa-tags",
           "trend": {
@@ -361,7 +361,7 @@ BELPlatform/
           }
         },
         {
-          "title": "Total Orders Count",
+          "title": "Total Orders",
           "value": "35", 
           "icon": "fas fa-shopping-cart",
           "trend": {
@@ -396,7 +396,7 @@ BELPlatform/
           }
         },
         {
-          "title": "Referral ID Usage", 
+          "title": "Click to Orders CVR (%)", 
           "value": "285",
           "icon": "fas fa-tags",
           "trend": {
@@ -406,7 +406,7 @@ BELPlatform/
           }
         },
         {
-          "title": "Total Orders Count",
+          "title": "Total Orders",
           "value": "72", 
           "icon": "fas fa-shopping-cart",
           "trend": {

@@ -89,16 +89,6 @@
             <h1 class="bel-h1">Talk to Admin</h1>
 
             <!-- New User Welcome Notice -->
-            <div class="notice-banner">
-                <div class="notice-banner-content">
-                    <i class="fas fa-info-circle notice-banner-icon"></i>
-                    <div class="notice-banner-text">
-                        <h3>Welcome to BEL Partner Support</h3>
-                        <p>As a new partner, you have full access to our support system. Submit tickets for any questions or issues, and browse our FAQ for quick answers.</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="section-header-with-action">
                 <h3 class="bel-h3">Contact Support</h3>
                 <button class="bel-btn primary" id="contact-support-btn">
@@ -108,13 +98,12 @@
             
             <div class="bel-panel">
                 <!-- Empty State for New User -->
-                <div id="empty-state" style="text-align: center; padding: 40px 20px; color: var(--ds-color-gray-60);">
-                    <i class="fas fa-ticket-alt" style="font-size: 3rem; margin-bottom: 16px; color: var(--ds-color-gray-40);"></i>
-                    <h3 style="margin: 0 0 8px 0; color: var(--ds-color-gray-70); font-size: 1.1rem;">No Support Tickets Yet</h3>
-                    <p style="margin: 0; font-size: 0.9rem; line-height: 1.5;">
-                        You haven't submitted any support tickets yet.<br>
-                        Click "Submit Support Ticket" above to get help with any questions or issues.
-                    </p>
+                <div id="empty-state" class="empty-state" style="text-align: center; padding: 24px; color: var(--ds-color-gray-60);">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/No+support+Ticket+Yet.png" alt="No Support Tickets Yet" style="width: 240px; height: 240px; opacity: 0.8;">
+                    <h3 style="color: var(--ds-color-gray-70); margin-bottom: 8px; font-size: var(--fs-lg); font-weight: var(--fw-medium);">We're Here to Help You!</h3>
+                    <div style="max-width: 500px; margin: 0 auto;">
+                        <p style="margin: 0; font-size: var(--fs-sm);">Haven't submitted any support tickets yet? No worries! Our support team is ready to assist you with any questions or concerns you may have.</p>
+                    </div>
                 </div>
 
                 <!-- Support Tickets Table (initially hidden) -->
@@ -154,16 +143,16 @@
             </div>
             <form id="contact-support-form">
                 <div class="bel-form-group">
-                    <label for="support-subject">Subject *</label>
-                    <input type="text" id="support-subject" placeholder="Enter your subject" required>
+                    <label for="support-subject">Subject <span class="required-asterisk">*</span></label>
+                    <input type="text" id="support-subject" class="bel-form-input" placeholder="Enter your subject" required>
                 </div>
                 <div class="bel-form-group">
-                    <label for="support-message">Message *</label>
-                    <textarea id="support-message" rows="5" placeholder="Describe your issue or question in detail" required class="bel-textarea-form"></textarea>
+                    <label for="support-message">Message <span class="required-asterisk">*</span></label>
+                    <textarea id="support-message" class="bel-form-textarea" rows="5" placeholder="Describe your issue or question in detail" required></textarea>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="bel-btn secondary" id="cancel-support-btn">Cancel</button>
-                    <button type="submit" class="bel-btn primary" id="submit-support-btn">Submit Ticket</button>
+                <div class="modal-actions" style="flex-direction: row; gap: 10px;">
+                    <button type="button" class="bel-btn secondary" id="cancel-support-btn" style="flex: 1;">Cancel</button>
+                    <button type="submit" class="bel-btn primary" id="submit-support-btn" style="flex: 1;">Submit Ticket</button>
                 </div>
             </form>
         </div>
@@ -185,6 +174,73 @@
         </div>
     </div>
 
+    <!-- Referral ID Setting Modal -->
+    <div class="modal-overlay" id="referral-id-modal">
+        <div style="background: white; border-radius: 4px; padding: 30px; max-width: 550px; width: 100%; box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 60px; text-align: center;">
+            <div style="margin-bottom: 25px;">
+                <i class="fas fa-link" style="font-size: 48px; color: #007bff; margin-bottom: 15px;"></i>
+                <h3 style="margin: 0 0 10px 0; color: var(--ds-color-gray-80, #434447);">Set Your Referral Link</h3>
+                <p style="margin: 0; color: var(--ds-color-gray-60, #737b7d); font-size: 14px;">Create your unique 6-letter referral ID for the BEL Partner Program</p>
+            </div>
+            
+            <form id="referral-id-form" style="text-align: left;">
+                <div style="margin-bottom: 25px;">
+                    <label style="display: block; margin-bottom: 5px; color: var(--ds-color-gray-80, #434447); font-weight: 600; font-size: 14px;">
+                        Referral ID Setting <span style="color: #e74c3c;">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="referral-id-input" 
+                        required 
+                        maxlength="6" 
+                        pattern="[A-Z]{6}" 
+                        class="bel-form-control bel-form-input"
+                        style="
+                            width: 100%;
+                            padding: 12px 15px;
+                            border: 2px solid var(--ds-color-gray-40, #e8ecef);
+                            border-radius: 4px;
+                            font-size: 18px;
+                            font-family: monospace;
+                            letter-spacing: 2px;
+                            text-align: center;
+                            box-sizing: border-box;
+                            transition: border-color 0.3s ease;
+                            text-transform: uppercase;
+                        " 
+                        placeholder="AAAAAA"
+                        autocomplete="off"
+                        spellcheck="false"
+                        inputmode="text"
+                        title="Only English letters A-Z are allowed"
+                    >
+                    <div id="referral-id-validation" class="validation-error" style="color: #e74c3c; font-size: 12px; margin-top: 5px; display: none;"></div>
+                    <div style="background: #f8f9fa; padding: 12px; border-radius: 4px; margin-top: 8px; font-size: 12px; color: var(--ds-color-gray-60, #737b7d); line-height: 1.4;">
+                        <i class="fas fa-info-circle" style="color: #007bff; margin-right: 5px;"></i>
+                        Note: Complete your referral ID setting to generate your unique referral link and QR code for sharing and start earning rebates!
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 15px;">
+                    <button type="submit" id="save-referral-btn" style="
+                        flex: 1;
+                        padding: 12px 24px;
+                        background: var(--ds-color-gray-40, #e8ecef);
+                        color: var(--ds-color-gray-60, #737b7d);
+                        border: none;
+                        border-radius: 4px;
+                        font-weight: 600;
+                        cursor: not-allowed;
+                        transition: all 0.3s ease;
+                        font-size: 14px;
+                    " disabled>
+                        Save Referral ID
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script src="js/data-loader.js"></script>
     <div class="modal-overlay" id="view-detail-modal">
         <div class="modal-content bel-modal-content-p24">
@@ -199,6 +255,283 @@
     </div>
     <script src="js/common.js"></script>
 
+    <style>
+        /* Fixed Task Modal Styles */
+        .setup-task-modal {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e8ecef;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: none;
+        }
+        
+        .setup-task-modal.minimized {
+            width: 320px;
+        }
+        
+        .setup-task-content {
+            padding: 0;
+        }
+        
+        .setup-task-header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: #fef7e6;
+            border-radius: 4px 4px 0 0;
+            border-bottom: 1px solid #f0d7a7;
+        }
+        
+        .task-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--ds-color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .task-text {
+            flex: 1;
+        }
+        
+        .task-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 2px;
+        }
+        
+        .task-subtitle {
+            font-size: 12px;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .task-close {
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: transparent;
+            color: var(--ds-color-gray-60);
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .task-close:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--ds-color-gray-80);
+        }
+        
+        .setup-task-body {
+            padding: 16px;
+            overflow: hidden;
+            transition: max-height 0.6s ease, opacity 0.6s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .setup-task-modal.minimized .setup-task-body {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--ds-color-gray-40);
+            background: var(--ds-color-white);
+            transition: all 0.2s ease;
+        }
+        
+        .task-item:hover {
+            border-color: var(--ds-color-primary);
+            background: var(--ds-color-primary-light-10, #fff7e6);
+        }
+        
+        .task-item-content {
+            flex: 1;
+        }
+        
+        .task-item-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 4px;
+        }
+        
+        .task-item-desc {
+            font-size: 12px;
+            color: var(--ds-color-gray-70);
+            line-height: 1.4;
+        }
+        
+        .task-item-arrow {
+            color: var(--ds-color-gray-60);
+            font-size: 12px;
+            transition: all 0.2s ease;
+            opacity: 0.7;
+        }
+        
+        .task-item:hover .task-item-arrow {
+            color: var(--ds-color-primary);
+            opacity: 1;
+            transform: translateX(2px);
+        }
+        
+        @media (max-width: 768px) {
+            .setup-task-modal {
+                width: 280px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .setup-task-modal.minimized {
+                width: 280px;
+            }
+        }
+
+        /* Referral ID Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        /* Button hover effects for the new modal */
+        .modal-overlay button[type="submit"]:not(:disabled):hover {
+            background: #0056b3 !important;
+            transform: translateY(-1px);
+            cursor: pointer !important;
+        }
+
+        .modal-overlay button[type="submit"]:disabled {
+            background: var(--ds-color-gray-40, #e8ecef) !important;
+            color: var(--ds-color-gray-60, #737b7d) !important;
+            cursor: not-allowed !important;
+            transform: none !important;
+        }
+
+        .modal-overlay button[type="submit"].enabled {
+            background: #007bff !important;
+            color: white !important;
+            cursor: pointer !important;
+        }
+
+        /* Input focus styles for the new modal */
+        .modal-overlay input:focus {
+            outline: none;
+            border-color: #007bff !important;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1) !important;
+        }
+
+        /* Input error state */
+        .modal-overlay input.error {
+            border-color: #e74c3c !important;
+        }
+
+        .required-asterisk {
+            color: #dc3545;
+            font-weight: 600;
+        }
+
+        /* Validation Error Styling (same as banking form) */
+        .validation-error {
+            color: #dc3545 !important;
+            font-size: 0.75rem !important;
+            margin-top: 4px !important;
+        }
+
+        .input-requirements {
+            font-style: italic;
+        }
+
+        .validation-success {
+            color: #28a745 !important;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .validation-success::before {
+            content: '✓';
+            font-weight: bold;
+        }
+
+        .btn-loading {
+            position: relative;
+            color: transparent !important;
+        }
+
+        .btn-loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            border: 2px solid transparent;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 600px) {
+            .modal-overlay > div {
+                margin: 15px !important;
+                padding: 20px !important;
+            }
+            
+            .modal-overlay input {
+                font-size: 16px !important;
+            }
+            
+            .modal-overlay button {
+                font-size: 13px !important;
+                padding: 10px 20px !important;
+            }
+        }
+    </style>
+
     
     <!-- Fixed Task Modal in Bottom Right -->
     <div id="setup-task-modal" class="setup-task-modal">
@@ -209,27 +542,311 @@
                 </div>
                 <div class="task-text">
                     <div class="task-title">Complete Setup</div>
-                    <div class="task-subtitle">1 task remaining</div>
+                    <div class="task-subtitle" id="support-task-subtitle">2 tasks remaining</div>
                 </div>
                 <button class="task-close" id="task-close-btn" title="Minimize (task will remain active)">
                     <i class="fas fa-minus"></i>
                 </button>
             </div>
             <div class="setup-task-body" id="setup-task-body">
-                <div class="task-item incomplete" data-task="banking">
+                <div class="task-item incomplete" data-task="referral-id" onclick="showReferralIdModal()" style="cursor: pointer;">
+                    <div class="task-item-content">
+                        <div class="task-item-title">Referral ID Setting</div>
+                        <div class="task-item-desc">Set your preferred 6-digit referral ID for earning commissions</div>
+                    </div>
+                    <div class="task-item-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="task-item incomplete" data-task="banking" onclick="goToBankingSetup()" style="cursor: pointer;">
                     <div class="task-item-content">
                         <div class="task-item-title">Banking Information</div>
                         <div class="task-item-desc">Set up your payout details, required to receive commission payments and earnings</div>
                     </div>
-                    <button class="task-item-action" onclick="goToBankingSetup()">
-                        Complete
-                    </button>
+                    <div class="task-item-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
     <script>
+        // Referral ID Modal Functions
+        function showReferralIdModal() {
+            // Check if referral ID is already set
+            const existingReferralId = localStorage.getItem('bel_referral_id_value');
+            if (existingReferralId) {
+                // If already set, show a message instead
+                alert('Your referral ID has already been set. Contact support if you need to change it.');
+                return;
+            }
+            
+            document.getElementById('referral-id-modal').style.display = 'flex';
+            document.getElementById('referral-id-input').focus();
+            // Initialize button state
+            updateSaveButtonState();
+        }
+
+        function saveReferralId() {
+            const input = document.getElementById('referral-id-input');
+            const saveBtn = document.getElementById('save-referral-btn');
+            const referralId = input.value.trim().toUpperCase();
+            
+            // Disable save button to prevent duplicate submission
+            saveBtn.disabled = true;
+            saveBtn.textContent = 'Validating...';
+            
+            // Final format validation
+            if (!validateReferralId(referralId)) {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Save Referral ID';
+                return;
+            }
+            
+            // Check availability (simulate API call)
+            if (!checkReferralIdAvailability(referralId)) {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Save Referral ID';
+                return;
+            }
+            
+            // Simulate API request delay
+            setTimeout(() => {
+                try {
+                    // Final check - ensure no conflicts
+                    const existingId = localStorage.getItem('bel_referral_id_value');
+                    if (existingId && existingId !== referralId) {
+                        // If there's already a different ID, ask if they want to replace it
+                        if (!confirm('You already have a referral ID set. Do you want to replace it?')) {
+                            saveBtn.disabled = false;
+                            saveBtn.textContent = 'Save Referral ID';
+                            return;
+                        }
+                    }
+                    
+                    // Save to localStorage
+                    localStorage.setItem('bel_referral_completed', 'true');
+                    localStorage.setItem('bel_referral_id_value', referralId);
+                    localStorage.setItem('bel_referral_id_timestamp', Date.now());
+                    
+                    // Update button state
+                    saveBtn.textContent = 'Saved!';
+                    saveBtn.style.background = '#28a745';
+                    
+                    // Hide modal
+                    setTimeout(() => {
+                        document.getElementById('referral-id-modal').style.display = 'none';
+                        
+                        // Update task status
+                        checkTaskStatus();
+                        
+                        // Show success message
+                        showSuccessMessage('Referral ID saved successfully!');
+                        
+                        // Reset button state
+                        saveBtn.disabled = false;
+                        saveBtn.textContent = 'Save Referral ID';
+                        saveBtn.style.background = '';
+                    }, 1000);
+                    
+                } catch (error) {
+                    // Error handling
+                    showValidationError('An error occurred while saving. Please try again.');
+                    saveBtn.disabled = false;
+                    saveBtn.textContent = 'Save Referral ID';
+                    console.error('Error saving referral ID:', error);
+                }
+            }, 800);
+        }
+
+        function validateReferralId(referralId) {
+            // Reset validation styles
+            clearValidationError();
+            
+            // 1. Basic required check
+            if (!referralId || referralId.trim() === '') {
+                showFieldError(document.getElementById('referral-id-input'), 'Please enter a referral ID');
+                return false;
+            }
+            
+            // 2. Length check
+            if (referralId.length !== 6) {
+                showFieldError(document.getElementById('referral-id-input'), 'Referral ID must be exactly 6 characters');
+                return false;
+            }
+            
+            // 3. Format check - only allow English letters
+            if (!/^[A-Z]{6}$/.test(referralId)) {
+                showFieldError(document.getElementById('referral-id-input'), 'Referral ID must contain only English letters (A-Z)');
+                return false;
+            }
+            
+            // 4. Check if all six letters are the same
+            const firstChar = referralId.charAt(0);
+            if (referralId === firstChar.repeat(6)) {
+                showFieldError(document.getElementById('referral-id-input'), 'Six identical letters are not allowed. Please use different letters');
+                return false;
+            }
+            
+            // 5. Check if it conflicts with others
+            if (isReferralIdTaken(referralId)) {
+                let errorMessage = 'This referral ID is already taken by another user.';
+                
+                showFieldError(document.getElementById('referral-id-input'), errorMessage);
+                return false;
+            }
+            
+            // Validation passed - clear error and show success style
+            clearFieldError(document.getElementById('referral-id-input'));
+            return true;
+        }
+
+        // Helper function to show error message
+        function showFieldError(field, message) {
+            field.style.borderColor = '#e74c3c';
+            field.classList.add('error');
+            
+            // Show error in the dedicated error div
+            const errorDiv = document.getElementById('referral-id-validation');
+            if (errorDiv) {
+                errorDiv.textContent = message;
+                errorDiv.style.display = 'block';
+            }
+        }
+        
+        function clearFieldError(field) {
+            field.style.borderColor = 'var(--ds-color-gray-40, #e8ecef)';
+            field.classList.remove('error');
+            
+            // Hide error message
+            const errorDiv = document.getElementById('referral-id-validation');
+            if (errorDiv) {
+                errorDiv.style.display = 'none';
+                errorDiv.textContent = '';
+            }
+        }
+        
+        function clearValidationError() {
+            const input = document.getElementById('referral-id-input');
+            clearFieldError(input);
+        }
+
+        // Control save button state
+        function updateSaveButtonState() {
+            const input = document.getElementById('referral-id-input');
+            const saveBtn = document.getElementById('save-referral-btn');
+            const value = input.value.trim().toUpperCase();
+            
+            // Check if conditions are met: 6 English letters, not identical letters, not taken by others
+            const isValidLength = value.length === 6;
+            const isValidFormat = /^[A-Z]{6}$/.test(value);
+            const isNotIdentical = value !== value.charAt(0).repeat(6);
+            const isNotTaken = !isReferralIdTaken(value);
+            
+            const isValid = isValidLength && isValidFormat && isNotIdentical && isNotTaken;
+            
+            if (isValid) {
+                // Enable button
+                saveBtn.disabled = false;
+                saveBtn.style.background = '#007bff';
+                saveBtn.style.color = 'white';
+                saveBtn.style.cursor = 'pointer';
+                saveBtn.classList.add('enabled');
+            } else {
+                // Disable button
+                saveBtn.disabled = true;
+                saveBtn.style.background = 'var(--ds-color-gray-40, #e8ecef)';
+                saveBtn.style.color = 'var(--ds-color-gray-60, #737b7d)';
+                saveBtn.style.cursor = 'not-allowed';
+                saveBtn.classList.remove('enabled');
+            }
+        }
+
+        function isReferralIdTaken(referralId) {
+            // Simulate list of referral IDs taken by other users
+            // In actual application, this should call backend API to check
+            const takenIds = [
+                // System reserved and already used IDs (letters only)
+                'IOTMAR', 'BELPAR', 'ADMINS', 'SYSTEM', 'TESTER', 'SAMPLE',
+                'MYCODE', 'REFIDA', 'BESTID', 'TOPREF', 'USERID', 'MYREF',
+                'WINNER', 'MASTER', 'GOLDEN', 'SILVER', 'BRONZE', 'LEADER',
+                'EXPERT', 'GENIUS', 'TALENT', 'REGALO', 'PROMO', 'BONUS'
+            ];
+            
+            return takenIds.includes(referralId);
+        }
+
+        function checkReferralIdAvailability(referralId) {
+            // Use unified check logic
+            if (isReferralIdTaken(referralId)) {
+                let errorMessage = 'This referral ID is already taken by another user.';
+                
+                showFieldError(document.getElementById('referral-id-input'), errorMessage);
+                return false;
+            }
+            
+            return true;
+        }
+
+        function validateReferralIdRealtime(referralId) {
+            // Update button state
+            updateSaveButtonState();
+            
+            if (referralId.length === 6) {
+                // Perform complete validation when length reaches 6
+                return validateReferralId(referralId);
+            } else if (referralId.length > 0) {
+                // Clear error and show normal state during partial input
+                clearFieldError(document.getElementById('referral-id-input'));
+                return true;
+            }
+            return true;
+        }
+
+        function showSuccessMessage(message) {
+            const successMsg = document.createElement('div');
+            successMsg.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: var(--ds-color-success); 
+                color: var(--ds-color-white); 
+                padding: 16px 24px; 
+                border-radius: 4px; 
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+                z-index: 1001;
+                animation: slideIn 0.5s ease-out;
+                font-size: var(--fs-sm);
+                font-weight: var(--fw-medium);
+            `;
+            successMsg.innerHTML = `<i class="fas fa-check-circle" style="margin-right: 8px;"></i>${message}`;
+            document.body.appendChild(successMsg);
+            
+            // Auto hide after 3 seconds
+            setTimeout(() => {
+                successMsg.style.animation = 'slideIn 0.5s ease-out reverse';
+                setTimeout(() => successMsg.remove(), 500);
+            }, 3000);
+        }
+
+        function updateInputVisualState(value) {
+            const input = document.getElementById('referral-id-input');
+            const length = value.length;
+            
+            // Remove all state classes
+            input.classList.remove('input-empty', 'input-partial', 'input-complete', 'input-valid', 'error');
+            
+            if (length === 0) {
+                input.classList.add('input-empty');
+            } else if (length < 6) {
+                input.classList.add('input-partial');
+            } else if (length === 6) {
+                input.classList.add('input-complete');
+                // Full validation will be triggered when length is 6
+            }
+        }
+
         // Setup task modal management
         function checkBankingStatus() {
             const bankingCompleted = localStorage.getItem('bel_banking_completed');
@@ -239,6 +856,42 @@
                 taskModal.style.display = 'none';
             } else {
                 taskModal.style.display = 'block';
+            }
+        }
+
+        // Check task completion status
+        function checkTaskStatus() {
+            const referralCompleted = localStorage.getItem('bel_referral_completed') === 'true';
+            const bankingCompleted = localStorage.getItem('bel_banking_completed') === 'true';
+            const taskSubtitle = document.getElementById('support-task-subtitle');
+            const taskModal = document.getElementById('setup-task-modal');
+            const referralTask = document.querySelector('[data-task="referral-id"]');
+            const bankingTask = document.querySelector('[data-task="banking"]');
+            
+            let remainingTasks = 0;
+            
+            // Check referral ID task
+            if (referralCompleted) {
+                if (referralTask) referralTask.style.display = 'none';
+            } else {
+                remainingTasks++;
+            }
+            
+            // Check banking task
+            if (bankingCompleted) {
+                if (bankingTask) bankingTask.style.display = 'none';
+            } else {
+                remainingTasks++;
+            }
+            
+            if (remainingTasks === 0) {
+                // All tasks completed - hide modal
+                taskModal.style.display = 'none';
+            } else {
+                // Update task counter
+                if (taskSubtitle) {
+                    taskSubtitle.textContent = `${remainingTasks} task${remainingTasks > 1 ? 's' : ''} remaining`;
+                }
             }
         }
         
@@ -270,6 +923,156 @@
         
         document.addEventListener('DOMContentLoaded', function() {
             checkBankingStatus();
+            checkTaskStatus();
+
+            // Add slideIn animation CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Add real-time validation for referral ID input
+            const referralIdInput = document.getElementById('referral-id-input');
+            let validationTimeout;
+            
+            referralIdInput.addEventListener('input', function(e) {
+                // Strictly filter: only keep English letters and convert to uppercase
+                let value = this.value.replace(/[^A-Za-z]/g, '').toUpperCase();
+                
+                // Limit length to no more than 6 characters
+                if (value.length > 6) {
+                    value = value.substring(0, 6);
+                }
+                
+                // Set filtered value
+                this.value = value;
+                
+                // Clear previous validation error
+                clearValidationError();
+                
+                // Visual feedback: adjust style based on input length
+                updateInputVisualState(value);
+                
+                // Debouncing - validate only after user stops typing for 300ms
+                clearTimeout(validationTimeout);
+                if (value.length > 0) {
+                    validationTimeout = setTimeout(() => {
+                        validateReferralIdRealtime(value);
+                    }, 300);
+                }
+            });
+            
+            // Strictly limit to only English letters
+            referralIdInput.addEventListener('keypress', function(e) {
+                // Allow control keys (Backspace, Delete, Enter, Tab etc)
+                if (e.ctrlKey || e.metaKey || e.altKey) {
+                    return;
+                }
+                
+                // Allow special keys
+                const allowedKeys = [8, 9, 13, 27, 35, 36, 37, 38, 39, 40, 46]; // Backspace, Tab, Enter, Esc, End, Home, Arrows, Delete
+                if (allowedKeys.includes(e.keyCode)) {
+                    return;
+                }
+                
+                // Check if input character is English letter
+                const char = String.fromCharCode(e.which || e.keyCode);
+                if (!/^[A-Za-z]$/.test(char)) {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Check if max length reached
+                if (this.value.length >= 6) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // Paste event handling - strictly filter non-English letters
+            referralIdInput.addEventListener('paste', function(e) {
+                e.preventDefault();
+                
+                // Get pasted text
+                const paste = (e.clipboardData || window.clipboardData).getData('text');
+                
+                // Only keep English letters and convert to uppercase, limit to 6 characters
+                const cleanPaste = paste.replace(/[^A-Za-z]/g, '').toUpperCase().substring(0, 6);
+                
+                if (cleanPaste.length === 0) {
+                    return;
+                }
+                
+                // Set cleaned value
+                this.value = cleanPaste;
+                
+                // Trigger input event for validation and visual update
+                this.dispatchEvent(new Event('input', { bubbles: true }));
+            });
+
+            // Additional keydown event handling
+            referralIdInput.addEventListener('keydown', function(e) {
+                // Prevent non-letter key input
+                const allowedKeys = [
+                    8, 9, 13, 27, 35, 36, 37, 38, 39, 40, 46, // Control keys
+                    16, 17, 18, 91, 93 // Shift, Ctrl, Alt, Cmd
+                ];
+                
+                const isAlpha = (e.keyCode >= 65 && e.keyCode <= 90); // A-Z
+                const isAllowed = allowedKeys.includes(e.keyCode);
+                
+                if (!isAlpha && !isAllowed && !e.ctrlKey && !e.metaKey) {
+                    e.preventDefault();
+                }
+            });
+
+            // Validation on blur
+            referralIdInput.addEventListener('blur', function() {
+                const value = this.value.trim();
+                if (value.length > 0 && value.length < 6) {
+                    showFieldError(this, 'Referral ID must be exactly 6 letters');
+                }
+                // Update button state
+                updateSaveButtonState();
+            });
+            
+            // Click overlay area to close modal
+            const referralIdModal = document.getElementById('referral-id-modal');
+            referralIdModal.addEventListener('click', function(e) {
+                // Only close when clicking overlay background, not modal content area
+                if (e.target === referralIdModal) {
+                    document.getElementById('referral-id-modal').style.display = 'none';
+                    // Reset form state
+                    document.getElementById('referral-id-input').value = '';
+                    clearFieldError(document.getElementById('referral-id-input'));
+                    updateSaveButtonState();
+                }
+            });
+            
+            // Handle referral ID form submission
+            const referralIdForm = document.getElementById('referral-id-form');
+            referralIdForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                saveReferralId();
+            });
+            
+            // Allow ESC key to close modal
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('referral-id-modal');
+                    if (modal.style.display === 'flex') {
+                        modal.style.display = 'none';
+                        // Reset form state
+                        document.getElementById('referral-id-input').value = '';
+                        clearFieldError(document.getElementById('referral-id-input'));
+                        updateSaveButtonState();
+                    }
+                }
+            });
         });
     </script>
 </body>

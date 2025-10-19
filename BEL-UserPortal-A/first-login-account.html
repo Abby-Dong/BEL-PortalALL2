@@ -161,51 +161,118 @@
                 </div>
      
                 <!-- Banking Form -->
-                <form class="banking-form" id="banking-form">
-                    <!-- First row: Account Holder Name | Phone Number (50% each) -->
-                    <div class="bel-grid-container grid-cols-2 bel-mb-8">
-                        <div class="bel-form-group">
-                            <label for="account-holder-name">Account Holder Name <span class="required-asterisk">*</span></label>
-                            <input type="text" id="account-holder-name" placeholder="Full name as on bank account" required style="color: var(--ds-color-gray-80);">
-                        </div>
-                        <div class="bel-form-group">
-                            <label for="phone-number">Phone Number <span class="required-asterisk">*</span></label>
-                            <input type="tel" id="phone-number" placeholder="Enter phone number" required style="color: var(--ds-color-gray-80);">
-                        </div>
-                    </div>
-                    <!-- Second row: Bank Name | SWIFT Code | Account Number (33% each) -->
+                <form class="banking-form" id="banking-form" novalidate>
+                    <!-- First row: Beneficiary Name | Beneficiary Bank | Branch Name of Beneficiary Bank (33% each) -->
                     <div class="bel-grid-container grid-cols-3 bel-mb-8">
                         <div class="bel-form-group">
-                            <label for="bank-name">Bank Name <span class="required-asterisk">*</span></label>
-                            <input type="text" id="bank-name" placeholder="Your bank name" required style="color: var(--ds-color-gray-80);">
+                            <label for="beneficiary-name">Beneficiary Name <span class="required-asterisk">*</span></label>
+                            <input type="text" id="beneficiary-name" class="bel-form-control bel-form-input" placeholder="Full name as on bank account">
                         </div>
                         <div class="bel-form-group">
-                            <label for="swift-code">SWIFT Code <span class="required-asterisk">*</span></label>
-                            <input type="text" id="swift-code" placeholder="Bank SWIFT code" required style="color: var(--ds-color-gray-80);">
+                            <label for="beneficiary-bank">Beneficiary Bank <span class="required-asterisk">*</span></label>
+                            <input type="text" id="beneficiary-bank" class="bel-form-control bel-form-input" placeholder="Your bank name">
                         </div>
                         <div class="bel-form-group">
-                            <label for="account-number">Account Number <span class="required-asterisk">*</span></label>
-                            <input type="text" id="account-number" placeholder="Your bank account number" required style="color: var(--ds-color-gray-80);">
+                            <label for="branch-name">Branch Name of Beneficiary Bank <span class="required-asterisk">*</span></label>
+                            <input type="text" id="branch-name" class="bel-form-control bel-form-input" placeholder="Bank branch name">
                         </div>
                     </div>
-                    <!-- Third row: Address (full width) -->
-                    <div class="bel-grid-container bel-mb-8">
+                    <!-- Second row: Swift Code | Account No | IBAN Code (33% each) -->
+                    <div class="bel-grid-container grid-cols-3 bel-mb-8">
                         <div class="bel-form-group">
-                            <label for="address">Address <span class="required-asterisk">*</span></label>
-                            <textarea id="address" rows="3" placeholder="Complete address for bank account verification" required style="resize: vertical; min-height: 80px; width: 100%; color: var(--ds-color-gray-80);"></textarea>
+                            <label for="swift-code">Swift Code (11 Digits) <span class="required-asterisk">*</span></label>
+                            <input type="text" id="swift-code" class="bel-form-control bel-form-input" placeholder="Bank SWIFT code">
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="account-number">Account No <span class="required-asterisk">*</span></label>
+                            <input type="text" id="account-number" class="bel-form-control bel-form-input" placeholder="Your bank account number">
+                        </div>
+                        <div class="bel-form-group">
+                            <label for="iban-code">IBAN Code (For Europe Only)</label>
+                            <input type="text" id="iban-code" class="bel-form-control bel-form-input" placeholder="IBAN code (optional for Europe)">
+                        </div>
+                    </div>
+                    <!-- Third row: Country | Office Street / Office Postal Code -->
+                    <div class="bel-grid-container grid-cols-4 bel-mb-8">
+                        <div class="bel-form-group">
+                            <label for="country">Country <span class="required-asterisk">*</span></label>
+                            <select id="country" class="bel-form-control bel-form-select">
+                                <option value="">Please select a country</option>
+                                <option value="US">United States</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="CA">Canada</option>
+                                <option value="AU">Australia</option>
+                                <option value="DE">Germany</option>
+                                <option value="FR">France</option>
+                                <option value="IT">Italy</option>
+                                <option value="ES">Spain</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="BE">Belgium</option>
+                                <option value="CH">Switzerland</option>
+                                <option value="AT">Austria</option>
+                                <option value="SE">Sweden</option>
+                                <option value="NO">Norway</option>
+                                <option value="DK">Denmark</option>
+                                <option value="FI">Finland</option>
+                                <option value="IE">Ireland</option>
+                                <option value="PT">Portugal</option>
+                                <option value="PL">Poland</option>
+                                <option value="CZ">Czech Republic</option>
+                                <option value="HU">Hungary</option>
+                                <option value="SK">Slovakia</option>
+                                <option value="SI">Slovenia</option>
+                                <option value="HR">Croatia</option>
+                                <option value="BG">Bulgaria</option>
+                                <option value="RO">Romania</option>
+                                <option value="EE">Estonia</option>
+                                <option value="LV">Latvia</option>
+                                <option value="LT">Lithuania</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="MT">Malta</option>
+                                <option value="CY">Cyprus</option>
+                                <option value="GR">Greece</option>
+                                <option value="JP">Japan</option>
+                                <option value="KR">South Korea</option>
+                                <option value="CN">China</option>
+                                <option value="TW">Taiwan</option>
+                                <option value="HK">Hong Kong</option>
+                                <option value="SG">Singapore</option>
+                                <option value="MY">Malaysia</option>
+                                <option value="TH">Thailand</option>
+                                <option value="VN">Vietnam</option>
+                                <option value="PH">Philippines</option>
+                                <option value="ID">Indonesia</option>
+                                <option value="IN">India</option>
+                                <option value="BR">Brazil</option>
+                                <option value="MX">Mexico</option>
+                                <option value="AR">Argentina</option>
+                                <option value="CL">Chile</option>
+                                <option value="CO">Colombia</option>
+                                <option value="PE">Peru</option>
+                                <option value="ZA">South Africa</option>
+                                <option value="EG">Egypt</option>
+                                <option value="MA">Morocco</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="KE">Kenya</option>
+                                <option value="AE">United Arab Emirates</option>
+                                <option value="SA">Saudi Arabia</option>
+                                <option value="IL">Israel</option>
+                                <option value="TR">Turkey</option>
+                                <option value="RU">Russia</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="BY">Belarus</option>
+                                <option value="KZ">Kazakhstan</option>
+                                <option value="UZ">Uzbekistan</option>
+                                <option value="NZ">New Zealand</option>
+                            </select>
+                        </div>
+                        <div class="bel-form-group" style="grid-column: span 3;">
+                            <label for="office-address">Office Street / Office Postal Code <span class="required-asterisk">*</span></label>
+                            <textarea id="office-address" class="bel-form-control bel-form-textarea" rows="1" style="height: auto; min-height: 40px; resize: vertical;" placeholder="Complete address for bank account verification"></textarea>
                         </div>
                     </div>
 
-                                    <!-- Disclaimer Notice -->
-                <div class="disclaimer-notice" style="background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 4px; padding: 12px 16px; margin-bottom: 20px;">
-                    <div style="display: flex; align-items: flex-start; gap: 8px;">
-                        <i class="fas fa-exclamation-triangle" style="color: #856404; margin-top: 2px; font-size: 14px;"></i>
-                        <div style="flex: 1;">
-                            <p style="color: #856404; font-size: 13px; margin: 0; line-height: 1.4;">
-                               By submitting this form, you represent and warrant that all banking information provided is complete, accurate, and current. The Company disclaims all liability for any losses, failed transactions, verification delays, or compliance issues arising from inaccurate or incomplete details. Please ensure all information is verified prior to submission.
-                        </div>
-                    </div>
-                </div>    
+        
                     <!-- Form Actions -->
                     <div class="form-actions" style="margin-top: 24px; text-align: right;">
                         <button type="submit" class="bel-btn primary">
@@ -284,28 +351,36 @@
                 
                 <div class="confirmation-details">
                     <div class="detail-row">
-                        <label>Account Holder Name:</label>
-                        <span id="confirm-account-holder"></span>
+                        <label>Beneficiary Name:</label>
+                        <span id="confirm-beneficiary-name"></span>
                     </div>
                     <div class="detail-row">
-                        <label>Phone Number:</label>
-                        <span id="confirm-phone"></span>
+                        <label>Beneficiary Bank:</label>
+                        <span id="confirm-beneficiary-bank"></span>
                     </div>
                     <div class="detail-row">
-                        <label>Bank Name:</label>
-                        <span id="confirm-bank-name"></span>
+                        <label>Branch Name of Beneficiary Bank:</label>
+                        <span id="confirm-branch-name"></span>
                     </div>
                     <div class="detail-row">
-                        <label>SWIFT Code:</label>
+                        <label>Swift Code (11 Digits):</label>
                         <span id="confirm-swift"></span>
                     </div>
                     <div class="detail-row">
-                        <label>Account Number:</label>
+                        <label>Account No:</label>
                         <span id="confirm-account-number"></span>
                     </div>
                     <div class="detail-row">
-                        <label>Address:</label>
-                        <span id="confirm-address"></span>
+                        <label>IBAN Code (For Europe Only):</label>
+                        <span id="confirm-iban-code"></span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Country:</label>
+                        <span id="confirm-country"></span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Office Street / Office Postal Code:</label>
+                        <span id="confirm-office-address"></span>
                     </div>
                 </div>
                 
@@ -322,9 +397,9 @@
                 </div>
 
 
-                <div style="display: flex; justify-content: flex-end;">
-                    <button class="bel-btn secondary" id="cancel-confirmation" style="margin-right: 12px;">Cancel</button>
-                    <button class="bel-btn primary" id="confirm-banking">Confirm & Save</button>
+                <div style="display: flex; gap: 10px;">
+                    <button class="bel-btn secondary" id="cancel-confirmation" style="flex: 1;">Cancel</button>
+                    <button class="bel-btn primary" id="confirm-banking" style="flex: 1;">Confirm & Save</button>
                 </div>
             </div>
         </div>
@@ -350,6 +425,73 @@
         </div>
     </div>
 
+    <!-- Referral ID Modal -->
+    <div class="modal-overlay" id="referral-id-modal">
+        <div style="background: white; border-radius: 4px; padding: 30px; max-width: 550px; width: 100%; box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 60px; text-align: center;">
+            <div style="margin-bottom: 25px;">
+                <i class="fas fa-link" style="font-size: 48px; color: #007bff; margin-bottom: 15px;"></i>
+                <h3 style="margin: 0 0 10px 0; color: var(--ds-color-gray-80, #434447);">Set Your Referral Link</h3>
+                <p style="margin: 0; color: var(--ds-color-gray-60, #737b7d); font-size: 14px;">Create your unique 6-letter referral ID for the BEL Partner Program</p>
+            </div>
+            
+            <form id="referral-id-form" style="text-align: left;">
+                <div style="margin-bottom: 25px;">
+                    <label style="display: block; margin-bottom: 5px; color: var(--ds-color-gray-80, #434447); font-weight: 600; font-size: 14px;">
+                        Referral ID Setting <span style="color: #e74c3c;">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="referral-id-input" 
+                        required 
+                        maxlength="6" 
+                        pattern="[A-Z]{6}" 
+                        class="bel-form-control bel-form-input"
+                        style="
+                            width: 100%;
+                            padding: 12px 15px;
+                            border: 2px solid var(--ds-color-gray-40, #e8ecef);
+                            border-radius: 4px;
+                            font-size: 18px;
+                            font-family: monospace;
+                            letter-spacing: 2px;
+                            text-align: center;
+                            box-sizing: border-box;
+                            transition: border-color 0.3s ease;
+                            text-transform: uppercase;
+                        " 
+                        placeholder="AAAAAA"
+                        autocomplete="off"
+                        spellcheck="false"
+                        inputmode="text"
+                        title="Only English letters A-Z are allowed"
+                    >
+                    <div id="referral-id-validation" class="validation-error" style="color: #e74c3c; font-size: 12px; margin-top: 5px; display: none;"></div>
+                    <div style="background: #f8f9fa; padding: 12px; border-radius: 4px; margin-top: 8px; font-size: 12px; color: var(--ds-color-gray-60, #737b7d); line-height: 1.4;">
+                        <i class="fas fa-info-circle" style="color: #007bff; margin-right: 5px;"></i>
+                        Note: Complete your referral ID setting to generate your unique referral link and QR code for sharing and start earning rebates!
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 15px;">
+                    <button type="submit" id="save-referral-btn" style="
+                        flex: 1;
+                        padding: 12px 24px;
+                        background: var(--ds-color-gray-40, #e8ecef);
+                        color: var(--ds-color-gray-60, #737b7d);
+                        border: none;
+                        border-radius: 4px;
+                        font-weight: 600;
+                        cursor: not-allowed;
+                        transition: all 0.3s ease;
+                        font-size: 14px;
+                    " disabled>
+                        Save Referral ID
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script src="js/data-loader.js"></script>
     <script src="js/common.js"></script>
     
@@ -365,6 +507,9 @@
 
             // Setup new profile handlers
             setupNewProfileHandlers();
+            
+            // Setup real-time validation
+            setupRealTimeValidation();
         });
 
         // Setup new profile form handlers
@@ -538,47 +683,325 @@
         });
         
         function validateBankingForm() {
-            const requiredFields = [
-                'account-holder-name',
-                'phone-number', 
-                'bank-name',
-                'swift-code',
-                'account-number',
-                'address'
-            ];
-            
             let isValid = true;
-            requiredFields.forEach(fieldId => {
-                const field = document.getElementById(fieldId);
-                if (!field.value.trim()) {
-                    field.style.borderColor = '#dc3545';
-                    isValid = false;
-                } else {
-                    field.style.borderColor = '#e0e0e0';
+            
+            // Helper function to show error message (same as real-time validation)
+            function showFieldError(field, message) {
+                field.style.borderColor = '#dc3545';
+                
+                // Remove existing error message
+                const existingError = field.parentNode.querySelector('.validation-error');
+                if (existingError) {
+                    existingError.remove();
                 }
+                
+                // Add new error message
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'validation-error';
+                errorDiv.style.color = '#dc3545';
+                errorDiv.style.fontSize = '0.75rem';
+                errorDiv.style.marginTop = '4px';
+                errorDiv.textContent = message;
+                field.parentNode.appendChild(errorDiv);
+            }
+            
+            function clearFieldError(field) {
+                field.style.borderColor = '#e0e0e0';
+                const existingError = field.parentNode.querySelector('.validation-error');
+                if (existingError) {
+                    existingError.remove();
+                }
+            }
+            
+            // Clear all existing errors first
+            document.querySelectorAll('#banking-form .validation-error').forEach(error => error.remove());
+            document.querySelectorAll('#banking-form input, #banking-form select, #banking-form textarea').forEach(field => {
+                field.style.borderColor = '#e0e0e0';
             });
             
+            // 1. Beneficiary Name validation
+            const beneficiaryName = document.getElementById('beneficiary-name');
+            if (!beneficiaryName.value.trim()) {
+                showFieldError(beneficiaryName, 'Beneficiary Name is required.');
+                isValid = false;
+            } else {
+                // Only allow letters, spaces, hyphens, and periods
+                const namePattern = /^[A-Za-z\s\-.]+$/;
+                if (!namePattern.test(beneficiaryName.value)) {
+                    showFieldError(beneficiaryName, 'Beneficiary Name can only contain letters, spaces, hyphens (-), and periods (.).');
+                    isValid = false;
+                } else {
+                    clearFieldError(beneficiaryName);
+                }
+            }
+            
+            // 2. Beneficiary Bank validation
+            const beneficiaryBank = document.getElementById('beneficiary-bank');
+            if (!beneficiaryBank.value.trim()) {
+                showFieldError(beneficiaryBank, 'Beneficiary Bank is required.');
+                isValid = false;
+            } else {
+                clearFieldError(beneficiaryBank);
+            }
+            
+            // 3. Branch Name validation
+            const branchName = document.getElementById('branch-name');
+            if (!branchName.value.trim()) {
+                showFieldError(branchName, 'Branch Name of Beneficiary Bank is required.');
+                isValid = false;
+            } else {
+                clearFieldError(branchName);
+            }
+            
+            // 4. Swift Code validation
+            const swiftCode = document.getElementById('swift-code');
+            if (!swiftCode.value.trim()) {
+                showFieldError(swiftCode, 'Swift Code is required.');
+                isValid = false;
+            } else {
+                // Must be exactly 11 characters and match SWIFT format
+                const swiftPattern = /^[A-Z]{4}[A-Z]{2}[A-Z0-9]{2}[A-Z0-9]{3}$/;
+                if (swiftCode.value.length !== 11) {
+                    showFieldError(swiftCode, 'Swift Code must be exactly 11 characters long.');
+                    isValid = false;
+                } else if (!swiftPattern.test(swiftCode.value.toUpperCase())) {
+                    showFieldError(swiftCode, 'Invalid SWIFT format. Expected: AAAABBCCXXX (A=letters, B=country, C=location, X=branch).');
+                    isValid = false;
+                } else {
+                    clearFieldError(swiftCode);
+                }
+            }
+            
+            // 5. Account Number validation
+            const accountNumber = document.getElementById('account-number');
+            if (!accountNumber.value.trim()) {
+                showFieldError(accountNumber, 'Account Number is required.');
+                isValid = false;
+            } else {
+                // Only letters and numbers, no spaces or special characters
+                const accountPattern = /^[A-Za-z0-9]+$/;
+                if (!accountPattern.test(accountNumber.value)) {
+                    showFieldError(accountNumber, 'Account Number can only contain letters and numbers (no spaces or special characters).');
+                    isValid = false;
+                } else {
+                    clearFieldError(accountNumber);
+                }
+            }
+            
+            // 6. IBAN Code validation (optional)
+            const ibanCode = document.getElementById('iban-code');
+            if (ibanCode.value.trim()) {
+                // Basic IBAN format validation
+                const ibanPattern = /^[A-Z]{2}[0-9]{2}[A-Z0-9]{4}[0-9]{7}([A-Z0-9]?){0,16}$/;
+                const cleanIban = ibanCode.value.replace(/\s/g, '').toUpperCase();
+                if (cleanIban.length < 15 || cleanIban.length > 34) {
+                    showFieldError(ibanCode, 'IBAN Code must be between 15-34 characters long.');
+                    isValid = false;
+                } else if (!ibanPattern.test(cleanIban)) {
+                    showFieldError(ibanCode, 'IBAN Code format is invalid.');
+                    isValid = false;
+                } else {
+                    clearFieldError(ibanCode);
+                }
+            } else {
+                clearFieldError(ibanCode);
+            }
+            
+            // 7. Country validation
+            const country = document.getElementById('country');
+            if (!country.value || country.value === '') {
+                showFieldError(country, 'Please select a country.');
+                isValid = false;
+            } else {
+                clearFieldError(country);
+            }
+            
+            // 8. Office Address validation
+            const officeAddress = document.getElementById('office-address');
+            if (!officeAddress.value.trim()) {
+                showFieldError(officeAddress, 'Office Street / Office Postal Code is required.');
+                isValid = false;
+            } else {
+                clearFieldError(officeAddress);
+            }
+            
+            // Scroll to first error if validation fails
             if (!isValid) {
-                alert('Please fill in all required fields.');
+                const firstError = document.querySelector('#banking-form .validation-error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             }
             
             return isValid;
         }
         
+        // Real-time validation setup
+        function setupRealTimeValidation() {
+            // Helper function to show error message
+            function showFieldError(field, message) {
+                field.style.borderColor = '#dc3545';
+                
+                // Remove existing error message
+                const existingError = field.parentNode.querySelector('.validation-error');
+                if (existingError) {
+                    existingError.remove();
+                }
+                
+                // Add new error message
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'validation-error';
+                errorDiv.style.color = '#dc3545';
+                errorDiv.style.fontSize = '0.75rem';
+                errorDiv.style.marginTop = '4px';
+                errorDiv.textContent = message;
+                field.parentNode.appendChild(errorDiv);
+            }
+            
+            function clearFieldError(field) {
+                field.style.borderColor = '#e0e0e0';
+                const existingError = field.parentNode.querySelector('.validation-error');
+                if (existingError) {
+                    existingError.remove();
+                }
+            }
+            
+            // Beneficiary Name validation
+            const beneficiaryName = document.getElementById('beneficiary-name');
+            beneficiaryName.addEventListener('input', function() {
+                if (!this.value.trim()) {
+                    showFieldError(this, 'Beneficiary Name is required.');
+                } else {
+                    const namePattern = /^[A-Za-z\s\-.]+$/;
+                    if (!namePattern.test(this.value)) {
+                        showFieldError(this, 'Only letters, spaces, hyphens (-), and periods (.) are allowed.');
+                    } else {
+                        clearFieldError(this);
+                    }
+                }
+            });
+            
+            // Beneficiary Bank validation
+            const beneficiaryBank = document.getElementById('beneficiary-bank');
+            beneficiaryBank.addEventListener('input', function() {
+                if (!this.value.trim()) {
+                    showFieldError(this, 'Beneficiary Bank is required.');
+                } else {
+                    clearFieldError(this);
+                }
+            });
+            
+            // Branch Name validation
+            const branchName = document.getElementById('branch-name');
+            branchName.addEventListener('input', function() {
+                if (!this.value.trim()) {
+                    showFieldError(this, 'Branch Name is required.');
+                } else {
+                    clearFieldError(this);
+                }
+            });
+            
+            // Swift Code validation
+            const swiftCode = document.getElementById('swift-code');
+            swiftCode.addEventListener('input', function() {
+                if (!this.value.trim()) {
+                    showFieldError(this, 'Swift Code is required.');
+                } else if (this.value.length !== 11) {
+                    showFieldError(this, 'Swift Code must be exactly 11 characters long.');
+                } else {
+                    const swiftPattern = /^[A-Z]{4}[A-Z]{2}[A-Z0-9]{2}[A-Z0-9]{3}$/;
+                    if (!swiftPattern.test(this.value.toUpperCase())) {
+                        showFieldError(this, 'Invalid SWIFT format. Expected: AAAABBCCXXX (A=letters, B=country, C=location, X=branch).');
+                    } else {
+                        clearFieldError(this);
+                    }
+                }
+            });
+            
+            // Auto-uppercase SWIFT code
+            swiftCode.addEventListener('input', function() {
+                this.value = this.value.toUpperCase();
+            });
+            
+            // Account Number validation
+            const accountNumber = document.getElementById('account-number');
+            accountNumber.addEventListener('input', function() {
+                if (!this.value.trim()) {
+                    showFieldError(this, 'Account Number is required.');
+                } else {
+                    const accountPattern = /^[A-Za-z0-9]+$/;
+                    if (!accountPattern.test(this.value)) {
+                        showFieldError(this, 'Only letters and numbers are allowed (no spaces or special characters).');
+                    } else {
+                        clearFieldError(this);
+                    }
+                }
+            });
+            
+            // IBAN Code validation (optional)
+            const ibanCode = document.getElementById('iban-code');
+            ibanCode.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    const cleanIban = this.value.replace(/\s/g, '').toUpperCase();
+                    if (cleanIban.length < 15 || cleanIban.length > 34) {
+                        showFieldError(this, 'IBAN must be between 15-34 characters long.');
+                    } else {
+                        const ibanPattern = /^[A-Z]{2}[0-9]{2}[A-Z0-9]{4}[0-9]{7}([A-Z0-9]?){0,16}$/;
+                        if (!ibanPattern.test(cleanIban)) {
+                            showFieldError(this, 'Invalid IBAN format. Must start with 2-letter country code followed by check digits.');
+                        } else {
+                            clearFieldError(this);
+                        }
+                    }
+                } else {
+                    clearFieldError(this);
+                }
+            });
+            
+            // Auto-uppercase and format IBAN
+            ibanCode.addEventListener('input', function() {
+                this.value = this.value.toUpperCase().replace(/\s/g, '');
+            });
+            
+            // Country validation
+            const country = document.getElementById('country');
+            country.addEventListener('change', function() {
+                if (!this.value || this.value === '') {
+                    showFieldError(this, 'Please select a country.');
+                } else {
+                    clearFieldError(this);
+                }
+            });
+            
+            // Office Address validation
+            const officeAddress = document.getElementById('office-address');
+            officeAddress.addEventListener('input', function() {
+                if (!this.value.trim()) {
+                    showFieldError(this, 'Office address is required.');
+                } else {
+                    clearFieldError(this);
+                }
+            });
+        }
+        
         function showConfirmationModal() {
             // Populate confirmation modal with form data
-            document.getElementById('confirm-account-holder').textContent = 
-                document.getElementById('account-holder-name').value;
-            document.getElementById('confirm-phone').textContent = 
-                document.getElementById('phone-number').value;
-            document.getElementById('confirm-bank-name').textContent = 
-                document.getElementById('bank-name').value;
+            document.getElementById('confirm-beneficiary-name').textContent = 
+                document.getElementById('beneficiary-name').value;
+            document.getElementById('confirm-beneficiary-bank').textContent = 
+                document.getElementById('beneficiary-bank').value;
+            document.getElementById('confirm-branch-name').textContent = 
+                document.getElementById('branch-name').value;
             document.getElementById('confirm-swift').textContent = 
                 document.getElementById('swift-code').value;
             document.getElementById('confirm-account-number').textContent = 
                 document.getElementById('account-number').value;
-            document.getElementById('confirm-address').textContent = 
-                document.getElementById('address').value;
+            document.getElementById('confirm-iban-code').textContent = 
+                document.getElementById('iban-code').value || '-';
+            document.getElementById('confirm-country').textContent = 
+                document.getElementById('country').value;
+            document.getElementById('confirm-office-address').textContent = 
+                document.getElementById('office-address').value;
             
             // Show confirmation modal
             document.getElementById('confirmation-modal').classList.add('show');
@@ -718,7 +1141,6 @@
         /* Ensure form consistency */
         .banking-form input,
         .banking-form textarea {
-            font-size: 1rem;
             font-family: inherit;
         }
         
@@ -739,7 +1161,7 @@
         }
         
         .setup-task-modal.minimized {
-            width: 200px;
+            width: 320px;
         }
         
         .setup-task-content {
@@ -807,6 +1229,15 @@
         
         .setup-task-body {
             padding: 16px;
+            overflow: hidden;
+            transition: max-height 0.6s ease, opacity 0.6s ease;
+        }
+        
+        .setup-task-modal.minimized .setup-task-body {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
         }
         
         @media (max-width: 768px) {
@@ -817,7 +1248,7 @@
             }
             
             .setup-task-modal.minimized {
-                width: 160px;
+                width: 280px;
             }
         }
         
@@ -868,6 +1299,281 @@
         .banking-form.disabled .form-actions {
             display: none;
         }
+
+        /* Fixed Task Modal Styles */
+        .setup-task-modal {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e8ecef;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: none;
+        }
+        
+        .setup-task-modal.minimized {
+            width: 320px;
+        }
+        
+        .setup-task-content {
+            padding: 0;
+        }
+        
+        .setup-task-header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: #fef7e6;
+            border-radius: 4px 4px 0 0;
+            border-bottom: 1px solid #f0d7a7;
+        }
+        
+        .task-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--ds-color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .task-text {
+            flex: 1;
+        }
+        
+        .task-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 2px;
+        }
+        
+        .task-subtitle {
+            font-size: 12px;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .task-close {
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: transparent;
+            color: var(--ds-color-gray-60);
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .task-close:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--ds-color-gray-80);
+        }
+        
+        .setup-task-body {
+            padding: 16px;
+            overflow: hidden;
+            transition: max-height 0.6s ease, opacity 0.6s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .setup-task-modal.minimized .setup-task-body {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--ds-color-gray-40);
+            background: var(--ds-color-white);
+            transition: all 0.2s ease;
+        }
+        
+        .task-item:hover {
+            border-color: var(--ds-color-primary);
+            background: var(--ds-color-primary-light-10, #fff7e6);
+        }
+        
+        .task-item-content {
+            flex: 1;
+        }
+        
+        .task-item-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 4px;
+        }
+        
+        .task-item-desc {
+            font-size: 12px;
+            color: var(--ds-color-gray-70);
+            line-height: 1.4;
+        }
+        
+        .task-item-arrow {
+            color: var(--ds-color-gray-60);
+            font-size: 12px;
+            transition: all 0.2s ease;
+            opacity: 0.7;
+        }
+        
+        .task-item:hover .task-item-arrow {
+            color: var(--ds-color-primary);
+            opacity: 1;
+            transform: translateX(2px);
+        }
+        
+        @media (max-width: 768px) {
+            .setup-task-modal {
+                width: 280px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .setup-task-modal.minimized {
+                width: 280px;
+            }
+        }
+
+        /* Referral ID Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        /* Button hover effects for the new modal */
+        .modal-overlay button[type="submit"]:not(:disabled):hover {
+            background: #0056b3 !important;
+            transform: translateY(-1px);
+            cursor: pointer !important;
+        }
+
+        .modal-overlay button[type="submit"]:disabled {
+            background: var(--ds-color-gray-40, #e8ecef) !important;
+            color: var(--ds-color-gray-60, #737b7d) !important;
+            cursor: not-allowed !important;
+            transform: none !important;
+        }
+
+        .modal-overlay button[type="submit"].enabled {
+            background: #007bff !important;
+            color: white !important;
+            cursor: pointer !important;
+        }
+
+        /* Input focus styles for the new modal */
+        .modal-overlay input:focus {
+            outline: none;
+            border-color: #007bff !important;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1) !important;
+        }
+
+        /* Input error state */
+        .modal-overlay input.error {
+            border-color: #e74c3c !important;
+        }
+
+        .required-asterisk {
+            color: #dc3545;
+            font-weight: 600;
+        }
+
+        /* Validation Error Styling (same as banking form) */
+        .validation-error {
+            color: #dc3545 !important;
+            font-size: 0.75rem !important;
+            margin-top: 4px !important;
+        }
+
+        .input-requirements {
+            font-style: italic;
+        }
+
+        .validation-success {
+            color: #28a745 !important;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .validation-success::before {
+            content: '✓';
+            font-weight: bold;
+        }
+
+        .btn-loading {
+            position: relative;
+            color: transparent !important;
+        }
+
+        .btn-loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            border: 2px solid transparent;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 600px) {
+            .modal-overlay > div {
+                margin: 15px !important;
+                padding: 20px !important;
+            }
+            
+            .modal-overlay input {
+                font-size: 16px !important;
+            }
+            
+            .modal-overlay button {
+                font-size: 13px !important;
+                padding: 10px 20px !important;
+            }
+        }
     </style>
     
     <!-- Fixed Task Modal in Bottom Right -->
@@ -879,27 +1585,311 @@
                 </div>
                 <div class="task-text">
                     <div class="task-title">Complete Setup</div>
-                    <div class="task-subtitle">1 task remaining</div>
+                    <div class="task-subtitle" id="account-task-subtitle">2 tasks remaining</div>
                 </div>
                 <button class="task-close" id="task-close-btn" title="Minimize (task will remain active)">
                     <i class="fas fa-minus"></i>
                 </button>
             </div>
             <div class="setup-task-body" id="setup-task-body">
-                <div class="task-item incomplete" data-task="banking">
+                <div class="task-item incomplete" data-task="referral-id" onclick="showReferralIdModal()" style="cursor: pointer;">
+                    <div class="task-item-content">
+                        <div class="task-item-title">Referral ID Setting</div>
+                        <div class="task-item-desc">Set your preferred 6-digit referral ID for earning commissions</div>
+                    </div>
+                    <div class="task-item-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="task-item incomplete" data-task="banking" onclick="scrollToBankingSection()" style="cursor: pointer;">
                     <div class="task-item-content">
                         <div class="task-item-title">Banking Information</div>
                         <div class="task-item-desc">Set up your payout details, required to receive commission payments and earnings</div>
                     </div>
-                    <button class="task-item-action" onclick="scrollToBankingSection()">
-                        Complete
-                    </button>
+                    <div class="task-item-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
     <script>
+        // Referral ID Modal Functions
+        function showReferralIdModal() {
+            // Check if referral ID is already set
+            const existingReferralId = localStorage.getItem('bel_referral_id_value');
+            if (existingReferralId) {
+                // If already set, show a message instead
+                alert('Your referral ID has already been set. Contact support if you need to change it.');
+                return;
+            }
+            
+            document.getElementById('referral-id-modal').style.display = 'flex';
+            document.getElementById('referral-id-input').focus();
+            // Initialize button state
+            updateSaveButtonState();
+        }
+
+        function saveReferralId() {
+            const input = document.getElementById('referral-id-input');
+            const saveBtn = document.getElementById('save-referral-btn');
+            const referralId = input.value.trim().toUpperCase();
+            
+            // Disable save button to prevent duplicate submission
+            saveBtn.disabled = true;
+            saveBtn.textContent = 'Validating...';
+            
+            // Final format validation
+            if (!validateReferralId(referralId)) {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Save Referral ID';
+                return;
+            }
+            
+            // Check availability (simulate API call)
+            if (!checkReferralIdAvailability(referralId)) {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Save Referral ID';
+                return;
+            }
+            
+            // Simulate API request delay
+            setTimeout(() => {
+                try {
+                    // Final check - ensure no conflicts
+                    const existingId = localStorage.getItem('bel_referral_id_value');
+                    if (existingId && existingId !== referralId) {
+                        // If there's already a different ID, ask if they want to replace it
+                        if (!confirm('You already have a referral ID set. Do you want to replace it?')) {
+                            saveBtn.disabled = false;
+                            saveBtn.textContent = 'Save Referral ID';
+                            return;
+                        }
+                    }
+                    
+                    // Save to localStorage
+                    localStorage.setItem('bel_referral_completed', 'true');
+                    localStorage.setItem('bel_referral_id_value', referralId);
+                    localStorage.setItem('bel_referral_id_timestamp', Date.now());
+                    
+                    // Update button state
+                    saveBtn.textContent = 'Saved!';
+                    saveBtn.style.background = '#28a745';
+                    
+                    // Hide modal
+                    setTimeout(() => {
+                        document.getElementById('referral-id-modal').style.display = 'none';
+                        
+                        // Update task status
+                        checkTaskStatus();
+                        
+                        // Show success message
+                        showSuccessMessage('Referral ID saved successfully!');
+                        
+                        // Reset button state
+                        saveBtn.disabled = false;
+                        saveBtn.textContent = 'Save Referral ID';
+                        saveBtn.style.background = '';
+                    }, 1000);
+                    
+                } catch (error) {
+                    // Error handling
+                    showValidationError('An error occurred while saving. Please try again.');
+                    saveBtn.disabled = false;
+                    saveBtn.textContent = 'Save Referral ID';
+                    console.error('Error saving referral ID:', error);
+                }
+            }, 800);
+        }
+
+        function validateReferralId(referralId) {
+            // Reset validation styles
+            clearValidationError();
+            
+            // 1. Basic required check
+            if (!referralId || referralId.trim() === '') {
+                showFieldError(document.getElementById('referral-id-input'), 'Please enter a referral ID');
+                return false;
+            }
+            
+            // 2. Length check
+            if (referralId.length !== 6) {
+                showFieldError(document.getElementById('referral-id-input'), 'Referral ID must be exactly 6 characters');
+                return false;
+            }
+            
+            // 3. Format check - only allow English letters
+            if (!/^[A-Z]{6}$/.test(referralId)) {
+                showFieldError(document.getElementById('referral-id-input'), 'Referral ID must contain only English letters (A-Z)');
+                return false;
+            }
+            
+            // 4. Check if all six letters are the same
+            const firstChar = referralId.charAt(0);
+            if (referralId === firstChar.repeat(6)) {
+                showFieldError(document.getElementById('referral-id-input'), 'Six identical letters are not allowed. Please use different letters');
+                return false;
+            }
+            
+            // 5. Check if it conflicts with others
+            if (isReferralIdTaken(referralId)) {
+                let errorMessage = 'This referral ID is already taken by another user.';
+                
+                showFieldError(document.getElementById('referral-id-input'), errorMessage);
+                return false;
+            }
+            
+            // Validation passed - clear error and show success style
+            clearFieldError(document.getElementById('referral-id-input'));
+            return true;
+        }
+
+        // Helper function to show error message
+        function showFieldError(field, message) {
+            field.style.borderColor = '#e74c3c';
+            field.classList.add('error');
+            
+            // Show error in the dedicated error div
+            const errorDiv = document.getElementById('referral-id-validation');
+            if (errorDiv) {
+                errorDiv.textContent = message;
+                errorDiv.style.display = 'block';
+            }
+        }
+        
+        function clearFieldError(field) {
+            field.style.borderColor = 'var(--ds-color-gray-40, #e8ecef)';
+            field.classList.remove('error');
+            
+            // Hide error message
+            const errorDiv = document.getElementById('referral-id-validation');
+            if (errorDiv) {
+                errorDiv.style.display = 'none';
+                errorDiv.textContent = '';
+            }
+        }
+        
+        function clearValidationError() {
+            const input = document.getElementById('referral-id-input');
+            clearFieldError(input);
+        }
+
+        // Control save button state
+        function updateSaveButtonState() {
+            const input = document.getElementById('referral-id-input');
+            const saveBtn = document.getElementById('save-referral-btn');
+            const value = input.value.trim().toUpperCase();
+            
+            // Check if conditions are met: 6 English letters, not identical letters, not taken by others
+            const isValidLength = value.length === 6;
+            const isValidFormat = /^[A-Z]{6}$/.test(value);
+            const isNotIdentical = value !== value.charAt(0).repeat(6);
+            const isNotTaken = !isReferralIdTaken(value);
+            
+            const isValid = isValidLength && isValidFormat && isNotIdentical && isNotTaken;
+            
+            if (isValid) {
+                // Enable button
+                saveBtn.disabled = false;
+                saveBtn.style.background = '#007bff';
+                saveBtn.style.color = 'white';
+                saveBtn.style.cursor = 'pointer';
+                saveBtn.classList.add('enabled');
+            } else {
+                // Disable button
+                saveBtn.disabled = true;
+                saveBtn.style.background = 'var(--ds-color-gray-40, #e8ecef)';
+                saveBtn.style.color = 'var(--ds-color-gray-60, #737b7d)';
+                saveBtn.style.cursor = 'not-allowed';
+                saveBtn.classList.remove('enabled');
+            }
+        }
+
+        function isReferralIdTaken(referralId) {
+            // Simulate list of referral IDs taken by other users
+            // In actual application, this should call backend API to check
+            const takenIds = [
+                // System reserved and already used IDs (letters only)
+                'IOTMAR', 'BELPAR', 'ADMINS', 'SYSTEM', 'TESTER', 'SAMPLE',
+                'MYCODE', 'REFIDA', 'BESTID', 'TOPREF', 'USERID', 'MYREF',
+                'WINNER', 'MASTER', 'GOLDEN', 'SILVER', 'BRONZE', 'LEADER',
+                'EXPERT', 'GENIUS', 'TALENT', 'REGALO', 'PROMO', 'BONUS'
+            ];
+            
+            return takenIds.includes(referralId);
+        }
+
+        function checkReferralIdAvailability(referralId) {
+            // Use unified check logic
+            if (isReferralIdTaken(referralId)) {
+                let errorMessage = 'This referral ID is already taken by another user.';
+                
+                showFieldError(document.getElementById('referral-id-input'), errorMessage);
+                return false;
+            }
+            
+            return true;
+        }
+
+        function validateReferralIdRealtime(referralId) {
+            // Update button state
+            updateSaveButtonState();
+            
+            if (referralId.length === 6) {
+                // Perform complete validation when length reaches 6
+                return validateReferralId(referralId);
+            } else if (referralId.length > 0) {
+                // Clear error and show normal state during partial input
+                clearFieldError(document.getElementById('referral-id-input'));
+                return true;
+            }
+            return true;
+        }
+
+        function showSuccessMessage(message) {
+            const successMsg = document.createElement('div');
+            successMsg.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: var(--ds-color-success); 
+                color: var(--ds-color-white); 
+                padding: 16px 24px; 
+                border-radius: 4px; 
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+                z-index: 1001;
+                animation: slideIn 0.5s ease-out;
+                font-size: var(--fs-sm);
+                font-weight: var(--fw-medium);
+            `;
+            successMsg.innerHTML = `<i class="fas fa-check-circle" style="margin-right: 8px;"></i>${message}`;
+            document.body.appendChild(successMsg);
+            
+            // Auto hide after 3 seconds
+            setTimeout(() => {
+                successMsg.style.animation = 'slideIn 0.5s ease-out reverse';
+                setTimeout(() => successMsg.remove(), 500);
+            }, 3000);
+        }
+
+        function updateInputVisualState(value) {
+            const input = document.getElementById('referral-id-input');
+            const length = value.length;
+            
+            // Remove all state classes
+            input.classList.remove('input-empty', 'input-partial', 'input-complete', 'input-valid', 'error');
+            
+            if (length === 0) {
+                input.classList.add('input-empty');
+            } else if (length < 6) {
+                input.classList.add('input-partial');
+            } else if (length === 6) {
+                input.classList.add('input-complete');
+                // Full validation will be triggered when length is 6
+            }
+        }
+
         // Setup task modal management
         function checkBankingStatus() {
             const bankingCompleted = localStorage.getItem('bel_banking_completed');
@@ -916,15 +1906,53 @@
                 taskModal.style.display = 'block';
             }
         }
-        
+
+        // Check task completion status
+        function checkTaskStatus() {
+            const referralCompleted = localStorage.getItem('bel_referral_completed') === 'true';
+            const bankingCompleted = localStorage.getItem('bel_banking_completed') === 'true';
+            const taskSubtitle = document.getElementById('account-task-subtitle');
+            const taskModal = document.getElementById('setup-task-modal');
+            const referralTask = document.querySelector('[data-task="referral-id"]');
+            const bankingTask = document.querySelector('[data-task="banking"]');
+            
+            let remainingTasks = 0;
+            
+            // Check referral ID task
+            if (referralCompleted) {
+                if (referralTask) referralTask.style.display = 'none';
+            } else {
+                remainingTasks++;
+            }
+            
+            // Check banking task
+            if (bankingCompleted) {
+                if (bankingTask) bankingTask.style.display = 'none';
+            } else {
+                remainingTasks++;
+            }
+            
+            if (remainingTasks === 0) {
+                // All tasks completed - hide modal and banners
+                taskModal.style.display = 'none';
+                const noticeBanners = document.querySelectorAll('.notice-banner');
+                noticeBanners.forEach(banner => {
+                    banner.style.display = 'none';
+                });
+            } else {
+                // Update task counter
+                if (taskSubtitle) {
+                    taskSubtitle.textContent = `${remainingTasks} task${remainingTasks > 1 ? 's' : ''} remaining`;
+                }
+            }
+        }
+
         function scrollToBankingSection() {
-            const bankingSection = document.getElementById('banking-setup');
+            const bankingSection = document.getElementById('payout-info-panel');
             if (bankingSection) {
                 bankingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-        }
-        
-        // Task modal minimize/restore functionality
+        }        // Task modal minimize/restore functionality
         const taskModal = document.getElementById('setup-task-modal');
         const taskCloseBtn = document.getElementById('task-close-btn');
         const taskBody = document.getElementById('setup-task-body');
@@ -932,13 +1960,13 @@
         
         taskCloseBtn.addEventListener('click', function() {
             if (isMinimized) {
-                taskBody.style.display = 'block';
+                // Restore
                 taskModal.classList.remove('minimized');
                 taskCloseBtn.innerHTML = '<i class="fas fa-minus"></i>';
                 taskCloseBtn.title = 'Minimize (task will remain active)';
                 isMinimized = false;
             } else {
-                taskBody.style.display = 'none';
+                // Minimize
                 taskModal.classList.add('minimized');
                 taskCloseBtn.innerHTML = '<i class="fas fa-plus"></i>';
                 taskCloseBtn.title = 'Restore task panel';
@@ -948,6 +1976,156 @@
         
         document.addEventListener('DOMContentLoaded', function() {
             checkBankingStatus();
+            checkTaskStatus();
+
+            // Add slideIn animation CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Add real-time validation for referral ID input
+            const referralIdInput = document.getElementById('referral-id-input');
+            let validationTimeout;
+            
+            referralIdInput.addEventListener('input', function(e) {
+                // Strictly filter: only keep English letters and convert to uppercase
+                let value = this.value.replace(/[^A-Za-z]/g, '').toUpperCase();
+                
+                // Limit length to no more than 6 characters
+                if (value.length > 6) {
+                    value = value.substring(0, 6);
+                }
+                
+                // Set filtered value
+                this.value = value;
+                
+                // Clear previous validation error
+                clearValidationError();
+                
+                // Visual feedback: adjust style based on input length
+                updateInputVisualState(value);
+                
+                // Debouncing - validate only after user stops typing for 300ms
+                clearTimeout(validationTimeout);
+                if (value.length > 0) {
+                    validationTimeout = setTimeout(() => {
+                        validateReferralIdRealtime(value);
+                    }, 300);
+                }
+            });
+            
+            // Strictly limit to only English letters
+            referralIdInput.addEventListener('keypress', function(e) {
+                // Allow control keys (Backspace, Delete, Enter, Tab etc)
+                if (e.ctrlKey || e.metaKey || e.altKey) {
+                    return;
+                }
+                
+                // Allow special keys
+                const allowedKeys = [8, 9, 13, 27, 35, 36, 37, 38, 39, 40, 46]; // Backspace, Tab, Enter, Esc, End, Home, Arrows, Delete
+                if (allowedKeys.includes(e.keyCode)) {
+                    return;
+                }
+                
+                // Check if input character is English letter
+                const char = String.fromCharCode(e.which || e.keyCode);
+                if (!/^[A-Za-z]$/.test(char)) {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Check if max length reached
+                if (this.value.length >= 6) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // Paste event handling - strictly filter non-English letters
+            referralIdInput.addEventListener('paste', function(e) {
+                e.preventDefault();
+                
+                // Get pasted text
+                const paste = (e.clipboardData || window.clipboardData).getData('text');
+                
+                // Only keep English letters and convert to uppercase, limit to 6 characters
+                const cleanPaste = paste.replace(/[^A-Za-z]/g, '').toUpperCase().substring(0, 6);
+                
+                if (cleanPaste.length === 0) {
+                    return;
+                }
+                
+                // Set cleaned value
+                this.value = cleanPaste;
+                
+                // Trigger input event for validation and visual update
+                this.dispatchEvent(new Event('input', { bubbles: true }));
+            });
+
+            // Additional keydown event handling
+            referralIdInput.addEventListener('keydown', function(e) {
+                // Prevent non-letter key input
+                const allowedKeys = [
+                    8, 9, 13, 27, 35, 36, 37, 38, 39, 40, 46, // Control keys
+                    16, 17, 18, 91, 93 // Shift, Ctrl, Alt, Cmd
+                ];
+                
+                const isAlpha = (e.keyCode >= 65 && e.keyCode <= 90); // A-Z
+                const isAllowed = allowedKeys.includes(e.keyCode);
+                
+                if (!isAlpha && !isAllowed && !e.ctrlKey && !e.metaKey) {
+                    e.preventDefault();
+                }
+            });
+
+            // Validation on blur
+            referralIdInput.addEventListener('blur', function() {
+                const value = this.value.trim();
+                if (value.length > 0 && value.length < 6) {
+                    showFieldError(this, 'Referral ID must be exactly 6 letters');
+                }
+                // Update button state
+                updateSaveButtonState();
+            });
+            
+            // Click overlay area to close modal
+            const referralIdModal = document.getElementById('referral-id-modal');
+            referralIdModal.addEventListener('click', function(e) {
+                // Only close when clicking overlay background, not modal content area
+                if (e.target === referralIdModal) {
+                    document.getElementById('referral-id-modal').style.display = 'none';
+                    // Reset form state
+                    document.getElementById('referral-id-input').value = '';
+                    clearFieldError(document.getElementById('referral-id-input'));
+                    updateSaveButtonState();
+                }
+            });
+            
+            // Handle referral ID form submission
+            const referralIdForm = document.getElementById('referral-id-form');
+            referralIdForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                saveReferralId();
+            });
+            
+            // Allow ESC key to close modal
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('referral-id-modal');
+                    if (modal.style.display === 'flex') {
+                        modal.style.display = 'none';
+                        // Reset form state
+                        document.getElementById('referral-id-input').value = '';
+                        clearFieldError(document.getElementById('referral-id-input'));
+                        updateSaveButtonState();
+                    }
+                }
+            });
         });
     </script>
 </body>

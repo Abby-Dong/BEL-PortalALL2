@@ -133,16 +133,16 @@
             </div>
             <form id="contact-support-form">
                 <div class="bel-form-group">
-                    <label for="support-subject">Subject *</label>
-                    <input type="text" id="support-subject" placeholder="Enter your subject" required>
+                    <label for="support-subject">Subject <span class="required-asterisk">*</span></label>
+                    <input type="text" id="support-subject" class="bel-form-input" placeholder="Enter your subject" required>
                 </div>
                 <div class="bel-form-group">
-                    <label for="support-message">Message *</label>
-                    <textarea id="support-message" rows="5" placeholder="Describe your issue or question in detail" required class="bel-textarea-form"></textarea>
+                    <label for="support-message">Message <span class="required-asterisk">*</span></label>
+                    <textarea id="support-message" class="bel-form-textarea" rows="5" placeholder="Describe your issue or question in detail" required></textarea>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="bel-btn secondary" id="cancel-support-btn">Cancel</button>
-                    <button type="submit" class="bel-btn primary" id="submit-support-btn">Submit Ticket</button>
+                <div class="modal-actions" style="flex-direction: row; gap: 10px;">
+                    <button type="button" class="bel-btn secondary" id="cancel-support-btn" style="flex: 1;">Cancel</button>
+                    <button type="submit" class="bel-btn primary" id="submit-support-btn" style="flex: 1;">Submit Ticket</button>
                 </div>
             </form>
         </div>

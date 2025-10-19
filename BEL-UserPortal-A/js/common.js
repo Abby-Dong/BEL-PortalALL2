@@ -1240,11 +1240,6 @@ async function loadDashboardData() {
                             <label for="ref-link-db" style="margin-bottom: 2px;">Your Referral Link</label>
                             <div class="referral-inline">
                                 <input id="ref-link-db" type="text" value="${userProfile.referralInfo.link}" readonly />
-                                <select id="region-selector" class="region-selector">
-                                    <option value="global" data-url="https://www.iotmart.com/en-en/?ref=">Global</option>
-                                    <option value="eu" data-url="https://www.iotmart.com/en-eu/?ref=">EU</option>
-                                    <option value="kr" data-url="https://www.iotmart.com/kr/?ref=">KR</option>
-                                </select>
                                 <button class="copy-button" data-copy-target="ref-link-db"><i class="far fa-copy"></i> </button>
                             </div>
                         </div>
@@ -1439,15 +1434,15 @@ async function loadAccountData() {
                     // First row: Beneficiary Name | Beneficiary Bank | Branch Name of Beneficiary Bank (33% each)
                     gridContainers[0].innerHTML = `
                         <div class="bel-form-group">
-                            <label for="beneficiary-name">Beneficiary Name</label>
+                            <label for="beneficiary-name">Beneficiary Name <span class="required-asterisk">*</span></label>
                             <div class="bel-text-display" id="beneficiary-name">${userProfile.name}</div>
                         </div>
                         <div class="bel-form-group">
-                            <label for="beneficiary-bank">Beneficiary Bank</label>
+                            <label for="beneficiary-bank">Beneficiary Bank <span class="required-asterisk">*</span></label>
                             <div class="bel-text-display" id="beneficiary-bank">${userProfile.bankInfo.bankName}</div>
                         </div>
                         <div class="bel-form-group">
-                            <label for="branch-name">Branch Name of Beneficiary Bank</label>
+                            <label for="branch-name">Branch Name of Beneficiary Bank <span class="required-asterisk">*</span></label>
                             <div class="bel-text-display" id="branch-name">San Francisco Main Branch</div>
                         </div>
                     `;
@@ -1455,11 +1450,11 @@ async function loadAccountData() {
                     // Second row: Swift Code | Account No | IBAN Code (33% each)
                     gridContainers[1].innerHTML = `
                         <div class="bel-form-group">
-                            <label for="swift-code">Swift Code (11 Digits)</label>
+                            <label for="swift-code">Swift Code (11 Digits) <span class="required-asterisk">*</span></label>
                             <div class="bel-text-display" id="swift-code">${userProfile.bankInfo.swiftCode}</div>
                         </div>
                         <div class="bel-form-group">
-                            <label for="account-number">Account No</label>
+                            <label for="account-number">Account No <span class="required-asterisk">*</span></label>
                             <div class="bel-text-display" id="account-number">****${userProfile.bankInfo.accountNumber.slice(-4)}</div>
                         </div>
                         <div class="bel-form-group">
@@ -1468,14 +1463,14 @@ async function loadAccountData() {
                         </div>
                     `;
 
-                    // Third row: Country | Office Street / Office Postal Code
+                    // Third row: Country | Office Street / Office Postal Code (1:3 ratio)
                     gridContainers[2].innerHTML = `
                         <div class="bel-form-group">
-                            <label for="country">Country</label>
+                            <label for="country">Country <span class="required-asterisk">*</span></label>
                             <div class="bel-text-display" id="country">United States</div>
                         </div>
-                        <div class="bel-form-group">
-                            <label for="office-address">Office Street / Office Postal Code</label>
+                        <div class="bel-form-group" style="grid-column: span 3;">
+                            <label for="office-address">Office Street / Office Postal Code <span class="required-asterisk">*</span></label>
                             <div class="bel-text-display" id="office-address">1234 Technology Innovation Boulevard, Suite 567, Silicon Valley Business District, San Francisco, CA 94102</div>
                         </div>
                     `;
@@ -1551,33 +1546,22 @@ async function loadEarningsData() {
             });
         }
 
-        // Calculate order stats from order tracking
+        // Calculate order stats from order tracking  
         if (orderTracking && orderTracking.length > 0) {
             totalOrderCount = orderTracking.length;
             
             orderTracking.forEach(order => {
-                // Extract numeric value from order amount (handle different currencies)
-                const amountStr = order.orderAmount || '';
+                // Use orderAmountUSD which is already in USD
+                const amountStr = order.orderAmountUSD || '';
                 const numericMatch = amountStr.match(/[\d,]+\.?\d*/);
                 if (numericMatch) {
                     const amount = parseFloat(numericMatch[0].replace(/,/g, ''));
-                    // Convert to USD equivalent (simplified - you might want more sophisticated currency conversion)
-                    let usdAmount = amount;
-                    if (amountStr.includes('EUR')) {
-                        usdAmount = amount * 1.08; // Approximate EUR to USD
-                    } else if (amountStr.includes('GBP')) {
-                        usdAmount = amount * 1.25; // Approximate GBP to USD
-                    } else if (amountStr.includes('JPY')) {
-                        usdAmount = amount * 0.0067; // Approximate JPY to USD
-                    } else if (amountStr.includes('TWD')) {
-                        usdAmount = amount * 0.031; // Approximate TWD to USD
-                    }
-                    totalOrderAmount += usdAmount;
+                    totalOrderAmount += amount;
                 }
             });
         }
 
-        // Update the new stats cards
+        // Update the new stats cards with calculated values
         const netPayoutsValue = document.getElementById('net-payouts-value');
         const orderCountsValue = document.getElementById('order-counts-value');
         const orderAmountValue = document.getElementById('order-amount-value');
@@ -1592,25 +1576,22 @@ async function loadEarningsData() {
             orderAmountValue.textContent = `$${totalOrderAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
         }
 
-        // Update earnings summary
-        const totalValue = document.querySelector('.total-value');
-        const subEarnings = document.querySelector('.sub-earnings');
-        const tooltipText = document.querySelector('.tooltip-text');
+        // Update trend indicators with mock data for now
+        const netPayoutsTrend = document.getElementById('net-payouts-trend');
+        const orderCountsTrend = document.getElementById('order-counts-trend');
+        const orderAmountTrend = document.getElementById('order-amount-trend');
 
-        if (totalValue) totalValue.textContent = earningsSummary.totalEarnings;
-        if (tooltipText) tooltipText.textContent = earningsSummary.tooltipText;
-
-        if (subEarnings) {
-            subEarnings.innerHTML = `
-                <div>
-                    <div class="sub-title">To Be Payout</div>
-                    <div class="sub-value">${earningsSummary.pendingPayout}</div>
-                </div>
-                <div>
-                    <div class="sub-title">Already Paid</div>
-                    <div class="sub-value">${earningsSummary.alreadyPaid}</div>
-                </div>
-            `;
+        if (netPayoutsTrend) {
+            netPayoutsTrend.className = 'trend-indicator positive';
+            netPayoutsTrend.innerHTML = '<i class="fas fa-caret-up"></i> +12.5% <span class="trend-indicator-text">Increase in Sep.(MoM)</span>';
+        }
+        if (orderCountsTrend) {
+            orderCountsTrend.className = 'trend-indicator negative';
+            orderCountsTrend.innerHTML = '<i class="fas fa-caret-down"></i> -2.3% <span class="trend-indicator-text">Decreased in Sep.(MoM)</span>';
+        }
+        if (orderAmountTrend) {
+            orderAmountTrend.className = 'trend-indicator positive';
+            orderAmountTrend.innerHTML = '<i class="fas fa-caret-up"></i> +8.7% <span class="trend-indicator-text">Increase in Sep.(MoM)</span>';
         }
         
         // Update payout history table

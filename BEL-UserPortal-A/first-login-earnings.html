@@ -92,15 +92,6 @@
             <h1 class="bel-h1">Earnings & Orders</h1>
             
             <!-- Important Notice for New Users -->
-            <div class="notice-banner">
-                <div class="notice-banner-content">
-                    <i class="fas fa-exclamation-triangle notice-banner-icon"></i>
-                    <div class="notice-banner-text">
-                        <h3>Complete Banking Information Required</h3>
-                        <p>You need to complete your banking information to receive earnings. <a href="first-login-account.html#banking">Complete now →</a></p>
-                    </div>
-                </div>
-            </div>
 
             <div class="bel-stats-cards">
                 <div class="bel-card" style="margin-bottom: 0px;">
@@ -111,7 +102,7 @@
                         </div>
                         <div class="bel-card-icon"><i class="fas fa-money-bill-wave"></i></div>
                     </div>
-                    <div class="trend-indicator neutral"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No earnings yet</span></div>
+                    <div class="trend-indicator neutral"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No data yet</span></div>
                 </div>
                 <div class="bel-card" style="margin-bottom: 0px;">
                     <div class="bel-card-layout">
@@ -121,7 +112,7 @@
                         </div>
                         <div class="bel-card-icon"><i class="fas fa-shopping-cart"></i></div>
                     </div>
-                    <div class="trend-indicator neutral"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No orders yet</span></div>
+                    <div class="trend-indicator neutral"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No data yet</span></div>
                 </div>
                 <div class="bel-card" style="margin-bottom: 0px;">
                     <div class="bel-card-layout">
@@ -131,7 +122,7 @@
                         </div>
                         <div class="bel-card-icon"><i class="fas fa-chart-line"></i></div>
                     </div>
-                    <div class="trend-indicator neutral"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No orders yet</span></div>
+                    <div class="trend-indicator neutral"><i class="fas fa-minus"></i> 0% <span class="trend-indicator-text">No data yet</span></div>
                 </div>
                 <div class="bel-card" style="margin-bottom: 0px;">
                     <div class="bel-card-layout">
@@ -149,16 +140,26 @@
             <div class="section-header-with-controls">
                 <h3 class="bel-h3 bel-h3-reset">Payout History</h3>
             </div>
-            <div class="bel-panel">
-                <div class="empty-state" style="text-align: center; padding: 60px 20px; color: var(--ds-color-gray-60);">
-                    <i class="fas fa-credit-card" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;"></i>
-                    <h3 style="color: var(--ds-color-gray-70); margin-bottom: 8px;">No Payout History</h3>
-                    <p style="margin: 0;">Your payout history will appear here once you start earning rebates</p>
-                    <div style="margin-top: 16px;">
-                        <p style="margin: 0; color: var(--ds-color-primary); font-weight: var(--fw-medium); font-size: var(--fs-sm);">
-                            <i class="fas fa-info-circle" style="margin-right: 4px;"></i>
-                            Complete your banking information to receive payouts
-                        </p>
+            
+            <!-- Empty State for No Banking Info -->
+            <div class="bel-panel" id="no-banking-empty-state">
+                <div class="empty-state" style="text-align: center; padding: 24px; color: var(--ds-color-gray-60);">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/No+banking+information.png" alt="Banking information required" style="width: 240px; height: 240px; opacity: 0.8;">
+                    <h3 style="color: var(--ds-color-gray-70); margin-bottom: 8px; font-size: var(--fs-lg); font-weight: var(--fw-medium);">Banking Information Required</h3>
+                    <div style="max-width: 500px; margin: 0 auto;">
+                        <p style="margin: 0 0 8px 0; font-size: var(--fs-sm);">Please complete your banking information setup to start receiving commission payouts and track your earnings history.</p>
+                        <p style="margin: 0; font-size: var(--fs-sm);"><a href="first-login-account.html" style="color: var(--ds-color-link); text-decoration: none; font-weight: var(--fw-medium);">Complete Banking Setup →</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Empty State for No Payouts Yet -->
+            <div class="bel-panel" id="no-payouts-empty-state" style="display: none;">
+                <div class="empty-state" style="text-align: center; padding: 24px; color: var(--ds-color-gray-60);">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/No+Payout+History.png" alt="Waiting for payouts" style="width: 240px; height: 240px; opacity: 0.8;">
+                    <h3 style="color: var(--ds-color-gray-70); margin-bottom: 8px; font-size: var(--fs-lg); font-weight: var(--fw-medium);">Your Payout Adventure Starts Here!</h3>
+                    <div style="max-width: 500px; margin: 0 auto;">
+                        <p style="margin: 0; font-size: var(--fs-sm);">Your payout history will appear here once you start earning and your first payout is processed. Keep promoting to see your earnings grow!</p>
                     </div>
                 </div>
             </div>
@@ -173,10 +174,12 @@
                 </div>
             </div>
             <div class="bel-panel">
-                <div class="empty-state" style="text-align: center; padding: 60px 20px; color: var(--ds-color-gray-60);">
-                    <i class="fas fa-shopping-bag" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;"></i>
-                    <h3 style="color: var(--ds-color-gray-70); margin-bottom: 8px;">No Orders Yet</h3>
-                    <p style="margin: 0;">Orders made through your referral will appear here</p>
+                <div class="empty-state" style="text-align: center; padding: 24px; color: var(--ds-color-gray-60);">
+                    <img src="https://irp.cdn-website.com/56869327/dms3rep/multi/No+Order+Yet.png" alt="Waiting for first order" style="width: 240px; height: 240px; opacity: 0.8;">
+                    <h3 style="color: var(--ds-color-gray-70); margin-bottom: 8px; font-size: var(--fs-lg); font-weight: var(--fw-medium);">Get Your First Order!</h3>
+                    <div style="max-width: 500px; margin: 0 auto;">
+                        <p style="margin: 0; font-size: var(--fs-sm);">Orders made through your referral will appear here once customers start purchasing through your promotional efforts!</p>
+                    </div>
                 </div>
             </div>
 
@@ -192,21 +195,30 @@
                 </div>
                 <div class="task-text">
                     <div class="task-title">Complete Setup</div>
-                    <div class="task-subtitle">1 task remaining</div>
+                    <div class="task-subtitle" id="task-subtitle">2 tasks remaining</div>
                 </div>
                 <button class="task-close" id="task-close-btn" title="Minimize (task will remain active)">
                     <i class="fas fa-minus"></i>
                 </button>
             </div>
             <div class="setup-task-body" id="setup-task-body">
-                <div class="task-item incomplete" data-task="banking">
+                <div class="task-item incomplete" data-task="referral-id" onclick="showReferralIdModal()" style="cursor: pointer;">
+                    <div class="task-item-content">
+                        <div class="task-item-title">Referral ID Setting</div>
+                        <div class="task-item-desc">Set your preferred 6-digit referral ID for earning commissions</div>
+                    </div>
+                    <div class="task-item-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="task-item incomplete" data-task="banking" onclick="goToBankingSetup()" style="cursor: pointer;">
                     <div class="task-item-content">
                         <div class="task-item-title">Banking Information</div>
                         <div class="task-item-desc">Set up your payout details, required to receive commission payments and earnings</div>
                     </div>
-                    <button class="task-item-action" onclick="goToBankingSetup()">
-                        Complete
-                    </button>
+                    <div class="task-item-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -216,20 +228,232 @@
     <script src="js/common.js"></script>
     
     <script>
-        // Setup task modal management
-        function checkBankingStatus() {
+        // Setup task modal management - Updated to match first-login.html
+        function checkTaskStatus() {
+            const referralIdCompleted = localStorage.getItem('bel_referral_id_completed');
             const bankingCompleted = localStorage.getItem('bel_banking_completed');
             const taskModal = document.getElementById('setup-task-modal');
+            const referralTask = document.querySelector('[data-task="referral-id"]');
+            const bankingTask = document.querySelector('[data-task="banking"]');
+            const taskSubtitle = document.querySelector('.task-subtitle');
             
-            if (bankingCompleted === 'true') {
+            let remainingTasks = 0;
+            
+            // Check referral ID task (if exists)
+            if (referralTask) {
+                if (referralIdCompleted === 'true') {
+                    referralTask.style.display = 'none';
+                } else {
+                    remainingTasks++;
+                }
+            }
+            
+            // Check banking task
+            if (bankingTask) {
+                if (bankingCompleted === 'true') {
+                    bankingTask.style.display = 'none';
+                } else {
+                    remainingTasks++;
+                }
+            }
+            
+            // Update task count and modal visibility
+            if (remainingTasks === 0) {
                 taskModal.style.display = 'none';
             } else {
                 taskModal.style.display = 'block';
+                if (taskSubtitle) {
+                    taskSubtitle.textContent = remainingTasks === 1 ? '1 task remaining' : `${remainingTasks} tasks remaining`;
+                }
             }
+        }
+        
+        // For backward compatibility
+        function checkBankingStatus() {
+            checkTaskStatus();
         }
         
         function goToBankingSetup() {
             window.location.href = 'first-login-account.html';
+        }
+
+        // Referral ID Modal Functions
+        function showReferralIdModal() {
+            document.getElementById('referral-id-modal').style.display = 'flex';
+            const input = document.getElementById('referral-id-input');
+            input.focus();
+            updateSaveButtonState();
+        }
+
+        function saveReferralId() {
+            const input = document.getElementById('referral-id-input');
+            const saveBtn = document.getElementById('save-referral-btn');
+            const referralId = input.value.trim().toUpperCase();
+            
+            saveBtn.disabled = true;
+            saveBtn.textContent = 'Validating...';
+            
+            if (!validateReferralId(referralId)) {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Save Referral ID';
+                return;
+            }
+            
+            if (!checkReferralIdAvailability(referralId)) {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Save Referral ID';
+                return;
+            }
+            
+            setTimeout(() => {
+                try {
+                    localStorage.setItem('bel_referral_id_completed', 'true');
+                    localStorage.setItem('bel_referral_id_value', referralId);
+                    
+                    document.getElementById('referral-id-modal').style.display = 'none';
+                    
+                    showSuccessMessage('Referral ID saved successfully!');
+                    
+                    input.value = '';
+                    clearFieldError(input);
+                    updateSaveButtonState();
+                    
+                    checkTaskStatus();
+                } catch (error) {
+                    console.error('Error saving referral ID:', error);
+                    saveBtn.disabled = false;
+                    saveBtn.textContent = 'Save Referral ID';
+                }
+            }, 800);
+        }
+
+        function validateReferralId(referralId) {
+            clearValidationError();
+            
+            if (!referralId || referralId.trim() === '') {
+                showFieldError(document.getElementById('referral-id-input'), 'Please enter a referral ID');
+                return false;
+            }
+            
+            if (referralId.length !== 6) {
+                showFieldError(document.getElementById('referral-id-input'), 'Referral ID must be exactly 6 characters');
+                return false;
+            }
+            
+            if (!/^[A-Z]{6}$/.test(referralId)) {
+                showFieldError(document.getElementById('referral-id-input'), 'Referral ID must contain only English letters (A-Z)');
+                return false;
+            }
+            
+            const firstChar = referralId.charAt(0);
+            if (referralId === firstChar.repeat(6)) {
+                showFieldError(document.getElementById('referral-id-input'), 'Six identical letters are not allowed. Please use different letters');
+                return false;
+            }
+            
+            if (isReferralIdTaken(referralId)) {
+                const errorMessage = `"${referralId}" is already taken. Please try a different combination.`;
+                showFieldError(document.getElementById('referral-id-input'), errorMessage);
+                return false;
+            }
+            
+            clearFieldError(document.getElementById('referral-id-input'));
+            return true;
+        }
+
+        function showFieldError(field, message) {
+            field.style.borderColor = '#e74c3c';
+            field.classList.add('error');
+            
+            const errorDiv = document.getElementById('referral-id-validation');
+            if (errorDiv) {
+                errorDiv.textContent = message;
+                errorDiv.style.display = 'block';
+            }
+        }
+
+        function clearFieldError(field) {
+            field.style.borderColor = 'var(--ds-color-gray-40, #e8ecef)';
+            field.classList.remove('error');
+            
+            const errorDiv = document.getElementById('referral-id-validation');
+            if (errorDiv) {
+                errorDiv.style.display = 'none';
+            }
+        }
+
+        function clearValidationError() {
+            const input = document.getElementById('referral-id-input');
+            clearFieldError(input);
+        }
+
+        function updateSaveButtonState() {
+            const input = document.getElementById('referral-id-input');
+            const saveBtn = document.getElementById('save-referral-btn');
+            const value = input.value.trim().toUpperCase();
+            
+            const isValidLength = value.length === 6;
+            const isValidFormat = /^[A-Z]{6}$/.test(value);
+            const isNotIdentical = value !== value.charAt(0).repeat(6);
+            const isNotTaken = !isReferralIdTaken(value);
+            
+            const isValid = isValidLength && isValidFormat && isNotIdentical && isNotTaken;
+            
+            if (isValid) {
+                saveBtn.disabled = false;
+                saveBtn.style.background = '#007bff';
+                saveBtn.style.color = 'white';
+                saveBtn.style.cursor = 'pointer';
+                saveBtn.classList.add('enabled');
+            } else {
+                saveBtn.disabled = true;
+                saveBtn.style.background = 'var(--ds-color-gray-40, #e8ecef)';
+                saveBtn.style.color = 'var(--ds-color-gray-60, #737b7d)';
+                saveBtn.style.cursor = 'not-allowed';
+                saveBtn.classList.remove('enabled');
+            }
+        }
+
+        function isReferralIdTaken(referralId) {
+            const takenIds = [
+                'ABCDEF', 'GHIJKL', 'MNOPQR', 'STUVWX', 'YZABCD',
+                'QWERTY', 'ASDFGH', 'ZXCVBN', 'POIUYT', 'LKJHGF'
+            ];
+            return takenIds.includes(referralId);
+        }
+
+        function checkReferralIdAvailability(referralId) {
+            if (isReferralIdTaken(referralId)) {
+                const errorMessage = `"${referralId}" is already taken. Please try a different combination.`;
+                showFieldError(document.getElementById('referral-id-input'), errorMessage);
+                return false;
+            }
+            return true;
+        }
+
+        function showSuccessMessage(message) {
+            const successMsg = document.createElement('div');
+            successMsg.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: var(--ds-color-success); 
+                color: var(--ds-color-white); 
+                padding: 16px 24px; 
+                border-radius: 4px; 
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+                z-index: 1001;
+                animation: slideIn 0.5s ease-out;
+                font-size: var(--fs-sm);
+                font-weight: var(--fw-medium);
+            `;
+            successMsg.innerHTML = `<i class="fas fa-check-circle" style="margin-right: 8px;"></i>${message}`;
+            document.body.appendChild(successMsg);
+            
+            setTimeout(() => {
+                successMsg.style.animation = 'slideIn 0.5s ease-out reverse';
+                setTimeout(() => successMsg.remove(), 500);
+            }, 3000);
         }
         
         // Task modal minimize/restore functionality
@@ -255,8 +479,82 @@
         });
         
         document.addEventListener('DOMContentLoaded', function() {
-            checkBankingStatus();
+            checkTaskStatus();
+            checkPayoutEmptyState();
+            
+            // Add event listeners for referral ID modal
+            const referralIdInput = document.getElementById('referral-id-input');
+            if (referralIdInput) {
+                referralIdInput.addEventListener('input', function(e) {
+                    let value = this.value.replace(/[^A-Za-z]/g, '').toUpperCase();
+                    if (value.length > 6) {
+                        value = value.substring(0, 6);
+                    }
+                    this.value = value;
+                    clearValidationError();
+                    updateSaveButtonState();
+                });
+
+                referralIdInput.addEventListener('keypress', function(e) {
+                    const char = String.fromCharCode(e.which);
+                    if (!/[A-Za-z]/.test(char)) {
+                        e.preventDefault();
+                    }
+                });
+            }
+            
+            // Handle referral ID form submission
+            const referralIdForm = document.getElementById('referral-id-form');
+            if (referralIdForm) {
+                referralIdForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    saveReferralId();
+                });
+            }
+            
+            // Handle modal overlay clicks
+            const referralIdModal = document.getElementById('referral-id-modal');
+            if (referralIdModal) {
+                referralIdModal.addEventListener('click', function(e) {
+                    if (e.target === referralIdModal) {
+                        referralIdModal.style.display = 'none';
+                        document.getElementById('referral-id-input').value = '';
+                        clearValidationError();
+                        updateSaveButtonState();
+                    }
+                });
+            }
+            
+            // Handle ESC key to close modal
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('referral-id-modal');
+                    if (modal && modal.style.display === 'flex') {
+                        modal.style.display = 'none';
+                        document.getElementById('referral-id-input').value = '';
+                        clearValidationError();
+                        updateSaveButtonState();
+                    }
+                }
+            });
         });
+        
+        // Check which payout empty state to show
+        function checkPayoutEmptyState() {
+            const bankingCompleted = localStorage.getItem('bel_banking_completed') === 'true';
+            const noBankingEmptyState = document.getElementById('no-banking-empty-state');
+            const noPayoutsEmptyState = document.getElementById('no-payouts-empty-state');
+            
+            if (!bankingCompleted) {
+                // Show banking required message
+                if (noBankingEmptyState) noBankingEmptyState.style.display = 'block';
+                if (noPayoutsEmptyState) noPayoutsEmptyState.style.display = 'none';
+            } else {
+                // Show no payouts yet message (for first-login users who completed banking)
+                if (noBankingEmptyState) noBankingEmptyState.style.display = 'none';
+                if (noPayoutsEmptyState) noPayoutsEmptyState.style.display = 'block';
+            }
+        }
     </script>
 
     <!-- Exchange Rate Info Modal -->
@@ -286,6 +584,321 @@
             </div>
         </div>
     </div>
+
+    <!-- Referral ID Setting Modal -->
+    <div class="modal-overlay" id="referral-id-modal">
+        <div style="background: white; border-radius: 4px; padding: 30px; max-width: 550px; width: 100%; box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 60px; text-align: center;">
+            <div style="margin-bottom: 25px;">
+                <i class="fas fa-link" style="font-size: 48px; color: #007bff; margin-bottom: 15px;"></i>
+                <h3 style="margin: 0 0 10px 0; color: var(--ds-color-gray-80, #434447);">Set Your Referral Link</h3>
+                <p style="margin: 0; color: var(--ds-color-gray-60, #737b7d); font-size: 14px;">Create your unique 6-letter referral ID for the BEL Partner Program</p>
+            </div>
+            
+            <form id="referral-id-form" style="text-align: left;">
+                <div style="margin-bottom: 25px;">
+                    <label style="display: block; margin-bottom: 5px; color: var(--ds-color-gray-80, #434447); font-weight: 600; font-size: 14px;">
+                        Referral ID Setting <span style="color: #e74c3c;">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="referral-id-input" 
+                        required 
+                        maxlength="6" 
+                        pattern="[A-Z]{6}" 
+                        class="bel-form-control bel-form-input"
+                        style="
+                            width: 100%;
+                            padding: 12px 15px;
+                            border: 2px solid var(--ds-color-gray-40, #e8ecef);
+                            border-radius: 4px;
+                            font-size: 18px;
+                            font-family: monospace;
+                            letter-spacing: 2px;
+                            text-align: center;
+                            box-sizing: border-box;
+                            transition: border-color 0.3s ease;
+                            text-transform: uppercase;
+                        " 
+                        placeholder="AAAAAA"
+                        autocomplete="off"
+                        spellcheck="false"
+                        inputmode="text"
+                        title="Only English letters A-Z are allowed"
+                    >
+                    <div id="referral-id-validation" class="validation-error" style="color: #e74c3c; font-size: 12px; margin-top: 5px; display: none;"></div>
+                    <div style="background: #f8f9fa; padding: 12px; border-radius: 4px; margin-top: 8px; font-size: 12px; color: var(--ds-color-gray-60, #737b7d); line-height: 1.4;">
+                        <i class="fas fa-info-circle" style="color: #007bff; margin-right: 5px;"></i>
+                        Note: Complete your referral ID setting to generate your unique referral link and QR code for sharing and start earning rebates!
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 15px;">
+                    <button type="submit" id="save-referral-btn" style="
+                        flex: 1;
+                        padding: 12px 24px;
+                        background: var(--ds-color-gray-40, #e8ecef);
+                        color: var(--ds-color-gray-60, #737b7d);
+                        border: none;
+                        border-radius: 4px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        cursor: not-allowed;
+                        transition: all 0.3s ease;
+                    " disabled>Save Referral ID</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        /* Fixed Task Modal Styles */
+        .setup-task-modal {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e8ecef;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: none;
+        }
+        
+        .setup-task-modal.minimized {
+            width: 320px;
+        }
+        
+        .setup-task-content {
+            padding: 0;
+        }
+        
+        .setup-task-header {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: #fef7e6;
+            border-radius: 4px 4px 0 0;
+            border-bottom: 1px solid #f0d7a7;
+        }
+        
+        .task-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--ds-color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .task-text {
+            flex: 1;
+        }
+        
+        .task-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 2px;
+        }
+        
+        .task-subtitle {
+            font-size: 12px;
+            color: var(--ds-color-gray-80);
+        }
+        
+        .task-close {
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: transparent;
+            color: var(--ds-color-gray-60);
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .task-close:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--ds-color-gray-80);
+        }
+        
+        .setup-task-body {
+            padding: 16px;
+            overflow: hidden;
+            transition: max-height 0.6s ease, opacity 0.6s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .setup-task-modal.minimized .setup-task-body {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--ds-color-gray-40);
+            background: var(--ds-color-white);
+            transition: all 0.2s ease;
+        }
+        
+        .task-item:hover {
+            border-color: var(--ds-color-primary);
+            background: var(--ds-color-primary-light-10, #fff7e6);
+        }
+        
+        .task-item-content {
+            flex: 1;
+        }
+        
+        .task-item-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--ds-color-gray-90);
+            margin-bottom: 4px;
+        }
+        
+        .task-item-desc {
+            font-size: 12px;
+            color: var(--ds-color-gray-70);
+            line-height: 1.4;
+        }
+        
+        .task-item-arrow {
+            color: var(--ds-color-gray-60);
+            font-size: 12px;
+            transition: all 0.2s ease;
+            opacity: 0.7;
+        }
+        
+        .task-item:hover .task-item-arrow {
+            color: var(--ds-color-primary);
+            opacity: 1;
+            transform: translateX(2px);
+        }
+        
+        @media (max-width: 768px) {
+            .setup-task-modal {
+                width: 280px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .setup-task-modal.minimized {
+                width: 280px;
+            }
+        }
+
+        /* Referral ID Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Button hover effects for the new modal */
+        .modal-overlay button[type="submit"]:not(:disabled):hover {
+            background: #0056b3 !important;
+            transform: translateY(-1px);
+            cursor: pointer !important;
+        }
+
+        .modal-overlay button[type="submit"]:disabled {
+            background: var(--ds-color-gray-40, #e8ecef) !important;
+            color: var(--ds-color-gray-60, #737b7d) !important;
+            cursor: not-allowed !important;
+            transform: none !important;
+        }
+
+        .modal-overlay button[type="submit"].enabled {
+            background: #007bff !important;
+            color: white !important;
+            cursor: pointer !important;
+        }
+
+        /* Input focus styles for the new modal */
+        .modal-overlay input:focus {
+            outline: none;
+            border-color: #007bff !important;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1) !important;
+        }
+
+        /* Input error state */
+        .modal-overlay input.error {
+            border-color: #e74c3c !important;
+        }
+
+        .required-asterisk {
+            color: #dc3545;
+            font-weight: 600;
+        }
+
+        /* Validation Error Styling */
+        .validation-error {
+            color: #dc3545 !important;
+            font-size: 0.75rem !important;
+            margin-top: 4px !important;
+        }
+
+        .input-requirements {
+            font-style: italic;
+        }
+
+        .validation-success {
+            color: #28a745 !important;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .validation-success::before {
+            content: '✓';
+            font-weight: bold;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 600px) {
+            .modal-overlay > div {
+                margin: 15px !important;
+                padding: 20px !important;
+            }
+            
+            .modal-overlay input {
+                font-size: 16px !important;
+            }
+            
+            .modal-overlay button {
+                font-size: 13px !important;
+                padding: 10px 20px !important;
+            }
+        }
+    </style>
 
 </body>
 </html>

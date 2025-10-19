@@ -168,6 +168,7 @@
     --scrollbar-track: transparent;
     
     /* -- Typography Variables -- */
+    --font-family-base: "heebo", "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --fw-normal: 400;
     --fw-medium: 500;
     --fw-semibold: 600;
@@ -210,7 +211,7 @@ html {
 }
 
 body {
-    font-family: "heebo", "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: var(--font-family-base);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.6;
@@ -904,8 +905,131 @@ body::-webkit-scrollbar-track,
 }
 
 .bel-form-group { margin-bottom: 0px; }
-.bel-form-group label { display: block; margin-bottom: 2px; font-weight: 500; font-size: 0.875rem; color: var(--ds-color-gray-70);}
+.bel-form-group label { display: block; margin-bottom: 2px; font-weight: 500; font-size: 0.875rem; color: var(--ds-color-gray-80);}
 .bel-form-group label .required-asterisk { color: #dc3545; }
+/* Base unified form control styles - applies to all input, select, and textarea elements */
+.bel-form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--ds-color-gray-40);
+    border-radius: 4px;
+    font-size: var(--fs-sm);
+    background-color: var(--ds-color-white);
+    color: var(--ds-color-gray-90);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Input-specific styles (text inputs) */
+.bel-form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--ds-color-gray-40);
+    border-radius: 4px;
+    font-size: var(--fs-sm);
+    font-family: var(--font-family-base);
+    background-color: var(--ds-color-white);
+    color: var(--ds-color-gray-90);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Textarea-specific styles */
+.bel-form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--ds-color-gray-40);
+    border-radius: 4px;
+    font-size: var(--fs-sm);
+    font-family: var(--font-family-base);
+    background-color: var(--ds-color-white);
+    color: var(--ds-color-gray-90);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    cursor: text;
+    resize: vertical;
+    min-height: 80px;
+    line-height: 1.5;
+}
+
+/* Hover states for all form elements */
+.bel-form-control:hover,
+.bel-form-input:hover,
+.bel-form-textarea:hover {
+    border-color: var(--ds-color-brand-light-50);
+    background-color: var(--ds-color-gray-30);
+}
+
+/* Focus states for all form elements */
+.bel-form-control:focus,
+.bel-form-input:focus,
+.bel-form-textarea:focus {
+    outline: none;
+    border-color: var(--ds-color-brand);
+    box-shadow: 0 0 0 2px var(--ds-color-brand-light-30);
+    background-color: var(--ds-color-white);
+}
+
+/* Placeholder color for unified form controls */
+.bel-form-control::placeholder,
+.bel-form-input::placeholder,
+.bel-form-textarea::placeholder {
+    color: var(--ds-color-gray-60);
+    opacity: 1;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+/* Browser-specific placeholder styles for better compatibility */
+.bel-form-control::-webkit-input-placeholder,
+.bel-form-input::-webkit-input-placeholder,
+.bel-form-textarea::-webkit-input-placeholder { /* Safari/Chrome */
+    color: var(--ds-color-gray-60);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+.bel-form-control::-moz-placeholder,
+.bel-form-input::-moz-placeholder,
+.bel-form-textarea::-moz-placeholder { /* Firefox */
+    color: var(--ds-color-gray-60);
+    opacity: 1;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+.bel-form-control:-ms-input-placeholder,
+.bel-form-input:-ms-input-placeholder,
+.bel-form-textarea:-ms-input-placeholder { /* IE 10+ (legacy) */
+    color: var(--ds-color-gray-60);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+.bel-form-control::-ms-input-placeholder,
+.bel-form-input::-ms-input-placeholder,
+.bel-form-textarea::-ms-input-placeholder { /* Edge (legacy) */
+    color: var(--ds-color-gray-60);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+/* Disabled states for all form elements */
+.bel-form-control:disabled,
+.bel-form-input:disabled,
+.bel-form-textarea:disabled {
+    background-color: var(--ds-color-gray-30);
+    color: var(--ds-color-gray-60);
+    cursor: not-allowed;
+    border-color: var(--ds-color-gray-40);
+}
+
+/* Legacy support - keep existing styles for backward compatibility */
 .bel-form-group input, .bel-form-group select {
     width: 100%;
     padding: 12px;
@@ -914,6 +1038,67 @@ body::-webkit-scrollbar-track,
     font-size: 0.875rem;
     background-color: var(--ds-color-white);
     transition: all 0.2s ease;
+}
+
+/* Banking form specific styles */
+.banking-form input,
+.banking-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--ds-color-gray-40);
+    border-radius: 4px;
+    font-size: var(--fs-sm);
+    background-color: var(--ds-color-white);
+    color: var(--ds-color-gray-90);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.banking-form textarea {
+    resize: vertical;
+    min-height: 80px;
+    line-height: 1.5;
+}
+
+.banking-form input:hover,
+.banking-form textarea:hover {
+    border-color: var(--ds-color-brand-light-50);
+    background-color: var(--ds-color-gray-30);
+}
+
+.banking-form input:focus,
+.banking-form textarea:focus {
+    outline: none;
+    border-color: var(--ds-color-brand);
+    box-shadow: 0 0 0 2px var(--ds-color-brand-light-30);
+    background-color: var(--ds-color-white);
+}
+
+/* Banking form placeholder styles */
+.banking-form input::placeholder,
+.banking-form textarea::placeholder {
+    color: var(--ds-color-gray-60);
+    opacity: 1;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+.banking-form input::-webkit-input-placeholder,
+.banking-form textarea::-webkit-input-placeholder {
+    color: var(--ds-color-gray-60);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+.banking-form input::-moz-placeholder,
+.banking-form textarea::-moz-placeholder {
+    color: var(--ds-color-gray-60);
+    opacity: 1;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
 }
 
 .bel-text-display {
@@ -960,8 +1145,7 @@ body::-webkit-scrollbar-track,
     font-size: 1rem;
     text-decoration: none !important;
 }
-.bel-btn:hover { background-color: #0262de; }
-
+/* Button color variants - Primary */
 .bel-btn.primary {
     background-color: var(--ds-color-link);
     color: var(--ds-color-white);
@@ -986,6 +1170,21 @@ body::-webkit-scrollbar-track,
 }
 .bel-btn.brand:hover { 
     background-color: var(--ds-color-primary-dark); 
+}
+
+/* Button color variants - Danger */
+.bel-btn.danger {
+    background-color: var(--ds-color-error);
+    color: var(--ds-color-white);
+}
+
+.bel-btn.danger:hover {
+    background-color: var(--ds-color-error-dark);
+}
+
+/* Default hover for buttons without specific variants */
+.bel-btn:not(.primary):not(.secondary):not(.brand):not(.danger):hover {
+    background-color: #0262de;
 }
 
 .bel-btn:not(.secondary) {
@@ -1045,6 +1244,16 @@ body::-webkit-scrollbar-track,
 
 .bel-btn-s.brand:hover { 
     background-color: var(--ds-color-primary-dark); 
+}
+
+/* Button color variants - Danger (Small) */
+.bel-btn-s.danger {
+    background-color: var(--ds-color-error);
+    color: var(--ds-color-white);
+}
+
+.bel-btn-s.danger:hover {
+    background-color: var(--ds-color-error-dark);
 }
 
 .bel-btn-s:not(.secondary) {
@@ -1441,12 +1650,20 @@ text-align-last: center;
 }
 
 .grid-cols-4 {
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
 
 .grid-col-span-3 {
-    grid-column: span 1;
+    grid-column: span 3;
+}
+
+/* Country-Address Grid - 1:3 ratio */
+.country-address-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 24px;
+    margin-bottom: 12px;
 }
 
 /* Responsive grid for mobile */
@@ -1532,33 +1749,41 @@ text-align-last: center;
 }
 .modal-content {
     background-color: var(--ds-color-white);
-    padding: 30px;
+    padding: 0px 16px 16px;
     border-radius: 4px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     width: 100%;
     max-width: 500px;
 }
 .modal-header {
+    position: sticky;
+    top: 0;
+    background: var(--ds-color-white);
+    z-index: 10;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--ot-color-gray-45);
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+    padding-top: 16px;
 }
-.modal-header h3 { margin: 0; font-size: 1.4rem; }
+.modal-header h3 {
+    margin: 0;
+    font-size: var(--fs-lg);
+}
 .modal-header .close-button {
-    font-size: 1.8rem;
+    font-size: var(--fs-h2);
     color: var(--ot-color-gray-65);
     cursor: pointer;
     border: none;
     background: none;
 }
-.modal-footer {
+.modal-actions {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     gap: 10px;
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 

@@ -10,27 +10,27 @@
           "trend": {
             "direction": "positive",
             "percentage": "+6.5%",
-            "text": "Since Last Month (MoM)"
+            "text": "Increase in Sep. (MoM)"
           }
         },
         {
-          "title": "Referral ID Usage", 
-          "value": "142",
+          "title": "Click to Orders CVR (%)", 
+          "value": "22.4%",
           "icon": "fas fa-tags",
           "trend": {
             "direction": "negative",
             "percentage": "-0.10%",
-            "text": "Since Last Month (MoM)"
+            "text": "Decreased in Sep.(MoM)"
           }
         },
         {
-          "title": "Total Orders Count",
+          "title": "Total Orders",
           "value": "35", 
           "icon": "fas fa-shopping-cart",
           "trend": {
             "direction": "negative",
             "percentage": "-0.2%",
-            "text": "Since Last Month (MoM)"
+            "text": "Decreased in Sep.(MoM)"
           }
         },
         {
@@ -40,7 +40,7 @@
           "trend": {
             "direction": "positive",
             "percentage": "+11.8%",
-            "text": "Since Last Month (MoM)"
+            "text": "Increase in Sep.(MoM)"
           }
         }
       ]
