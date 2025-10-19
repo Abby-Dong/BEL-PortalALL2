@@ -5309,6 +5309,7 @@ if (!checkAuthentication()) {
         belPayoutModalEl: null,
         supportModalEl: null,
         announcementModalEl: null,
+        announcementConfirmModalEl: null,
         imageModalEl: null,
         confirmModalEl: null,
         formModalEl: null,
@@ -7547,6 +7548,7 @@ if (!checkAuthentication()) {
                                     <th data-sortable data-type="string">Title</th>
                                     <th data-sortable data-type="string">Body</th>
                                     <th data-sortable data-type="string">Link</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
@@ -8659,13 +8661,14 @@ if (!checkAuthentication()) {
             if (!tableBody) return;
             
             const announcements = APP_DATA.announcements.announcements;
-            tableBody.innerHTML = announcements.map(ann => `
-                <tr>
+            tableBody.innerHTML = announcements.map((ann, index) => `
+                <tr data-announcement-id="announcement-${index}">
                     <td>${ann.created}</td>
                     <td><span class="bel-badge ${this.getCategoryBadgeClass(ann.category)}">${ann.category}</span></td>
                     <td>${ann.title}</td>
                     <td>${ann.body}</td>
                     <td><a href="${ann.link}" target="_blank" class="referral-id-link">${ann.link}</a></td>
+                    <td><button class="bel-btn-s danger announcement-delete-btn" data-announcement-id="announcement-${index}"><i class="fas fa-trash"></i> Delete</button></td>
                 </tr>
             `).join('');
 
@@ -9461,6 +9464,14 @@ if (!checkAuthentication()) {
                     return;
                 }
 
+                // Event delegation for announcement delete buttons
+                const announcementDeleteBtn = e.target.closest('.announcement-delete-btn');
+                if (announcementDeleteBtn) {
+                    const announcementId = announcementDeleteBtn.getAttribute('data-announcement-id');
+                    this.openAnnouncementConfirmModal(announcementId);
+                    return;
+                }
+
                 // Event delegation for add asset button
                 const addBtn = e.target.closest('#asset-add-btn');
                 if (addBtn) {
@@ -9891,6 +9902,65 @@ if (!checkAuthentication()) {
             if (APP_DATA.content.assets[assetIndex]) {
                 APP_DATA.content.assets.splice(assetIndex, 1);
                 this.renderAssets();
+            }
+        },
+
+        // Announcement deletion functionality
+        ensureAnnouncementConfirmModal() {
+            if (this.announcementConfirmModalEl) return this.announcementConfirmModalEl;
+            
+            const wrap = document.createElement('div');
+            wrap.className = 'modal-overlay';
+            wrap.id = 'announcement-delete-modal';
+            wrap.innerHTML = `
+                <div class="modal-content" style="max-width:520px;">
+                    <div class="modal-header">
+                        <h3 style="margin:0;">Confirm Deletion</h3>
+                        <button class="close-button" aria-label="Close">&times;</button>
+                    </div>
+                    <div style="padding-top:16px;">
+                        <p style="line-height:1.6; font-size:0.95rem;">
+                            This action <strong>cannot be undone</strong>. Are you sure you want to delete this announcement?
+                        </p>
+                        <div class="modal-actions" style="margin-top:16px; display:flex; justify-content:flex-end; gap:8px;">
+                            <button class="bel-btn danger confirm-announcement-delete-btn">Delete</button>
+                            <button class="bel-btn secondary confirm-announcement-cancel-btn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(wrap);
+            this.announcementConfirmModalEl = wrap;
+
+            const close = () => this.announcementConfirmModalEl.classList.remove('show');
+            this.announcementConfirmModalEl.querySelector('.close-button')?.addEventListener('click', close);
+            this.announcementConfirmModalEl.querySelector('.confirm-announcement-cancel-btn')?.addEventListener('click', close);
+            this.announcementConfirmModalEl.addEventListener('click', (e) => { 
+                if (e.target === this.announcementConfirmModalEl) close(); 
+            });
+
+            // Handle delete confirmation
+            this.announcementConfirmModalEl.querySelector('.confirm-announcement-delete-btn')?.addEventListener('click', () => {
+                const announcementId = this.announcementConfirmModalEl.getAttribute('data-announcement-id');
+                this.deleteAnnouncement(announcementId);
+                close();
+            });
+
+            return this.announcementConfirmModalEl;
+        },
+
+        openAnnouncementConfirmModal(announcementId) {
+            const modal = this.ensureAnnouncementConfirmModal();
+            modal.setAttribute('data-announcement-id', announcementId);
+            modal.style.zIndex = this.getNextModalZIndex();
+            modal.classList.add('show');
+        },
+
+        deleteAnnouncement(announcementId) {
+            const announcementIndex = parseInt(announcementId.replace('announcement-', ''));
+            if (APP_DATA.announcements.announcements[announcementIndex]) {
+                APP_DATA.announcements.announcements.splice(announcementIndex, 1);
+                this.renderAnnouncementsNew();
             }
         }
     };
